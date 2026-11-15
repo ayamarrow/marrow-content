@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inflammation 3-4</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--card:#fff;--ink:#2b2d42;--mut:#6b7090;--mint:#d8f5e6;--sky:#dbeeff;--lav:#e8e0ff;--peach:#ffe3d3;--yel:#fff3b8;--pink:#ffdfe9;--line:#ece5d6;--acc:#5b6cff;--grn:#2e9e6b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;overflow-x:hidden}
+.en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;display:inline-block}
+#bar{position:fixed;top:0;right:0;height:5px;width:0;background:linear-gradient(270deg,#5b6cff,#ff9d6c,#3fcf8e);z-index:50;transition:width .15s}
+#nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:6px 8px;box-shadow:0 6px 24px rgba(60,50,20,.15);max-width:95vw}
+#nav button{border:0;background:var(--lav);border-radius:30px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;font-size:14px}
+#nav button.on{background:var(--acc);color:#fff}
+.hero{padding:56px 18px 30px;text-align:center;background:radial-gradient(1000px 400px at 50% -10%,#e8e0ff 0,transparent 70%),radial-gradient(700px 300px at 90% 20%,#d8f5e6 0,transparent 70%)}
+.hero .big{font-size:64px;animation:flo 3s ease-in-out infinite}
+@keyframes flo{50%{transform:translateY(-8px) rotate(-4deg)}}
+.hero h1{font-size:clamp(28px,7vw,48px);font-weight:800;margin:6px 0}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto 10px;font-size:17px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px auto;max-width:760px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 16px;min-width:105px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.stat b{display:block;font-size:26px;color:var(--acc)}
+.stat span{font-size:12.5px;color:var(--mut)}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--acc);color:#fff;border:0;border-radius:40px;padding:12px 26px;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 8px 20px rgba(91,108,255,.35);transition:transform .2s}
+.cta:hover{transform:translateY(-2px) scale(1.03)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;max-width:1000px;margin:26px auto 0;padding:0 14px}
+.ccard{border-radius:22px;padding:16px;cursor:pointer;text-align:right;border:1px solid rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.ccard:hover{transform:translateY(-6px);box-shadow:0 12px 26px rgba(0,0,0,.1)}
+.ccard .e{font-size:34px}.ccard h3{font-size:18px;font-weight:800}.ccard small{color:var(--mut);display:block;font-size:12.5px}.ccard p{font-size:14px;margin-top:4px}
+main{max-width:860px;margin:0 auto;padding:10px 14px 120px}
+.chap{margin:46px 0;scroll-margin-top:16px}
+.chead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.num{flex:none;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff;background:var(--acc);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.chead .lab{font-size:12.5px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase;direction:ltr;text-align:right}
+.chead h2{font-size:clamp(22px,5.5vw,30px);font-weight:800;line-height:1.3}
+.cap{display:flex;gap:10px;align-items:flex-start;margin:12px 0 18px}
+.cap .av{font-size:34px;flex:none}
+.bubble{background:#fff;border:1px solid var(--line);border-radius:6px 20px 20px 20px;padding:12px 16px;box-shadow:0 3px 10px rgba(0,0,0,.05);font-size:16.5px}
+.con{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 3px 14px rgba(60,50,20,.05)}
+.con h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 10px}
+.chip{background:var(--sky);border-radius:30px;padding:4px 13px;font-weight:700;font-size:14px;opacity:0;transform:translateY(8px) scale(.9);transition:all .4s}
+.chip:nth-child(4n+3){background:var(--mint)}.chip:nth-child(4n+5){background:var(--peach)}.chip:nth-child(4n+7){background:var(--lav)}
+.chip.ar{color:var(--mut);background:none;padding:0 2px;opacity:0}
+.in .chip{opacity:1;transform:none}
+.con ul{padding-right:20px}.con li{margin:5px 0}
+.mn{margin-top:12px;background:var(--yel);border-radius:16px;overflow:hidden}
+.mn button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:800;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between}
+.mn .body{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 14px}
+.mn.open .body{max-height:1200px;padding-bottom:12px}.mn .body{line-height:1.95;font-size:15px}
+.mn.open button span:last-child{transform:rotate(180deg)}
+.hy{margin-top:10px;background:var(--mint);border-right:5px solid var(--grn);border-radius:12px;padding:9px 13px;font-size:15px}
+.hy b{color:var(--grn)}
+.hl{margin:18px 0 0;background:linear-gradient(100deg,var(--yel),#ffe9a0);border-radius:18px;padding:13px 16px;font-weight:800;font-size:15.5px;box-shadow:0 4px 12px rgba(200,160,0,.18)}
+.hl small{display:block;font-size:12px;color:#8a6d00;margin-bottom:2px}
+.sep{color:#b08a00;margin:0 6px}
+table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;font-size:14.5px;margin:10px 0}
+th{background:var(--lav);padding:9px 10px}td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfaf4}
+.sec{border-radius:26px;padding:22px 16px;margin:30px 0}
+.sec h2{font-size:26px;font-weight:800;margin-bottom:6px}
+.rv{background:#fff;border:1px solid var(--line);border-radius:18px;margin:10px 0;overflow:hidden}
+.rv>button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:700;padding:13px 15px;cursor:pointer;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.rv .ans{display:none;padding:0 15px 14px}
+.rv.open .ans{display:block;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}}
+.rv .ans ul{padding-right:20px}
+.flash{perspective:900px;height:130px;margin:10px 0;cursor:pointer}
+.flash .in2{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flash.flip .in2{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border:1px solid var(--line)}
+.face.f{background:var(--sky)}.face.b{background:var(--mint);transform:rotateY(180deg)}
+.score{position:sticky;top:10px;z-index:20;margin:0 auto 10px;width:max-content;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.know{display:flex;gap:6px;justify-content:center;margin-top:-4px;margin-bottom:8px}
+.know button{border:0;border-radius:20px;padding:5px 14px;font:inherit;font-weight:700;cursor:pointer}
+.know .y{background:var(--mint)}.know .n{background:var(--peach)}
+.game{background:#fff;border:2px dashed #c9bff5;border-radius:22px;padding:16px;margin:18px 0}
+.game h4{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:var(--sky);border-radius:14px;padding:7px 12px;font:inherit;font-weight:700;cursor:pointer}
+.opts button.ok{background:#8fe3b4}.opts button.no{background:#ffb4b4}
+.tf{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:9px 0}
+.tf .b2{display:flex;gap:4px;flex:none}
+.tf button{border:0;border-radius:12px;padding:6px 12px;font:inherit;font-weight:800;cursor:pointer;background:var(--lav)}
+.tf.ok{background:#e8fff1}.tf.no{background:#fff0f0}
+.fb{font-size:13.5px;color:var(--mut);margin-top:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);padding:30px 14px 110px;font-size:14px}
+#tourbadge{position:fixed;top:12px;left:12px;z-index:45;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:700;display:none;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.chip{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+#tabs{position:sticky;top:5px;z-index:48;display:flex;gap:6px;justify-content:center;padding:8px;background:rgba(255,250,240,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#tabs button{border:0;background:var(--lav);border-radius:30px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer;font-size:14.5px}
+#tabs button.on{background:var(--acc);color:#fff;box-shadow:0 4px 12px rgba(91,108,255,.35)}
+.view[hidden]{display:none}
+.wrap{max-width:860px;margin:0 auto;padding:22px 14px 120px}
+.wrap>h1{font-size:clamp(26px,6vw,38px);font-weight:800}
+.wrap>p.sub{color:var(--mut);margin-bottom:14px}
+.gcard{border-radius:22px;padding:16px;margin:14px 0;border:1px solid rgba(0,0,0,.05);box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.gcard h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.gi{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;margin:4px 0;background:rgba(255,255,255,.75);border-radius:12px;cursor:pointer;transition:all .25s;font-size:15.5px}
+.gi::before{content:'🔑';flex:none}
+.gi.got{opacity:.45;text-decoration:line-through}
+.gi.got::before{content:'✅'}
+.gnum{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.gnum div{background:#fff;border-radius:16px;padding:8px 14px;text-align:center;border:1px solid var(--line);min-width:92px}
+.gnum b{display:block;font-size:22px;color:var(--acc)}.gnum span{font-size:12px;color:var(--mut)}
+.gprog{font-weight:800;margin:8px 0}
+.qc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;margin:14px 0;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.qh .q{font-weight:800;font-size:17px;direction:ltr;text-align:left;unicode-bidi:isolate}
+.qh .pt{flex:none;color:var(--mut);font-size:13px;white-space:nowrap}
+.qc textarea{width:100%;margin-top:12px;border:0;border-bottom:2px solid var(--line);background:transparent;font:inherit;padding:8px 2px;resize:vertical;min-height:54px;outline:none}
+.qc textarea:focus{border-color:var(--acc)}
+.qa{display:none;margin-top:10px;background:var(--mint);border-radius:16px;padding:12px 14px}
+.qa.show{display:block;animation:pop .35s}
+.qa ol{padding-right:22px}.qa li{margin:3px 0}
+.qa .kw{margin-top:6px;font-size:13px;color:#1d6b49;font-weight:700}
+.rate{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-weight:700;font-size:14px}
+.rate button{border:0;background:#fff;border-radius:12px;padding:4px 12px;font:inherit;font-weight:800;cursor:pointer}
+.rate button.sel{background:var(--acc);color:#fff}
+.qbtn{margin-top:10px;border:0;background:var(--yel);border-radius:14px;padding:8px 16px;font:inherit;font-weight:800;cursor:pointer}
+.tot{position:sticky;top:58px;z-index:20;width:max-content;margin:6px auto 10px;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{border:0;background:var(--lav);border-radius:14px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}
+.ge{direction:ltr;text-align:left;font-weight:700;font-size:15.5px;line-height:1.5;unicode-bidi:isolate}
+.ga{font-size:14px;color:var(--mut);margin-top:3px;line-height:1.6}
+.gcard h3{direction:ltr;text-align:left}
+.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.cheat{background:#ffe3e8;border-right:5px solid #e85d9b;border-radius:12px;padding:9px 13px;margin-top:10px;font-weight:700;line-height:1.9}.say{background:#eef3ff;border-radius:14px;padding:9px 13px;margin:6px 0 10px;font-weight:700;border-right:4px solid var(--acc)}.intro{margin:6px 0 10px;line-height:1.95;font-size:16px}.enul{padding:0!important;list-style:none;text-align:right;font-size:15.5px;direction:rtl;line-height:1.95}.enul li{direction:rtl;text-align:right;unicode-bidi:isolate;margin:0 0 10px}.extra{text-align:left;color:var(--mut);font-size:14px;margin:4px 0}.chips{margin:10px 0}.mn .body{line-height:1.95}.hy{background:#fff3b8;border-right:0;border-left:5px solid #e0a800;text-align:left}.hy b{color:#8a6d00}.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.cheat{background:#ffe3e8;border-right:5px solid #e85d9b;border-radius:12px;padding:9px 13px;margin-top:10px;font-weight:700;line-height:1.9}.say{background:#eef3ff;border-radius:14px;padding:9px 13px;margin:6px 0 10px;font-weight:700;border-right:4px solid var(--acc)}.intro{margin:6px 0 10px;line-height:1.95;font-size:16px}.enul{padding:0!important;list-style:none;text-align:right;font-size:15.5px;direction:rtl;line-height:1.95}.enul li{direction:rtl;text-align:right;unicode-bidi:isolate;margin:0 0 10px}.extra{text-align:left;color:var(--mut);font-size:14px;margin:4px 0}.chips{margin:10px 0}.mn .body{line-height:1.95}.hy{background:#fff3b8;border-right:0;border-left:5px solid #e0a800;text-align:left}.hy b{color:#8a6d00}.trk2{margin:12px 0;background:linear-gradient(100deg,#fbf3dc,#f6ead0);border-inline-start:5px solid #c9ae74;border-radius:16px;padding:10px 14px;color:#5f4d22;font-size:15.5px;line-height:2;font-weight:600;box-shadow:0 6px 16px #c9ae7422}.trk2 b{color:#8a6a2a}</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="tourbadge">▶ الجولة شغّالة</div>
+
+<div id="tabs"><button data-v="study" class="on">🎬 الرحلة</button><button data-v="gold">🏆 الملخص الذهبي</button><button data-v="short">✍️ Short Essay</button></div>
+<div id="v-study" class="view"><section class="hero">
+  <div class="big">🎬🔥</div>
+  <h1><span class="en">Inflammation: Outcomes, Chronic &amp; Granulomas</span><br>مصير الالتهاب والمزمن والحبيبي</h1>
+  <p>Inflammation 3-4 · د. نزار جوهر. العلامات الخمس وأسباب الالتهاب وتغيّرات الأوعية، وشو بيصير بالالتهاب الحاد بالآخر، أشكالو، الالتهاب المزمن، الورم الحبيبي، والتأثيرات الجهازية.</p>
+  <div class="stats">
+    <div class="stat"><b>5</b><span>signs</span></div>
+    <div class="stat"><b>8</b><span>causes</span></div>
+    <div class="stat"><b>4</b><span>outcomes</span></div>
+    <div class="stat"><b>6</b><span>acute types</span></div>
+    <div class="stat"><b>3</b><span>chronic ways</span></div>
+    <div class="stat"><b>2</b><span>granuloma types</span></div>
+  </div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0"><a class="cta" href="#gold" style="text-decoration:none">🏆 الملخص الذهبي</a><a class="cta" href="#short" style="text-decoration:none">✍️ Short Essay</a></div>
+  <button class="cta" id="tourBtn">▶ شغّل الجولة التلقائية</button>
+  <div class="grid" id="cards"></div>
+</section>
+
+<main id="main"></main>
+<footer>🛡️ المصدر: ملف المحاضرة (Inflammation 3-4، د. نزار جوهر).</footer>
+
+</div><div id="v-gold" class="view" hidden></div><div id="v-short" class="view" hidden></div>
+<div id="nav"><button id="prev">→ السابق</button><button id="toggle">⏸ / ▶</button><button id="next">التالي ←</button></div>
+
+<script>
+const E=t=>`<span class="en">${t}</span>`;
+const T=x=>x.replace(/\{\{(.+?)\}\}/g,'(<span class="en">$1</span>)');
+const CH=[
+ {
+  "n": 0,
+  "en": "Warm-up from your notes",
+  "ar": "تمهيد من ملاحظاتك",
+  "emoji": "🔥",
+  "col": "#ffe9c7",
+  "teaser": "5 علامات · 8 أسباب · الأوعية",
+  "cap": "🔥",
+  "q": "هيدا تمهيد من نصّك أنت، مش من سلايدات هالمحاضرة. بنقرا فيه الأساس قبل ما نبدأ.",
+  "cons": [
+   {
+    "e": "🖐️",
+    "t": "Classical signs of acute inflammation — العلامات الخمس",
+    "key": "signs",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> تخيّل جسمك بيت، وإصبعك باب البيت. حدا كسر الباب. بالحال دقّ جرس الإنذار، وصارت حركة كبيرة عالباب: الباب احمرّ، سخن، انتفخ، وجّعك، وما عاد يفتح منيح.",
+     "🩺 <b>Medical Explanation:</b> تعال نبلّش بالأساس. الالتهاب الحاد إلو <bdi dir=\"ltr\">5</bdi> علامات (<bdi dir=\"ltr\">Signs</bdi>) بتشوفها بعينك: احمرار (<bdi dir=\"ltr\">Redness</bdi>)، حرارة (<bdi dir=\"ltr\">Heat</bdi>)، انتفاخ (<bdi dir=\"ltr\">Swelling</bdi>)، ألم (<bdi dir=\"ltr\">Pain</bdi> / <bdi dir=\"ltr\">Tenderness</bdi>)، وفقدان الوظيفة (<bdi dir=\"ltr\">Loss of function</bdi>). تخيّل إصبعك انجرح: بيحمرّ وبيسخن وبينتفخ وبيوجّعك وما بتقدر تستعملو منيح.",
+     "وليش بتظهر؟ بسبب المواد الكيميائية اللي بيطلقها الجسم (<bdi dir=\"ltr\">Chemical mediators</bdi>)، وبسبب الأذية اللي ممكن تسبّبها خلايا الدم البيضاء للنسيج (<bdi dir=\"ltr\">Leukocyte-mediated tissue damage</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الباب المكسور وحركة الطوارئ حواليه هي نفسها العلامات الخمس. فكل علامة = إشارة إنو في معركة دفاع عم تصير.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو العلامات الخمس للالتهاب الحاد؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Redness · Heat · Swelling · Pain · Loss of function</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">الالتهاب مرض ولا دفاع؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ دفاع من الجسم</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Redness",
+     "Heat",
+     "Swelling",
+     "Pain",
+     "Loss of function"
+    ],
+    "m": "باب انكسر، الجرس دقّ، صار أحمر وسخن ومنتفخ وبيوجّع وما بيشتغل.",
+    "h": "Redness + Heat + Swelling + Pain + Loss of function ← chemical mediators + leukocyte-mediated tissue damage",
+    "c": "<bdi dir=\"ltr\">5</bdi> علامات، وسببها مواد كيميائية + أذية الكريات البيض.",
+    "tr": "🏠 الباب انكسر والجرس دقّ: أحمر، سخن، منتفخ، بيوجّع، وما بيشتغل. الأسباب: مواد كيميائية وأذية الكريات البيض."
+   },
+   {
+    "e": "🕵️",
+    "t": "Causes of acute inflammation — 8 أسباب",
+    "key": "causes",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> الجرس بالبيت دقّ، والبكتيريا سألت القائد: \"ليش دقيت الجرس؟\" قال: \"مش شرط إنتِ!\" وفتح دفتر الشرطة: في <bdi dir=\"ltr\">8</bdi> مشتبهين ممكن كل واحد يدقّ الجرس.",
+     "🩺 <b>Medical Explanation:</b> سؤال بيجي بالبال: ليش الجسم أعلن الحرب أصلاً؟ مش شرط تكون بكتيريا! الالتهاب ممكن يبدأ من عدوى (<bdi dir=\"ltr\">Infection</bdi>) متل البكتيريا (<bdi dir=\"ltr\">Bacteria</bdi>) أو الفيروسات (<bdi dir=\"ltr\">Viruses</bdi>)، أو من جرح وإصابة (<bdi dir=\"ltr\">Trauma</bdi>).",
+     "وأحياناً جهاز المناعة نفسو بيعمل تفاعل غير مناسب مع أنتيجين (<bdi dir=\"ltr\">Antigen</bdi>–<bdi dir=\"ltr\">Antibody reaction</bdi>). وممكن مواد كيميائية (<bdi dir=\"ltr\">Chemicals</bdi>)، أو الشمس وأشعة <bdi dir=\"ltr\">UV</bdi> (<bdi dir=\"ltr\">Physical agents</bdi>)، أو الحروق والبرودة الشديدة (<bdi dir=\"ltr\">Heat</bdi> / <bdi dir=\"ltr\">Cold</bdi>). وحتى موت الأنسجة (<bdi dir=\"ltr\">Tissue necrosis</bdi>) أو دخول جسم غريب (<bdi dir=\"ltr\">Foreign body</bdi>) بيشعلوا المعركة.",
+     "🎭 <b>Analogy Trick:</b> الجرس متل إنذار الحريق: بيرنّ لأي خطر، دخان أو حرارة أو شرارة. ما بيرنّ بس للصوص.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">اذكر <bdi dir=\"ltr\">4</bdi> أسباب للالتهاب الحاد.</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Infection · Trauma · Chemicals · Foreign body</bdi> (وكمان <bdi dir=\"ltr\">Heat/Cold</bdi>, <bdi dir=\"ltr\">UV</bdi>, <bdi dir=\"ltr\">Immune reaction</bdi>, <bdi dir=\"ltr\">Necrosis</bdi>)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">هل كل التهاب سببو جراثيم؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ لا</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Infection",
+     "Trauma",
+     "Immune reactions",
+     "Chemicals",
+     "Physical agents",
+     "Heat/Cold",
+     "Necrosis",
+     "Foreign body"
+    ],
+    "m": "الجرس بيرنّ لأي خطر، مش بس للجراثيم.",
+    "h": "Infection + Trauma + Immune reactions + Chemicals + Physical agents + Heat/Cold + Tissue necrosis + Foreign bodies",
+    "c": "<bdi dir=\"ltr\">8</bdi> أسباب. مش كل التهاب بسبب بكتيريا.",
+    "tr": "🔥 مش كل حريق من جرثومة: ثمانية أسباب (عدوى، رضّ، مناعة، كيماويات، فيزيائية، حرارة وبرد، نخر، جسم غريب)."
+   },
+   {
+    "e": "🚰",
+    "t": "Vasodilation — الأوعية بتفتح",
+    "key": "vdil",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> القائد صرخ: \"بدنا دم أكتر عالباب!\" فعمّال الطرق وسّعوا الشارع الضيّق وصار أوتوستراد، وسيارات الدم صارت تمرق بكثرة.",
+     "🩺 <b>Medical Explanation:</b> غرفة القيادة بتبعت أمر للأوعية: \"بدنا دم أكتر يوصل لمكان الإصابة!\" فالأوعية بتتوسّع (<bdi dir=\"ltr\">Vasodilation</bdi>). تخيّل الطريق كان ضيّق وصار أعرض، فالدم بيمرق بكمية أكبر. وبما إنو الدم زاد بالمنطقة، بتصير حمرا وسخنة.",
+     "🎭 <b>Analogy Trick:</b> الأوعية شوارع، والدم سيارات إسعاف. شارع أوسع = سيارات أكتر = المكان أحمر وسخن.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بيصير بالأوعية أول شي؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Vasodilation</bdi> (بتتوسّع)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بيطلع من توسّعها؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ دم أكتر = <bdi dir=\"ltr\">Redness + Heat</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Vessel caliber ↑",
+     "Blood flow ↑",
+     "Redness",
+     "Heat"
+    ],
+    "m": "وسّعوا الشارع، زادوا السيارات، احمرّ وسخن.",
+    "h": "Vasodilation → Vessel caliber ↑ → Blood flow ↑ → Redness + Heat",
+    "c": "توسّع الأوعية = احمرار + حرارة.",
+    "tr": "🚰 (<bdi dir=\"ltr\">Vasodilation</bdi>) الحنفية انفتحت: دم أكتر، فاحمرار وحرارة."
+   },
+   {
+    "e": "🧺",
+    "t": "Increased vascular permeability — النفاذية",
+    "key": "perm",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> القائد قال: \"بدنا كمان ماي وأدوات!\" فعمّال الشبكة فتحوا ثقوب صغيرة بالأنابيب، والماي والبروتينات طلعت وتجمّعت حوالين الباب.",
+     "🩺 <b>Medical Explanation:</b> القائد ما اكتفى. قال: \"بدنا كمان سوائل وبروتينات تطلع من الدم وتوصل لمكان الإصابة!\" فجدار الأوعية بيسمح بخروجها. هيدا اسمو زيادة النفاذية (<bdi dir=\"ltr\">Increased vascular permeability</bdi>). والسوائل لما بتتجمّع بين الخلايا، المنطقة بتنتفخ. وهيدا هو الوذمة (<bdi dir=\"ltr\">Edema</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الوعاء متل مصفاة ثقوبها وسّعت: الماي بيطلع وبيتجمّع، فالمكان بينتفخ. وتذكّر: الشارع الواسع يعني أحمر وسخن، والثقوب يعني منتفخ.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو سبب الانتفاخ؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ ↑ <bdi dir=\"ltr\">Permeability</bdi> فيطلع ماي وبروتين = <bdi dir=\"ltr\">Edema</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">الفرق بين التوسّع والنفاذية؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ توسّع = أحمر وسخن. نفاذية = منتفخ.</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Permeability ↑",
+     "Fluid + protein leakage",
+     "Edema",
+     "Swelling"
+    ],
+    "m": "ثقوب بالمصفاة، ماي طلع، انتفخ.",
+    "h": "Increased vascular permeability → Fluid + Protein leakage into interstitial tissue → Edema → Swelling",
+    "c": "نفاذية أكتر = وذمة = انتفاخ.",
+    "tr": "💧 (<bdi dir=\"ltr\">Permeability</bdi>) الأنبوب بيسرّب: ماي وبروتين لبرّا، وذمة، وانتفاخ."
+   },
+   {
+    "e": "🏰",
+    "t": "Vascular barrier — حاجز الوعاء",
+    "key": "barr",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بس ليش الأنابيب ما بتسرّب بالأيام العادية؟ لأنو جدارها قلعة من <bdi dir=\"ltr\">3</bdi> طبقات. بالحرب القائد بيفتح فتحات صغيرة، وبس بالأنابيب الصغيرة.",
+     "🩺 <b>Medical Explanation:</b> بس كيف قدر السائل يطلع؟ بالطبيعة جدار الوعاء عندو حاجز بيمنع التسريب العشوائي، بيتكوّن من البطانة (<bdi dir=\"ltr\">Endothelium</bdi>)، الوصلات المحكمة (<bdi dir=\"ltr\">Tight junctions</bdi>)، والغشاء القاعدي (<bdi dir=\"ltr\">Basement membrane</bdi>). بس بالالتهاب نفاذية هالحاجز بتزيد. وأول أماكن بتظهر فيها الاستجابة بشكل أساسي هي الشعيرات (<bdi dir=\"ltr\">Capillaries</bdi>) والوريدات بعد الشعرية (<bdi dir=\"ltr\">Postcapillary venules</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الجدار متل جدار بيت من <bdi dir=\"ltr\">3</bdi> طبقات: طوب وإسمنت وعازل. بيمنع التسريب، لو انفتح بيدخل الماي.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو طبقات حاجز الوعاء؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Endothelium + Tight junctions + Basement membrane</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">وين بيبدأ التسريب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Capillaries + Postcapillary venules</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Endothelium",
+     "Tight junctions",
+     "Basement membrane",
+     "Capillaries + postcapillary venules"
+    ],
+    "m": "طوب، إسمنت، عازل = بطانة، وصلات، غشاء.",
+    "h": "Normal vascular barrier = Endothelium + Tight junctions + Basement membrane | Early acute response = Capillaries + Postcapillary venules",
+    "c": "حاجز: بطانة + وصلات + غشاء.",
+    "tr": "🧱 جدار الوعاء تلات طبقات: بطانة، وصلات، غشاء. وأول مين بيتأثر شعيرات وأوردة صغيرة."
+   }
+  ],
+  "hl": [
+   "Classical signs = Redness + Heat + Swelling + Pain + Loss of function | Causes = Chemical mediators + Leukocyte-mediated tissue damage",
+   "Causes of acute inflammation = Infection + Trauma + Immune reactions + Chemicals + Physical agents + Heat/Cold + Tissue necrosis + Foreign bodies",
+   "Vasodilation → Vessel caliber ↑ → Blood flow ↑ → Redness + Heat",
+   "Increased vascular permeability → fluid + protein leakage → edema → swelling",
+   "Normal vascular barrier = Endothelium + Tight junctions + Basement membrane | Early response = Capillaries + Postcapillary venules"
+  ]
+ },
+ {
+  "n": 1,
+  "en": "Outcomes of acute inflammation",
+  "ar": "مصير الالتهاب الحاد",
+  "emoji": "🧭",
+  "col": "#d8f5e6",
+  "teaser": "4 مصائر + مخطط + Abscess/Pus",
+  "cap": "🩺",
+  "q": "أول جزء بالمحاضرة: شو بيصير بالالتهاب الحاد بالآخر؟ وبدنا نمشي سلايد سلايد.",
+  "cons": [
+   {
+    "e": "🧭",
+    "t": "Effects of acute inflammation depend on — شو بيقرّر التأثير",
+    "key": "out",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> خلصت المعركة عالباب. شو بيصير بعدها؟ القائد بيسأل <bdi dir=\"ltr\">3</bdi> أسئلة قبل ما يقرّر.",
+     "🩺 <b>Medical Explanation:</b> أول سلايد بعد العنوان بيقلّك: تأثيرات الالتهاب الحاد (<bdi dir=\"ltr\">Effects of acute inflammation</bdi>) بتعتمد على <bdi dir=\"ltr\">3</bdi> أشياء. الأول: نوع الإصابة وشدّتها (<bdi dir=\"ltr\">Type and severity of injury</bdi>). وكتب الدكتور بالهامش: يعني نوع وقوة الإصابة، مثلاً بالحرق بتختلف حسب الدرجة.",
+     "الثاني: المكان المصاب (<bdi dir=\"ltr\">Site affected</bdi>). وهنا الدكتور نبّه إنو الالتهاب بالعين ما بيتقارن بالالتهاب بإصبع القدم. التالت: ردّ فعل الجسم (<bdi dir=\"ltr\">Host response</bdi>)، وكتب بالهامش: إختلافات فردية، يعني كل شخص بيتصرّف جسمو غير شخص.",
+     "🎭 <b>Analogy Trick:</b> متل طبيب بيقرّر العلاج: بيشوف شو الإصابة، وين صارت، ومين المريض.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو <bdi dir=\"ltr\">3</bdi> عوامل مصير الالتهاب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Type/severity · Site · Host response</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">احفظها بكلمتين.</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ شو، وين، مين</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Type + severity",
+     "Site affected",
+     "Host response"
+    ],
+    "m": "شو، وين، مين.",
+    "h": "Effects of acute inflammation = Type + severity of injury + Site affected + Host response",
+    "c": "المصير: الإصابة (شو) + المكان (وين) + المريض (مين).",
+    "tr": "🧭 مصير الالتهاب بيقرره التلاتة: شو الإصابة، وين المكان، ومين المريض."
+   },
+   {
+    "e": "✅",
+    "t": "Complete resolution — الشفاء الكامل",
+    "key": "resol",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> الحفلة خلصت. الموسيقى سكتت، الأبواب سكّرت، المعازيم المتعبين ناموا، وعمّال النظافة لمّوا الماي. والصبح رجع كل شي متل ما كان.",
+     "🩺 <b>Medical Explanation:</b> وصلنا لسلايد \"مصير الالتهاب الحاد\" (<bdi dir=\"ltr\">Fate of Acute inflammation</bdi>). المصير ممكن يكون <bdi dir=\"ltr\">4</bdi> أشياء: التئام كامل (<bdi dir=\"ltr\">Complete resolution</bdi>)، ندبة وتليّف (<bdi dir=\"ltr\">Scarring & fibrosis</bdi>)، تكوّن خراج (<bdi dir=\"ltr\">Abscess formation</bdi>)، أو تطوّر للمزمن (<bdi dir=\"ltr\">Progression to chronic inflammation</bdi>).",
+     "نبلّش بالالتئام الكامل. متى بيصير؟ بشروط: نسيج عندو قدرة تجدّد (<bdi dir=\"ltr\">Tissue with regeneration ability</bdi>)، وإصابة خفيفة (<bdi dir=\"ltr\">Mild injury</bdi>)، ومدة قصيرة (<bdi dir=\"ltr\">Short duration</bdi>)، وقليل تدمير بالنسيج (<bdi dir=\"ltr\">Little tissue destruction</bdi>).",
+     "وبعد هيك بيصير تسلسل: المواد الكيميائية بتتحلّل (<bdi dir=\"ltr\">Decay of chemical mediators</bdi>). وبيوقف إنتاجها (<bdi dir=\"ltr\">Stop of mediators construction</bdi>). بتتضيّق الأوعية (<bdi dir=\"ltr\">Vasoconstriction</bdi>)، فبتقل النفاذية (<bdi dir=\"ltr\">Less permeability</bdi>) ويقل تجنيد الخلايا (<bdi dir=\"ltr\">Less recruitment</bdi>). العدلات بتموت (<bdi dir=\"ltr\">Neutrophils dies</bdi>). السائل الالتهابي (<bdi dir=\"ltr\">Exudate</bdi>) بتمتصّو الأوعية اللمفاوية (<bdi dir=\"ltr\">Lymphatic vessels</bdi>). والمواد اللي بتروح للخلايا الجارة بتحفّزها تنقسم (<bdi dir=\"ltr\">Mitosis</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الشفاء الكامل متل بيت بعد حفلة: بعد التنظيف ما بيبقى أثر، بس بشرط إنو الحفلة كانت صغيرة والأثاث بيتصلّح.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">إيمتى بيصير شفاء كامل؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ أذية صغيرة + مدة قصيرة + نسيج بيتجدّد</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بيشيل الماي؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Lymphatics</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Regenerating tissue",
+     "Mild injury",
+     "Short duration",
+     "Little destruction"
+    ],
+    "m": "الموسيقى وقفت، الأبواب سكّرت، النظافة خلصت، رجع الباب متل ما كان.",
+    "h": "Regeneration ability + Mild + Short + Little destruction → mediators decay → vasoconstriction → neutrophils die → exudate absorbed → mitosis",
+    "c": "شفاء كامل لو: نسيج بيتجدّد + إصابة خفيفة + مدة قصيرة.",
+    "tr": "🌱 شفاء كامل لو: النسيج بيتجدّد، الإصابة خفيفة، والمدة قصيرة. المواد الكيميائية بتخف والعدلات بتموت والسائل بينشال."
+   },
+   {
+    "e": "🩹",
+    "t": "Scarring and fibrosis — الندبة والتليّف",
+    "key": "scar",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> إذا الكسر كبير ما بيقدر يتصلّح لحالو. بيجيبوا رقعة إسمنت ويلصقوها. الباب بيشتغل بس مش متل أول. وبالقلب بالذات، الرقعة بتخلّي الضخ أضعف.",
+     "🩺 <b>Medical Explanation:</b> وإذا ما حصل شفاء كامل؟ بيصير ندبة وتليّف (<bdi dir=\"ltr\">Scarring & fibrosis</bdi>). كتب الدكتور بالهامش سبب: إذا تضرّر الإطار (<bdi dir=\"ltr\">Framework</bdi>) راح يصير عندنا <bdi dir=\"ltr\">Scar</bdi>، والمادة الاسمها <bdi dir=\"ltr\">Reticulin</bdi> دورها مهم. أو إذا النسيج المتضرّر غير قابل للتجدّد.",
+     "وأعطى مثال عن القلب: نسيج القلب بيتكوّن من نوعين <bdi dir=\"ltr\">Collagen</bdi> هنّي <bdi dir=\"ltr\">Type 1</bdi> و <bdi dir=\"ltr\">Type 3.</bdi> النوع التالت (<bdi dir=\"ltr\">Type 3</bdi>) اسمو <bdi dir=\"ltr\">Reticulin</bdi>، وهو ألياف رقيقة (<bdi dir=\"ltr\">Delicate reticular fibers</bdi>) بتغطّي القلب. بينما <bdi dir=\"ltr\">Type 1</bdi> بيكون دعامة للقلب، وإذا زاد ممكن يسبّب صلابة بالقلب. فإذا صار ضرر بنسيج القلب، بيتعافى بمكان الضرر بـ <bdi dir=\"ltr\">Scar</bdi> مكوّن من <bdi dir=\"ltr\">Type 1.</bdi> وهيك حالة بتأثّر سلباً على ضخ القلب، لأنو <bdi dir=\"ltr\">Type 1</bdi> مش خلايا انقباضية، فاستُبدل نسيج القلب بنسيج <bdi dir=\"ltr\">Scar.</bdi>",
+     "🎭 <b>Analogy Trick:</b> الندبة متل رقعة إسمنت على جدار مكسور: بتسد الثغرة بس ما بترجّع الجدار الأصلي. وعضلة القلب لما بتصير رقعة بتتعب بالضخ.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">ليش بتصير ندبة؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ أذية كبيرة أو نسيج ما بيتجدّد</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مثال نسيج ما بيتجدّد؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ عضلة القلب</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Framework damaged",
+     "Non-regenerating tissue",
+     "Type 1 scar",
+     "Heart pumping ↓"
+    ],
+    "m": "كسر كبير، رقعة إسمنت، ندبة.",
+    "h": "Framework damaged OR non-regenerating tissue → scarring + fibrosis | Heart: type 1 collagen scar replaces myocardium → ↓ pumping",
+    "c": "ندبة = إطار تضرّر أو نسيج ما بيتجدّد.",
+    "tr": "🧵 الندبة: الإطار تدمّر أو النسيج ما بيتجدّد. مثال القلب: كولاجين نوع 1 بيحل مكان العضلة فبيقلّ الضخ."
+   },
+   {
+    "e": "🗺️",
+    "t": "Outcome diagram (Elsevier) — مخطط المصائر",
+    "key": "odiag",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> تخيّل خريطة طرق بتبيّن كل الدروب بعد الإصابة: درب بيرجع للشفاء، درب بيروح للخراج، درب بيكمّل للمزمن، وكلها ممكن توصل لندبة.",
+     "🩺 <b>Medical Explanation:</b> السلايد الرابع هو مخطط (<bdi dir=\"ltr\">Diagram</bdi>) بيجمع كل المصائر. بيبدأ بإصابة (<bdi dir=\"ltr\">Injury</bdi>) سببها: احتشاء (<bdi dir=\"ltr\">Infarction</bdi>)، عدوى بكتيرية (<bdi dir=\"ltr\">Bacterial infections</bdi>)، سموم (<bdi dir=\"ltr\">Toxins</bdi>)، أو رضح (<bdi dir=\"ltr\">Trauma</bdi>).",
+     "بعدها الالتهاب الحاد (<bdi dir=\"ltr\">Acute inflammation</bdi>) فيه: تغيّرات وعائية (<bdi dir=\"ltr\">Vascular changes</bdi>)، تجنيد العدلات (<bdi dir=\"ltr\">Neutrophil recruitment</bdi>)، ومواد وسيطة (<bdi dir=\"ltr\">Mediators</bdi>). من هون في <bdi dir=\"ltr\">3</bdi> دروب. درب الشفاء (<bdi dir=\"ltr\">Resolution</bdi>): إزالة المحفّز المؤذي (<bdi dir=\"ltr\">Clearance of injurious stimuli</bdi>)، إزالة المواد والخلايا الالتهابية الحادة (<bdi dir=\"ltr\">Clearance of mediators and acute inflammatory cells</bdi>)، تعويض الخلايا المصابة (<bdi dir=\"ltr\">Replacement of injured cells</bdi>)، ووظيفة طبيعية (<bdi dir=\"ltr\">Normal function</bdi>). درب القيح (<bdi dir=\"ltr\">Pus formation</bdi> / <bdi dir=\"ltr\">abscess</bdi>). ودرب التطوّر للمزمن (<bdi dir=\"ltr\">Progression</bdi>).",
+     "والمزمن (<bdi dir=\"ltr\">Chronic inflammation</bdi>) إلو إصاباتو: عدوى فيروسية (<bdi dir=\"ltr\">Viral infections</bdi>)، عدوى مزمنة (<bdi dir=\"ltr\">Chronic infections</bdi>)، إصابة مستمرة (<bdi dir=\"ltr\">Persistent injury</bdi>)، وأمراض مناعية ذاتية (<bdi dir=\"ltr\">Autoimmune diseases</bdi>). وفيه: تكوّن أوعية جديدة (<bdi dir=\"ltr\">Angiogenesis</bdi>)، ارتشاح خلايا وحيدة النواة (<bdi dir=\"ltr\">Mononuclear cell infiltrate</bdi>)، وتليّف أو ندبة (<bdi dir=\"ltr\">Fibrosis</bdi> / <bdi dir=\"ltr\">scar</bdi>). ومن الخراج والمزمن والحاد في أسهم \"<bdi dir=\"ltr\">Healing</bdi>\" كلها بتوصل لـ <bdi dir=\"ltr\">Fibrosis</bdi>، ونتيجتو فقدان الوظيفة (<bdi dir=\"ltr\">Loss of function</bdi>).",
+     "🎭 <b>Analogy Trick:</b> المخطط متل خريطة مترو: كل محطة اسمها مصير، وكل خط بيوصل لمحطة أخرى.",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Injury",
+     "Acute inflammation",
+     "Resolution",
+     "Abscess",
+     "Chronic",
+     "Fibrosis"
+    ],
+    "m": "إصابة، حاد، فرق طرق: شفاء، خراج، مزمن، وآخرها ندبة.",
+    "h": "Injury → acute inflammation → resolution | abscess | chronic; healing → fibrosis → loss of function",
+    "c": "المخطط: إصابة ← حاد ← شفاء أو خراج أو مزمن؛ والتئام ← تليّف ← فقدان وظيفة.",
+    "tr": "🗺️ مخطط الدرب: إصابة ← حاد ← (شفاء | خراج | مزمن). والالتئام ← تليّف ← فقد وظيفة."
+   },
+   {
+    "e": "🟡",
+    "t": "Abscess and Pus — الخراج والقيح",
+    "key": "abs",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بعض الأشرار الجراثيم المقيّحة دخلوا الباب. المعركة قوية فجزء من الباب ذاب، وتجمّعت بقايا المعركة بكيس أصفر.",
+     "🩺 <b>Medical Explanation:</b> السلايد الخامس. الخراج (<bdi dir=\"ltr\">Abscess</bdi>) هو تجمّع موضّع من القيح (<bdi dir=\"ltr\">Localized collection of pus</bdi>)، وبيتطوّر عادةً بعد تلف نسيجي واسع (<bdi dir=\"ltr\">Extensive tissue damage</bdi>)، خصوصاً من بكتيريا مقيّحة (<bdi dir=\"ltr\">Pyogenic bacteria</bdi>) متل المكوّرات العنقودية الذهبية (<bdi dir=\"ltr\">Staph aureus</bdi>، <bdi dir=\"ltr\">Staphylococcus</bdi>). وكتب الدكتور: <bdi dir=\"ltr\">Pyogenic</bdi> يعني بكتيريا مكوّنة للقيح.",
+     "والقيح (<bdi dir=\"ltr\">Pus</bdi>) سائل أصفر كثيف لزج (<bdi dir=\"ltr\">Thick yellow viscous fluid</bdi>)، بينتج من إسالة النسيج (<bdi dir=\"ltr\">Liquefaction of tissue</bdi>، يعني تحوّل النسيج لسائل) بفعل الإنزيمات الحالّة (<bdi dir=\"ltr\">Lysosomal enzymes</bdi>). بيحتوي: عدلات ميتة ومحتضرة (<bdi dir=\"ltr\">Dead & dying neutrophils</bdi>)، حطام نسيج ميت (<bdi dir=\"ltr\">Necrotic tissue debris</bdi>)، أحياء دقيقة (<bdi dir=\"ltr\">Microorganisms</bdi>)، والمكوّن السائل للالتهاب الحاد. وكتب الدكتور: القيح دايماً فيه بكتيريا، فبيقدر يسبّب عدوى.",
+     "🎭 <b>Analogy Trick:</b> الخراج متل كيس نفايات بيتجمّع فيه بقايا المعركة. وأي كيس نفايات فيه جراثيم، فبينقل العدوى.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو الخراج؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Localized pus</bdi> (<bdi dir=\"ltr\">Staph aureus</bdi>)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">القيح فيه شو؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ عدلات ميتة + حطام + جراثيم + سوائل</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Extensive tissue damage",
+     "Pyogenic bacteria (Staph aureus)",
+     "Lysosomal enzymes",
+     "Liquefaction",
+     "Pus"
+    ],
+    "m": "كيس أصفر مليان بقايا معركة وجراثيم.",
+    "h": "Extensive damage + Staph aureus → lysosomal enzymes → liquefaction → pus → abscess",
+    "c": "خراج = تجمّع قيح موضّع. القيح فيه بكتيريا دايماً.",
+    "tr": "🕳️ الخراج: جيب قيح. الجراثيم (<bdi dir=\"ltr\">Staph aureus</bdi>) بتهدم النسيج بإنزيمات الليزوزوم، فبيسيّل وبيتكوّن القيح."
+   },
+   {
+    "e": "⏩",
+    "t": "Progression to chronic inflammation — التحوّل للمزمن",
+    "key": "prog",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> المعركة ما خلصت. القائد بيقول \"كمّلوا ببطء\"، فبتتحوّل لحرب طويلة.",
+     "🩺 <b>Medical Explanation:</b> والمصير الرابع من سلايد الـ <bdi dir=\"ltr\">Fate</bdi>: التطوّر للالتهاب المزمن (<bdi dir=\"ltr\">Progression to chronic inflammation</bdi>). يعني الالتهاب الحاد ما انحلّ، فاستمر. وهيدا اللي رح نشرحو بالتفصيل بجزء الـ <bdi dir=\"ltr\">Chronic inflammation.</bdi>",
+     "🎭 <b>Analogy Trick:</b> متل نار طفوها بس ضلّ الجمر تحت الرماد، فبترجع تشتعل.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">اذكر المصائر الأربعة.</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Resolution · Scar · Abscess · Chronic</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو يعني مزمن؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ المعركة ما خلصت</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Failure to resolve",
+     "Chronic"
+    ],
+    "m": "النار طفت، الجمر لسا.",
+    "h": "Failure to resolve → progression to chronic inflammation",
+    "c": "المصير الرابع: يتحوّل لمزمن.",
+    "tr": "⏳ المصير الرابع: ما قدر يشفي نفسو، فبينقلب مزمن."
+   },
+   {
+    "e": "📋",
+    "t": "Extra Info: Outcomes — تفاصيل إضافية",
+    "key": "x1",
+    "say": null,
+    "i": "",
+    "b": [
+     "<div dir=\"rtl\"><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">السلايد</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">التفصيل الإضافي من المحاضرة</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Slide 2</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Type & severity</bdi>: مثال حسب درجة الحرق · <bdi dir=\"ltr\">Site</bdi>: العين مش متل إصبع القدم · <bdi dir=\"ltr\">Host</bdi>: اختلافات فردية</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Slide 3</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Scar</bdi>: إذا تضرّر الـ <bdi dir=\"ltr\">framework</bdi> (<bdi dir=\"ltr\">Reticulin</bdi> مهم) أو النسيج غير قابل للتجدّد · القلب: <bdi dir=\"ltr\">Collagen Type 1</bdi> و <bdi dir=\"ltr\">Type 3</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Slide 4</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">مخطط <bdi dir=\"ltr\">Elsevier 2005</bdi>: أسباب الحاد (<bdi dir=\"ltr\">Infarction</bdi>, <bdi dir=\"ltr\">Bacterial infections</bdi>, <bdi dir=\"ltr\">Toxins</bdi>, <bdi dir=\"ltr\">Trauma</bdi>) · أسباب المزمن (<bdi dir=\"ltr\">Viral</bdi>, <bdi dir=\"ltr\">Chronic infections</bdi>, <bdi dir=\"ltr\">Persistent injury</bdi>, <bdi dir=\"ltr\">Autoimmune</bdi>)</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Slide 5</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Pyogenic</bdi> = بكتيريا مكوّنة للقيح · <bdi dir=\"ltr\">Liquefaction</bdi> = تحوّل النسيج لسائل · <bdi dir=\"ltr\">Pus</bdi> فيه بكتيريا دايماً</td></tr></table></div>",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Slides 2-5"
+    ],
+    "m": "<bdi dir=\"ltr\">Outcomes</bdi>: <bdi dir=\"ltr\">extra details</bdi>",
+    "h": "Extra Info: Outcomes (slides 2-5)",
+    "c": "تفاصيل إضافية من نفس السلايدات."
+   }
+  ],
+  "hl": [
+   "Type + severity of injury | Site affected | Host response",
+   "Complete resolution: Tissue with regeneration ability + Mild injury + Short duration + Little tissue destruction | Decay of mediators → Stop of mediators construction → Vasoconstriction → Less permeability → Less recruitment → Neutrophils die → Exudate absorbed by lymphatics → Mediators to neighboring cells stimulate mitosis",
+   "Scarring & fibrosis: framework destroyed (reticulin important) OR tissue cannot regenerate | Heart scar = Type 1 collagen → impaired pumping",
+   "Resolution: clearance of stimuli + mediators + replacement of injured cells + normal function | Pus formation (abscess) | Progression → chronic: angiogenesis + mononuclear infiltrate + fibrosis (scar) | Fibrosis → loss of function",
+   "Abscess = localized pus after extensive damage (pyogenic bacteria, Staph aureus) | Pus = thick yellow viscous fluid: liquefaction by lysosomal enzymes + dead/dying neutrophils + necrotic debris + microorganisms + acute-inflammation fluid | Pus always has bacteria → can cause infection",
+   "Fate of acute inflammation: Complete resolution | Scarring & fibrosis | Abscess formation | Progression to chronic inflammation",
+   "Extra Info: Outcomes (slides 2-5)"
+  ]
+ },
+ {
+  "n": 2,
+  "en": "Morphological types",
+  "ar": "أشكال الالتهاب الحاد (6)",
+  "emoji": "🔬",
+  "col": "#dbeeff",
+  "teaser": "6 أشكال حسب الشدة والنسيج",
+  "cap": "🔍",
+  "q": "نفس الالتهاب بيبيّن بوجوه مختلفة حسب نوع وشدة الإصابة ونوع النسيج.",
+  "cons": [
+   {
+    "e": "🤧",
+    "t": "Mild acute (catarrhal) inflammation — الشكل 1: النزلي",
+    "key": "cat",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> أول شكل من أشكال المعركة خفيف: زكام. الأنف أحمر وسخن ومنتفخ وبيسيل. بعد كم يوم بيهدا.",
+     "🩺 <b>Medical Explanation:</b> السلايد السادس عنوانو \"<bdi dir=\"ltr\">Morphological features in acute inflammation</bdi>\". بيقلّك: حسب نوع الإصابة وشدّتها ونوع النسيج المصاب، منشوف الأنواع التالية. وكتب الدكتور بالهامش إنو هالعوامل اللي ذكرناها قبل.",
+     "الشكل الأول: الالتهاب الحاد الخفيف (<bdi dir=\"ltr\">Mild acute</bdi> / <bdi dir=\"ltr\">Catarrhal inflammation</bdi>). بيكون مميّز لعدوى خفيفة بالغشاء المخاطي (<bdi dir=\"ltr\">Mucous membrane</bdi>)، متل عدوى الجهاز التنفسي العلوي الفيروسية (<bdi dir=\"ltr\">Viral upper respiratory tract infection</bdi>). علاماتو: حرارة واحمرار وتورّم (<bdi dir=\"ltr\">Hotness</bdi>, <bdi dir=\"ltr\">redness and swelling</bdi>). والنتيجة: التئام كامل (<bdi dir=\"ltr\">Complete resolution</bdi>)، مثال: التهاب البلعوم (<bdi dir=\"ltr\">Pharyngitis</bdi>).",
+     "🎭 <b>Analogy Trick:</b> أخف معركة بتشبه مشاجرة صغيرة بالحارة: بتنحل لحالها.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">أخف شكل التهاب حاد؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Catarrhal</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مثال؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Pharyngitis</bdi> (زكام)</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Mild infection of mucous membrane",
+     "Hot + red + swollen",
+     "Complete resolution"
+    ],
+    "m": "زكام: خفيف وبيروح.",
+    "h": "Catarrhal → mild mucosal infection (viral URTI) → hotness + redness + swelling → complete resolution (pharyngitis)",
+    "c": "أخف شكل، بيطيب كامل. مثال: <bdi dir=\"ltr\">Pharyngitis.</bdi>",
+    "tr": "🤧 (<bdi dir=\"ltr\">Catarrhal</bdi>) زكام: أخف شكل، بيطيب كامل. مثال (<bdi dir=\"ltr\">Pharyngitis</bdi>)."
+   },
+   {
+    "e": "💧",
+    "t": "Serous inflammation — الشكل 2: المصلي",
+    "key": "ser",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> إذا زادت المعركة شوي، بتطلع فقاعة فيها ماي صافي. متل لما تحرق إيدك بمي سخن.",
+     "🩺 <b>Medical Explanation:</b> الشكل التاني: الالتهاب المصلي (<bdi dir=\"ltr\">Serous inflammation</bdi>). تجمّع مفرط لسائل قليل البروتين (<bdi dir=\"ltr\">Excessive accumulation of protein-poor fluid</bdi>) وبينتج عنو فقاعة (<bdi dir=\"ltr\">Blister formation</bdi>). وكتب الدكتور \"<bdi dir=\"ltr\">in tissue</bdi>\" يعني بالنسيج. أمثلة: الحروق (<bdi dir=\"ltr\">Burn</bdi>) والعدوى الفيروسية بالجلد (<bdi dir=\"ltr\">Viral infection of skin</bdi>). وبالسلايد صورة لانصباب جنبي (<bdi dir=\"ltr\">Pleural effusion</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الفقاعة متل بالون صغير مليان ماي نضيف.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو الـ <bdi dir=\"ltr\">Serous</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ سائل صافي قليل البروتين</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مثال؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ فقاعة الحرق (<bdi dir=\"ltr\">Blister</bdi>)</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Protein-poor fluid",
+     "Blister",
+     "Burn / viral skin infection",
+     "Pleural effusion"
+    ],
+    "m": "فقاعة ماي صافي.",
+    "h": "Excessive protein-poor fluid → blister | burn, viral skin infection | pleural effusion",
+    "c": "مصلي = سائل قليل البروتين، فقاعة.",
+    "tr": "🫧 (<bdi dir=\"ltr\">Serous</bdi>) فقاعة ماي: سائل قليل البروتين. حرق أو فيروس جلدي، وانصباب جنب."
+   },
+   {
+    "e": "🕸️",
+    "t": "Fibrinous inflammation — الشكل 3: الليفيني",
+    "key": "fib",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> وإذا المعركة أقوى، بيطلع من الأنابيب بروتين كبير بيتحوّل لغراء بيغطّي السطح.",
+     "🩺 <b>Medical Explanation:</b> الشكل التالت: الالتهاب الليفيني (<bdi dir=\"ltr\">Fibrinous inflammation</bdi>). مميّز لإصابة أشد (<bdi dir=\"ltr\">More severe injury</bdi>): نفاذية وعائية أكبر (<bdi dir=\"ltr\">Greater vascular permeability</bdi>) مع خروج كمية كبيرة من الفيبرينوجين (<bdi dir=\"ltr\">Exudation of large amount of fibrinogen</bdi>).",
+     "والنتيجة إمّا التئام كامل (<bdi dir=\"ltr\">Complete resolution</bdi>) أو تنظّم (<bdi dir=\"ltr\">Organization</bdi>): ترسّب الفيبرين (<bdi dir=\"ltr\">Deposition of fibrin</bdi>) وبعدها نمو شعيرات جديدة وخلايا ليفية (<bdi dir=\"ltr\">Ingrowth of new capillary & fibroblast</bdi>) وبتنتهي بتليّف (<bdi dir=\"ltr\">Fibrosis</bdi>). وكتب الدكتور بالهامش: إذا تجمّعت كميات كبيرة من الفيبرين بالسائل الموجود بالتامور (<bdi dir=\"ltr\">Pericardium</bdi>)، راح تتحوّل لنسيج ليفي (<bdi dir=\"ltr\">Fibrous tissue</bdi>)، وهيك بيصير عندنا التهاب تامور انضغاطي (<bdi dir=\"ltr\">Constrictive pericarditis</bdi>).",
+     "وهو شائع بالأغشية المصلية والمفاصل (<bdi dir=\"ltr\">Serosal membranes & joints</bdi>): التامور (<bdi dir=\"ltr\">Pericardium</bdi>) ← التهاب تامور ليفيني (<bdi dir=\"ltr\">Fibrinous pericarditis</bdi>). الجنب (<bdi dir=\"ltr\">Pleura</bdi>) ← <bdi dir=\"ltr\">Fibrinous pleuritis.</bdi> الصفاق (<bdi dir=\"ltr\">Peritoneum</bdi>) ← <bdi dir=\"ltr\">Fibrinous peritonitis.</bdi>",
+     "🎭 <b>Analogy Trick:</b> الفيبرين متل غراء بيلصق الطبقات ببعضها. إذا ضل كتير بيقسّي المكان.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بيطلع بالليفيني؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Fibrinogen → Fibrin</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">وين بيطلع؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Pericardium · Pleura · Peritoneum</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "More severe injury",
+     "↑ permeability",
+     "Fibrinogen → fibrin",
+     "Resolution or organization"
+    ],
+    "m": "غراء عالسطح، يا شفاء يا تليّف.",
+    "h": "More severe injury → ↑ permeability → large fibrinogen exudate → fibrin → resolution OR organization (capillaries + fibroblasts → fibrosis)",
+    "c": "ليفيني: إصابة أشد + فيبرينوجين. شائع بالأغشية المصلية.",
+    "tr": "🕸️ (<bdi dir=\"ltr\">Fibrinous</bdi>) شبكة: إصابة أشد، نفاذية أكتر، فيبرينوجين خرج وصار فيبرين. بيشفى أو بيتنظّم (<bdi dir=\"ltr\">Organization</bdi>)."
+   },
+   {
+    "e": "🟠",
+    "t": "Suppurative (purulent) inflammation — الشكل 4: القيحي",
+    "key": "sup",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> إذا الأشرار جراثيم معيّنة، المصنع اشتغل وطلع قيح كتير مع خراج.",
+     "🩺 <b>Medical Explanation:</b> الشكل الرابع: الالتهاب القيحي (<bdi dir=\"ltr\">Suppurative</bdi> / <bdi dir=\"ltr\">Purulent inflammation</bdi>). بيتميّز بتجمّع كمية كبيرة من القيح (<bdi dir=\"ltr\">Large amount of pus</bdi>) مع تكوّن خراج (<bdi dir=\"ltr\">Abscess formation</bdi>). وبيجي من عدوى بكتيرية معيّنة (<bdi dir=\"ltr\">Certain bacterial infection</bdi>). وكتب الدكتور: الخراج الحاد (<bdi dir=\"ltr\">Acute abscess</bdi>) مرتبط بالتهاب حاد وإحمرار (<bdi dir=\"ltr\">Redness</bdi>). وفي صور بالسلايد: خراج جلدي وخراج بالدماغ.",
+     "🎭 <b>Analogy Trick:</b> مصنع قيح اشتغل بكل طاقتو.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو الـ <bdi dir=\"ltr\">Suppurative</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ قيح كتير + خراج</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">السبب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ جراثيم معيّنة (<bdi dir=\"ltr\">Pyogenic</bdi>)</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Large amount of pus",
+     "Abscess",
+     "Certain bacteria",
+     "Acute abscess = redness"
+    ],
+    "m": "مصنع قيح، خراج.",
+    "h": "Suppurative → large amount of pus + abscess formation ← certain bacterial infection",
+    "c": "قيحي = قيح كتير + خراج من بكتيريا معيّنة.",
+    "tr": "🟡 (<bdi dir=\"ltr\">Suppurative</bdi>) مصنع قيح: قيح كتير وخراج من جراثيم معيّنة."
+   },
+   {
+    "e": "🕳️",
+    "t": "Acute ulceration — الشكل 5: التقرّح الحاد",
+    "key": "ulc",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> العدوى القوية أكلت سطح الجلد، فصار فيه حفرة.",
+     "🩺 <b>Medical Explanation:</b> الشكل الخامس: التقرّح الحاد (<bdi dir=\"ltr\">Acute ulceration</bdi>). لما العدوى تكون شديدة وبتضرب الظهارة السطحية (<bdi dir=\"ltr\">Surface epithelium</bdi>)، بيصير فقدان لجزء من هالظهارة (<bdi dir=\"ltr\">Loss of part of the epithelium</bdi>). وبالسلايد صورة مجهرية للتقرّح.",
+     "🎭 <b>Analogy Trick:</b> القرحة متل حفرة بالشارع راح منها الإسفلت.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو القرحة؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ فقدان الظهارة السطحية</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">السبب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ عدوى شديدة</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Severe infection",
+     "Surface epithelium affected",
+     "Loss of epithelium"
+    ],
+    "m": "حفرة براس الشارع.",
+    "h": "Severe infection → surface epithelium affected → loss of part of the epithelium → ulcer",
+    "c": "قرحة = فقدان جزء من الظهارة.",
+    "tr": "🕳️ (<bdi dir=\"ltr\">Ulcer</bdi>) نقص جزء من الغطاء: عدوى شديدة قشّرت الظهارة."
+   },
+   {
+    "e": "🧫",
+    "t": "Pseudomembranous inflammation — الشكل 6: الغشاء الكاذب",
+    "key": "pseudo",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بمكانين بس بيطلع شي شكلو غشاء لكن هو نسيج ميت: القولون والبلعوم. والمجرم جرثومة <bdi dir=\"ltr\">C. difficile.</bdi>",
+     "🩺 <b>Medical Explanation:</b> الشكل السادس: الالتهاب الغشائي الكاذب (<bdi dir=\"ltr\">Pseudomembranous inflammation</bdi>). كتب الدكتور: بيصير بس بالقولون (<bdi dir=\"ltr\">Colon</bdi>) ومكان تاني هو البلعوم الفموي (<bdi dir=\"ltr\">Oropharynx</bdi>، يعني الحلق).",
+     "هو عدوى نخرية (<bdi dir=\"ltr\">Necrotizing infection</bdi>) بالظهارة السطحية للقولون، سببها بكتيريا معيّنة اسمها <bdi dir=\"ltr\">Clostridium difficile.</bdi> وكتب الدكتور: إحمرار شديد (<bdi dir=\"ltr\">Severe redness</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الغشاء الكاذب متل قناع: شكلو وجه بس هو مش وجه.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">أين بيصير الغشاء الكاذب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Colon + Oropharynx</bdi> بس</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">جرثومتو؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">C. difficile</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Colon + Oropharynx only",
+     "Necrotizing infection of surface epithelium",
+     "Clostridium difficile"
+    ],
+    "m": "قناع بالقولون وبالبلعوم.",
+    "h": "Pseudomembranous → only colon + oropharynx | necrotizing infection of surface epithelium ← Clostridium difficile",
+    "c": "غشاء كاذب = بس قولون وبلعوم. <bdi dir=\"ltr\">C. difficile.</bdi>",
+    "tr": "🎭 (<bdi dir=\"ltr\">Pseudomembranous</bdi>) غشاء كاذب: بس قولون وبلعوم، من (<bdi dir=\"ltr\">Clostridium difficile</bdi>)."
+   },
+   {
+    "e": "📋",
+    "t": "Extra Info: Morphological types — تفاصيل إضافية",
+    "key": "x2",
+    "say": null,
+    "i": "",
+    "b": [
+     "<div dir=\"rtl\"><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">النوع</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">النتيجة / مثال</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">ملاحظة الدكتور</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Catarrhal</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Complete resolution · Pharyngitis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Mild infection of mucous membrane</bdi> (<bdi dir=\"ltr\">viral URTI</bdi>)</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Serous</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Blister · Burn · viral skin infection</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">in tissue · Pleural effusion</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Fibrinous</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Resolution</bdi> أو <bdi dir=\"ltr\">Organization</bdi> (<bdi dir=\"ltr\">fibrosis</bdi>)</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Fibrinous pericarditis</bdi> / <bdi dir=\"ltr\">pleuritis</bdi> / <bdi dir=\"ltr\">peritonitis · Constrictive pericarditis</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Suppurative</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Pus + abscess</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Acute abscess = redness</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Ulceration</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Loss of surface epithelium</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Severe infection</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Pseudomembranous</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Necrotizing infection · C. difficile</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Colon + oropharynx only · severe redness</bdi></td></tr></table></div>",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "6 types"
+    ],
+    "m": "<bdi dir=\"ltr\">Extra Info</bdi>: <bdi dir=\"ltr\">types</bdi>",
+    "h": "Extra Info: 6 morphological types",
+    "c": "جدول الأشكال الستة."
+   }
+  ],
+  "hl": [
+   "1) Catarrhal: mild infection of mucous membrane (viral URTI) | hotness, redness, swelling | complete resolution | e.g. pharyngitis",
+   "2) Serous: excessive accumulation of protein-poor fluid → blister | burn, viral infection of skin | pleural effusion (picture)",
+   "3) Fibrinous: more severe injury, greater permeability, large fibrinogen exudate | outcome: resolution or organization | serosal membranes + joints | pericardium → fibrinous pericarditis; pleura → fibrinous pleuritis; peritoneum → fibrinous peritonitis",
+   "4) Suppurative (purulent): large amount of pus + abscess formation | certain bacterial infection | acute abscess associated with acute inflammation, redness",
+   "5) Acute ulceration: severe infection affecting surface epithelium → loss of part of the epithelium",
+   "6) Pseudomembranous: only in colon + oropharynx | necrotizing infection of surface epithelium | Clostridium difficile | severe redness",
+   "Extra Info: 6 morphological types"
+  ]
+ },
+ {
+  "n": 3,
+  "en": "Lymphatics + Arachidonic diagram",
+  "ar": "اللمف ومخطط Arachidonic acid",
+  "emoji": "🚰",
+  "col": "#e8e0ff",
+  "teaser": "دور اللمف + مخطط السلايد 12",
+  "cap": "🚰",
+  "q": "اللمف بيشارك بالالتهاب، وبعدها سلايد مخطط الـ Arachidonic acid.",
+  "cons": [
+   {
+    "e": "🚰",
+    "t": "Role of lymphatics in inflammation — دور الأوعية اللمفاوية",
+    "key": "lymph",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بالبيت مجاري كبيرة بتشيل الماي الزايد من مكان المعركة. بس أحياناً الأشرار بيركبوا فيها ويروحوا لبعيد.",
+     "🩺 <b>Medical Explanation:</b> سلايد \"<bdi dir=\"ltr\">Role of lymphatic in inflammation</bdi>\" (وكتب الدكتور إنو من سمنار). الأوعية اللمفاوية (<bdi dir=\"ltr\">Lymphatics</bdi>) بتشارك بالاستجابة الالتهابية. بالوضع الطبيعي، الكمية الصغيرة من السائل بين الخلايا (<bdi dir=\"ltr\">Interstitial fluid</bdi>) بتنشال بالتصريف اللمفاوي (<bdi dir=\"ltr\">Lymphatic drainage</bdi>).",
+     "وبالالتهاب، جريان اللمف بيزيد (<bdi dir=\"ltr\">Lymph flow is increased</bdi>) وبيساعد بتصريف سائل الوذمة (<bdi dir=\"ltr\">Edema fluid</bdi>) من الحيّز خارج الأوعية (<bdi dir=\"ltr\">Extravascular space</bdi>). وكمان ممكن الكريات البيض وحطام الخلايا (<bdi dir=\"ltr\">Leukocytes and cell debris</bdi>) يلاقوا طريقهم للّمف. وبالتفاعلات الالتهابية الشديدة، خصوصاً للميكروبات، ممكن الأوعية اللمفاوية تنقل العامل المسبّب (<bdi dir=\"ltr\">Offending agent</bdi>). وكتب الدكتور: ممكن <bdi dir=\"ltr\">microbes</bdi> تنتقل عبر اللمف وتسبّب التهاب بالأجهزة اللمفاوية.",
+     "والأوعية اللمفاوية نفسها ممكن تلتهب ثانوياً (<bdi dir=\"ltr\">Lymphangitis</bdi>)، وكذلك العقد اللمفاوية المصرِّفة (<bdi dir=\"ltr\">Lymphadenitis</bdi>).",
+     "🎭 <b>Analogy Trick:</b> مجاري المدينة: بتصرّف المي، وبتنقل الوسخ إذا كان في تلوّث.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو وظيفة اللمف بالالتهاب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ بيصرّف الوذمة</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">وشو الخطر؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ ممكن ينقل الميكروب</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "↑ Lymph flow",
+     "Drains edema fluid",
+     "Carries leukocytes + debris",
+     "May transport the offending agent"
+    ],
+    "m": "مجاري بتشيل الماي، وممكن تنقل الميكروب.",
+    "h": "↑ lymph flow → drains edema → leukocytes + debris enter lymph → may carry microbes → lymphangitis → lymphadenitis",
+    "c": "اللمف بيصرّف الوذمة، وممكن ينقل الميكروب.",
+    "tr": "🚰 مجاري المدينة: بتصرّف الماي، وبتنقل الوسخ إذا في تلوّث."
+   },
+   {
+    "e": "🔴",
+    "t": "Lymphangitis and lymphadenitis — الخطوط الحمرا",
+    "key": "lymphang",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> إذا المجاري نفسها التهبت، بتبين خطوط حمرا على الجلد. والمحطات الكبيرة بتتضخّم وبتوجّع.",
+     "🩺 <b>Medical Explanation:</b> العقد الملتهبة (<bdi dir=\"ltr\">Inflamed lymph nodes</bdi>) غالباً بتكبر بسبب فرط تنسّج الجريبات اللمفاوية (<bdi dir=\"ltr\">Hyperplasia of the lymphoid follicles</bdi>). هالمجموعة من التغيّرات اسمها التهاب العقد التفاعلي أو الالتهابي (<bdi dir=\"ltr\">Reactive</bdi> / <bdi dir=\"ltr\">Inflammatory lymphadenitis</bdi>). وكتب الدكتور: لأنو العوامل اللي حفّزت الالتهاب بالنسيج دخلت للّمف ووصلت للعقدة، فحفّزت الخلايا الدفاعية بالعقدة، فبتنشط وتتكاثر (<bdi dir=\"ltr\">Hyperplasia</bdi>).",
+     "وللأطباء: وجود خطوط حمرا (<bdi dir=\"ltr\">Red streaks</bdi>) قرب جرح جلدي هو علامة واضحة على عدوى بالجرح. هالخطوط بتتبع مسار القنوات اللمفاوية وهي تشخيصية للـ <bdi dir=\"ltr\">Lymphangitis</bdi>، وممكن يكون معها تضخّم مؤلم بالعقد المصرِّفة (<bdi dir=\"ltr\">Painful enlargement of the draining lymph nodes</bdi>) وهيدا <bdi dir=\"ltr\">Lymphadenitis.</bdi> وبالسلايد صورة لرقبة منتفخة وصورة لذراع فيها خط أحمر (<bdi dir=\"ltr\">Streak</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الخط الأحمر متل خط مرسوم بالأحمر بيبيّن طريق الميكروب.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">علامة التهاب الأوعية اللمفاوية؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ خطوط حمرا على الجلد (<bdi dir=\"ltr\">Red streaks</bdi>)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">التهاب العقد اسمو؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Lymphadenitis</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Hyperplasia of lymphoid follicles",
+     "Reactive lymphadenitis",
+     "Red streaks near wound",
+     "Painful nodes"
+    ],
+    "m": "خط أحمر = التهاب المجاري.",
+    "h": "Wound infection → red streaks = lymphangitis → painful enlarged nodes = lymphadenitis (hyperplasia of lymphoid follicles)",
+    "c": "خط أحمر قرب جرح = <bdi dir=\"ltr\">Lymphangitis.</bdi> عقدة مؤلمة = <bdi dir=\"ltr\">Lymphadenitis.</bdi>",
+    "tr": "🔴 (<bdi dir=\"ltr\">Lymphangitis</bdi>) خط أحمر قرب الجرح. (<bdi dir=\"ltr\">Lymphadenitis</bdi>) عقدة مؤلمة وكبيرة: متل بوليس السير عم يوصّل الخبر."
+   },
+   {
+    "e": "🧬",
+    "t": "Arachidonic acid metabolism (slide 12) — مخطط Arachidonic acid",
+    "key": "arach",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> تخيّل مصنع بيبدأ من جدار الخلية. مادة أولى بتتحوّل لمادة وسيطة، وبعدين بتتفرّع لدروب مختلفة، وكل درب بيصنع منتجات بتعمل شغلات مختلفة بالالتهاب.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">12</bdi> صورة مخطط (<bdi dir=\"ltr\">Diagram</bdi>) من غير شرح نصّي. تعال نقراه سوا من فوق لتحت. بيبدأ بفوسفوليبيدات غشاء الخلية (<bdi dir=\"ltr\">Cell membrane phospholipids</bdi>). إنزيم <bdi dir=\"ltr\">Phospholipases</bdi> بيحوّلها لـ <bdi dir=\"ltr\">Arachidonic acid.</bdi> وعلى المخطط: الستيرويدات (<bdi dir=\"ltr\">Steroids</bdi>) بتثبّط <bdi dir=\"ltr\">Phospholipases.</bdi>",
+     "من <bdi dir=\"ltr\">Arachidonic acid</bdi> في دربين رئيسيين. الدرب الأول بإنزيم <bdi dir=\"ltr\">Cyclooxygenase</bdi> (وبيثبّطو <bdi dir=\"ltr\">COX-1 and COX-2 inhibitors</bdi>، <bdi dir=\"ltr\">aspirin</bdi>، <bdi dir=\"ltr\">indomethacin</bdi>). بيعطي <bdi dir=\"ltr\">Prostaglandin G2</bdi> ثم <bdi dir=\"ltr\">H2.</bdi> ومنو: <bdi dir=\"ltr\">Prostacyclin PGI2</bdi> (بيسبّب توسّع أوعية وبيثبّط تجمّع الصفائح)، <bdi dir=\"ltr\">Thromboxane A2 TXA2</bdi> (بيسبّب تضيّق أوعية وبيعزّز تجمّع الصفائح)، و <bdi dir=\"ltr\">PGD2</bdi> / <bdi dir=\"ltr\">PGE2</bdi> (بيسبّبوا توسّع أوعية وزيادة نفاذية).",
+     "الدرب التاني بإنزيم <bdi dir=\"ltr\">5-Lipoxygenase</bdi> (بيثبّطو <bdi dir=\"ltr\">Lipoxygenase inhibitors</bdi>). بيعطي <bdi dir=\"ltr\">5-HPETE</bdi> ثم <bdi dir=\"ltr\">5-HETE</bdi> (للانجذاب الكيميائي <bdi dir=\"ltr\">Chemotaxis</bdi>). وبعدها <bdi dir=\"ltr\">Leukotriene A4</bdi> (<bdi dir=\"ltr\">LTA4</bdi>) ← <bdi dir=\"ltr\">Leukotriene B4</bdi> (<bdi dir=\"ltr\">chemotaxis</bdi>). و <bdi dir=\"ltr\">LTC4</bdi> و <bdi dir=\"ltr\">LTD4</bdi> و <bdi dir=\"ltr\">LTE4</bdi> بيسبّبوا تشنّج قصبي (<bdi dir=\"ltr\">Bronchospasm</bdi>) وزيادة نفاذية (<bdi dir=\"ltr\">Increased vascular permeability</bdi>)، وبيثبّطهم <bdi dir=\"ltr\">Leukotriene receptor antagonists.</bdi> وبإنزيم <bdi dir=\"ltr\">12-Lipoxygenase</bdi> بتتكوّن <bdi dir=\"ltr\">Lipoxin A4</bdi> (<bdi dir=\"ltr\">LXA4</bdi>) و <bdi dir=\"ltr\">Lipoxin B4</bdi> (<bdi dir=\"ltr\">LXB4</bdi>) ونتيجتها تثبيط الالتهاب (<bdi dir=\"ltr\">Inhibition of inflammation</bdi>). وكمان في <bdi dir=\"ltr\">Other lipoxygenases ← HPETEs ← HETEs.</bdi>",
+     "🎭 <b>Analogy Trick:</b> المخطط متل سلسلة مصانع: مادة خام، ومنها خطوط إنتاج، وكل خط منتجو غير. وبعض المنتجات بتفتح الأوعية وبعضها بتسكّرها.",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Phospholipids → Phospholipases",
+     "Arachidonic acid",
+     "Cyclooxygenase → PGs, TXA2",
+     "5-Lipoxygenase → Leukotrienes",
+     "12-Lipoxygenase → Lipoxins"
+    ],
+    "m": "مادة خام، <bdi dir=\"ltr\">3</bdi> خطوط إنتاج، منتجات مختلفة.",
+    "h": "Membrane phospholipids → Phospholipases → Arachidonic acid → COX (PGI2, TXA2, PGD2/PGE2) | 5-LOX (LTB4 chemotaxis; LTC4/D4/E4 bronchospasm + permeability) | 12-LOX (lipoxins: inhibit inflammation)",
+    "c": "<bdi dir=\"ltr\">Cyclooxygenase</bdi> و <bdi dir=\"ltr\">5-Lipoxygenase</bdi> و <bdi dir=\"ltr\">12-Lipoxygenase</bdi>: <bdi dir=\"ltr\">3</bdi> دروب من <bdi dir=\"ltr\">Arachidonic acid.</bdi>",
+    "tr": "🌳 شجرة (<bdi dir=\"ltr\">Arachidonic acid</bdi>): بتتفرّع تلات دروب: (<bdi dir=\"ltr\">COX</bdi>) و(<bdi dir=\"ltr\">5-LOX</bdi>) و(<bdi dir=\"ltr\">12-LOX</bdi>). كل درب بيعطي مواد (<bdi dir=\"ltr\">PGs, TXA2, LTs</bdi>)."
+   },
+   {
+    "e": "📋",
+    "t": "Extra Info: Lymphatics — تفاصيل إضافية",
+    "key": "x3",
+    "say": null,
+    "i": "",
+    "b": [
+     "<div dir=\"rtl\"><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">الموضوع</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">التفصيل</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Lymph flow</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">↑ بالالتهاب · بيصرّف <bdi dir=\"ltr\">edema fluid</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Severe reactions</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">اللمف ممكن ينقل <bdi dir=\"ltr\">offending agent</bdi> / <bdi dir=\"ltr\">microbes</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Lymphangitis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Red streaks</bdi> تتبع القنوات اللمفاوية</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Lymphadenitis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Painful enlargement · hyperplasia of lymphoid follicles = reactive</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Arachidonic diagram</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Steroids</bdi> ⊣ <bdi dir=\"ltr\">Phospholipases · Aspirin</bdi> ⊣ <bdi dir=\"ltr\">COX · Lipoxygenase inhibitors · Leukotriene receptor antagonists</bdi></td></tr></table></div>",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Lymph"
+    ],
+    "m": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">lymph</bdi>",
+    "h": "Extra Info: lymphatics + arachidonic",
+    "c": ""
+   }
+  ],
+  "hl": [
+   "Lymph flow ↑ → drains edema fluid | leukocytes + debris may enter lymph | severe reactions: transports offending agent | Lymphangitis + Lymphadenitis",
+   "Inflamed nodes enlarge: hyperplasia of lymphoid follicles = reactive lymphadenitis | Red streaks near skin wound = lymphangitis | painful draining nodes = lymphadenitis",
+   "Steroids ⊣ Phospholipases | Aspirin/COX inhibitors ⊣ COX | PGI2: vasodilation + ↓platelets | TXA2: vasoconstriction + ↑platelets | PGD2/PGE2: vasodilation + ↑permeability | LTB4: chemotaxis | LTC4/D4/E4: bronchospasm + ↑permeability | Lipoxins: inhibit inflammation",
+   "Extra Info: lymphatics + arachidonic"
+  ]
+ },
+ {
+  "n": 4,
+  "en": "Chronic inflammation",
+  "ar": "الالتهاب المزمن",
+  "emoji": "⏳",
+  "col": "#ffe3d3",
+  "teaser": "تعريف · طرق · مكوّنات · بلاعم · شكل عياني",
+  "cap": "🧱",
+  "q": "هلق ننتقل للمزمن: التهاب وتدمير وترميم بنفس الوقت.",
+  "cons": [
+   {
+    "e": "⏳",
+    "t": "Chronic inflammation: definition and causes — التعريف والأسباب",
+    "key": "cdef",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> المعركة ما خلصت وصارت حرب طويلة: بيوت بتنهدم وبتنبني بنفس الوقت.",
+     "🩺 <b>Medical Explanation:</b> بنبلّش الجزء التاني: الالتهاب المزمن (<bdi dir=\"ltr\">Chronic inflammation</bdi>). تعريفو: التهاب طويل المدة (<bdi dir=\"ltr\">Prolonged duration</bdi>) بيصير فيه <bdi dir=\"ltr\">3</bdi> أشياء بنفس الوقت: التهاب فعّال (<bdi dir=\"ltr\">Active inflammation</bdi>)، وتدمير نسيج (<bdi dir=\"ltr\">Tissue destruction</bdi>)، ومحاولات ترميم (<bdi dir=\"ltr\">Attempts at repair</bdi>).",
+     "وبينتج عن <bdi dir=\"ltr\">4</bdi> أشياء: عدوى مستمرة (<bdi dir=\"ltr\">Persistent infection</bdi>) متل السل <bdi dir=\"ltr\">TB</bdi> والفيروسات والفطور (<bdi dir=\"ltr\">Fungi</bdi>). سموم مستمرة (<bdi dir=\"ltr\">Persistent toxins</bdi>) داخلية (<bdi dir=\"ltr\">Endogenous</bdi>) أو خارجية (<bdi dir=\"ltr\">Exogenous</bdi>). جسم غريب مستمر (<bdi dir=\"ltr\">Persistent foreign body</bdi>). وأمراض التهابية بوساطة المناعة (<bdi dir=\"ltr\">Immune mediated inflammatory diseases</bdi> / <bdi dir=\"ltr\">Autoimmunity</bdi>). وكتب الدكتور بالهامش: لهيك الواحد إذا ما انحلّ الالتهاب، ما بيقدر يتخلّص من المسبّب، مستمر.",
+     "🎭 <b>Analogy Trick:</b> متل ورشة ترميم بتشتغل بحي فيه حريق صغير لسا شغّال.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو الالتهاب المزمن؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ التهاب + تدمير + ترميم بنفس الوقت</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">اذكر <bdi dir=\"ltr\">4</bdi> أسباب.</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Infection · Toxins · Foreign body · Autoimmunity</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Persistent infection",
+     "Persistent toxins",
+     "Persistent foreign body",
+     "Autoimmunity"
+    ],
+    "m": "حرب طويلة: هدم وبناء.",
+    "h": "Chronic = prolonged: active inflammation + destruction + repair simultaneously ← persistent infection / toxins / foreign body / autoimmunity",
+    "c": "مزمن = التهاب + تدمير + ترميم بنفس الوقت.",
+    "tr": "⏱️ المزمن بيجمع التلاتة بنفس الوقت: التهاب، تدمير، وترميم. السبب: عدوى مستمرة، سموم، جسم غريب، أو مناعة ذاتية."
+   },
+   {
+    "e": "🛤️",
+    "t": "Three ways chronic inflammation arises — 3 طرق",
+    "key": "cways",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> في <bdi dir=\"ltr\">3</bdi> دروب بتوصل لنفس الحرب الطويلة: معركة ما خلصت، معارك صغيرة بتتكرر، أو حرب طويلة من الأول.",
+     "🩺 <b>Medical Explanation:</b> كيف بيبلّش المزمن؟ بثلاث طرق. الأولى: التطوّر من الالتهاب الحاد (<bdi dir=\"ltr\">Progression from acute inflammation</bdi>)، بسبب فشل الحاد بالانحلال بوجود سموم مستمرة أو جسم غريب (<bdi dir=\"ltr\">Persistent toxin and F.B</bdi>)، أو خراج غير مصرَّف (<bdi dir=\"ltr\">Undrained abscess</bdi>). الثانية: نوبات متكررة من الالتهاب الحاد (<bdi dir=\"ltr\">Recurrent episodes of acute inflammation</bdi>). والثالثة: التهاب مزمن من البداية (<bdi dir=\"ltr\">Chronic inflammation from the start</bdi>).",
+     "🎭 <b>Analogy Trick:</b> <bdi dir=\"ltr\">3</bdi> طرق بتودّي لنفس المدينة.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\"><bdi dir=\"ltr\">3</bdi> طرق بداية المزمن؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ من حاد · حاد متكرر · مزمن من البداية</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مثال المزمن من البداية؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Autoimmunity</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Progression from acute",
+     "Recurrent acute",
+     "Chronic from the start"
+    ],
+    "m": "من حاد، متكرر، أو من الأول.",
+    "h": "Acute fails to resolve (persistent toxin / F.B / undrained abscess) OR recurrent acute episodes OR chronic from the start",
+    "c": "<bdi dir=\"ltr\">3</bdi> طرق: من حاد، حاد متكرر، أو مزمن من أول لحظة.",
+    "tr": "🛣️ ثلاث طرق للمزمن: حاد ما شفى، حاد يتكرّر، أو مزمن من البداية."
+   },
+   {
+    "e": "⚖️",
+    "t": "Components of chronic inflammation — مكوّنات المزمن",
+    "key": "ccomp",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بالحرب الطويلة ما في سيارات إطفاء ولا ماي. بدالها جنود جداد، وهدم، وبناء. وقال الدكتور: بالحاد استعملنا المسدسات، بالمزمن بنجيب الدبابات، بتقضي على المسبّب بس بتضرّ النسيج.",
+     "🩺 <b>Medical Explanation:</b> عنوان السلايد \"<bdi dir=\"ltr\">Components of chronic inflammation</bdi>\" وتحتو ملاحظة: بدون استجابة وعائية (<bdi dir=\"ltr\">Without vascular response</bdi>)، فما في حرارة ولا احمرار ولا وذمة (<bdi dir=\"ltr\">No hotness</bdi>, <bdi dir=\"ltr\">redness</bdi>, <bdi dir=\"ltr\">edema</bdi>).",
+     "بالمقارنة مع الحاد، المزمن بيتميّز بـ <bdi dir=\"ltr\">3</bdi> أشياء. الأول: تجنيد خلايا وحيدة النواة (<bdi dir=\"ltr\">Recruitment of mononuclear cells</bdi>). والسلايد بيسأل \"ليش؟\" وعلّق الدكتور: بالحاد استعملنا العدلات (<bdi dir=\"ltr\">Neutrophils</bdi>). والتاني: تدمير نسيج (<bdi dir=\"ltr\">Tissue destruction</bdi>) بسبب المحفّز المستمر أو بسبب الخلايا الالتهابية نفسها، والسلايد بيسأل \"كيف؟\". والتالت: محاولات شفاء (<bdi dir=\"ltr\">Attempts at healing</bdi>) باستبدال النسيج المتضرّر بنسيج ضام (<bdi dir=\"ltr\">Connective tissue replacement</bdi>)، مع تكاثر أوعية صغيرة (<bdi dir=\"ltr\">Angiogenesis</bdi>) وتليّف (<bdi dir=\"ltr\">Fibrosis</bdi>).",
+     "وهون الدكتور ضرب مثل حلو: استعملنا المسدسات بالحاد (العدلات) بس ما فادت، فنجيب الدبابات بالمزمن (البلاعم) حتى نقضي على المسبّب، بس الدبابات راح تضرّ النسيج كلّو.",
+     "🎭 <b>Analogy Trick:</b> الحاد: مسدسات (عدلات) سريعة. المزمن: دبابات (بلاعم) قوية بس بتخرّب.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">خلايا الحاد والمزمن؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ حاد = <bdi dir=\"ltr\">Neutrophils.</bdi> مزمن = <bdi dir=\"ltr\">Macrophages</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">هل في أحمر وسخن بالمزمن؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ لا، ما في استجابة وعائية</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "No vascular response",
+     "Mononuclear cells",
+     "Tissue destruction",
+     "Healing attempts: angiogenesis + fibrosis"
+    ],
+    "m": "مسدسات بالحاد، دبابات بالمزمن.",
+    "h": "No vascular response (no heat/redness/edema) → mononuclear cells → destruction → healing (angiogenesis + fibrosis)",
+    "c": "حاد = عدلات (مسدسات). مزمن = بلاعم (دبابات) وبتضرّ النسيج.",
+    "tr": "⚔️ الحاد عدلات (مسدسات)، والمزمن بلاعم (دبابات). بلا احمرار ولا حرارة ولا وذمة، لكن بتخرّب وبترمّم (<bdi dir=\"ltr\">Angiogenesis + Fibrosis</bdi>)."
+   },
+   {
+    "e": "🦠",
+    "t": "Role of macrophages — دور البلاعم",
+    "key": "mac",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> القائد بالمزمن هو البلعم. بيطلع من الوعاء، بيكبر، وبيتنشّط بالإنترفيرون. وبيشتغل بشغلتين.",
+     "🩺 <b>Medical Explanation:</b> شو بيصير؟ أول شي، الوحيدات (<bdi dir=\"ltr\">Monocytes</bdi>) بتهاجر للحيّز خارج الأوعية (<bdi dir=\"ltr\">Extravascular space</bdi>) عن طريق التعبير عن جزيئات التصاق معيّنة (<bdi dir=\"ltr\">Specific adhesion molecules</bdi>) وإفراز عوامل كيميائية جاذبة (<bdi dir=\"ltr\">Chemotactic factors</bdi>). كتب الدكتور: <bdi dir=\"ltr\">Monocyte</bdi> بيطلع من الأوعية الدموية للنسيج، بعدها بيتحوّل لـ <bdi dir=\"ltr\">Macrophage</bdi>، وهيدا بدوره بيفرز مواد كيميائية بتحفّز عمليات تانية، عدا مهمتو الأساسية: البلعمة (<bdi dir=\"ltr\">Phagocytosis</bdi>).",
+     "بعدين بتتمايز لبلاعم أكبر (<bdi dir=\"ltr\">Differentiate into larger macrophages</bdi>). وبعدين بتتنشّط بالسايتوكينات (<bdi dir=\"ltr\">Cytokines</bdi>) مثل الإنترفيرون (<bdi dir=\"ltr\">Interferon</bdi>)، وهالبلاعم المنشّطة بتفرز منتجات فعّالة (<bdi dir=\"ltr\">Chemical mediators</bdi>) بتسبّب: أذية نسيج (<bdi dir=\"ltr\">Tissue injury</bdi>) متل الإنزيمات ومستقلبات الأكسجين (<bdi dir=\"ltr\">O2 metabolites</bdi>)، وتليّف (<bdi dir=\"ltr\">Fibrosis</bdi>) متل <bdi dir=\"ltr\">FGF.</bdi>",
+     "🎭 <b>Analogy Trick:</b> عامل ورشة بيهدم القديم وبيبني الجديد.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مين القائد بالمزمن؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Macrophage</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بينشّطو؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Interferon</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Monocytes emigrate (adhesion molecules + chemotactic factors)",
+     "Differentiate into macrophages",
+     "Activated by interferon",
+     "Injury (enzymes, O2) + Fibrosis (FGF)"
+    ],
+    "m": "بلعم: بيهدم وبيبني.",
+    "h": "Monocytes emigrate → macrophages → activated by interferon → secrete mediators: tissue injury (enzymes, O2 metabolites) + fibrosis (FGF)",
+    "c": "بلعم = بيأذي (إنزيمات) وبيعمل تليّف (<bdi dir=\"ltr\">FGF</bdi>). نشّطو <bdi dir=\"ltr\">Interferon.</bdi>",
+    "tr": "🛡️ البلعم (<bdi dir=\"ltr\">Macrophage</bdi>) سلاح ذو حدّين: إنزيمات بتخرّب النسيج، و(<bdi dir=\"ltr\">FGF</bdi>) بيعمل تليّف. (<bdi dir=\"ltr\">Interferon</bdi>) بينشّطو."
+   },
+   {
+    "e": "🏚️",
+    "t": "Gross morphological features — الشكل العياني",
+    "key": "cgross",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> إذا فتّشنا على أثر الحرب الطويلة بالعين منشوف <bdi dir=\"ltr\">5</bdi> أشياء: خراج بارد، قرحة، جدار سميك، نفق، وممر.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">17</bdi>: الخصائص العيانية للمزمن (<bdi dir=\"ltr\">Gross features</bdi>) بـ <bdi dir=\"ltr\">5</bdi> نقاط. الأولى: خراج مزمن (<bdi dir=\"ltr\">Chronic abscess</bdi> / <bdi dir=\"ltr\">Cold abscess</bdi>)، وكتب الدكتور \"لأنو ماكو <bdi dir=\"ltr\">hotness</bdi> ولا <bdi dir=\"ltr\">redness</bdi>\" يعني لأنو بدون حرارة واحمرار. التانية: قرحة مزمنة (<bdi dir=\"ltr\">Chronic ulcer</bdi>). التالتة: سماكة منتشرة بجدار عضو مجوّف (<bdi dir=\"ltr\">Diffuse thickening of the wall of a hollow viscus</bdi>) ممكن تسبّب تضيّق (<bdi dir=\"ltr\">Stenosis</bdi>). الرابعة: ناسور مستمر (<bdi dir=\"ltr\">Persistent sinus</bdi>). الخامسة: ناسور (<bdi dir=\"ltr\">Fistula</bdi>) وهو فتحة بين سطحين (<bdi dir=\"ltr\">An opening between two surfaces</bdi>).",
+     "🎭 <b>Analogy Trick:</b> متل مفتّش بيمرّ على الحي وبيسجّل <bdi dir=\"ltr\">5</bdi> آثار.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">اذكر <bdi dir=\"ltr\">3</bdi> أشكال بالعين للمزمن.</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Cold abscess · Chronic ulcer · Wall thickening → Stenosis</bdi> (وكمان <bdi dir=\"ltr\">Sinus</bdi>, <bdi dir=\"ltr\">Fistula</bdi>)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">الفرق بين <bdi dir=\"ltr\">Sinus</bdi> و <bdi dir=\"ltr\">Fistula</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Sinus</bdi> نفق أعمى. <bdi dir=\"ltr\">Fistula</bdi> فتحة بين سطحين</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Cold abscess (no heat/redness)",
+     "Chronic ulcer",
+     "Diffuse wall thickening → stenosis",
+     "Persistent sinus",
+     "Fistula"
+    ],
+    "m": "<bdi dir=\"ltr\">5</bdi> آثار: خراج بارد، قرحة، سماكة، نفق، ممر.",
+    "h": "Cold abscess · chronic ulcer · diffuse wall thickening (→ stenosis) · persistent sinus · fistula (opening between two surfaces)",
+    "c": "<bdi dir=\"ltr\">5</bdi> أشكال عيانية. <bdi dir=\"ltr\">Cold abscess</bdi> = بلا حرارة واحمرار.",
+    "tr": "🔍 خمس أشكال عيانية: خراج بارد (<bdi dir=\"ltr\">Cold abscess</bdi>)، قرحة مزمنة، سماكة جدار، ناسور مستمر (<bdi dir=\"ltr\">Sinus</bdi>)، ونفق (<bdi dir=\"ltr\">Fistula</bdi>) بين سطحين."
+   },
+   {
+    "e": "📋",
+    "t": "Extra Info: Chronic inflammation — تفاصيل إضافية",
+    "key": "x4",
+    "say": null,
+    "i": "",
+    "b": [
+     "<div dir=\"rtl\"><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">الموضوع</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">التفصيل (من صناديق وملاحظات السلايدات)</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Chronic ulcer</bdi> (صندوق)</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">A chronic ulcer is a persistent local defect in the surface of an organ or tissue caused by tissue destruction</bdi>, <bdi dir=\"ltr\">with failure of normal healing</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Thickening</bdi> (صندوق)</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Chronic inflammatory cell infiltration</bdi> (<bdi dir=\"ltr\">lymphocytes + macrophages</bdi>) · <bdi dir=\"ltr\">Fibrosis</bdi> (ترسّب كولاجين) · <bdi dir=\"ltr\">Tissue remodeling · Edema</bdi> قد يساهم لكن مش السبب الأساسي</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Persistent sinus</bdi> (صندوق)</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">1</bdi>) <bdi dir=\"ltr\">Chronic inflammation</bdi> يستمر لبقاء المسبّب <bdi dir=\"ltr\">2</bdi>) <bdi dir=\"ltr\">Tissue destruction</bdi> ممكن يكوّن <bdi dir=\"ltr\">abscess 3</bdi>) <bdi dir=\"ltr\">Sinus tract formation</bdi> نحو سطح الجسم <bdi dir=\"ltr\">4</bdi>) <bdi dir=\"ltr\">Persistent discharge</bdi> قيح/سوائل إذا السبب موجود</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Persistent sinus</bdi> (ملاحظة الدكتور)</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Foreign body</bdi> مثل شعرة تدخل تحت الجلد لمدة طويلة · أو بكتيريا وصلت العظم، <bdi dir=\"ltr\">chronic inflammation</bdi> ما بتقدر تتخلص منها</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">حاد <bdi dir=\"ltr\">vs</bdi> مزمن</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">حاد: العدلات (مسدسات) · مزمن: البلاعم (دبابات) بتقضي على المسبّب بس بتضرّ النسيج</td></tr></table></div>",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Chronic"
+    ],
+    "m": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">chronic</bdi>",
+    "h": "Extra Info: chronic inflammation",
+    "c": ""
+   }
+  ],
+  "hl": [
+   "Chronic inflammation: prolonged duration | active inflammation + tissue destruction + attempts at repair simultaneously | causes: persistent infection (TB, viruses, fungi) + persistent toxins (endogenous/exogenous) + persistent foreign body + autoimmunity",
+   "Chronic arises: 1) progression from acute (failure to resolve: persistent toxin, F.B, undrained abscess) 2) recurrent acute episodes 3) chronic from the start",
+   "Chronic (vs acute): without vascular response = no hotness/redness/edema | recruitment of mononuclear cells (acute used neutrophils) | tissue destruction (persistent stimulus or inflammatory cells) | attempts at healing: connective tissue replacement + angiogenesis + fibrosis",
+   "Monocytes emigrate (adhesion molecules + chemotactic factors) → larger macrophages → activated by cytokines (interferon) → mediators: tissue injury (enzymes, O2 metabolites) + fibrosis (FGF)",
+   "Gross: 1) chronic (cold) abscess 2) chronic ulcer 3) diffuse thickening of hollow viscus wall → stenosis 4) persistent sinus 5) fistula = opening between two surfaces",
+   "Extra Info: chronic inflammation"
+  ]
+ },
+ {
+  "n": 5,
+  "en": "Granulomatous inflammation",
+  "ar": "الالتهاب الحبيبي",
+  "emoji": "🎯",
+  "col": "#fff3b8",
+  "teaser": "Granuloma · أنواعه · جدول أمراض",
+  "cap": "🎯",
+  "q": "نمط خاص من المزمن. السلايدات فيها صور وجدول وملاحظات للدكتور.",
+  "cons": [
+   {
+    "e": "🎯",
+    "t": "Granulomatous inflammation: definition — التعريف",
+    "key": "gdef",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بعض الحروب الطويلة بيصير فيها جنود يلبسوا بدلة رسمية وتجمّعوا بكتلة.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">18.</bdi> الالتهاب الحبيبي (<bdi dir=\"ltr\">Granulomatous inflammation</bdi>) نمط مميّز من التفاعل الالتهابي المزمن (<bdi dir=\"ltr\">Distinctive pattern of chronic inflammatory reaction</bdi>)، بيتميّز بتكوّن الورم الحبيبي (<bdi dir=\"ltr\">Granuloma</bdi>). والـ <bdi dir=\"ltr\">Granuloma</bdi> هو تجمّع من بلاعم معدّلة (<bdi dir=\"ltr\">Aggregate of modified macrophages</bdi>) إلها مظهر شبيه بالظهارة (<bdi dir=\"ltr\">Epithelial-like appearance</bdi>)، ولهيك اسمها <bdi dir=\"ltr\">Epithelioid histiocytes.</bdi>",
+     "🎭 <b>Analogy Trick:</b> الجنود بالبدلة الرسمية هني البلاعم اللي صارت تشبه خلايا الظهارة وتجمّعت.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو الـ <bdi dir=\"ltr\">Granuloma</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ تجمّع بلاعم ظهارية الشكل (<bdi dir=\"ltr\">Epithelioid</bdi>)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">هو نوع من أي التهاب؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ المزمن</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Distinctive pattern of chronic inflammation",
+     "Granuloma = aggregate of modified macrophages",
+     "Epithelioid histiocytes"
+    ],
+    "m": "بدلة رسمية، كتلة = <bdi dir=\"ltr\">granuloma.</bdi>",
+    "h": "Chronic pattern → modified macrophages (epithelioid histiocytes) aggregate → granuloma",
+    "c": "<bdi dir=\"ltr\">granuloma</bdi> = تجمّع بلاعم معدّلة شكلها شبه الظهارة.",
+    "tr": "🧱 (<bdi dir=\"ltr\">Granuloma</bdi>) تجمّع بلاعم معدّلة شكلها شبه الظهارة (<bdi dir=\"ltr\">Epithelioid histiocytes</bdi>)."
+   },
+   {
+    "e": "📋",
+    "t": "Why granulomatous inflammation is important — ليش مهم؟",
+    "key": "gimp",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> الكتلة هيدي بتطلع بحالات قليلة بس، فإذا شفتها بتحصر الاحتمالات.",
+     "🩺 <b>Medical Explanation:</b> ليش مهم نتعرّف عليه؟ لأنو بيصير بحالات مرضية قليلة (<bdi dir=\"ltr\">Few pathological conditions</bdi>). <bdi dir=\"ltr\">3</bdi> مجموعات: عدوى (<bdi dir=\"ltr\">Infections</bdi>)، وكتب الدكتور \"جوا في جدول بيه أمراض\" يعني في جدول بالسلايد <bdi dir=\"ltr\">22</bdi> بيذكرها. وتفاعل مع مواد صعبة الهضم (<bdi dir=\"ltr\">Reaction to poorly digestible materials</bdi>) متل معادن غير عضوية (<bdi dir=\"ltr\">Inorganic metals</bdi>)، دهون مهيّجة (<bdi dir=\"ltr\">Irritant lipids</bdi>)، وبعض المواد الغريبة (<bdi dir=\"ltr\">Some foreign materials</bdi>). وخلل مناعي غير معروف (<bdi dir=\"ltr\">Unknown immune disorder</bdi>) متل الساركويد (<bdi dir=\"ltr\">Sarcoidosis</bdi>).",
+     "🎭 <b>Analogy Trick:</b> متل بصمة مميّزة بتدلّك على المجرم بين قايمة صغيرة.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">اذكر <bdi dir=\"ltr\">4</bdi> أسباب <bdi dir=\"ltr\">Granuloma.</bdi></summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">TB · Leprosy · Syphilis · Cat-scratch</bdi> (وكمان <bdi dir=\"ltr\">Foreign body</bdi>, <bdi dir=\"ltr\">Sarcoidosis</bdi>, <bdi dir=\"ltr\">Crohn</bdi>)</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">بيطلع بحالات كتير ولا قليلة؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ قليلة</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Infections",
+     "Poorly digestible materials",
+     "Unknown immune disorder (sarcoidosis)"
+    ],
+    "m": "<bdi dir=\"ltr\">granuloma</bdi>: بصمة لحالات قليلة.",
+    "h": "Granuloma seen in few conditions: infections + poorly digestible materials (inorganic metals, irritant lipids, foreign materials) + unknown immune disorder (sarcoidosis)",
+    "c": "<bdi dir=\"ltr\">3</bdi> مجموعات: عدوى، مواد صعبة الهضم، خلل مناعي مجهول.",
+    "tr": "🎯 ليش مهم: بيجي بقليل أمراض فبيدلّ عالسبب: عدوى، مواد صعبة الهضم، أو خلل مناعي مجهول."
+   },
+   {
+    "e": "🧩",
+    "t": "Granuloma structure — شكل الـ Granuloma",
+    "key": "gran",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> بالقرب من الكتلة شكلها متل لوح تصويب بدوائر.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">20.</bdi> الـ <bdi dir=\"ltr\">Granuloma</bdi> هو بؤرة محدّدة من الالتهاب الحبيبي (<bdi dir=\"ltr\">Focal area</bdi>). بيتكوّن من تجمّع مجهري لبلاعم ظهارية الشكل (<bdi dir=\"ltr\">Microscopic aggregation of epithelioid macrophages</bdi>) محاطة بطوق من اللمفاويات (<bdi dir=\"ltr\">Collar of lymphocytes</bdi>) ومحدودة من الخارج بالخلايا الليفية (<bdi dir=\"ltr\">Fibroblasts</bdi>). وغالباً بتندمج عدة بلاعم ظهارية مع بعض لتعمل خلية كبيرة متعددة النوى اسمها الخلية العملاقة (<bdi dir=\"ltr\">Giant cell</bdi>). والجزء المركزي ممكن يظهر نخر (<bdi dir=\"ltr\">Necrosis</bdi>).",
+     "وكتب الدكتور بالهوامش: \"تشبه شكل الدرنة\" (شكلو متل الدرنة). وبيشرح: عندك <bdi dir=\"ltr\">T helper cell</bdi> (<bdi dir=\"ltr\">lymphocyte</bdi>) بتفرز <bdi dir=\"ltr\">Interferon gamma</bdi> اللي بيخلّي الـ <bdi dir=\"ltr\">Macrophage</bdi> يتحوّل لخلية ضخمة (<bdi dir=\"ltr\">Giant cell</bdi>)، وتجمّعاتهم هذول بيسوّوا الـ <bdi dir=\"ltr\">Granuloma.</bdi> يعني ممكن بمرض <bdi dir=\"ltr\">TB</bdi> تشوف <bdi dir=\"ltr\">granuloma</bdi> وممكن فيها <bdi dir=\"ltr\">Necrosis</bdi> أو ما فيها، وهيدا دليل إنو في معركة بين <bdi dir=\"ltr\">TB bacilli</bdi> وتجمّعات الـ <bdi dir=\"ltr\">macrophages.</bdi> ولازم تعرف الـ <bdi dir=\"ltr\">granuloma</bdi> حتى تعرف إنو المرض مش <bdi dir=\"ltr\">inflammation</bdi> عادي وتعطيه <bdi dir=\"ltr\">amoxicillin</bdi> وبس.",
+     "🎭 <b>Analogy Trick:</b> لوح التصويب: دايرة بالنص، حلقة حواليها، وحدود برّا.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بنص الـ <bdi dir=\"ltr\">Granuloma</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Epithelioid macrophages</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو حواليها؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Lymphocytes collar + Fibroblasts</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Epithelioid macrophages (center)",
+     "Lymphocyte collar",
+     "Fibroblasts (outer)",
+     "Giant cell (fusion)",
+     "± Necrosis"
+    ],
+    "m": "نص، حلقة، حدود.",
+    "h": "Epithelioid macrophages + lymphocyte collar + fibroblast rim + giant cell ± central necrosis ← T helper → interferon gamma",
+    "c": "<bdi dir=\"ltr\">Granuloma</bdi>: بلاعم بالنص، لمفاويات حواليها، <bdi dir=\"ltr\">Fibroblasts</bdi> برّا، و<bdi dir=\"ltr\">Giant cell.</bdi>",
+    "tr": "🎯 الهدف: بلاعم بالنص، لمفاويات حزام، (<bdi dir=\"ltr\">Fibroblasts</bdi>) سور، قائد ضخم (<bdi dir=\"ltr\">Giant cell</bdi>)، ونخر بالنص أحياناً. (<bdi dir=\"ltr\">T helper</bdi>) و(<bdi dir=\"ltr\">Interferon gamma</bdi>) بيقودوا."
+   },
+   {
+    "e": "📊",
+    "t": "Examples of diseases with granulomatous inflammation — جدول الأمراض",
+    "key": "gtab",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> الجدول بيقلّك مين المجرم بكل مرض.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">21</bdi> صورة مجهرية للـ <bdi dir=\"ltr\">Granuloma</bdi> وفيها أسهم: خلايا وحيدة النواة (<bdi dir=\"ltr\">Mononuclear cells</bdi>) وخلية عملاقة متعددة النوى (<bdi dir=\"ltr\">Multinucleated giant cell</bdi>). والسلايد <bdi dir=\"ltr\">22</bdi> جدول الأمراض اللي وعدنا فيه الدكتور: بيربط كل مرض بسببو.",
+     "🎭 <b>Analogy Trick:</b> متل ملف مجرمين: كل اسم مرض معو اسم الفاعل.",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Tuberculosis",
+     "Leprosy",
+     "Syphilis",
+     "Cat-scratch disease",
+     "Sarcoidosis",
+     "Crohn disease"
+    ],
+    "m": "مرض ← سبب.",
+    "h": "TB (M. tuberculosis) · Leprosy (M. leprae) · Syphilis (T. pallidum) · Cat-scratch (Gram-negative bacillus) · Sarcoidosis (unknown) · Crohn (immune reaction)",
+    "c": "<bdi dir=\"ltr\">6</bdi> أمراض وسببها بالجدول.",
+    "tr": "📋 ستة أمراض: (<bdi dir=\"ltr\">TB, Leprosy, Syphilis, Cat-scratch, Sarcoidosis, Crohn</bdi>). كل واحد إلو جرثومة."
+   },
+   {
+    "e": "🧱",
+    "t": "Types of granuloma — أنواع الـ Granuloma",
+    "key": "gtypes",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> في نوعين: شي غريب ما بيتهضم، أو سبب مناعي.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">23</bdi> صورتين: على اليسار خلايا عملاقة لجسم غريب قرب خيط جراحة، وعلى اليمين تحت الضوء المستقطب بلّورات بيضاء (<bdi dir=\"ltr\">Talc</bdi>) عند مريض كان يحقن مخدّرات وريدياً، فالمادة الغريبة بتسبّب تفاعل حبيبي (<bdi dir=\"ltr\">Granulomatous reaction</bdi>).",
+     "السلايد <bdi dir=\"ltr\">24</bdi> بيقسم الأنواع لنوعين. الأول: <bdi dir=\"ltr\">Granuloma</bdi> جسم غريب (<bdi dir=\"ltr\">Foreign body granuloma</bdi>): بيتكوّن كردّ فعل لأجسام غريبة خاملة نسبياً (<bdi dir=\"ltr\">Relatively inert</bdi>) صعبة الهضم وما بيقدر بلعم واحد يبلعها (<bdi dir=\"ltr\">Cannot be phagocytosed by a single macrophage</bdi>)، فبتندمج وبتعمل خلية عملاقة، متل مادة الخيط الجراحي (<bdi dir=\"ltr\">Suture material</bdi>). وكتب الدكتور: جسم غريب ما كدر عمو الـ <bdi dir=\"ltr\">macrophage</bdi> يهضمه، فراح اتّحد مع باقي الـ <bdi dir=\"ltr\">macrophages</bdi> حتى يكدروله.",
+     "والتاني: <bdi dir=\"ltr\">Granuloma</bdi> مناعي (<bdi dir=\"ltr\">Immune granuloma</bdi>): بيتكوّن كردّ فعل لوجود جزيئات غير ذائبة (<bdi dir=\"ltr\">Insoluble particles</bdi>) قادرة على استحثاث استجابة مناعية بوساطة خلايا <bdi dir=\"ltr\">T</bdi> (<bdi dir=\"ltr\">T-cell mediated immune response</bdi>)، متل السل <bdi dir=\"ltr\">TB.</bdi> وكتب الدكتور: هيدا الشائع، والنوع الآخر نادر. وبمرض <bdi dir=\"ltr\">AIDS</bdi> ما بيتكوّن <bdi dir=\"ltr\">granuloma</bdi> لأنو بيضبط (يثبّط) الجهاز المناعي من أساسو. وبالنسبة للـ <bdi dir=\"ltr\">TB</bdi>: الـ <bdi dir=\"ltr\">Mycobacterium tuberculosis</bdi> بتقدر تتحمّل وتعيش داخل الـ <bdi dir=\"ltr\">macrophage.</bdi> وكمان كتب: كيف نستدلّ على وجود سابق لـ <bdi dir=\"ltr\">TB</bdi>؟ من خلال الـ <bdi dir=\"ltr\">scar tissue</bdi> الناتج عن الـ <bdi dir=\"ltr\">granuloma.</bdi>",
+     "🎭 <b>Analogy Trick:</b> الأول متل شوكة غرقت بالجلد، والتاني متل حرب مناعية.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">نوعين <bdi dir=\"ltr\">Granuloma</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Foreign body · Immune</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مثال لكل واحد؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Suture · TB</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Foreign body: inert, poorly digestible → fuse into giant cells (suture)",
+     "Immune: insoluble particles → T-cell mediated (TB)"
+    ],
+    "m": "غريب أو مناعي.",
+    "h": "Foreign body granuloma (suture, cannot be phagocytosed by one macrophage → giant cell) vs Immune granuloma (insoluble particles, T-cell mediated, TB; common)",
+    "c": "نوعين: <bdi dir=\"ltr\">Foreign body</bdi> (خيط جراحة) و <bdi dir=\"ltr\">Immune</bdi> (<bdi dir=\"ltr\">TB</bdi>، الشائع). <bdi dir=\"ltr\">AIDS</bdi> ما بيعمل <bdi dir=\"ltr\">granuloma.</bdi>",
+    "tr": "🧵 نوعين: (<bdi dir=\"ltr\">Foreign body</bdi>) خيط جراحة، بلعم واحد ما بيكفي فبيندمجوا (<bdi dir=\"ltr\">Giant cell</bdi>). و(<bdi dir=\"ltr\">Immune</bdi>) متل السل، شائع. الإيدز ما بيعمل (<bdi dir=\"ltr\">Granuloma</bdi>)."
+   },
+   {
+    "e": "📋",
+    "t": "Extra Info: Granulomatous inflammation — تفاصيل إضافية",
+    "key": "x5",
+    "say": null,
+    "i": "",
+    "b": [
+     "<div dir=\"rtl\"><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">المرض</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">السبب (من جدول السلايد <bdi dir=\"ltr\">22</bdi>)</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Tuberculosis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Mycobacterium tuberculosis</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Leprosy</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Mycobacterium leprae</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Syphilis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Treponema pallidum</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Cat-scratch disease</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Gram-negative bacillus</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Sarcoidosis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Unknown etiology</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Crohn disease</bdi> (<bdi dir=\"ltr\">inflammatory bowel disease</bdi>)</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Immune reaction against intestinal bacterial</bdi>, <bdi dir=\"ltr\">self antigens</bdi></td></tr></table><br><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">ملاحظة الدكتور</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">التفصيل</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">شكل الـ <bdi dir=\"ltr\">granuloma</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">يشبه الدرنة</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Mechanism</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">T helper → interferon gamma → macrophage → giant cell</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">TB</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">granuloma</bdi> ± <bdi dir=\"ltr\">necrosis</bdi> = معركة بين <bdi dir=\"ltr\">TB bacilli</bdi> و <bdi dir=\"ltr\">macrophages</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">أهمية التعرّف</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">المرض مش <bdi dir=\"ltr\">inflammation</bdi> عادي، مش بس <bdi dir=\"ltr\">amoxicillin</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Foreign body</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">الـ <bdi dir=\"ltr\">macrophage</bdi> ما بيقدر يهضمو فبتتّحد المجموعة</td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Immune</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">الشائع · نادر النوع الآخر · <bdi dir=\"ltr\">AIDS</bdi> ما بيكوّن <bdi dir=\"ltr\">granuloma</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">TB</bdi> وجود سابق</td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\">يُستدلّ عليه من <bdi dir=\"ltr\">scar tissue</bdi> الناتج عن <bdi dir=\"ltr\">granuloma</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Slide 23</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Foreign body giant cells</bdi> قرب <bdi dir=\"ltr\">suture</bdi> · بلّورات <bdi dir=\"ltr\">talc</bdi> تحت الضوء المستقطب عند مدمن حقن وريدي</td></tr></table></div>",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Granuloma"
+    ],
+    "m": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">granuloma</bdi>",
+    "h": "Extra Info: granulomatous inflammation",
+    "c": ""
+   }
+  ],
+  "hl": [
+   "Granulomatous inflammation = distinctive pattern of chronic inflammation | granuloma = aggregate of modified macrophages with epithelial-like appearance (epithelioid histiocytes)",
+   "Importance: few pathological conditions | infections (see table) | poorly digestible materials: inorganic metals, irritant lipids, foreign materials | unknown immune disorder: sarcoidosis",
+   "Granuloma = focal aggregation of epithelioid macrophages + collar of lymphocytes + outer fibroblasts | fused macrophages → multinucleated giant cell | central necrosis possible | T helper → interferon gamma → macrophage → giant cell",
+   "Granulomatous diseases: TB | Leprosy | Syphilis | Cat-scratch | Sarcoidosis | Crohn",
+   "Types: Foreign body granuloma (inert, poorly digestible, fuse → giant cell, suture) | Immune granuloma (insoluble particles, T-cell mediated, TB; common) | AIDS → no granuloma",
+   "Extra Info: granulomatous inflammation"
+  ]
+ },
+ {
+  "n": 6,
+  "en": "Systemic effects + Conclusion",
+  "ar": "التأثيرات الجهازية والخلاصة",
+  "emoji": "🌡️",
+  "col": "#ffdfe9",
+  "teaser": "Fever · CRP · Leukocytosis · Septic shock",
+  "cap": "🌡️",
+  "q": "آخر السلايدات: التأثيرات الجهازية للالتهاب والخلاصة.",
+  "cons": [
+   {
+    "e": "🌡️",
+    "t": "Systemic effects: Fever — الحمّى",
+    "key": "fever",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> الرسايل وصلت للدماغ وطلبت ترفع الحرارة.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">25</bdi> \"<bdi dir=\"ltr\">Systemic effects of inflammation</bdi>\" (وكتب الدكتور: من سمنار). أول تأثير: الحمّى (<bdi dir=\"ltr\">Fever</bdi>). السايتوكينات (<bdi dir=\"ltr\">Cytokines</bdi>: <bdi dir=\"ltr\">TNF</bdi> و <bdi dir=\"ltr\">IL-1</bdi>) بتحفّز إنتاج البروستاغلاندينات (<bdi dir=\"ltr\">Prostaglandins</bdi>) بالوطاء (<bdi dir=\"ltr\">Hypothalamus</bdi>). وبالمخطط الجانبي: <bdi dir=\"ltr\">Inflammation ← cytokines</bdi> (<bdi dir=\"ltr\">IL-1</bdi> و <bdi dir=\"ltr\">TNF</bdi>) ← <bdi dir=\"ltr\">Hypothalamus ← Prostaglandin E2</bdi> (<bdi dir=\"ltr\">PGE2</bdi>) ← ارتفاع درجة الحرارة (الدماغ بيرفع درجة الحرارة المستهدفة للجسم).",
+     "🎭 <b>Analogy Trick:</b> متل ترموستات بالبيت: ارتفع الإعداد، فسخن البيت.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو بيرفع الحرارة؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">TNF/IL-1/IL-6 → Prostaglandins</bdi> بالـ <bdi dir=\"ltr\">Hypothalamus</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">وين الترموستات؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Hypothalamus</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "TNF + IL-1",
+     "Hypothalamus",
+     "Prostaglandin E2",
+     "Fever"
+    ],
+    "m": "رسايل، ترموستات، حمّى.",
+    "h": "Inflammation → cytokines (TNF, IL-1) → hypothalamus → prostaglandins (PGE2) → fever",
+    "c": "حمّى: سايتوكينات ← بروستاغلاندين بالوطاء.",
+    "tr": "🌡️ (<bdi dir=\"ltr\">Fever</bdi>) سايتوكينات (<bdi dir=\"ltr\">TNF, IL-1</bdi>) ← الوطاء ← (<bdi dir=\"ltr\">PGE2</bdi>) ← حمّى. متل ترموستات انضرب."
+   },
+   {
+    "e": "🧪",
+    "t": "Systemic effects: Acute-phase proteins — بروتينات الطور الحاد",
+    "key": "aps",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> الرسايل وصلت للكبد، فبعت بروتينات طوارئ.",
+     "🩺 <b>Medical Explanation:</b> التأثير التاني: إنتاج بروتينات الطور الحاد (<bdi dir=\"ltr\">Acute-phase proteins</bdi>) مثل <bdi dir=\"ltr\">C-reactive protein</bdi> (<bdi dir=\"ltr\">CRP</bdi>) وغيرها. تصنيعها بتحفّزو السايتوكينات (مثل <bdi dir=\"ltr\">IL-6</bdi>) اللي بتعمل على خلايا الكبد (<bdi dir=\"ltr\">Liver cells</bdi>). وبالمخطط الجانبي: <bdi dir=\"ltr\">Inflammation ← cytokines ← IL-6 ← Liver ← Acute-phase proteins ← CRP</bdi> (<bdi dir=\"ltr\">C-reactive protein</bdi>).",
+     "🎭 <b>Analogy Trick:</b> الكبد متل مخزن طوارئ بيبعت مواد لما ينذر الجرس.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">أشهر بروتين طوارئ؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">CRP</bdi></div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">من وين؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ الكبد (<bdi dir=\"ltr\">IL-6</bdi>)</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Cytokines (IL-6)",
+     "Liver cells",
+     "Acute-phase proteins",
+     "CRP"
+    ],
+    "m": "رسالة <bdi dir=\"ltr\">IL-6</bdi>، الكبد، <bdi dir=\"ltr\">CRP.</bdi>",
+    "h": "Inflammation → cytokines (IL-6) → liver → acute-phase proteins → CRP",
+    "c": "<bdi dir=\"ltr\">CRP</bdi> من الكبد بتحفيز <bdi dir=\"ltr\">IL-6.</bdi>",
+    "tr": "🧪 (<bdi dir=\"ltr\">IL-6</bdi>) بيصرخ عالكبد، فبيطلّع (<bdi dir=\"ltr\">CRP</bdi>) وأصحابو. بروتينات الطور الحاد."
+   },
+   {
+    "e": "🩸",
+    "t": "Systemic effects: Leukocytosis — كثرة الكريات البيض",
+    "key": "leuko",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> القلعة طلبت جنود زيادة من نخاع العظم.",
+     "🩺 <b>Medical Explanation:</b> التأثير التالت: كثرة الكريات البيض (<bdi dir=\"ltr\">Leukocytosis</bdi>). السايتوكينات، وبالتحديد عوامل تحفيز المستعمرات (<bdi dir=\"ltr\">Colony-stimulating factors</bdi>، <bdi dir=\"ltr\">CSFs</bdi>)، بتحفّز إنتاج الكريات البيض من سلائفها (<bdi dir=\"ltr\">Precursors</bdi>) بنخاع العظم (<bdi dir=\"ltr\">Bone marrow</bdi>).",
+     "🎭 <b>Analogy Trick:</b> النخاع متل ثكنة جنود بتبعت تعزيزات.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو الـ <bdi dir=\"ltr\">Leukocytosis</bdi>؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ زيادة الكريات البيض</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">مين بيحفّزها؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">CSFs</bdi> على نخاع العظم</div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "CSFs",
+     "Bone marrow precursors",
+     "Leukocytosis"
+    ],
+    "m": "تعزيزات من النخاع.",
+    "h": "Cytokines (CSFs) → bone marrow → leukocyte production from precursors → leukocytosis",
+    "c": "<bdi dir=\"ltr\">CSFs</bdi> بتحفّز النخاع = <bdi dir=\"ltr\">Leukocytosis.</bdi>",
+    "tr": "🏭 (<bdi dir=\"ltr\">CSFs</bdi>) بتحفّز النخاع، فبتزيد الكريات البيض: (<bdi dir=\"ltr\">Leukocytosis</bdi>)."
+   },
+   {
+    "e": "⚠️",
+    "t": "Systemic effects: Septic shock — الصدمة الإنتانية",
+    "key": "shock",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> لما الحرب كبيرة كتير، الرسايل انفجرت.",
+     "🩺 <b>Medical Explanation:</b> التأثير الرابع: بالعدوى الشديدة بعض الأحيان بيصير الصدمة الإنتانية (<bdi dir=\"ltr\">Septic shock</bdi>): هبوط ضغط الدم (<bdi dir=\"ltr\">Fall in blood pressure</bdi>)، تخثّر منتشر داخل الأوعية (<bdi dir=\"ltr\">Disseminated intravascular coagulation</bdi>، <bdi dir=\"ltr\">DIC</bdi>)، واضطرابات استقلابية (<bdi dir=\"ltr\">Metabolic abnormalities</bdi>). كلها بتنتج عن مستويات عالية من <bdi dir=\"ltr\">TNF</bdi> (<bdi dir=\"ltr\">High levels of TNF</bdi>).",
+     "🎭 <b>Analogy Trick:</b> متل إنذار حريق بكل البناية بنفس الوقت.",
+     "<div style=\"margin-top:6px\">🧪 <b>اختبر حالك</b></div><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">شو سبب الصدمة الإنتانية؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">TNF</bdi> عالي</div></details><details style=\"margin:6px 0;background:#fff;border:1px solid #ddd;border-radius:10px;padding:6px 10px\"><summary style=\"cursor:pointer\">علاماتها؟</summary><div dir=\"rtl\" style=\"margin-top:6px;color:#1a7a4c\">✅ <bdi dir=\"ltr\">Low BP + DIC + Metabolic abnormalities</bdi></div></details>"
+    ],
+    "x": "",
+    "flow": [
+     "Severe infection",
+     "High TNF",
+     "Low BP + DIC + metabolic abnormalities"
+    ],
+    "m": "<bdi dir=\"ltr\">TNF</bdi> عالي، صدمة.",
+    "h": "Severe infection → high TNF → ↓BP + DIC + metabolic abnormalities → septic shock",
+    "c": "<bdi dir=\"ltr\">Septic shock = TNF</bdi> عالي، ضغط واطي، <bdi dir=\"ltr\">DIC.</bdi>",
+    "tr": "💥 (<bdi dir=\"ltr\">Septic shock</bdi>) (<bdi dir=\"ltr\">TNF</bdi>) عالي، ضغط واطي، (<bdi dir=\"ltr\">DIC</bdi>)، واضطراب استقلاب."
+   },
+   {
+    "e": "🏁",
+    "t": "Conclusion and learning outcomes — الخلاصة",
+    "key": "concl",
+    "say": null,
+    "i": "",
+    "b": [
+     "🎬 <b>Cinematic Story:</b> وبالآخر الدكتور لخّص كل المعركة بأربع جمل.",
+     "🩺 <b>Medical Explanation:</b> السلايد <bdi dir=\"ltr\">26</bdi> الخلاصة (<bdi dir=\"ltr\">Conclusion</bdi>) بـ <bdi dir=\"ltr\">4</bdi> نقاط: الالتهاب هو آلية دفاع عن الجسم (<bdi dir=\"ltr\">Inflammation is a body defense mechanism</bdi>). مقسوم لحاد ومزمن (<bdi dir=\"ltr\">Divided into acute & chronic</bdi>). بيمرّ بخطوات متتالية قليلة (<bdi dir=\"ltr\">Involves few consecutive steps</bdi>). والمواد الكيميائية الوسيطة أساسية بالاستجابة الالتهابية (<bdi dir=\"ltr\">Chemical mediators are essential in inflammatory response</bdi>).",
+     "وبالسلايد <bdi dir=\"ltr\">27</bdi> \"<bdi dir=\"ltr\">Learning outcome</bdi>\" بيقول: بنهاية الجلسة لازم يكون الطالب قادر على... ومن غير نقاط مكتوبة. والسلايد <bdi dir=\"ltr\">28</bdi> مراجع: <bdi dir=\"ltr\">Robbins Basic Pathology</bdi> (<bdi dir=\"ltr\">10th ed.</bdi>)، <bdi dir=\"ltr\">Robbins & Cotran Pathologic Basis of Disease</bdi> (<bdi dir=\"ltr\">10th ed.</bdi>)، <bdi dir=\"ltr\">Kumar</bdi>, <bdi dir=\"ltr\">Cotran & Robbins</bdi> (<bdi dir=\"ltr\">Elsevier 2018</bdi>)، <bdi dir=\"ltr\">Muir</bdi>'<bdi dir=\"ltr\">s pathology</bdi> (<bdi dir=\"ltr\">16th ed.</bdi>)، وموقعين <bdi dir=\"ltr\">pathweb.com</bdi> و <bdi dir=\"ltr\">pathologyoutline.com.</bdi>",
+     "🎭 <b>Analogy Trick:</b> الخلاصة متل ملخّص نهاية الفيلم.",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Body defense mechanism",
+     "Acute & chronic",
+     "Few consecutive steps",
+     "Chemical mediators essential"
+    ],
+    "m": "دفاع، حاد ومزمن، خطوات، مواد.",
+    "h": "Inflammation = body defense mechanism: acute + chronic, consecutive steps, chemical mediators essential",
+    "c": "الالتهاب = دفاع، حاد ومزمن، مواد كيميائية أساسية.",
+    "tr": "🏁 الخلاصة: الالتهاب دفاع، حاد ومزمن، خطوات متتابعة، والمواد الكيميائية أساس."
+   },
+   {
+    "e": "📋",
+    "t": "Extra Info: Systemic effects — تفاصيل إضافية",
+    "key": "x6",
+    "say": null,
+    "i": "",
+    "b": [
+     "<div dir=\"rtl\"><table style=\"width:100%;border-collapse:collapse;font-size:14px;margin:6px 0\"><tr><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">التأثير</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">الآلية</th><th style=\"border:1px solid #ccc;background:#fff3d6;padding:6px;text-align:right\">الوسيط</th></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Fever</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Cytokines → hypothalamus</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">TNF</bdi>, <bdi dir=\"ltr\">IL-1 → PGE2</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Acute-phase proteins</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Cytokines → liver</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">IL-6 → CRP</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Leukocytosis</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Cytokines → bone marrow</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">CSFs</bdi></td></tr><tr><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Septic shock</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">Severe infection</bdi></td><td style=\"border:1px solid #ddd;padding:6px;text-align:right;background:#fff\"><bdi dir=\"ltr\">High TNF</bdi> → ↓<bdi dir=\"ltr\">BP</bdi>, <bdi dir=\"ltr\">DIC</bdi>, <bdi dir=\"ltr\">metabolic abnormalities</bdi></td></tr></table></div>",
+     ""
+    ],
+    "x": "",
+    "flow": [
+     "Systemic"
+    ],
+    "m": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">systemic</bdi>",
+    "h": "Extra Info: systemic effects",
+    "c": ""
+   }
+  ],
+  "hl": [
+   "Fever: cytokines (TNF, IL-1) → prostaglandins in hypothalamus",
+   "Acute-phase proteins: CRP + others, synthesis stimulated by cytokines (IL-6) acting on liver cells",
+   "Leukocytosis: cytokines (CSFs) stimulate leukocyte production from precursors in the bone marrow",
+   "Septic shock: fall in BP + DIC + metabolic abnormalities ← high levels of TNF",
+   "Conclusion: defense mechanism | acute & chronic | few consecutive steps | chemical mediators essential",
+   "Extra Info: systemic effects"
+  ]
+ }
+];
+const ST={
+"signs": "باب انكسر، الجرس دقّ، صار أحمر وسخن ومنتفخ وبيوجّع وما بيشتغل.",
+"causes": "الجرس بيرنّ لأي خطر، مش بس للجراثيم.",
+"vdil": "وسّعوا الشارع، زادوا السيارات، احمرّ وسخن.",
+"perm": "ثقوب بالمصفاة، ماي طلع، انتفخ.",
+"barr": "طوب، إسمنت، عازل = بطانة، وصلات، غشاء.",
+"out": "شو، وين، مين.",
+"resol": "الموسيقى وقفت، الأبواب سكّرت، النظافة خلصت، رجع الباب متل ما كان.",
+"scar": "كسر كبير، رقعة إسمنت، ندبة.",
+"odiag": "إصابة، حاد، فرق طرق: شفاء، خراج، مزمن، وآخرها ندبة.",
+"abs": "كيس أصفر مليان بقايا معركة وجراثيم.",
+"prog": "النار طفت، الجمر لسا.",
+"x1": "<bdi dir=\"ltr\">Outcomes</bdi>: <bdi dir=\"ltr\">extra details</bdi>",
+"cat": "زكام: خفيف وبيروح.",
+"ser": "فقاعة ماي صافي.",
+"fib": "غراء عالسطح، يا شفاء يا تليّف.",
+"sup": "مصنع قيح، خراج.",
+"ulc": "حفرة براس الشارع.",
+"pseudo": "قناع بالقولون وبالبلعوم.",
+"x2": "<bdi dir=\"ltr\">Extra Info</bdi>: <bdi dir=\"ltr\">types</bdi>",
+"lymph": "مجاري بتشيل الماي، وممكن تنقل الميكروب.",
+"lymphang": "خط أحمر = التهاب المجاري.",
+"arach": "مادة خام، <bdi dir=\"ltr\">3</bdi> خطوط إنتاج، منتجات مختلفة.",
+"x3": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">lymph</bdi>",
+"cdef": "حرب طويلة: هدم وبناء.",
+"cways": "من حاد، متكرر، أو من الأول.",
+"ccomp": "مسدسات بالحاد، دبابات بالمزمن.",
+"mac": "بلعم: بيهدم وبيبني.",
+"cgross": "<bdi dir=\"ltr\">5</bdi> آثار: خراج بارد، قرحة، سماكة، نفق، ممر.",
+"x4": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">chronic</bdi>",
+"gdef": "بدلة رسمية، كتلة = <bdi dir=\"ltr\">granuloma.</bdi>",
+"gimp": "<bdi dir=\"ltr\">granuloma</bdi>: بصمة لحالات قليلة.",
+"gran": "نص، حلقة، حدود.",
+"gtab": "مرض ← سبب.",
+"gtypes": "غريب أو مناعي.",
+"x5": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">granuloma</bdi>",
+"fever": "رسايل، ترموستات، حمّى.",
+"aps": "رسالة <bdi dir=\"ltr\">IL-6</bdi>، الكبد، <bdi dir=\"ltr\">CRP.</bdi>",
+"leuko": "تعزيزات من النخاع.",
+"shock": "<bdi dir=\"ltr\">TNF</bdi> عالي، صدمة.",
+"concl": "دفاع، حاد ومزمن، خطوات، مواد.",
+"x6": "<bdi dir=\"ltr\">Extra</bdi>: <bdi dir=\"ltr\">systemic</bdi>"
+};
+const MNMAP={"0.0": "signs", "0.1": "causes", "0.2": "vdil", "0.3": "perm", "0.4": "barr", "1.0": "out", "1.1": "resol", "1.2": "scar", "1.3": "odiag", "1.4": "abs", "1.5": "prog", "1.6": "x1", "2.0": "cat", "2.1": "ser", "2.2": "fib", "2.3": "sup", "2.4": "ulc", "2.5": "pseudo", "2.6": "x2", "3.0": "lymph", "3.1": "lymphang", "3.2": "arach", "3.3": "x3", "4.0": "cdef", "4.1": "cways", "4.2": "ccomp", "4.3": "mac", "4.4": "cgross", "4.5": "x4", "5.0": "gdef", "5.1": "gimp", "5.2": "gran", "5.3": "gtab", "5.4": "gtypes", "5.5": "x5", "6.0": "fever", "6.1": "aps", "6.2": "leuko", "6.3": "shock", "6.4": "concl", "6.5": "x6"};
+CH.forEach(c=>c.cons.forEach((k,j)=>{const key=MNMAP[c.n+'.'+j];if(key)k.m=ST[key]}));
+const main=document.getElementById('main'),cards=document.getElementById('cards');
+const cols=['#ffe3d3','#dbeeff','#ffdfe9','#e8e0ff','#d8f5e6','#fff3b8','#dbeeff','#ffe3d3'];
+let html='';
+CH.forEach((c,i)=>{
+  cards.insertAdjacentHTML('beforeend',`<div class="ccard" style="background:${c.col}" data-go="ch${c.n}"><div class="e">${c.emoji}</div><h3>${c.ar}</h3><small>${c.en}</small><p>${c.teaser}</p></div>`);
+  html+=`<section class="chap reveal" id="ch${c.n}">
+  <div class="chead"><div class="num" style="background:${['#5b6cff','#ff8a5b','#e85d9b','#8b5cf6','#2e9e6b','#e0a800','#3b9ae1','#e86a3d'][i]}">${c.n}</div><div><div class="lab">${c.en}</div><h2>${c.emoji} ${c.ar}</h2></div></div>
+  <div class="cap"><div class="av">${c.cap}</div><div class="bubble">${c.q}</div></div>`;
+  c.cons.forEach(k=>{
+    html+=`<div class="con reveal"><h3>${k.e} ${k.t}</h3>
+    ${k.say?`<div class="say"><b>${k.say[0]}:</b> «${k.say[1]}»</div>`:''}
+    ${k.flow&&k.flow.length?`<div class="chips" dir="ltr">${k.flow.map((f,j)=>(j?'<span class="chip ar" style="transition-delay:'+(j*.12)+'s">→</span>':'')+'<span class="chip" style="transition-delay:'+(j*.12)+'s">'+f+'</span>').join('')}</div>`:''}
+    <ul class="enul" dir="rtl">${k.b.map(x=>'<li>'+x+'</li>').join('')}</ul>
+    ${k.x?`<p class="extra" dir="ltr">${k.x}</p>`:''}
+    ${k.m?`<div class="mn open"><button><span>🧩 بسطر واحد</span><span>⌄</span></button><div class="body">${k.m}</div></div>`:''}
+    
+    ${k.tr?`<div class="trk2">🎭 <b>حيلة الحفظ:</b> ${k.tr}</div>`:''}
+    ${k.c?`<div class="cheat"><b>⭐ أهم شي تنتبه عليه:</b> ${k.c}</div>`:''}
+    ${k.h?`<div class="hy" dir="ltr"><b>HIGHLIGHT:</b> ${k.h}</div>`:''}</div>`;
+  });
+  html+=`<div class="hl"><small>⭐ HIGHLIGHT</small>${c.hl.join('<span class="sep">|</span>')}</div></section>`;
+});
+
+/* mini games */
+html+=`<section class="chap reveal" id="games"><div class="chead"><div class="num" style="background:#2e9e6b">🎮</div><div><div class="lab">Mini games</div><h2>جرّب حالك</h2></div></div>
+<div class="game"><h4>🧩 وصّل المرض بنوعو</h4><div id="match"></div></div>
+<div class="game"><h4>✅❌ صح ولا غلط؟</h4><div id="tf"></div></div></section>`;
+
+/* final review */
+html+=`<section class="sec reveal" id="review" style="background:#fff3d6"><h2>📝 المراجعة الأخيرة</h2>
+<h3 style="margin-top:14px">Acute outcomes</h3>
+<div style="overflow-x:auto"><table><tr><th>Outcome</th><th>Condition</th><th>Key point</th></tr><tr><td>Resolution</td><td>Mild, short, regenerating</td><td>Mediators decay, lymph drains exudate</td></tr><tr><td>Scarring</td><td>Severe / non-regenerating</td><td>Fibrosis</td></tr><tr><td>Abscess</td><td>Pyogenic bacteria</td><td>Pus</td></tr><tr><td>Chronic</td><td>Persistent agent</td><td>Mononuclear cells</td></tr></table></div>
+<h3 style="margin-top:14px">Morphologic types</h3>
+<div style="overflow-x:auto"><table><tr><th>Type</th><th>Feature</th><th>Example</th></tr><tr><td>Catarrhal</td><td>Mild mucosal</td><td>Pharyngitis</td></tr><tr><td>Serous</td><td>Protein-poor fluid</td><td>Burn blister</td></tr><tr><td>Fibrinous</td><td>Fibrinogen exudate</td><td>Pericarditis</td></tr><tr><td>Suppurative</td><td>Pus + abscess</td><td>Staph infection</td></tr><tr><td>Ulceration</td><td>Epithelial loss</td><td>Severe infection</td></tr><tr><td>Pseudomembranous</td><td>Necrosis, colon + oropharynx</td><td>C. difficile</td></tr></table></div>
+<h3 style="margin-top:14px">Acute vs chronic</h3>
+<div style="overflow-x:auto"><table><tr><th>Feature</th><th>Acute</th><th>Chronic</th></tr><tr><td>Vascular response</td><td>Yes (heat, redness, edema)</td><td>No</td></tr><tr><td>Cells</td><td>Neutrophils</td><td>Mononuclear cells</td></tr><tr><td>Repair</td><td>Resolution / scar</td><td>Angiogenesis + fibrosis simultaneously</td></tr></table></div>
+<h3 style="margin-top:14px">Granuloma types</h3>
+<div style="overflow-x:auto"><table><tr><th>Type</th><th>Trigger</th><th>Example</th></tr><tr><td>Foreign body</td><td>Inert indigestible</td><td>Suture material</td></tr><tr><td>Immune</td><td>Insoluble particles + T cells</td><td>TB</td></tr></table></div>
+<h3 style="margin-top:14px">Arachidonic acid products (slide 12)</h3>
+<div style="overflow-x:auto"><table><tr><th>Product</th><th>Effect</th></tr><tr><td>PGI2 (prostacyclin)</td><td>Vasodilation, inhibits platelet aggregation</td></tr><tr><td>TXA2 (thromboxane)</td><td>Vasoconstriction, promotes platelet aggregation</td></tr><tr><td>PGD2 / PGE2</td><td>Vasodilation, increased vascular permeability</td></tr><tr><td>LTB4</td><td>Chemotaxis</td></tr><tr><td>LTC4 / LTD4 / LTE4</td><td>Bronchospasm, increased vascular permeability</td></tr><tr><td>Lipoxins LXA4 / LXB4</td><td>Inhibition of inflammation</td></tr><tr><td>Blockers</td><td>Steroids ⊣ phospholipases · Aspirin/COX inhibitors ⊣ COX · Lipoxygenase inhibitors · Leukotriene receptor antagonists</td></tr></table></div>
+<h3 style="margin-top:14px">Granulomatous diseases (slide 22)</h3>
+<div style="overflow-x:auto"><table><tr><th>Disease</th><th>Cause</th></tr><tr><td>Tuberculosis</td><td>Mycobacterium tuberculosis</td></tr><tr><td>Leprosy</td><td>Mycobacterium leprae</td></tr><tr><td>Syphilis</td><td>Treponema pallidum</td></tr><tr><td>Cat-scratch disease</td><td>Gram-negative bacillus</td></tr><tr><td>Sarcoidosis</td><td>Unknown etiology</td></tr><tr><td>Crohn disease</td><td>Immune reaction against intestinal bacterial, self antigens</td></tr></table></div>
+<h3 style="margin-top:14px">Heart scar (slide 3 note)</h3>
+<div style="overflow-x:auto"><table><tr><th>Item</th><th>Point</th></tr><tr><td>Collagen type 3</td><td>Reticulin, delicate reticular fibers (framework)</td></tr><tr><td>Collagen type 1</td><td>Support; scar tissue → stiffness, impaired pumping</td></tr></table></div>
+<h3 style="margin-top:14px">Systemic effects</h3>
+<div style="overflow-x:auto"><table><tr><th>Effect</th><th>Mediator</th><th>Site</th></tr><tr><td>Fever</td><td>TNF, IL-1 → prostaglandins (PGE2)</td><td>Hypothalamus</td></tr><tr><td>CRP</td><td>IL-6</td><td>Liver</td></tr><tr><td>Leukocytosis</td><td>CSFs</td><td>Bone marrow</td></tr><tr><td>Septic shock</td><td>High TNF</td><td>Systemic: low BP, DIC</td></tr></table></div>
+<h3 style="margin-top:14px">🏆 الورقة الذهبية</h3><div class="csg"><div class="cs" style="background:#ffe9c7"><b class="cst">🔥 BASICS</b><ul><li><bdi dir="ltr">5 signs</bdi>: <bdi dir="ltr">redness</bdi>, <bdi dir="ltr">heat</bdi>, <bdi dir="ltr">swelling</bdi>, <bdi dir="ltr">pain</bdi>, <bdi dir="ltr">loss of function</bdi>; <bdi dir="ltr">cause</bdi>: <bdi dir="ltr">mediators + leukocyte damage</bdi></li><li><bdi dir="ltr">Causes</bdi>: <bdi dir="ltr">infection</bdi>, <bdi dir="ltr">trauma</bdi>, <bdi dir="ltr">immune reaction</bdi>, <bdi dir="ltr">chemicals</bdi>, <bdi dir="ltr">physical agents</bdi>, <bdi dir="ltr">heat/cold</bdi>, <bdi dir="ltr">necrosis</bdi>, <bdi dir="ltr">foreign body</bdi></li><li><bdi dir="ltr">Vasodilation</bdi>: <bdi dir="ltr">blood flow up</bdi>, <bdi dir="ltr">redness + heat</bdi></li><li><bdi dir="ltr">Permeability</bdi>: <bdi dir="ltr">fluid + protein leak</bdi>, <bdi dir="ltr">edema</bdi>, <bdi dir="ltr">swelling</bdi></li><li><bdi dir="ltr">Barrier</bdi>: <bdi dir="ltr">endothelium + tight junctions + basement membrane</bdi>; <bdi dir="ltr">capillaries + postcapillary venules</bdi></li></ul></div><div class="cs" style="background:#d8f5e6"><b class="cst">🧭 OUTCOMES</b><ul><li><bdi dir="ltr">Depends injury type + severity</bdi>, <bdi dir="ltr">site</bdi>, <bdi dir="ltr">host response</bdi></li><li><bdi dir="ltr">Resolution</bdi>: <bdi dir="ltr">mild</bdi>, <bdi dir="ltr">short</bdi>, <bdi dir="ltr">regenerating tissue</bdi>; <bdi dir="ltr">mediators decay</bdi>, <bdi dir="ltr">neutrophils die</bdi>, <bdi dir="ltr">lymphatics drain exudate</bdi></li><li><bdi dir="ltr">Scarring + fibrosis</bdi>: <bdi dir="ltr">severe injury</bdi>, <bdi dir="ltr">non-regenerating tissue</bdi></li><li><bdi dir="ltr">Abscess</bdi>: <bdi dir="ltr">pus</bdi>, <bdi dir="ltr">pyogenic bacteria</bdi> (<bdi dir="ltr">staph aureus</bdi>); <bdi dir="ltr">chronic progression</bdi></li></ul></div><div class="cs" style="background:#dbeeff"><b class="cst">🔬 6 TYPES</b><ul><li><bdi dir="ltr">Catarrhal</bdi>: <bdi dir="ltr">mild mucosal</bdi>, <bdi dir="ltr">resolves</bdi></li><li><bdi dir="ltr">Serous</bdi>: <bdi dir="ltr">protein-poor fluid</bdi>, <bdi dir="ltr">blister</bdi></li><li><bdi dir="ltr">Fibrinous</bdi>: <bdi dir="ltr">fibrinogen</bdi>, <bdi dir="ltr">serosa + joints</bdi>, <bdi dir="ltr">organization</bdi></li><li><bdi dir="ltr">Suppurative</bdi>: <bdi dir="ltr">pus + abscess</bdi></li><li><bdi dir="ltr">Ulceration</bdi>: <bdi dir="ltr">epithelial loss</bdi></li><li><bdi dir="ltr">Pseudomembranous</bdi>: <bdi dir="ltr">colon + oropharynx</bdi>, <bdi dir="ltr">C. difficile</bdi></li></ul></div><div class="cs" style="background:#e8e0ff"><b class="cst">🚰 LYMPHATICS</b><ul><li><bdi dir="ltr">Drain edema</bdi>; <bdi dir="ltr">carry leukocytes</bdi>, <bdi dir="ltr">debris</bdi>, <bdi dir="ltr">microbes</bdi></li><li><bdi dir="ltr">Lymphangitis</bdi>: <bdi dir="ltr">red streaks</bdi></li><li><bdi dir="ltr">Lymphadenitis</bdi>: <bdi dir="ltr">painful nodes</bdi>, <bdi dir="ltr">follicular hyperplasia</bdi></li><li><bdi dir="ltr">Arachidonic</bdi>: <bdi dir="ltr">COX → PGI2</bdi> (<bdi dir="ltr">vasodil</bdi>), <bdi dir="ltr">TXA2</bdi> (<bdi dir="ltr">vasoconst + platelets</bdi>), <bdi dir="ltr">PGE2</bdi> (<bdi dir="ltr">permeability</bdi>); <bdi dir="ltr">5-LOX → LTB4 chemotaxis</bdi>, <bdi dir="ltr">LTC4/D4/E4 bronchospasm</bdi>; <bdi dir="ltr">12-LOX → lipoxins</bdi></li></ul></div><div class="cs" style="background:#ffe3d3"><b class="cst">⏳ CHRONIC</b><ul><li><bdi dir="ltr">Prolonged</bdi>: <bdi dir="ltr">inflammation + destruction + repair together</bdi></li><li><bdi dir="ltr">Causes</bdi>: <bdi dir="ltr">persistent infection</bdi> (<bdi dir="ltr">TB</bdi>), <bdi dir="ltr">toxins</bdi>, <bdi dir="ltr">foreign body</bdi>, <bdi dir="ltr">autoimmunity</bdi></li><li><bdi dir="ltr">Arises</bdi>: <bdi dir="ltr">acute failure</bdi>, <bdi dir="ltr">recurrent acute</bdi>, <bdi dir="ltr">primary chronic</bdi></li><li><bdi dir="ltr">No vascular response</bdi>; <bdi dir="ltr">mononuclear cells</bdi>; <bdi dir="ltr">angiogenesis + fibrosis</bdi></li><li><bdi dir="ltr">Macrophage</bdi>: <bdi dir="ltr">interferon activated</bdi>; <bdi dir="ltr">injury</bdi> (<bdi dir="ltr">enzymes</bdi>, <bdi dir="ltr">O2</bdi>) + <bdi dir="ltr">fibrosis</bdi> (<bdi dir="ltr">FGF</bdi>)</li><li><bdi dir="ltr">Gross</bdi>: <bdi dir="ltr">cold abscess</bdi>, <bdi dir="ltr">ulcer</bdi>, <bdi dir="ltr">stenosis</bdi>, <bdi dir="ltr">sinus</bdi>, <bdi dir="ltr">fistula</bdi></li></ul></div><div class="cs" style="background:#fff3b8"><b class="cst">🎯 GRANULOMA</b><ul><li><bdi dir="ltr">Epithelioid macrophages + lymphocyte collar + fibroblasts + giant cell</bdi> ± <bdi dir="ltr">necrosis</bdi></li><li><bdi dir="ltr">TB</bdi>, <bdi dir="ltr">leprosy</bdi>, <bdi dir="ltr">syphilis</bdi>, <bdi dir="ltr">cat-scratch</bdi>, <bdi dir="ltr">sarcoidosis</bdi>, <bdi dir="ltr">Crohn</bdi>, <bdi dir="ltr">foreign body</bdi></li><li><bdi dir="ltr">Foreign body</bdi>: <bdi dir="ltr">inert</bdi> (<bdi dir="ltr">suture</bdi>); <bdi dir="ltr">Immune</bdi>: <bdi dir="ltr">T cells</bdi> (<bdi dir="ltr">TB</bdi>); <bdi dir="ltr">AIDS none</bdi></li><li><bdi dir="ltr">Table</bdi>: <bdi dir="ltr">TB M. tuberculosis</bdi>, <bdi dir="ltr">leprosy M. leprae</bdi>, <bdi dir="ltr">syphilis T. pallidum</bdi>, <bdi dir="ltr">cat-scratch Gram-negative bacillus</bdi>, <bdi dir="ltr">sarcoidosis unknown</bdi>, <bdi dir="ltr">Crohn immune</bdi></li></ul></div><div class="cs" style="background:#ffdfe9"><b class="cst">🌡️ SYSTEMIC</b><ul><li><bdi dir="ltr">Fever</bdi>: <bdi dir="ltr">TNF</bdi>, <bdi dir="ltr">IL-1 → prostaglandins</bdi> (<bdi dir="ltr">PGE2</bdi>) <bdi dir="ltr">hypothalamus</bdi></li><li><bdi dir="ltr">CRP</bdi>: <bdi dir="ltr">liver</bdi>, <bdi dir="ltr">IL-6</bdi></li><li><bdi dir="ltr">Leukocytosis</bdi>: <bdi dir="ltr">CSFs bone marrow</bdi></li><li><bdi dir="ltr">Septic shock</bdi>: <bdi dir="ltr">high TNF</bdi>, <bdi dir="ltr">low BP</bdi>, <bdi dir="ltr">DIC</bdi>, <bdi dir="ltr">metabolic abnormalities</bdi></li></ul></div></div></section>`;
+
+/* essay */
+const ES=[["Outcomes of acute inflammation", "<ul><li>Resolution · scarring · abscess · chronic</li><li>Depends: injury, site, host</li></ul>"], ["Morphologic types", "<ul><li>Catarrhal, serous, fibrinous, suppurative, ulceration, pseudomembranous</li></ul>"], ["Chronic inflammation", "<ul><li>Mononuclear cells, destruction, repair</li><li>Causes: infection, toxins, foreign body, autoimmunity</li></ul>"], ["Macrophage role", "<ul><li>Monocytes → macrophages → interferon activation</li><li>Injury + fibrosis</li></ul>"], ["Granuloma", "<ul><li>Epithelioid macrophages + lymphocyte collar + giant cell ± necrosis</li><li>TB, leprosy, sarcoidosis, Crohn, foreign body</li></ul>"], ["Systemic effects", "<ul><li>Fever (prostaglandins), CRP (IL-6), leukocytosis (CSFs), septic shock (TNF)</li></ul>"]];
+html+=`<section class="sec reveal" id="essay" style="background:#e8e0ff"><h2>✍️ أسئلة مقالية</h2><p style="color:var(--mut)">فكّر بجوابك أول، وبعدين دوس.</p>`+
+ES.map((e,i)=>`<div class="rv"><button><span>${i+1}. ${e[0]}</span><span>👁️</span></button><div class="ans">${e[1]}</div></div>`).join('')+`</section>`;
+
+/* flashcards */
+const FC=[["5 علامات الالتهاب؟", "Redness · Heat · Swelling · Pain · Loss of function"], ["سبب العلامات؟", "Chemical mediators + leukocyte-mediated damage"], ["الاحمرار والحرارة من؟", "Vasodilation"], ["الانتفاخ من؟", "↑ Permeability → edema"], ["حاجز الوعاء؟", "Endothelium + tight junctions + basement membrane"], ["وين بتبدأ الاستجابة؟", "Capillaries + postcapillary venules"], ["3 عوامل المصير؟", "Injury · site · host response"], ["4 مصائر الحاد؟", "Resolution · scarring · abscess · chronic"], ["Abscess بيجي من؟", "Pyogenic bacteria (staph aureus)"], ["Pus بيحتوي؟", "Dead neutrophils · debris · microbes · fluid"], ["أخف شكل؟", "Catarrhal"], ["Serous مثال؟", "Blister (burns)"], ["Fibrinous بالـ؟", "Serosal membranes · joints"], ["Pseudomembranous جرثومة؟", "Clostridium difficile"], ["Pseudomembranous وين؟", "Colon + oropharynx"], ["Lymphangitis علامة؟", "Red streaks"], ["Lymphadenitis؟", "Painful enlarged nodes"], ["Chronic بلا؟", "Vascular response (heat, redness, edema)"], ["Chronic خلايا؟", "Mononuclear cells"], ["Macrophage بتنتنشّط بـ؟", "Interferon"], ["Sinus مقابل fistula؟", "Fistula = opening between two surfaces"], ["Granuloma خلايا؟", "Epithelioid macrophages"], ["Foreign body granuloma مثال؟", "Suture material"], ["Immune granuloma مثال؟", "TB (T-cell mediated)"], ["CRP من وين؟", "Liver (IL-6)"], ["Septic shock مفتاح؟", "High TNF · DIC · low BP"], ["Heart scar؟", "Collagen type 1 بدل العضلة ← ضخ أضعف"], ["COX بيعطي؟", "PGI2 · TXA2 · PGD2/PGE2"], ["LTB4؟", "Chemotaxis"], ["LTC4/D4/E4؟", "Bronchospasm + ↑permeability"], ["Lipoxins؟", "بتثبّط الالتهاب"], ["Cat-scratch سببو؟", "Gram-negative bacillus"], ["Crohn؟", "Immune reaction vs intestinal bacteria / self antigens"], ["AIDS و granuloma؟", "ما بيتكوّن لأنو المناعة مثبّطة"], ["Foreign body granuloma ليش giant cell؟", "لأنو بلعم واحد ما بيقدر يبلعو"], ["مسدسات ودبابات؟", "عدلات بالحاد، بلاعم بالمزمن (بتضرّ النسيج)"]];
+html+=`<section class="sec reveal" id="flash" style="background:#d8f5e6"><h2>⚡ بطاقات سريعة</h2><div class="score">✅ <span id="sy">0</span> · 🔁 <span id="sn">0</span> / ${FC.length}</div>`+
+FC.map((f,i)=>`<div class="flash" data-i="${i}"><div class="in2"><div class="face f">${T(f[0])}</div><div class="face b">${T(f[1])}</div></div></div><div class="know" data-i="${i}" style="display:none"><button class="y">عرفتها ✅</button><button class="n">أراجعها 🔁</button></div>`).join('')+`</section>`;
+main.innerHTML=T(html);
+
+/* interactions */
+document.querySelectorAll('.mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.querySelectorAll('.rv>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+let sy=0,sn=0;const done={};
+document.querySelectorAll('.flash').forEach(f=>f.onclick=()=>{f.classList.toggle('flip');const k=f.nextElementSibling;k.style.display=f.classList.contains('flip')?'flex':'none'});
+document.querySelectorAll('.know').forEach(k=>{
+  k.querySelector('.y').onclick=()=>mark(k,1);k.querySelector('.n').onclick=()=>mark(k,0)});
+function mark(k,v){const i=k.dataset.i;if(done[i]!==undefined){v?0:0}
+  if(done[i]===1)sy--;if(done[i]===0)sn--;done[i]=v;v?sy++:sn++;
+  document.getElementById('sy').textContent=sy;document.getElementById('sn').textContent=sn;k.style.opacity=.5}
+/* match */
+const MT=[["Catarrhal", "Pharyngitis"], ["Pseudomembranous", "C. difficile"], ["Foreign body granuloma", "Suture material"], ["Septic shock", "High TNF + DIC"]];
+const CL=["Pharyngitis", "C. difficile", "Suture material", "High TNF + DIC"];
+document.getElementById('match').innerHTML=MT.map(m=>`<div style="margin:8px 0"><b class="en">${m[0]}</b> ←<div class="opts" data-a="${m[1]}">${CL.map(c=>`<button>${c}</button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#match .opts').forEach(o=>o.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(b.textContent===o.dataset.a){b.classList.add('ok')}else{b.classList.add('no')}}));
+const TF=[["Pus دايماً فيه جراثيم", 1, "صح، ولهيك ممكن يسبّب عدوى."], ["Serous inflammation غني بالبروتين", 0, "غلط، قليل البروتين (Protein-poor)."], ["Pseudomembranous بتصير بأي عضو", 0, "غلط، بس بالقولون والبلعوم."], ["Chronic inflammation فيه حرارة وإحمرار", 0, "غلط، ما في استجابة وعائية."], ["Foreign body granuloma بسبب T cells", 0, "غلط، هيدا Immune granuloma. الجسم الغريب خامل."], ["Leukocytosis بتحفّز بالـ CSFs", 1, "صح، بتحفّز نخاع العظم."], ["Fistula = فتحة بين سطحين", 1, "صح."]];
+document.getElementById('tf').innerHTML=TF.map((t,i)=>`<div class="tf"><div>${t[0]}<div class="fb"></div></div><div class="b2"><button data-v="1">صح</button><button data-v="0">غلط</button></div></div>`).join('');
+document.querySelectorAll('#tf .tf').forEach((r,i)=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  const ok=+b.dataset.v===TF[i][1];r.classList.add(ok?'ok':'no');r.querySelector('.fb').innerHTML=T((ok?'🎉 ':'🤔 ')+TF[i][2])}));
+
+/* reveal & progress */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.con').forEach(el=>io.observe(el));
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>document.getElementById(c.dataset.go).scrollIntoView({behavior:'smooth'}));
+
+/* guided tour */
+const IDS=[...CH.map(c=>'ch'+c.n),'games','review','essay','flash'];
+let ti=-1,timer=null,playing=false;
+const badge=document.getElementById('tourbadge'),tog=document.getElementById('toggle');
+function go(i){ti=Math.max(0,Math.min(IDS.length-1,i));document.getElementById(IDS[ti]).scrollIntoView({behavior:'smooth'})}
+function stop(){playing=false;clearInterval(timer);badge.style.display='none'}
+function play(){if(ti<0)go(0);playing=true;badge.style.display='block';clearInterval(timer);timer=setInterval(()=>{if(ti>=IDS.length-1){stop();return}go(ti+1)},12000)}
+document.getElementById('tourBtn').onclick=()=>{ti=-1;play()};
+document.getElementById('next').onclick=()=>{go(ti+1);if(playing)play()};
+document.getElementById('prev').onclick=()=>{go(ti-1);if(playing)play()};
+tog.onclick=()=>playing?stop():play();
+
+/* ===== Golden summary ===== */
+const G=[["#ffe9c7", "Warm-up: the basics", "الأساسيات", [["5 signs: Redness + Heat + Swelling + Pain + Loss of function", "5 علامات: احمرار، حرارة، انتفاخ، ألم، فقدان وظيفة (كل إصبع بكفّك علامة)"], ["Causes: Mediators + Leukocyte damage", "السبب: مواد كيميائية + أذية الكريات البيض"], ["8 causes: Infection + Trauma + Immune + Chemicals + Physical + Heat/Cold + Necrosis + Foreign body", "8 أسباب بـ 3 عائلات: حي، من الجسم، من برّا"], ["Vasodilation → Blood flow ↑ → Redness + Heat", "توسّع الأوعية = احمرار + حرارة"], ["Permeability ↑ → Fluid + Protein leak → Edema = Swelling", "النفاذية = انتفاخ (لا تخلطها مع التوسّع)"], ["Barrier: Endothelium + Tight junctions + Basement membrane; capillaries + postcapillary venules", "الحاجز: بطانة + وصلات + غشاء. الاستجابة بالشعيرات والوريدات"]]], ["#d8f5e6", "Outcomes of acute inflammation", "مصير الالتهاب الحاد", [["Outcome depends: injury type + severity, site, host response", "المصير بيعتمد على: الإصابة (شو)، المكان (وين)، المريض (مين)"], ["Complete resolution: mild injury, short duration, regenerating tissue", "{{Complete resolution}}: إصابة خفيفة، مدّة قصيرة، نسيج بيتجدّد"], ["Mediators decay, neutrophils die, lymphatics drain exudate, neighbor mitosis", "المواد بتتحلل، {{neutrophils}} بتموت، اللمف بيمتص {{exudate}}"], ["Scarring + fibrosis: severe injury, non-regenerating tissue", "{{Scarring + fibrosis}}: إصابة كبيرة أو نسيج ما بيتجدّد"], ["Abscess = localized pus (pyogenic bacteria, staph aureus)", "{{Abscess}} = قيح موضّع، من بكتيريا مقيّحة"], ["Pus = dead neutrophils + necrotic debris + microbes + fluid; lysosomal liquefaction", "{{Pus}} = عدلات ميتة + حطام + جراثيم + سوائل، وفيه جراثيم دايماً"], ["Progression to chronic inflammation", "ما بيطفى فبيصير {{chronic}}"], ["Diagram: injury → acute (vascular changes, neutrophil recruitment, mediators) → resolution | abscess | chronic; healing → fibrosis = loss of function", "المخطط: إصابة ← حاد ← شفاء أو خراج أو مزمن؛ التئام ← تليّف = فقدان وظيفة"], ["Heart scar: type 1 collagen replaces myocardium → impaired pumping; reticulin (type 3) framework", "ندبة القلب: {{Collagen type 1}} بدل العضلة، بتضعف الضخ"]]], ["#dbeeff", "6 morphologic types", "6 أشكال", [["Catarrhal: mild mucosal infection, hot red swollen, resolves (pharyngitis)", "{{Catarrhal}}: أخف شكل، بيطيب كامل"], ["Serous: protein-poor fluid, blister (burns, viral skin)", "{{Serous}}: سائل قليل البروتين، فقاعة"], ["Fibrinous: severe injury, fibrinogen exudate; resolution or organization; serosa + joints", "{{Fibrinous}}: فيبرينوجين كتير، بالأغشية المصلية والمفاصل"], ["Suppurative: pus + abscess, certain bacteria", "{{Suppurative}}: قيح وخراج"], ["Ulceration: severe infection, epithelial loss", "{{Ulceration}}: ظهارة ضايعة"], ["Pseudomembranous: colon + oropharynx only, C. difficile necrosis", "{{Pseudomembranous}}: قولون وبلعوم بس، {{C. difficile}}"]]], ["#e8e0ff", "Lymphatics + Arachidonic diagram", "اللمف ومخطط Arachidonic acid", [["Normal: drain interstitial fluid", "الطبيعي: بتنزح السائل بين الخلايا"], ["Inflammation: lymph flow up, drains edema, carries leukocytes + debris, may carry microbes", "بالالتهاب: الجريان بيزيد وبينزح الوذمة، وممكن ينقل الميكروب"], ["Lymphangitis: red streaks near wound", "{{Lymphangitis}}: خطوط حمرا قرب جرح"], ["Lymphadenitis: painful enlarged nodes (follicular hyperplasia)", "{{Lymphadenitis}}: عقد متضخّمة ومؤلمة"], ["Arachidonic acid: phospholipases (⊣ steroids) → COX (⊣ aspirin) → PGI2 vasodilation + ↓platelets; TXA2 vasoconstriction + ↑platelets; PGD2/PGE2 vasodilation + ↑permeability", "{{COX}} بيعطي PGI2 وTXA2 وPGE2. الستيرويدات بتثبّط {{Phospholipases}}، الأسبرين بيثبّط COX"], ["5-LOX: LTB4 chemotaxis; LTC4/D4/E4 bronchospasm + ↑permeability | 12-LOX: lipoxins inhibit inflammation", "{{5-Lipoxygenase}}: LTB4 جذب خلايا، LTC4/D4/E4 تشنّج قصبي ونفاذية. {{Lipoxins}} بتثبّط الالتهاب"]]], ["#ffe3d3", "Chronic inflammation", "الالتهاب المزمن", [["Definition: prolonged; active inflammation + destruction + repair simultaneously", "التعريف: طويل، التهاب وتدمير وترميم بنفس الوقت"], ["Causes: persistent infection (TB), toxins, foreign body, autoimmunity", "الأسباب: عدوى مستمرة، سموم، جسم غريب، مناعة ذاتية"], ["3 ways: acute failure, recurrent acute, primary chronic", "3 طرق: من حاد، متكرر، مزمن من البداية"], ["No vascular response: no heat, redness, edema", "بلا استجابة وعائية: بلا حرارة وإحمرار ووذمة"], ["Mononuclear cells + tissue destruction + angiogenesis + fibrosis", "خلايا وحيدة النواة، تدمير، أوعية جديدة وتليّف"], ["Neutrophils (acute) = pistols; macrophages (chronic) = tanks: kill the cause but damage the tissue", "الحاد: عدلات (مسدسات). المزمن: بلاعم (دبابات) بتضرّ النسيج"], ["Macrophage: monocytes emigrate, interferon activates; injury (enzymes, O2) + fibrosis (FGF)", "البلعم: بيدمّر وبيرمّم"], ["Gross: cold abscess, chronic ulcer, wall thickening/stenosis, sinus, fistula", "بالعين: خراج بارد، قرحة، سماكة وتضيّق، {{sinus}}، {{fistula}}"]]], ["#fff3b8", "Granulomatous inflammation", "الالتهاب الحبيبي", [["Granuloma: aggregate epithelioid macrophages (modified histiocytes)", "{{Granuloma}}: بلاعم ظهارية الشكل"], ["Causes: TB, leprosy, syphilis, cat-scratch, sarcoidosis, Crohn, foreign body", "الأسباب: سل، جذام، زهري، خدش قط، ساركويد، كرون، جسم غريب"], ["Structure: epithelioid core, lymphocyte collar, fibroblast rim, giant cell, ± central necrosis", "البنية: نص ظهاري، طوق لمفاويات، فيبروبلاست، خلية عملاقة، ± نخر"], ["Foreign body granuloma: inert indigestible (suture) → giant cells", "{{Foreign body}}: جسم خامل، خلايا عملاقة"], ["Immune granuloma: insoluble particles + T-cell response (TB); common type; no granuloma in AIDS", "{{Immune}}: جزيئات + خلايا T (سل). الشائع. بـ AIDS ما في granuloma"], ["Table: TB (M. tuberculosis), leprosy (M. leprae), syphilis (T. pallidum), cat-scratch (Gram-negative bacillus), sarcoidosis (unknown), Crohn (immune reaction vs intestinal bacteria/self antigens)", "جدول الأمراض وأسبابها"], ["T helper → interferon gamma → macrophage → giant cell", "{{T helper}} بتفرز {{interferon gamma}} فالبلعم بيصير خلية عملاقة"]]], ["#ffdfe9", "Systemic effects", "التأثيرات الجهازية", [["Fever: TNF, IL-1 → hypothalamus prostaglandins (PGE2)", "حرارة: سايتوكينات تحفّز {{prostaglandins}} بالوطاء"], ["Acute-phase proteins (CRP): liver, IL-6", "{{CRP}}: كبد، IL-6"], ["Leukocytosis: CSFs stimulate bone marrow", "{{Leukocytosis}}: {{CSFs}} تحفّز النخاع"], ["Septic shock: high TNF, low BP, DIC, metabolic abnormalities", "{{Septic shock}}: TNF عالي، ضغط واطي، {{DIC}}"], ["Conclusion: defense mechanism; acute + chronic; few consecutive steps; chemical mediators essential", "الخلاصة: الالتهاب دفاع، حاد ومزمن، خطوات متتالية، المواد الكيميائية أساسية"]]]];
+const GM=[["signs", "causes", "vdil", "perm", "barr", "link"], ["out", "resol", "scar", "abs", "prog", "odiag", "x1"], ["cat", "ser", "fib", "sup", "ulc", "pseudo", "x2"], ["lymph", "lymphang", "arach", "x3"], ["cdef", "cways", "ccomp", "mac", "cgross", "x4"], ["gdef", "gimp", "gran", "gtab", "gtypes", "x5"], ["fever", "aps", "leuko", "shock", "concl", "x6"]];
+let gh=`<div class="wrap"><h1>⭐ الملخص الذهبي</h1><p class="sub">كل فكرة بسطر إنكليزي وتحتو شرحها بالعربي. دوس على السطر لما تحفظو (<span id="gp">0</span> / <span id="gt">0</span>).</p>`;
+G.forEach((g,gi)=>{gh+=`<div class="gcard reveal" style="background:${g[0]}"><h3>${g[1]} <small style="color:var(--mut);font-weight:500">· ${g[2]}</small></h3>${g[3].map(x=>`<div class="gi"><div><div class="ge">${x[0]}</div><div class="ga">${x[1]}</div></div></div>`).join('')}${GM[gi]?`<div class="mn"><button><span>🧠 حيلة الحفظ</span><span>⌄</span></button><div class="body">${GM[gi].map(k=>ST[k]).join('<br><br>')}</div></div>`:''}</div>`});
+gh+=`</div>`;
+document.getElementById('v-gold').innerHTML=T(gh);
+document.querySelectorAll('#v-gold .mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.getElementById('gt').textContent=document.querySelectorAll('#v-gold .gi').length;
+document.querySelectorAll('#v-gold .gi').forEach(e=>e.onclick=()=>{e.classList.toggle('got');document.getElementById('gp').textContent=document.querySelectorAll('#v-gold .gi.got').length});
+
+/* ===== Short essay ===== */
+const SQ=[["Q1: Mention factors deciding acute inflammation outcome.", ["Type + severity of injury", "Site affected", "Host response"], "injury · site · host"], ["Q2: Mention 4 outcomes of acute inflammation.", ["Complete resolution", "Scarring + fibrosis", "Abscess formation", "Progression to chronic inflammation"], "4 outcomes"], ["Q3: Describe complete resolution.", ["Mild injury, short duration, little destruction, regenerating tissue", "Mediators decay + stop production", "Vasoconstriction, less permeability, less recruitment, neutrophils die", "Lymphatics absorb exudate; neighbor mitosis"], "mild · short · regenerating"], ["Q4: Define abscess + pus.", ["Abscess = localized pus collection after extensive damage (pyogenic bacteria, staph aureus)", "Pus = thick yellow fluid, tissue liquefaction (lysosomal enzymes)", "Contains dead neutrophils, necrotic debris, microbes, fluid", "Pus always contains bacteria"], "staph aureus · lysosomal"], ["Q5: List 6 morphologic types of acute inflammation.", ["Catarrhal", "Serous", "Fibrinous", "Suppurative", "Ulceration", "Pseudomembranous"], "6 types"], ["Q6: Describe catarrhal + serous inflammation.", ["Catarrhal: mild mucosal infection (viral URTI), hot red swollen, complete resolution (pharyngitis)", "Serous: protein-poor fluid, blister, burns + viral skin infection, pleural effusion"], "mild · protein-poor"], ["Q7: Describe fibrinous inflammation.", ["Severe injury, ↑ permeability, large fibrinogen exudation", "Outcome: resolution or organization (capillaries + fibroblasts → fibrosis)", "Serosal membranes + joints: pericarditis, pleuritis, peritonitis"], "fibrinogen · organization"], ["Q8: Describe pseudomembranous inflammation.", ["Only colon + oropharynx", "Necrotizing surface epithelium infection", "Clostridium difficile", "Severe redness"], "C. difficile · colon"], ["Q9: Describe lymphatic role in inflammation.", ["Normal: drain interstitial fluid", "Inflammation: ↑ lymph flow, drain edema, carry leukocytes + debris", "Severe: transport microbes", "Lymphangitis + lymphadenitis (reactive follicular hyperplasia)"], "drain · transport"], ["Q10: Define chronic inflammation + causes.", ["Prolonged duration; active inflammation + tissue destruction + repair simultaneously", "Persistent infection (TB, viruses, fungi)", "Persistent toxins", "Persistent foreign body; autoimmunity"], "4 causes"], ["Q11: Mention 3 ways chronic inflammation arises.", ["Progression from acute (persistent toxin/foreign body, undrained abscess)", "Recurrent acute episodes", "Chronic from the start"], "3 ways"], ["Q12: Describe chronic inflammation components.", ["No vascular response (no heat, redness, edema)", "Mononuclear cell recruitment", "Tissue destruction (persistent stimulus or inflammatory cells)", "Healing: angiogenesis + fibrosis"], "mononuclear · destruction · repair"], ["Q13: Describe macrophage role.", ["Monocytes emigrate (adhesion molecules + chemotactic factors)", "Differentiate to macrophages", "Activated by cytokines (interferon)", "Tissue injury (enzymes, O2 metabolites) + fibrosis (FGF)"], "interferon · injury + fibrosis"], ["Q14: List gross chronic inflammation features.", ["Chronic (cold) abscess", "Chronic ulcer", "Wall thickening → stenosis", "Persistent sinus", "Fistula"], "5 features"], ["Q15: Define granuloma + causes + structure.", ["Aggregate epithelioid macrophages; lymphocyte collar; fibroblast rim; giant cell; ± central necrosis", "Causes: TB, leprosy, syphilis, cat-scratch, sarcoidosis, Crohn, foreign body"], "epithelioid · giant cell"], ["Q16: Types of granuloma + systemic effects.", ["Foreign body granuloma (suture) vs immune granuloma (TB, T-cell)", "Systemic: fever (prostaglandins), CRP (IL-6, liver), leukocytosis (CSFs), septic shock (TNF, DIC)"], "foreign body · immune"]];
+let sh=`<div class="wrap"><h1>✍️ Short Essay</h1><p class="sub">نفس نمط الامتحان: اكتب جوابك، وبعدين شوف الجواب النموذجي وقيّم حالك من 4.</p>
+<div class="tot">النتيجة: <span id="ts">0</span> / <span id="tm">${SQ.length*4}</span></div>
+<div class="tools"><button id="shuf">🔀 خلّط الأسئلة</button><button id="rst">↺ ابدأ من جديد</button></div><div id="sq"></div></div>`;
+document.getElementById('v-short').innerHTML=sh;
+const sc={};
+function renderSQ(list){
+ document.getElementById('sq').innerHTML=list.map(i=>{const q=SQ[i];return `<div class="qc reveal in" data-i="${i}"><div class="qh"><div class="pt">4 نقاط</div><div class="q">${q[0]}</div></div>
+ <textarea placeholder="إجابتك"></textarea><button class="qbtn">👁️ شوف الجواب</button>
+ <div class="qa"><ol>${q[1].map(x=>`<li class="en" style="display:list-item;direction:ltr;text-align:left">${x}</li>`).join('')}</ol><div class="kw">🔑 ${q[2]}</div>
+ <div class="rate">قيّم إجابتك: ${[0,1,2,3,4].map(n=>`<button data-n="${n}">${n}</button>`).join('')}</div></div></div>`}).join('');
+ document.querySelectorAll('#sq .qc').forEach(c=>{
+  c.querySelector('.qbtn').onclick=()=>c.querySelector('.qa').classList.toggle('show');
+  c.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{c.querySelectorAll('.rate button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');sc[c.dataset.i]=+b.dataset.n;
+   document.getElementById('ts').textContent=Object.values(sc).reduce((a,b)=>a+b,0)})});
+}
+const order=[...SQ.keys()];renderSQ(order);
+document.getElementById('shuf').onclick=()=>{const o=[...SQ.keys()].sort(()=>Math.random()-.5);renderSQ(o)};
+document.getElementById('rst').onclick=()=>{for(const k in sc)delete sc[k];document.getElementById('ts').textContent=0;renderSQ(order)};
+
+/* ===== view routing ===== */
+const VW=['study','gold','short'];
+function showView(v,push){if(!VW.includes(v))v='study';stop();
+ VW.forEach(x=>{document.getElementById('v-'+x).hidden=x!==v});
+ document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ document.getElementById('nav').style.display=v==='study'?'flex':'none';
+ scrollTo(0,0);if(push){try{location.hash=v}catch(e){}}
+ document.querySelectorAll('#v-'+v+' .reveal').forEach(el=>io.observe(el))}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>showView(b.dataset.v,true));
+addEventListener('hashchange',()=>showView(location.hash.slice(1),false));
+showView(location.hash.slice(1),false);
+</script>
+</body>
+</html>

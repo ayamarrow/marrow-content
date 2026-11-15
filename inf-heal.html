@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healing & Repair</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--card:#fff;--ink:#2b2d42;--mut:#6b7090;--mint:#d8f5e6;--sky:#dbeeff;--lav:#e8e0ff;--peach:#ffe3d3;--yel:#fff3b8;--pink:#ffdfe9;--line:#ece5d6;--acc:#5b6cff;--grn:#2e9e6b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;overflow-x:hidden}
+.en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;display:inline-block}
+#bar{position:fixed;top:0;right:0;height:5px;width:0;background:linear-gradient(270deg,#5b6cff,#ff9d6c,#3fcf8e);z-index:50;transition:width .15s}
+#nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:6px 8px;box-shadow:0 6px 24px rgba(60,50,20,.15);max-width:95vw}
+#nav button{border:0;background:var(--lav);border-radius:30px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;font-size:14px}
+#nav button.on{background:var(--acc);color:#fff}
+.hero{padding:56px 18px 30px;text-align:center;background:radial-gradient(1000px 400px at 50% -10%,#e8e0ff 0,transparent 70%),radial-gradient(700px 300px at 90% 20%,#d8f5e6 0,transparent 70%)}
+.hero .big{font-size:64px;animation:flo 3s ease-in-out infinite}
+@keyframes flo{50%{transform:translateY(-8px) rotate(-4deg)}}
+.hero h1{font-size:clamp(28px,7vw,48px);font-weight:800;margin:6px 0}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto 10px;font-size:17px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px auto;max-width:760px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 16px;min-width:105px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.stat b{display:block;font-size:26px;color:var(--acc)}
+.stat span{font-size:12.5px;color:var(--mut)}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--acc);color:#fff;border:0;border-radius:40px;padding:12px 26px;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 8px 20px rgba(91,108,255,.35);transition:transform .2s}
+.cta:hover{transform:translateY(-2px) scale(1.03)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;max-width:1000px;margin:26px auto 0;padding:0 14px}
+.ccard{border-radius:22px;padding:16px;cursor:pointer;text-align:right;border:1px solid rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.ccard:hover{transform:translateY(-6px);box-shadow:0 12px 26px rgba(0,0,0,.1)}
+.ccard .e{font-size:34px}.ccard h3{font-size:18px;font-weight:800}.ccard small{color:var(--mut);display:block;font-size:12.5px}.ccard p{font-size:14px;margin-top:4px}
+main{max-width:860px;margin:0 auto;padding:10px 14px 120px}
+.chap{margin:46px 0;scroll-margin-top:16px}
+.chead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.num{flex:none;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff;background:var(--acc);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.chead .lab{font-size:12.5px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase;direction:ltr;text-align:right}
+.chead h2{font-size:clamp(22px,5.5vw,30px);font-weight:800;line-height:1.3}
+.cap{display:flex;gap:10px;align-items:flex-start;margin:12px 0 18px}
+.cap .av{font-size:34px;flex:none}
+.bubble{background:#fff;border:1px solid var(--line);border-radius:6px 20px 20px 20px;padding:12px 16px;box-shadow:0 3px 10px rgba(0,0,0,.05);font-size:16.5px}
+.con{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 3px 14px rgba(60,50,20,.05)}
+.con h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 10px}
+.chip{background:var(--sky);border-radius:30px;padding:4px 13px;font-weight:700;font-size:14px;opacity:0;transform:translateY(8px) scale(.9);transition:all .4s}
+.chip:nth-child(4n+3){background:var(--mint)}.chip:nth-child(4n+5){background:var(--peach)}.chip:nth-child(4n+7){background:var(--lav)}
+.chip.ar{color:var(--mut);background:none;padding:0 2px;opacity:0}
+.in .chip{opacity:1;transform:none}
+.con ul{padding-right:20px}.con li{margin:5px 0}
+.mn{margin-top:12px;background:var(--yel);border-radius:16px;overflow:hidden}
+.mn button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:800;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between}
+.mn .body{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 14px}
+.mn.open .body{max-height:1200px;padding-bottom:12px}.mn .body{line-height:1.95;font-size:15px}
+.mn.open button span:last-child{transform:rotate(180deg)}
+.hy{margin-top:10px;background:var(--mint);border-right:5px solid var(--grn);border-radius:12px;padding:9px 13px;font-size:15px}
+.hy b{color:var(--grn)}
+.hl{margin:18px 0 0;background:linear-gradient(100deg,var(--yel),#ffe9a0);border-radius:18px;padding:13px 16px;font-weight:800;font-size:15.5px;box-shadow:0 4px 12px rgba(200,160,0,.18)}
+.hl small{display:block;font-size:12px;color:#8a6d00;margin-bottom:2px}
+.sep{color:#b08a00;margin:0 6px}
+table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;font-size:14.5px;margin:10px 0}
+th{background:var(--lav);padding:9px 10px}td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfaf4}
+.sec{border-radius:26px;padding:22px 16px;margin:30px 0}
+.sec h2{font-size:26px;font-weight:800;margin-bottom:6px}
+.rv{background:#fff;border:1px solid var(--line);border-radius:18px;margin:10px 0;overflow:hidden}
+.rv>button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:700;padding:13px 15px;cursor:pointer;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.rv .ans{display:none;padding:0 15px 14px}
+.rv.open .ans{display:block;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}}
+.rv .ans ul{padding-right:20px}
+.flash{perspective:900px;height:130px;margin:10px 0;cursor:pointer}
+.flash .in2{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flash.flip .in2{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border:1px solid var(--line)}
+.face.f{background:var(--sky)}.face.b{background:var(--mint);transform:rotateY(180deg)}
+.score{position:sticky;top:10px;z-index:20;margin:0 auto 10px;width:max-content;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.know{display:flex;gap:6px;justify-content:center;margin-top:-4px;margin-bottom:8px}
+.know button{border:0;border-radius:20px;padding:5px 14px;font:inherit;font-weight:700;cursor:pointer}
+.know .y{background:var(--mint)}.know .n{background:var(--peach)}
+.game{background:#fff;border:2px dashed #c9bff5;border-radius:22px;padding:16px;margin:18px 0}
+.game h4{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:var(--sky);border-radius:14px;padding:7px 12px;font:inherit;font-weight:700;cursor:pointer}
+.opts button.ok{background:#8fe3b4}.opts button.no{background:#ffb4b4}
+.tf{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:9px 0}
+.tf .b2{display:flex;gap:4px;flex:none}
+.tf button{border:0;border-radius:12px;padding:6px 12px;font:inherit;font-weight:800;cursor:pointer;background:var(--lav)}
+.tf.ok{background:#e8fff1}.tf.no{background:#fff0f0}
+.fb{font-size:13.5px;color:var(--mut);margin-top:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);padding:30px 14px 110px;font-size:14px}
+#tourbadge{position:fixed;top:12px;left:12px;z-index:45;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:700;display:none;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.chip{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+#tabs{position:sticky;top:5px;z-index:48;display:flex;gap:6px;justify-content:center;padding:8px;background:rgba(255,250,240,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#tabs button{border:0;background:var(--lav);border-radius:30px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer;font-size:14.5px}
+#tabs button.on{background:var(--acc);color:#fff;box-shadow:0 4px 12px rgba(91,108,255,.35)}
+.view[hidden]{display:none}
+.wrap{max-width:860px;margin:0 auto;padding:22px 14px 120px}
+.wrap>h1{font-size:clamp(26px,6vw,38px);font-weight:800}
+.wrap>p.sub{color:var(--mut);margin-bottom:14px}
+.gcard{border-radius:22px;padding:16px;margin:14px 0;border:1px solid rgba(0,0,0,.05);box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.gcard h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.gi{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;margin:4px 0;background:rgba(255,255,255,.75);border-radius:12px;cursor:pointer;transition:all .25s;font-size:15.5px}
+.gi::before{content:'🔑';flex:none}
+.gi.got{opacity:.45;text-decoration:line-through}
+.gi.got::before{content:'✅'}
+.gnum{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.gnum div{background:#fff;border-radius:16px;padding:8px 14px;text-align:center;border:1px solid var(--line);min-width:92px}
+.gnum b{display:block;font-size:22px;color:var(--acc)}.gnum span{font-size:12px;color:var(--mut)}
+.gprog{font-weight:800;margin:8px 0}
+.qc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;margin:14px 0;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.qh .q{font-weight:800;font-size:17px;direction:ltr;text-align:left;unicode-bidi:isolate}
+.qh .pt{flex:none;color:var(--mut);font-size:13px;white-space:nowrap}
+.qc textarea{width:100%;margin-top:12px;border:0;border-bottom:2px solid var(--line);background:transparent;font:inherit;padding:8px 2px;resize:vertical;min-height:54px;outline:none}
+.qc textarea:focus{border-color:var(--acc)}
+.qa{display:none;margin-top:10px;background:var(--mint);border-radius:16px;padding:12px 14px}
+.qa.show{display:block;animation:pop .35s}
+.qa ol{padding-right:22px}.qa li{margin:3px 0}
+.qa .kw{margin-top:6px;font-size:13px;color:#1d6b49;font-weight:700}
+.rate{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-weight:700;font-size:14px}
+.rate button{border:0;background:#fff;border-radius:12px;padding:4px 12px;font:inherit;font-weight:800;cursor:pointer}
+.rate button.sel{background:var(--acc);color:#fff}
+.qbtn{margin-top:10px;border:0;background:var(--yel);border-radius:14px;padding:8px 16px;font:inherit;font-weight:800;cursor:pointer}
+.tot{position:sticky;top:58px;z-index:20;width:max-content;margin:6px auto 10px;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{border:0;background:var(--lav);border-radius:14px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}
+.ge{direction:ltr;text-align:left;font-weight:700;font-size:15.5px;line-height:1.5;unicode-bidi:isolate}
+.ga{font-size:14px;color:var(--mut);margin-top:3px;line-height:1.6}
+.gcard h3{direction:ltr;text-align:left}
+.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.cheat{background:#ffe3e8;border-right:5px solid #e85d9b;border-radius:12px;padding:9px 13px;margin-top:10px;font-weight:700;line-height:1.9}.say{background:#eef3ff;border-radius:14px;padding:9px 13px;margin:6px 0 10px;font-weight:700;border-right:4px solid var(--acc)}.intro{margin:6px 0 10px;line-height:1.95;font-size:16px}.enul{padding:0!important;list-style:none;text-align:right;font-size:15.5px;direction:rtl;line-height:1.95}.enul li{direction:rtl;text-align:right;unicode-bidi:isolate;margin:0 0 10px}.extra{text-align:left;color:var(--mut);font-size:14px;margin:4px 0}.chips{margin:10px 0}.mn .body{line-height:1.95}.hy{background:#fff3b8;border-right:0;border-left:5px solid #e0a800;text-align:left}.hy b{color:#8a6d00}.trk2{margin:12px 0;background:linear-gradient(100deg,#fbf3dc,#f6ead0);border-inline-start:5px solid #c9ae74;border-radius:16px;padding:10px 14px;color:#5f4d22;font-size:15.5px;line-height:2;font-weight:600;box-shadow:0 6px 16px #c9ae7422}.trk2 b{color:#8a6a2a}</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="tourbadge">▶ الجولة شغّالة</div>
+
+<div id="tabs"><button data-v="study" class="on">🎬 الرحلة</button><button data-v="gold">🏆 الملخص الذهبي</button><button data-v="short">✍️ Short Essay</button></div>
+<div id="v-study" class="view"><section class="hero">
+  <div class="big">🎬🩹</div>
+  <h1><span class="en">Healing &amp; Repair</span><br>الشفاء والترميم</h1>
+  <p>Inflammation 5-6 · د. نزار جوهر. كيف الجسم بيرمّم نفسو: التجدّد والندبة، الشفاء الأولي والثانوي، العوامل والمضاعفات، بالعامية والمصطلحات الإنكليزية، وبآخرها أسئلة تجرّب حالك. 🍿</p>
+  <div class="stats">
+    <div class="stat"><b>5</b><span>healing steps</span></div>
+    <div class="stat"><b>3</b><span>cell types</span></div>
+    <div class="stat"><b>2</b><span>intentions</span></div>
+    <div class="stat"><b>70-80%</b><span>final strength</span></div>
+  </div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0"><a class="cta" href="#gold" style="text-decoration:none">🏆 الملخص الذهبي</a><a class="cta" href="#short" style="text-decoration:none">✍️ Short Essay</a></div>
+  <button class="cta" id="tourBtn">▶ شغّل الجولة التلقائية</button>
+  <div class="grid" id="cards"></div>
+</section>
+
+<main id="main"></main>
+<footer>🛡️ المصدر: ملف المحاضرة (Inflammation 5-6، د. نزار جوهر).</footer>
+
+</div><div id="v-gold" class="view" hidden></div><div id="v-short" class="view" hidden></div>
+<div id="nav"><button id="prev">→ السابق</button><button id="toggle">⏸ / ▶</button><button id="next">التالي ←</button></div>
+
+<script>
+const E=t=>`<span class="en">${t}</span>`;
+const T=x=>x.replace(/\{\{(.+?)\}\}/g,'(<span class="en">$1</span>)');
+const CH=[
+ {
+  "n": 1,
+  "en": "The big picture",
+  "ar": "الصورة الكبيرة",
+  "emoji": "🛠️",
+  "col": "#fff3b8",
+  "teaser": "Repair · Regeneration · Healing",
+  "cap": "👷",
+  "q": "بعد الإصابة، كيف الجسم بيقرّر يبدّل أو يرقّع.",
+  "cons": [
+   {
+    "e": "🛠️",
+    "t": "Repair — شو بيصير بعد الإصابة؟",
+    "key": "rep",
+    "say": null,
+    "i": "",
+    "b": [
+     "تعال احكيلك قصة بسيطة بتفهّمك المحاضرة كلها. تخيّل مدينة اسمها جسمك، وضربها زلزال. هيدا الزلزال هو الإصابة (<b><bdi dir=\"ltr\">Tissue injury</bdi></b>): بيوت وقعت وناس ماتوا (الخلايا الميتة).",
+     "أول ما يصير الزلزال، الإسعاف والإطفائية بيوصلوا فوراً، وهيدا الالتهاب (<b><bdi dir=\"ltr\">Inflammation</bdi></b>). وبعد ما يهدا الوضع، بتبلّش مرحلة إعادة الإعمار، وهيدا الترميم (<b><bdi dir=\"ltr\">Repair</bdi></b>): بنبدّل الميت بحيّ، وبنرجّع المدينة تشتغل.",
+     "وانتبه: الإسعاف هو يلي بيفتح الورشة. يعني بلا التهاب ما في شفاء (<b><bdi dir=\"ltr\">Healing</bdi></b>) أصلاً."
+    ],
+    "x": "",
+    "flow": [
+     "Injury",
+     "Inflammation",
+     "Repair"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Injury → Inflammation → Dead cells replaced → Repair<br>Repair = restore architecture + function</bdi></b>",
+    "h": "Repair = restore architecture + function",
+    "c": "الترميم (<b><bdi dir=\"ltr\">Repair</bdi></b>) = <b><bdi dir=\"ltr\">Regeneration</bdi></b> أو <b><bdi dir=\"ltr\">Healing</bdi></b>، والالتهاب لازم يسبقو.",
+    "tr": "🏗️ الترميم (<bdi dir=\"ltr\">Repair</bdi>) شغل البناء بعد القصف: لازم يرجّع الشكل والوظيفة. والالتهاب لازم يسبقو."
+   },
+   {
+    "e": "♻️",
+    "t": "Regeneration vs Healing — طريقين للترميم",
+    "key": "two",
+    "say": null,
+    "i": "",
+    "b": [
+     "لما بدنا نعمّر، المهندس بيسأل سؤالين: هل في ناس بالحي بتقدر تبني من جديد؟ وهل الهيكل (<b><bdi dir=\"ltr\">Supporting framework</bdi></b>) يلي ماسك المباني لساتو سليم؟",
+     "إذا الجواب إي، بنبني نفس البيت بالضبط، والجيران بتتكاثر وبتعوّض: هيدا التجدّد (<b><bdi dir=\"ltr\">Regeneration</bdi></b>)، والنسيج بيرجع طبيعي مية بالمية.",
+     "أما إذا الحيّ كلو انهدّ وما بقي أساس، منحطّ باطون عالسريع: الخلايا الليفية (<b><bdi dir=\"ltr\">Fibroblasts</bdi></b>) بتصنع الكولاجين (<b><bdi dir=\"ltr\">Collagen</bdi></b>) وبيتكوّن نسيج ليفي اسمو ندبة (<b><bdi dir=\"ltr\">Fibrous scar</bdi></b>). هيدا الشفاء بالندبة (<b><bdi dir=\"ltr\">Healing</bdi></b>).",
+     "الندبة مش بيت حلو متل الأول، بس بتخلّي المبنى يقف (<b><bdi dir=\"ltr\">Structural stability</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Regeneration → Normal",
+     "Healing → Scar"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Intact framework → Neighbors multiply → Normal tissue<br>Severe damage → Fibroblasts → Collagen → Scar<br>Regeneration = normal tissue · Healing = scar formation</bdi></b>",
+    "h": "Regeneration = normal · Healing = fibrous scar",
+    "c": "الهيكل (<b><bdi dir=\"ltr\">Framework</bdi></b>) سليم = تجدّد (<b><bdi dir=\"ltr\">Regeneration</bdi></b>). مخرّب = ندبة (<b><bdi dir=\"ltr\">Scar</bdi></b>).",
+    "tr": "🧱 الهيكل سليم = تجدّد (<bdi dir=\"ltr\">Regeneration</bdi>): بنيت البيت من جديد. الهيكل مخرّب = ندبة (<bdi dir=\"ltr\">Scar</bdi>): رقّعت بالإسمنت."
+   },
+   {
+    "e": "🧱",
+    "t": "Fibrosis vs Organization — نفس الكولاجين، مكان مختلف",
+    "key": "fib",
+    "say": null,
+    "i": "",
+    "b": [
+     "في كلمتين بتخلّوك تغلط. التليّف (<b><bdi dir=\"ltr\">Fibrosis</bdi></b>) معناه إنك صبّيت باطون (<b><bdi dir=\"ltr\">Collagen</bdi></b>) زيادة بالعضو، بعد التهاب مزمن (<b><bdi dir=\"ltr\">Chronic inflammation</bdi></b>) أو موت نسيج بنقص التروية (<b><bdi dir=\"ltr\">Ischemic necrosis</bdi></b>، متل <b><bdi dir=\"ltr\">Infarction</bdi></b>، الاحتشاء).",
+     "والحيلة: إذا هالباطون انصبّ بمكان ممتلي بقيح وسوائل التهابية (<b><bdi dir=\"ltr\">Inflammatory exudate</bdi></b>)، اسمو يتغيّر وبيصير التنظّم (<b><bdi dir=\"ltr\">Organization</bdi></b>). نفس الباطون، بس المكان هو يلي بيسمّيه.",
+     "والمقاول دايماً واحد: الـ <b><bdi dir=\"ltr\">Fibroblasts</bdi></b> هي يلي بتصنع المادة بين الخلايا (<b><bdi dir=\"ltr\">ECM</bdi></b>، <b><bdi dir=\"ltr\">Extracellular matrix</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Chronic inflammation",
+     "Collagen",
+     "Fibrosis"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Chronic inflammation / Infarction → Excess collagen = Fibrosis<br>Fibrosis + exudate space = Organization</bdi></b>",
+    "h": "Fibrosis + exudate = organization",
+    "c": "<b><bdi dir=\"ltr\">Fibrosis</bdi></b> = كولاجين زيادة. إذا المكان فيه <b><bdi dir=\"ltr\">Exudate</bdi></b>، اسمو <b><bdi dir=\"ltr\">Organization.</bdi></b>",
+    "tr": "🧶 نفس الكولاجين بس مكان مختلف: (<bdi dir=\"ltr\">Fibrosis</bdi>) كولاجين زيادة. إذا في (<bdi dir=\"ltr\">Exudate</bdi>) بالمكان بيصير (<bdi dir=\"ltr\">Organization</bdi>)."
+   },
+   {
+    "e": "🧬",
+    "t": "Cells + growth factors — مين بيشتغل؟",
+    "key": "cells",
+    "say": null,
+    "i": "",
+    "b": [
+     "مين العمال بالورشة؟ في تلات فرق بتتكاثر وقت الإعمار.",
+     "الفريق الأول بقايا النسيج المصاب (<b><bdi dir=\"ltr\">Remnants</bdi></b>)، همّي أهل الحيّ يلي ضلّوا، وبيرجّعوا الشكل الأصلي. الفريق التاني الخلايا البطانية (<b><bdi dir=\"ltr\">Endothelial cells</bdi></b>)، همّي عمال الطرقات والمياه، بيعملوا أوعية دموية جديدة تجيب الأوكسجين والغذاء. التالت الـ <b><bdi dir=\"ltr\">Fibroblasts</bdi></b>، عمال الباطون.",
+     "ومين المدير؟ هو عوامل النمو (<b><bdi dir=\"ltr\">Growth factors</bdi></b>)، بروتينات بتبعت الأوامر لكل الفرق."
+    ],
+    "x": "",
+    "flow": [
+     "Remnants",
+     "Endothelial cells",
+     "Fibroblasts"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Growth factors → Remnants + Endothelial cells + Fibroblasts<br>Repair = interaction cells + ECM</bdi></b>",
+    "h": "Remnants + endothelial + fibroblasts, driven growth factors",
+    "c": "<b><bdi dir=\"ltr\">Remnants</bdi></b> بيرجّعوا الشكل، <b><bdi dir=\"ltr\">Endothelial</bdi></b> أوعية، <b><bdi dir=\"ltr\">Fibroblasts</bdi></b> ندبة. والقيادة <b><bdi dir=\"ltr\">Growth factors.</bdi></b>",
+    "tr": "👷 الفريق: بقايا النسيج (<bdi dir=\"ltr\">Remnants</bdi>) بترجّع الشكل، البطانة بتبني أوعية، (<bdi dir=\"ltr\">Fibroblasts</bdi>) بتعمل الندبة. القائد (<bdi dir=\"ltr\">Growth factors</bdi>)."
+   }
+  ],
+  "hl": [
+   "Repair = restore architecture + function",
+   "Regeneration = normal · Healing = fibrous scar",
+   "Fibrosis + exudate = organization",
+   "Remnants + endothelial + fibroblasts, driven growth factors"
+  ]
+ },
+ {
+  "n": 2,
+  "en": "Steps + cells",
+  "ar": "الخطوات والخلايا",
+  "emoji": "♻️",
+  "col": "#dbeeff",
+  "teaser": "5 خطوات + 3 أنواع خلايا",
+  "cap": "🧑‍🔧",
+  "q": "ترتيب الشغل، ومين بيقدر يتجدّد.",
+  "cons": [
+   {
+    "e": "📋",
+    "t": "5 steps of healing — ترتيب الشغل",
+    "key": "steps",
+    "say": null,
+    "i": "",
+    "b": [
+     "الإعمار إلو ترتيب ثابت، متل أي ورشة. وأول شي لازم ننضّف الركام.",
+     "<b><bdi dir=\"ltr\">1</bdi></b> كنس الركام (<b><bdi dir=\"ltr\">Scavenging</bdi></b>): الـ <b><bdi dir=\"ltr\">Macrophages</bdi></b> (الخلايا البلعمية، الجرّافات) بتشيل الميت. <b><bdi dir=\"ltr\">2</bdi></b> التجدّد (<b><bdi dir=\"ltr\">Regeneration</bdi></b>): الجيران بيعوّضوا. <b><bdi dir=\"ltr\">3</bdi></b> بناء النسيج الحبيبي (<b><bdi dir=\"ltr\">Granulation tissue</bdi></b>): بنمدّ طرقات (أوعية) وبنجيب عمال.",
+     "<b><bdi dir=\"ltr\">4</bdi></b> صبّ الباطون (<b><bdi dir=\"ltr\">ECM synthesis + deposition</bdi></b>): الكولاجين. <b><bdi dir=\"ltr\">5</bdi></b> الصقل (<b><bdi dir=\"ltr\">Tissue remodelling</bdi></b>): نمسح ونقوّي الندبة."
+    ],
+    "x": "",
+    "flow": [
+     "Scavenging",
+     "Regeneration",
+     "Granulation",
+     "ECM",
+     "Remodelling"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Scavenging → Regeneration → Granulation → ECM → Remodelling<br>5 steps = clean</bdi></b>, <b><bdi dir=\"ltr\">replace</bdi></b>, <b><bdi dir=\"ltr\">vessels</bdi></b>, <b><bdi dir=\"ltr\">concrete</bdi></b>, <b><bdi dir=\"ltr\">polish</bdi></b>",
+    "h": "Scavenging → regeneration → granulation → ECM → remodelling",
+    "c": "أول خطوة دايماً كنس الركام (<b><bdi dir=\"ltr\">Scavenging</bdi></b>): تنضيف قبل البناء.",
+    "tr": "🧹 خمس خطوات: أول خطوة دايماً كنس الركام (<bdi dir=\"ltr\">Scavenging</bdi>)، بعدين تجدّد، نسيج حبيبي، (<bdi dir=\"ltr\">ECM</bdi>)، وصقل."
+   },
+   {
+    "e": "🔁",
+    "t": "Regeneration — الجار بيعبّي مكان الميت",
+    "key": "regen",
+    "say": null,
+    "i": "",
+    "b": [
+     "خلّينا نفهم التجدّد (<b><bdi dir=\"ltr\">Regeneration</bdi></b>) أكتر. هو إنو الجيران بينقسموا وبيعبّوا مكان يلي ماتوا، بتحفيز عوامل النمو (<b><bdi dir=\"ltr\">Growth factors</bdi></b>).",
+     "بس مش كل أهل الحيّ بيعرفوا يبنوا. في بس فئتين بتعرف تنقسم (<b><bdi dir=\"ltr\">Labile</bdi></b> و<b><bdi dir=\"ltr\">Stable</bdi></b>)، وفئة تالتة ما بتقدر. وبنقسم الخلايا لتلات مجموعات حسب قدرتها على التكاثر (<b><bdi dir=\"ltr\">Proliferative capacity</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Dead cells",
+     "Neighbors multiply",
+     "Replaced"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Dead cells → Neighbors multiply → Replacement = Regeneration<br>Possible only Labile + Stable</bdi></b>",
+    "h": "Regeneration: neighbors multiply; labile + stable only",
+    "c": "التجدّد بس لـ <b><bdi dir=\"ltr\">Labile</bdi></b> و<b><bdi dir=\"ltr\">Stable</bdi></b>، والـ <b><bdi dir=\"ltr\">Permanent</bdi></b> لأ.",
+    "tr": "🧑‍🤝‍🧑 التجدّد: الجار بيعبّي مكان الميت. بس للخلايا (<bdi dir=\"ltr\">Labile</bdi>) و(<bdi dir=\"ltr\">Stable</bdi>)، مش (<bdi dir=\"ltr\">Permanent</bdi>)."
+   },
+   {
+    "e": "🧫",
+    "t": "Labile · Stable · Permanent — مين بيتجدّد؟",
+    "key": "types",
+    "say": null,
+    "i": "",
+    "b": [
+     "هيدا أهم قسم بالمحاضرة، ركّز معي.",
+     "المجموعة الأولى المتبدّلة (<b><bdi dir=\"ltr\">Labile</bdi></b>، <b><bdi dir=\"ltr\">Continuously cycling</bdi></b>): هدول عمال ما بيرتاحوا، دايماً بالدورة الخلوية (<b><bdi dir=\"ltr\">Cycle</bdi></b>). مثلن بشرة الجلد (<b><bdi dir=\"ltr\">Epidermis</bdi></b>) وظهارة الجهاز الهضمي (<b><bdi dir=\"ltr\">GI tract epithelium</bdi></b>). الجلد بيتجدّد كل <b><bdi dir=\"ltr\">40</bdi></b> يوم، والمخاطية (<b><bdi dir=\"ltr\">Mucosa</bdi></b>) كل <b><bdi dir=\"ltr\">4</bdi></b> أيام.",
+     "التانية المستقرّة (<b><bdi dir=\"ltr\">Stable</bdi></b> أو <b><bdi dir=\"ltr\">Quiescent</bdi></b>): هدول نايمين، بمرحلة <b><bdi dir=\"ltr\">G0</bdi></b> (راحة). بس لما يصير ضرر بيفيقوا وبيشتغلوا. مثلن خلايا الكبد (<b><bdi dir=\"ltr\">Hepatocytes</bdi></b>)، ولهيك الكبد بيتجدّد.",
+     "التالتة الدائمة (<b><bdi dir=\"ltr\">Permanent</bdi></b>): هدول ما بيتبدّلوا أبداً. مثلن العصبونات (<b><bdi dir=\"ltr\">Neurons</bdi></b>) وخلايا عضلة القلب (<b><bdi dir=\"ltr\">Cardiac myocytes</bdi></b>). إذا ماتوا، بتترقّع بندبة.",
+     "يعني الأولى والتانية تجدّد، والتالتة ندبة."
+    ],
+    "x": "",
+    "flow": [
+     "Labile",
+     "Stable",
+     "Permanent"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Labile = always cycling · Stable = G0 → cycle when injured · Permanent = never</bdi></b>",
+    "h": "Labile + stable regenerate · Permanent = scar only",
+    "c": "العصب وعضلة القلب = <b><bdi dir=\"ltr\">Permanent</bdi></b> (ندبة). الكبد = <b><bdi dir=\"ltr\">Stable</bdi></b> (بيتجدّد).",
+    "tr": "📋 الأعصاب وعضلة القلب (<bdi dir=\"ltr\">Permanent</bdi>) ندبة بس. الكبد (<bdi dir=\"ltr\">Stable</bdi>) بيتجدّد. (<bdi dir=\"ltr\">Labile</bdi>) بتتجدّد باستمرار."
+   }
+  ],
+  "hl": [
+   "Scavenging → regeneration → granulation → ECM → remodelling",
+   "Regeneration: neighbors multiply; labile + stable only",
+   "Labile + stable regenerate · Permanent = scar only"
+  ]
+ },
+ {
+  "n": 3,
+  "en": "Granulation tissue",
+  "ar": "النسيج الحبيبي",
+  "emoji": "🍓",
+  "col": "#ffe3d3",
+  "teaser": "أوعية + Fibroblasts",
+  "cap": "🧵",
+  "q": "علامة الشفاء وكيف بيتكوّن.",
+  "cons": [
+   {
+    "e": "🍓",
+    "t": "Granulation tissue — علامة الشفاء",
+    "key": "gran",
+    "say": null,
+    "i": "",
+    "b": [
+     "بعد ما نظّفنا الركام، بنبني الجسر المؤقت اللي بيمرّ عليه العمال. هو النسيج الحبيبي (<b><bdi dir=\"ltr\">Granulation tissue</bdi></b>)، علامة الشفاء المميّزة (<b><bdi dir=\"ltr\">Hallmark</bdi></b>).",
+     "شكلو وردي، طري، حبيبي (<b><bdi dir=\"ltr\">Pink</bdi></b>, <b><bdi dir=\"ltr\">soft</bdi></b>, <b><bdi dir=\"ltr\">granular</bdi></b>). وردي ليش؟ لأنو مليان أوعية جديدة. وبيسرّب سوائل (<b><bdi dir=\"ltr\">Edematous</bdi></b>) لأنو الأوعية الجديدة هشّة، وصلات الخلايا البطانية (<b><bdi dir=\"ltr\">Endothelial cells</bdi></b>) لساتها مش محكمة، متل أنابيب مياه جديدة بتنقّط.",
+     "وبيتكوّن من عمليتين: تكوّن الأوعية (<b><bdi dir=\"ltr\">Angiogenesis</bdi></b>) وتكاثر الخلايا الليفية (<b><bdi dir=\"ltr\">Fibroblastic proliferation</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Angiogenesis",
+     "Fibroblasts",
+     "Granulation tissue"
+    ],
+    "m": "<b><bdi dir=\"ltr\">New vessels + Fibroblasts → Granulation tissue</bdi></b> (<b><bdi dir=\"ltr\">pink</bdi></b>, <b><bdi dir=\"ltr\">soft</bdi></b>, <b><bdi dir=\"ltr\">leaky</bdi></b>)<br><b><bdi dir=\"ltr\">Granulation tissue = hallmark healing</bdi></b>",
+    "h": "Granulation: pink, soft, leaky; angiogenesis + fibroblasts",
+    "c": "النسيج الحبيبي وردي وبيسرّب بسبب الأوعية الجديدة. لا تخلطو مع <b><bdi dir=\"ltr\">Granuloma.</bdi></b>",
+    "tr": "🌸 النسيج الحبيبي (<bdi dir=\"ltr\">Granulation</bdi>) وردي، طري، وبيسرّب بسبب الأوعية الجديدة. لا تخلطو مع (<bdi dir=\"ltr\">Granuloma</bdi>)."
+   },
+   {
+    "e": "🌱",
+    "t": "Angiogenesis — أوعية جديدة",
+    "key": "angio",
+    "say": null,
+    "i": "",
+    "b": [
+     "تعال نشوف كيف بيمدّوا الطرقات الجديدة. هيدا تكوّن الأوعية (<b><bdi dir=\"ltr\">Angiogenesis</bdi></b> أو <b><bdi dir=\"ltr\">Neovascularization</bdi></b>): أوعية دقيقة جديدة.",
+     "بطريقتين: الأولى براعم (<b><bdi dir=\"ltr\">Capillary sprouts</bdi></b>) بتطلع من أوعية موجودة جنب الإصابة، متل فرع طريق جديد من الأوتوستراد. التانية خلايا سلف بطانية (<b><bdi dir=\"ltr\">Endothelial precursor cells</bdi></b>، <b><bdi dir=\"ltr\">EPCs</bdi></b>) بتهاجر من نخاع العظم (<b><bdi dir=\"ltr\">Bone marrow</bdi></b>) لمكان الإصابة.",
+     "المحفّز: <b><bdi dir=\"ltr\">VEGF</bdi></b> (عامل نمو بطانة الأوعية) و<b><bdi dir=\"ltr\">Angiopoietin.</bdi></b> وهالعملية مهمة بالشفاء، وبنمو الورم (<b><bdi dir=\"ltr\">Tumor</bdi></b>)، وبإعادة تروية النسيج المنقوص تروية."
+    ],
+    "x": "",
+    "flow": [
+     "VEGF",
+     "Sprouts + EPCs",
+     "New vessels"
+    ],
+    "m": "<b><bdi dir=\"ltr\">VEGF + Angiopoietin → Sprouts + EPCs → New vessels = Angiogenesis</bdi></b>",
+    "h": "Angiogenesis: VEGF + angiopoietin; sprouts + EPCs",
+    "c": "المحفّز <b><bdi dir=\"ltr\">VEGF + Angiopoietin</bdi></b>، والورم بيستخدم نفس الآلية.",
+    "tr": "🌿 (<bdi dir=\"ltr\">Angiogenesis</bdi>) أوعية جديدة بتنبت: (<bdi dir=\"ltr\">VEGF</bdi>) و(<bdi dir=\"ltr\">Angiopoietin</bdi>). والورم بيستخدم نفس الآلية."
+   },
+   {
+    "e": "🪡",
+    "t": "Fibroblastic proliferation — فريق الندبة",
+    "key": "fibro",
+    "say": null,
+    "i": "",
+    "b": [
+     "بنفس الوقت لازم عمال الباطون، الـ <b><bdi dir=\"ltr\">Fibroblasts</bdi></b>، يوصلوا لموقع الورشة. بيتكاثروا وبيهاجروا (<b><bdi dir=\"ltr\">Migrate</bdi></b>) لإطار النسيج الحبيبي.",
+     "مين بيدعيهم؟ عوامل النمو (<b><bdi dir=\"ltr\">Growth factors</bdi></b>) والسايتوكينات (<b><bdi dir=\"ltr\">Cytokines</bdi></b>): <b><bdi dir=\"ltr\">PDGF</bdi></b> و<b><bdi dir=\"ltr\">FGF</bdi></b> و<b><bdi dir=\"ltr\">TNF</bdi></b> و<b><bdi dir=\"ltr\">IL-1.</bdi></b>",
+     "وبتحفظ الأسماء من معناها: <b><bdi dir=\"ltr\">PDGF = Platelet-derived growth factor</bdi></b>، من الصفائح لأنها أول واصلة للجرح. و<b><bdi dir=\"ltr\">FGF = Fibroblast growth factor</bdi></b>، اسمو بيحكي شغلتو."
+    ],
+    "x": "",
+    "flow": [
+     "Growth factors",
+     "Fibroblasts migrate",
+     "Granulation framework"
+    ],
+    "m": "<b><bdi dir=\"ltr\">PDGF + FGF + TNF + IL-1 → Fibroblasts migrate → Granulation framework</bdi></b>",
+    "h": "Fibroblasts migrate: PDGF, FGF, TNF, IL-1",
+    "c": "<b><bdi dir=\"ltr\">PDGF</bdi></b> من الصفائح، <b><bdi dir=\"ltr\">FGF</bdi></b> خاص بالفيبروبلاست.",
+    "tr": "👷 فريق الندبة: (<bdi dir=\"ltr\">PDGF</bdi>) من الصفائح، (<bdi dir=\"ltr\">FGF</bdi>) للفيبروبلاست، مع (<bdi dir=\"ltr\">TNF</bdi>) و(<bdi dir=\"ltr\">IL-1</bdi>)."
+   }
+  ],
+  "hl": [
+   "Granulation: pink, soft, leaky; angiogenesis + fibroblasts",
+   "Angiogenesis: VEGF + angiopoietin; sprouts + EPCs",
+   "Fibroblasts migrate: PDGF, FGF, TNF, IL-1"
+  ]
+ },
+ {
+  "n": 4,
+  "en": "ECM + remodelling",
+  "ar": "الـ ECM والصقل",
+  "emoji": "🧱",
+  "col": "#e8e0ff",
+  "teaser": "كولاجين ثم هدم منظّم",
+  "cap": "🏗️",
+  "q": "القوة من الكولاجين، والصقل بيظبّط الشكل.",
+  "cons": [
+   {
+    "e": "🧱",
+    "t": "ECM deposition — صبّ الإسمنت",
+    "key": "ecm",
+    "say": null,
+    "i": "",
+    "b": [
+     "وصلوا عمال الباطون. شو عم يعملوا؟ هنّي المعمل الرئيسي للمادة بين الخلايا (<b><bdi dir=\"ltr\">ECM</bdi></b>). بيصبّوا الكولاجين الليفي (<b><bdi dir=\"ltr\">Fibrillar collagen</bdi></b>) ومنو بتجي قوة الجرح (<b><bdi dir=\"ltr\">Strength</bdi></b>).",
+     "وبيبدأ الشغل بعد <b><bdi dir=\"ltr\">3</bdi></b> لـ <b><bdi dir=\"ltr\">5</bdi></b> أيام من الإصابة وبيكمّل أسابيع، بتحفيز <b><bdi dir=\"ltr\">PDGF</bdi></b> و<b><bdi dir=\"ltr\">FGF</bdi></b> والـ <b><bdi dir=\"ltr\">Cytokines.</bdi></b>",
+     "وهالـ <b><bdi dir=\"ltr\">ECM</bdi></b>، النسيج الضام، مكوّن من ألياف (<b><bdi dir=\"ltr\">Fibrils</bdi></b>) وبروتينات (<b><bdi dir=\"ltr\">Proteins</bdi></b>) وسكريات معقّدة (<b><bdi dir=\"ltr\">Glycosaminoglycans</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Fibroblasts",
+     "Collagen",
+     "Wound strength"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Fibroblasts → Fibrillar collagen → Wound strength</bdi></b> (<b><bdi dir=\"ltr\">day 3-5</bdi></b>, <b><bdi dir=\"ltr\">weeks</bdi></b>)",
+    "h": "ECM: fibroblasts, collagen, day 3-5, strength",
+    "c": "قوة الجرح من الكولاجين المترسّب، وبيبدأ يوم <b><bdi dir=\"ltr\">3-5.</bdi></b>",
+    "tr": "🧱 صبّ الإسمنت: الكولاجين المترسّب بيعطي القوة، وبيبدأ يوم 3-5."
+   },
+   {
+    "e": "🔧",
+    "t": "Remodelling — صقل وتقوية",
+    "key": "remod",
+    "say": null,
+    "i": "",
+    "b": [
+     "صبّينا الباطون، بس الشغل ما خلص. بقي الصقل (<b><bdi dir=\"ltr\">Remodelling</bdi></b>): الندبة لازم تنضج وتتنظّم.",
+     "وبيصير بتوازن بين الترسيب (<b><bdi dir=\"ltr\">Deposition</bdi></b>) والهدم (<b><bdi dir=\"ltr\">Degradation</bdi></b>). والهدم بتعملو إنزيمات اسمها <b><bdi dir=\"ltr\">Metalloproteinases</bdi></b> (متل <b><bdi dir=\"ltr\">Collagenases</bdi></b>)، بتحتاج <b><bdi dir=\"ltr\">Zinc.</bdi></b>",
+     "ومع النضج الأوعية بتنسحب (<b><bdi dir=\"ltr\">Vascular regression</bdi></b>)، فالندبة بتصير شاحبة وبلا أوعية (<b><bdi dir=\"ltr\">Pale</bdi></b>, <b><bdi dir=\"ltr\">avascular</bdi></b>) وأقوى. متل جدار إسمنت نشّف وتغيّر لونو."
+    ],
+    "x": "",
+    "flow": [
+     "Deposition",
+     "Degradation",
+     "Strong pale scar"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Deposition ⇄ Degradation → Strong pale scar<br>Remodelling = scar maturation</bdi></b>",
+    "h": "Remodelling: deposition/degradation, zinc enzymes, pale scar",
+    "c": "الهدم بـ <b><bdi dir=\"ltr\">Metalloproteinases</bdi></b> وبتحتاج <b><bdi dir=\"ltr\">Zinc.</bdi></b> الندبة الناضجة شاحبة.",
+    "tr": "🪚 الصقل: هدم وبناء بنفس الوقت بإنزيمات (<bdi dir=\"ltr\">Metalloproteinases</bdi>) بتحتاج (<bdi dir=\"ltr\">Zinc</bdi>). الندبة الناضجة شاحبة."
+   }
+  ],
+  "hl": [
+   "ECM: fibroblasts, collagen, day 3-5, strength",
+   "Remodelling: deposition/degradation, zinc enzymes, pale scar"
+  ]
+ },
+ {
+  "n": 5,
+  "en": "1st intention",
+  "ar": "الشفاء الأولي",
+  "emoji": "✂️",
+  "col": "#d8f5e6",
+  "teaser": "جرح نظيف حوافو لازقة",
+  "cap": "🩹",
+  "q": "جدول زمني، ساعة بساعة.",
+  "cons": [
+   {
+    "e": "✂️",
+    "t": "1st intention — جرح نظيف حوافو لازقة",
+    "key": "prim",
+    "say": null,
+    "i": "",
+    "b": [
+     "هلأ نشوف حالات. زلزال خفيف: شق نظيف بجدار، ومخيّط، حوافو لازقة ببعض (<b><bdi dir=\"ltr\">Opposed edges</bdi></b>). هيدا الشفاء بالمقصد الأول (<b><bdi dir=\"ltr\">First intention</bdi></b> أو <b><bdi dir=\"ltr\">Primary union</bdi></b>).",
+     "الضرر محدود: خلايا قليلة ماتت. والفراغ الصغير بيتعبّى بدم متخثّر فيه الفيبرين (<b><bdi dir=\"ltr\">Fibrin</bdi></b>)، والسطح بيجفّ وبيصير قشرة (<b><bdi dir=\"ltr\">Scab</bdi></b>).",
+     "والقاعدة: بلا التهاب ما في شفاء (<b><bdi dir=\"ltr\">Without inflammation</bdi></b>, <b><bdi dir=\"ltr\">no healing</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Clean incision",
+     "Clot + fibrin",
+     "Scab"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Clean incision → Clot + fibrin → Scab = 1st intention</bdi></b>",
+    "h": "1st intention: clean, opposed edges, limited damage",
+    "c": "<b><bdi dir=\"ltr\">First intention</bdi></b> = جرح نظيف ومخيّط وحوافو لازقة.",
+    "tr": "🧵 (<bdi dir=\"ltr\">1st intention</bdi>) جرح نظيف ومخيّط: الحواف ملتصقة والأذية قليلة."
+   },
+   {
+    "e": "⏱️",
+    "t": "Timeline: day 1 → 5 — ساعة بساعة",
+    "key": "time1",
+    "say": null,
+    "i": "",
+    "b": [
+     "الدكتور بيحب يسأل عن التوقيت، فخلّينا نمشي يوم بيوم. أول <b><bdi dir=\"ltr\">24</bdi></b> ساعة: العدلات (<b><bdi dir=\"ltr\">Neutrophils</bdi></b>، أول فرقة إسعاف) بتوصل للحواف باتجاه جلطة الفيبرين (<b><bdi dir=\"ltr\">Fibrin clot</bdi></b>).",
+     "بين <b><bdi dir=\"ltr\">24</bdi></b> و<b><bdi dir=\"ltr\">48</bdi></b> ساعة: ظهارة (<b><bdi dir=\"ltr\">Epithelial spurs</bdi></b>) بتتحرّك من الحواف وبتلتقي بالنص تحت القشرة (<b><bdi dir=\"ltr\">Scab</bdi></b>)، فبتسكّر الجرح بطبقة رقيقة.",
+     "يوم <b><bdi dir=\"ltr\">3</bdi></b>: الـ <b><bdi dir=\"ltr\">Macrophages</bdi></b> بتاخد مكان الـ <b><bdi dir=\"ltr\">Neutrophils</bdi></b>، والنسيج الحبيبي بيبدأ يدخل، والبشرة (<b><bdi dir=\"ltr\">Epidermis</bdi></b>) بتتخّن.",
+     "يوم <b><bdi dir=\"ltr\">5</bdi></b>: الفراغ ممتلي نسيج حبيبي، وتكوّن الأوعية (<b><bdi dir=\"ltr\">Neovascularization</bdi></b>) بالذروة، والكولاجين بيبدأ يجسّر الفراغ، والبشرة رجعت لسماكتها الطبيعية."
+    ],
+    "x": "",
+    "flow": [
+     "24h Neutrophils",
+     "Day 3 Macrophages",
+     "Day 5 peak vessels"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Day 1 neutrophils → Day 3 macrophages → Day 5 max vessels + collagen</bdi></b>",
+    "h": "Neutrophils day 1, macrophages day 3, max vessels day 5",
+    "c": "يوم <b><bdi dir=\"ltr\">1 Neutrophils</bdi></b>، يوم <b><bdi dir=\"ltr\">3 Macrophages</bdi></b>، يوم <b><bdi dir=\"ltr\">5</bdi></b> الأوعية بالذروة.",
+    "tr": "🗓️ يوم 1 عدلات، يوم 3 بلاعم، يوم 5 الأوعية بالذروة."
+   },
+   {
+    "e": "📆",
+    "t": "Timeline: week 2 → month 1 — لحد شهر",
+    "key": "time2",
+    "say": null,
+    "i": "",
+    "b": [
+     "بعد أسبوعين: الكولاجين والـ <b><bdi dir=\"ltr\">Fibroblasts</bdi></b> بيكملوا يزيدوا، والالتهاب والوذمة (<b><bdi dir=\"ltr\">Edema</bdi></b>) بيروحوا.",
+     "ونهاية الشهر الأول: ندبة خلوية (<b><bdi dir=\"ltr\">Cellular scar</bdi></b>) بلا ارتشاح التهابي (<b><bdi dir=\"ltr\">Inflammatory infiltrate</bdi></b>)، وفوقها بشرة سليمة.",
+     "بس في شي بيضيع للأبد: ملاحق الجلد (<b><bdi dir=\"ltr\">Dermal appendages</bdi></b>) يلي انهدمت بخط الشق: بصيلات الشعر (<b><bdi dir=\"ltr\">Hair follicles</bdi></b>)، الغدد الدهنية (<b><bdi dir=\"ltr\">Sebaceous glands</bdi></b>) والعرقية (<b><bdi dir=\"ltr\">Sweat glands</bdi></b>). وقوة الشدّ (<b><bdi dir=\"ltr\">Tensile strength</bdi></b>) بتضل تزيد شهور بالترسيب والصقل."
+    ],
+    "x": "",
+    "flow": [
+     "Week 2",
+     "Month 1 scar"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Week 2 collagen up → Month 1 cellular scar → Strength rises months</bdi></b>",
+    "h": "Month 1: cellular scar; appendages permanently lost",
+    "c": "الشعر والغدد يلي بخط الشق ما بيرجعوا. والقوة بتكبر شهور.",
+    "tr": "⏳ شهر: ندبة خلوية. الشعر والغدد اللي على خط الشق ما بيرجعوا. والقوة بتكبر شهور."
+   }
+  ],
+  "hl": [
+   "1st intention: clean, opposed edges, limited damage",
+   "Neutrophils day 1, macrophages day 3, max vessels day 5",
+   "Month 1: cellular scar; appendages permanently lost"
+  ]
+ },
+ {
+  "n": 6,
+  "en": "2nd intention",
+  "ar": "الشفاء الثانوي",
+  "emoji": "🕳️",
+  "col": "#ffdfe9",
+  "teaser": "جرح مفتوح + Contraction",
+  "cap": "🔥",
+  "q": "شو بيختلف عن الأولي.",
+  "cons": [
+   {
+    "e": "🕳️",
+    "t": "2nd intention — جرح مفتوح",
+    "key": "sec",
+    "say": null,
+    "i": "",
+    "b": [
+     "هلأ زلزال كبير: الجرح مفتوح، حوافو بعيدة عن بعض (<b><bdi dir=\"ltr\">Separated edges</bdi></b>)، وفقدان كبير بالنسيج (<b><bdi dir=\"ltr\">Large defect</bdi></b>)، متل حيّ كامل انهدّ.",
+     "هون التجدّد لحالو ما بيقدر يرجّع الأصل. فكمية كبيرة من النسيج الحبيبي بتدخل من الحواف وبتسدّ الفراغ. هيدا الشفاء بالمقصد الثاني (<b><bdi dir=\"ltr\">Second intention</bdi></b> أو <b><bdi dir=\"ltr\">Secondary union</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Large defect",
+     "Granulation from margins",
+     "Scar"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Large defect → Granulation from margins → Scar = 2nd intention</bdi></b>",
+    "h": "2nd intention: separated edges, large defect",
+    "c": "<b><bdi dir=\"ltr\">Second intention</bdi></b> = جرح مفتوح وحفرة كبيرة، بتتسكّر بنسيج حبيبي من الحواف.",
+    "tr": "🕳️ (<bdi dir=\"ltr\">2nd intention</bdi>) جرح مفتوح وحفرة كبيرة: بتتسكّر بنسيج حبيبي من الحواف."
+   },
+   {
+    "e": "⚖️",
+    "t": "1st vs 2nd — شو بيختلف",
+    "key": "diff",
+    "say": null,
+    "i": "",
+    "b": [
+     "شو بيفرّق الثاني عن الأول؟ ببساطة كل شي أكبر. جلطة الفيبرين (<b><bdi dir=\"ltr\">Fibrin clot</bdi></b>) أكبر، والركام (<b><bdi dir=\"ltr\">Necrotic debris</bdi></b>) والسوائل (<b><bdi dir=\"ltr\">Exudate</bdi></b>) أكتر، فالالتهاب أشدّ، وبيتكوّن نسيج حبيبي أكتر بكتير.",
+     "والفرق الأوضح: تقلّص الجرح (<b><bdi dir=\"ltr\">Wound contraction</bdi></b>). بتعملو الخلايا الليفية العضلية (<b><bdi dir=\"ltr\">Myofibroblasts</bdi></b>)، <b><bdi dir=\"ltr\">Fibroblasts</bdi></b> إلها خصائص عضلة ملساء (<b><bdi dir=\"ltr\">Smooth muscle</bdi></b>)، وبتشدّ حواف الجرح لجوّا متل خيط بيشدّ الجيب.",
+     "والنتيجة: ندبة أكبر، بشرة أرق، ومدة أطول."
+    ],
+    "x": "",
+    "flow": [
+     "Bigger clot",
+     "More inflammation",
+     "Contraction"
+    ],
+    "m": "<b><bdi dir=\"ltr\">More clot → More inflammation → More granulation → Contraction → Bigger scar</bdi></b>",
+    "h": "2nd: more clot, inflammation, granulation; contraction",
+    "c": "أوضح فرق: <b><bdi dir=\"ltr\">Wound contraction</bdi></b> بالـ <b><bdi dir=\"ltr\">Second intention</bdi></b> بسبب <b><bdi dir=\"ltr\">Myofibroblasts.</bdi></b>",
+    "tr": "🔍 أوضح فرق: انكماش الجرح (<bdi dir=\"ltr\">Wound contraction</bdi>) بسبب (<bdi dir=\"ltr\">Myofibroblasts</bdi>). والجلطة والالتهاب والنسيج الحبيبي أكتر."
+   },
+   {
+    "e": "💪",
+    "t": "Wound strength — قوة الجرح",
+    "key": "strength",
+    "say": null,
+    "i": "",
+    "b": [
+     "وقوة الجرح؟ نهاية الأسبوع الأول، حوالي <b><bdi dir=\"ltr\">10%</bdi></b> بس من الجلد السليم. بعدين بتزيد بالتدريج لحد <b><bdi dir=\"ltr\">70-80%</bdi></b> من قوة الشدّ (<b><bdi dir=\"ltr\">Tensile strength</bdi></b>) بترسّب الكولاجين.",
+     "وعمرها ما بترجع <b><bdi dir=\"ltr\">100%.</bdi></b>"
+    ],
+    "x": "",
+    "flow": [
+     "Week 1: 10%",
+     "Later: 70-80%"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Week 1 = 10% → Weeks later = 70-80%</bdi></b>",
+    "h": "Strength: 10% week 1 → 70-80%",
+    "c": "أسبوع <b><bdi dir=\"ltr\">1 = 10%</bdi></b>، وبالآخر <b><bdi dir=\"ltr\">70-80%</bdi></b>، وما بيرجع <b><bdi dir=\"ltr\">100%.</bdi></b>",
+    "tr": "📈 القوة: أسبوع 1 = 10%، وبالآخر 70-80%. ما بترجع 100%."
+   }
+  ],
+  "hl": [
+   "2nd intention: separated edges, large defect",
+   "2nd: more clot, inflammation, granulation; contraction",
+   "Strength: 10% week 1 → 70-80%"
+  ]
+ },
+ {
+  "n": 7,
+  "en": "Factors",
+  "ar": "العوامل المؤثرة",
+  "emoji": "🌍",
+  "col": "#fde68a",
+  "teaser": "Systemic + Local",
+  "cap": "⚖️",
+  "q": "شو بيسرّع وشو بيعطّل.",
+  "cons": [
+   {
+    "e": "🌍",
+    "t": "Systemic factors — ليش بيتأخّر الجرح؟",
+    "key": "sysf",
+    "say": null,
+    "i": "",
+    "b": [
+     "ليش في جروح بتتأخّر؟ في عوامل عامة بالجسم. أول شي التغذية (<b><bdi dir=\"ltr\">Nutrition</bdi></b>): نقص البروتين (<b><bdi dir=\"ltr\">Protein</bdi></b>) وفيتامين <b><bdi dir=\"ltr\">C</bdi></b> بيمنع صنع الكولاجين، فالشفاء بيتأخّر.",
+     "بعدين الحالة الاستقلابية (<b><bdi dir=\"ltr\">Metabolic status</bdi></b>): السكري (<b><bdi dir=\"ltr\">Diabetes mellitus</bdi></b>) بيخرّب الأوعية الدقيقة (<b><bdi dir=\"ltr\">Microangiopathy</bdi></b>). وكمان الدورة الدموية (<b><bdi dir=\"ltr\">Circulatory status</bdi></b>): ضعف التروية، متل تصلّب الشرايين (<b><bdi dir=\"ltr\">Atherosclerosis</bdi></b>).",
+     "وآخر شي الهرمونات: الغلوكوكورتيكويدات (<b><bdi dir=\"ltr\">Glucocorticoids</bdi></b>، مضادات التهاب). وتذكّر: الشفاء بيبدأ بالالتهاب، فإذا طفّيتو بيتأخّر."
+    ],
+    "x": "",
+    "flow": [
+     "Nutrition",
+     "Diabetes",
+     "Circulation",
+     "Glucocorticoids"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Protein ↓ / Vit C ↓ / Diabetes / Poor circulation / Steroids → Delayed healing</bdi></b>",
+    "h": "Systemic: nutrition, diabetes, circulation, steroids",
+    "c": "الكورتيزون (<b><bdi dir=\"ltr\">Glucocorticoids</bdi></b>) بيأخّر الشفاء لأنو بيطفّي الالتهاب.",
+    "tr": "🚫 ليش بيتأخّر؟ تغذية، سكري، دوران، وكورتيزون (<bdi dir=\"ltr\">Steroids</bdi>) لأنو بيطفّي الالتهاب."
+   },
+   {
+    "e": "📍",
+    "t": "Local factors — عوامل موضعية",
+    "key": "locf",
+    "say": null,
+    "i": "",
+    "b": [
+     "وفي عوامل موضعية، أهمها بلا منازع العدوى (<b><bdi dir=\"ltr\">Infection</bdi></b>): أهم سبب وحيد لتأخير الشفاء، لأنها بتخلّي الإصابة والالتهاب مستمرين.",
+     "وفي كمان عوامل ميكانيكية (<b><bdi dir=\"ltr\">Mechanical factors</bdi></b>) متل حركة بكّيرة أو ضغط موضعي. وجسم غريب (<b><bdi dir=\"ltr\">Foreign body</bdi></b>) متل زجاج أو حديد أو حتى عظم.",
+     "وحجم الجرح ومكانو: الصغير أسرع من الكبير، والوجه أسرع من القدم."
+    ],
+    "x": "",
+    "flow": [
+     "Infection",
+     "Mechanical",
+     "Foreign body",
+     "Size / site"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Infection → Persistent injury + inflammation → Delayed healing</bdi></b>",
+    "h": "Local: infection #1, mechanical, foreign body, size, site",
+    "c": "العدوى (<b><bdi dir=\"ltr\">Infection</bdi></b>) = أهم سبب موضعي لتأخير الشفاء.",
+    "tr": "🦠 (<bdi dir=\"ltr\">Infection</bdi>) أهم سبب موضعي: ثم ميكانيكي، جسم غريب، الحجم، والمكان."
+   }
+  ],
+  "hl": [
+   "Systemic: nutrition, diabetes, circulation, steroids",
+   "Local: infection #1, mechanical, foreign body, size, site"
+  ]
+ },
+ {
+  "n": 8,
+  "en": "Complications + summary",
+  "ar": "المضاعفات والخلاصة",
+  "emoji": "📊",
+  "col": "#fbcfe8",
+  "teaser": "Keloid · Dehiscence · Contracture",
+  "cap": "🧮",
+  "q": "لما الشفاء يطلع غلط.",
+  "cons": [
+   {
+    "e": "🎗️",
+    "t": "Hypertrophic scar vs Keloid — ندبة زايدة",
+    "key": "scar",
+    "say": null,
+    "i": "",
+    "b": [
+     "أحياناً الإعمار بيطلع بباطون زيادة. وفي نوعين لازم تفرّقن.",
+     "الندبة المتضخّمة (<b><bdi dir=\"ltr\">Hypertrophic scar</bdi></b>): كولاجين زيادة، فالندبة مرتفعة (<b><bdi dir=\"ltr\">Raised</bdi></b>)، بس بتضل ضمن حدود الجرح الأصلي.",
+     "أما الجدرة (<b><bdi dir=\"ltr\">Keloid</bdi></b>): كولاجين زيادة كمان، بس بتتعدّى حدود الجرح الأصلي وما بترجع (<b><bdi dir=\"ltr\">Regress</bdi></b>). وإلها استعداد فردي (<b><bdi dir=\"ltr\">Individual predisposition</bdi></b>)، وأكتر عند أصحاب البشرة السودا (<b><bdi dir=\"ltr\">Black people</bdi></b>)."
+    ],
+    "x": "",
+    "flow": [
+     "Excess collagen",
+     "Hypertrophic",
+     "Keloid"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Excess collagen → Hypertrophic</bdi></b> (<b><bdi dir=\"ltr\">within boundaries</bdi></b>) <b><bdi dir=\"ltr\">vs Keloid</bdi></b> (<b><bdi dir=\"ltr\">exceeds boundaries</bdi></b>)",
+    "h": "Hypertrophic raised within; keloid exceeds, no regression",
+    "c": "<b><bdi dir=\"ltr\">Hypertrophic</bdi></b> ضمن حدود الجرح، <b><bdi dir=\"ltr\">Keloid</bdi></b> بتتعدّاها وما بترجع.",
+    "tr": "🏔️ (<bdi dir=\"ltr\">Hypertrophic</bdi>) ندبة عالية بحدود الجرح، بترجع. (<bdi dir=\"ltr\">Keloid</bdi>) بتتعدّى الحدود وما بترجع."
+   },
+   {
+    "e": "⚠️",
+    "t": "Dehiscence + Contracture — نقص وزيادة",
+    "key": "defic",
+    "say": null,
+    "i": "",
+    "b": [
+     "وأحياناً العكس: الباطون ناقص. إذا ما تكوّن نسيج حبيبي كفاية، بيصير انفتاح الجرح (<b><bdi dir=\"ltr\">Wound dehiscence</bdi></b>)، وأكتر بجراحة البطن وبالتروية الضعيفة.",
+     "والمشكلة التالتة: إذا التقلّص (<b><bdi dir=\"ltr\">Contraction</bdi></b>) زاد عن حدو، بيصير تقلّص مشوِّه (<b><bdi dir=\"ltr\">Contracture</bdi></b>): بيشوّه الجرح والأنسجة حولو."
+    ],
+    "x": "",
+    "flow": [
+     "Deficient scar",
+     "Dehiscence",
+     "Contracture"
+    ],
+    "m": "<b><bdi dir=\"ltr\">Deficient scar → Dehiscence<br>Exaggerated contraction → Contracture → Deformity</bdi></b>",
+    "h": "Dehiscence = deficient scar; contracture = deformity",
+    "c": "<b><bdi dir=\"ltr\">Dehiscence</bdi></b> = ندبة ناقصة والجرح بينفتح. <b><bdi dir=\"ltr\">Contracture</bdi></b> = شدّ زيادة.",
+    "tr": "⚖️ (<bdi dir=\"ltr\">Dehiscence</bdi>) ندبة ناقصة والجرح بينفتح. (<bdi dir=\"ltr\">Contracture</bdi>) شدّ زيادة بيسبّب تشوّه."
+   },
+   {
+    "e": "📊",
+    "t": "Summary — الخلاصة",
+    "key": "cmp",
+    "say": null,
+    "i": "",
+    "b": [
+     "وبنختم القصة. الترميم (<b><bdi dir=\"ltr\">Repair</bdi></b>) بيوازن بين تجدّد كامل (<b><bdi dir=\"ltr\">Regeneration</bdi></b>) وندبة (<b><bdi dir=\"ltr\">Healing</bdi></b>). والمحرّك لكل شي عوامل النمو (<b><bdi dir=\"ltr\">Growth factors</bdi></b>).",
+     "والتسلسل: كنس الركام (<b><bdi dir=\"ltr\">Scavenging</bdi></b>)، تكوّن أوعية (<b><bdi dir=\"ltr\">Angiogenesis</bdi></b>)، ترسيب <b><bdi dir=\"ltr\">ECM</bdi></b>، ثم صقل (<b><bdi dir=\"ltr\">Remodelling</bdi></b>). وإذا اختلّ التسلسل بتطلع مشاكل: ندبة متضخّمة، جدرة، أو جرح مزمن ما بيشفى."
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<b><bdi dir=\"ltr\">Regeneration vs Scar · Growth factors drive · Failure = chronic ulcers / hypertrophic fibrosis</bdi></b>",
+    "h": "Repair: regeneration vs scar; failure = ulcers / fibrosis",
+    "c": "الهيكل سليم = تجدّد، مخرّب = ندبة. والتسلسل لازم يمشي بترتيبو.",
+    "tr": "🏁 الخلاصة: هيكل سليم = تجدّد، مخرّب = ندبة. والتسلسل لازم يمشي بترتيبو. الفشل = قرحات وتليّف."
+   }
+  ],
+  "hl": [
+   "Hypertrophic raised within; keloid exceeds, no regression",
+   "Dehiscence = deficient scar; contracture = deformity",
+   "Repair: regeneration vs scar; failure = ulcers / fibrosis"
+  ]
+ }
+];
+const ST={
+"rep": "<b><bdi dir=\"ltr\">Injury → Inflammation → Dead cells replaced → Repair<br>Repair = restore architecture + function</bdi></b>",
+"two": "<b><bdi dir=\"ltr\">Intact framework → Neighbors multiply → Normal tissue<br>Severe damage → Fibroblasts → Collagen → Scar<br>Regeneration = normal tissue · Healing = scar formation</bdi></b>",
+"fib": "<b><bdi dir=\"ltr\">Chronic inflammation / Infarction → Excess collagen = Fibrosis<br>Fibrosis + exudate space = Organization</bdi></b>",
+"cells": "<b><bdi dir=\"ltr\">Growth factors → Remnants + Endothelial cells + Fibroblasts<br>Repair = interaction cells + ECM</bdi></b>",
+"steps": "<b><bdi dir=\"ltr\">Scavenging → Regeneration → Granulation → ECM → Remodelling<br>5 steps = clean</bdi></b>, <b><bdi dir=\"ltr\">replace</bdi></b>, <b><bdi dir=\"ltr\">vessels</bdi></b>, <b><bdi dir=\"ltr\">concrete</bdi></b>, <b><bdi dir=\"ltr\">polish</bdi></b>",
+"regen": "<b><bdi dir=\"ltr\">Dead cells → Neighbors multiply → Replacement = Regeneration<br>Possible only Labile + Stable</bdi></b>",
+"types": "<b><bdi dir=\"ltr\">Labile = always cycling · Stable = G0 → cycle when injured · Permanent = never</bdi></b>",
+"gran": "<b><bdi dir=\"ltr\">New vessels + Fibroblasts → Granulation tissue</bdi></b> (<b><bdi dir=\"ltr\">pink</bdi></b>, <b><bdi dir=\"ltr\">soft</bdi></b>, <b><bdi dir=\"ltr\">leaky</bdi></b>)<br><b><bdi dir=\"ltr\">Granulation tissue = hallmark healing</bdi></b>",
+"angio": "<b><bdi dir=\"ltr\">VEGF + Angiopoietin → Sprouts + EPCs → New vessels = Angiogenesis</bdi></b>",
+"fibro": "<b><bdi dir=\"ltr\">PDGF + FGF + TNF + IL-1 → Fibroblasts migrate → Granulation framework</bdi></b>",
+"ecm": "<b><bdi dir=\"ltr\">Fibroblasts → Fibrillar collagen → Wound strength</bdi></b> (<b><bdi dir=\"ltr\">day 3-5</bdi></b>, <b><bdi dir=\"ltr\">weeks</bdi></b>)",
+"remod": "<b><bdi dir=\"ltr\">Deposition ⇄ Degradation → Strong pale scar<br>Remodelling = scar maturation</bdi></b>",
+"prim": "<b><bdi dir=\"ltr\">Clean incision → Clot + fibrin → Scab = 1st intention</bdi></b>",
+"time1": "<b><bdi dir=\"ltr\">Day 1 neutrophils → Day 3 macrophages → Day 5 max vessels + collagen</bdi></b>",
+"time2": "<b><bdi dir=\"ltr\">Week 2 collagen up → Month 1 cellular scar → Strength rises months</bdi></b>",
+"sec": "<b><bdi dir=\"ltr\">Large defect → Granulation from margins → Scar = 2nd intention</bdi></b>",
+"diff": "<b><bdi dir=\"ltr\">More clot → More inflammation → More granulation → Contraction → Bigger scar</bdi></b>",
+"strength": "<b><bdi dir=\"ltr\">Week 1 = 10% → Weeks later = 70-80%</bdi></b>",
+"sysf": "<b><bdi dir=\"ltr\">Protein ↓ / Vit C ↓ / Diabetes / Poor circulation / Steroids → Delayed healing</bdi></b>",
+"locf": "<b><bdi dir=\"ltr\">Infection → Persistent injury + inflammation → Delayed healing</bdi></b>",
+"scar": "<b><bdi dir=\"ltr\">Excess collagen → Hypertrophic</bdi></b> (<b><bdi dir=\"ltr\">within boundaries</bdi></b>) <b><bdi dir=\"ltr\">vs Keloid</bdi></b> (<b><bdi dir=\"ltr\">exceeds boundaries</bdi></b>)",
+"defic": "<b><bdi dir=\"ltr\">Deficient scar → Dehiscence<br>Exaggerated contraction → Contracture → Deformity</bdi></b>",
+"cmp": "<b><bdi dir=\"ltr\">Regeneration vs Scar · Growth factors drive · Failure = chronic ulcers / hypertrophic fibrosis</bdi></b>"
+};
+const MNMAP={"1.0": "rep", "1.1": "two", "1.2": "fib", "1.3": "cells", "2.0": "steps", "2.1": "regen", "2.2": "types", "3.0": "gran", "3.1": "angio", "3.2": "fibro", "4.0": "ecm", "4.1": "remod", "5.0": "prim", "5.1": "time1", "5.2": "time2", "6.0": "sec", "6.1": "diff", "6.2": "strength", "7.0": "sysf", "7.1": "locf", "8.0": "scar", "8.1": "defic", "8.2": "cmp"};
+CH.forEach(c=>c.cons.forEach((k,j)=>{const key=MNMAP[c.n+'.'+j];if(key)k.m=ST[key]}));
+const main=document.getElementById('main'),cards=document.getElementById('cards');
+const cols=['#ffe3d3','#dbeeff','#ffdfe9','#e8e0ff','#d8f5e6','#fff3b8','#dbeeff','#ffe3d3'];
+let html='';
+CH.forEach((c,i)=>{
+  cards.insertAdjacentHTML('beforeend',`<div class="ccard" style="background:${c.col}" data-go="ch${c.n}"><div class="e">${c.emoji}</div><h3>${c.ar}</h3><small>${c.en}</small><p>${c.teaser}</p></div>`);
+  html+=`<section class="chap reveal" id="ch${c.n}">
+  <div class="chead"><div class="num" style="background:${['#5b6cff','#ff8a5b','#e85d9b','#8b5cf6','#2e9e6b','#e0a800','#3b9ae1','#e86a3d'][i]}">${c.n}</div><div><div class="lab">${c.en}</div><h2>${c.emoji} ${c.ar}</h2></div></div>
+  <div class="cap"><div class="av">${c.cap}</div><div class="bubble">${c.q}</div></div>`;
+  c.cons.forEach(k=>{
+    html+=`<div class="con reveal"><h3>${k.e} ${k.t}</h3>
+    ${k.say?`<div class="say"><b>${k.say[0]}:</b> «${k.say[1]}»</div>`:''}
+    ${k.flow&&k.flow.length?`<div class="chips" dir="ltr">${k.flow.map((f,j)=>(j?'<span class="chip ar" style="transition-delay:'+(j*.12)+'s">→</span>':'')+'<span class="chip" style="transition-delay:'+(j*.12)+'s">'+f+'</span>').join('')}</div>`:''}
+    <ul class="enul" dir="rtl">${k.b.map(x=>'<li>'+x+'</li>').join('')}</ul>
+    ${k.x?`<p class="extra" dir="ltr">${k.x}</p>`:''}
+    ${k.m?`<div class="mn open"><button><span>🧩 بسطر واحد</span><span>⌄</span></button><div class="body">${k.m}</div></div>`:''}
+    
+    ${k.tr?`<div class="trk2">🎭 <b>حيلة الحفظ:</b> ${k.tr}</div>`:''}
+    ${k.c?`<div class="cheat"><b>⭐ أهم شي تنتبه عليه:</b> ${k.c}</div>`:''}
+    ${k.h?`<div class="hy" dir="ltr"><b>HIGHLIGHT:</b> ${k.h}</div>`:''}</div>`;
+  });
+  html+=`<div class="hl"><small>⭐ HIGHLIGHT</small>${c.hl.join('<span class="sep">|</span>')}</div></section>`;
+});
+
+/* mini games */
+html+=`<section class="chap reveal" id="games"><div class="chead"><div class="num" style="background:#2e9e6b">🎮</div><div><div class="lab">Mini games</div><h2>جرّب حالك</h2></div></div>
+<div class="game"><h4>🧩 وصّل المرض بنوعو</h4><div id="match"></div></div>
+<div class="game"><h4>✅❌ صح ولا غلط؟</h4><div id="tf"></div></div></section>`;
+
+/* final review */
+html+=`<section class="sec reveal" id="review" style="background:#fff3d6"><h2>📝 المراجعة الأخيرة</h2>
+<h3 style="margin-top:14px">Regeneration vs healing</h3>
+<div style="overflow-x:auto"><table><tr><th></th><th>Regeneration</th><th>Healing</th></tr><tr><td>Outcome</td><td>Normal tissue</td><td>Fibrous scar</td></tr><tr><td>Condition</td><td>Limited damage, framework intact</td><td>Severe damage OR framework destroyed</td></tr><tr><td>Cells</td><td>Labile + stable</td><td>Permanent cells + severe injury</td></tr></table></div>
+<h3 style="margin-top:14px">Cell types</h3>
+<div style="overflow-x:auto"><table><tr><th>Type</th><th>Behavior</th><th>Example</th></tr><tr><td>Labile</td><td>Continuous cycling</td><td>Epidermis, GI epithelium</td></tr><tr><td>Stable</td><td>Quiescent G0, divides when injured</td><td>Hepatocytes</td></tr><tr><td>Permanent</td><td>Never regenerates</td><td>Neurons, cardiac myocytes</td></tr></table></div>
+<h3 style="margin-top:14px">1st vs 2nd intention</h3>
+<div style="overflow-x:auto"><table><tr><th>Feature</th><th>1st intention</th><th>2nd intention</th></tr><tr><td>Edges</td><td>Opposed (sutured)</td><td>Separated</td></tr><tr><td>Defect</td><td>Small, clean</td><td>Large</td></tr><tr><td>Clot / exudate</td><td>Small</td><td>Larger</td></tr><tr><td>Inflammation</td><td>Mild</td><td>Intense</td></tr><tr><td>Granulation tissue</td><td>Little</td><td>Much more</td></tr><tr><td>Contraction</td><td>Minimal</td><td>Myofibroblasts</td></tr><tr><td>Scar</td><td>Small</td><td>Larger, thin epidermis</td></tr></table></div>
+<h3 style="margin-top:14px">Timeline 1st intention</h3>
+<div style="overflow-x:auto"><table><tr><th>Time</th><th>Event</th></tr><tr><td>24 h</td><td>Neutrophils margins</td></tr><tr><td>24-48 h</td><td>Epithelial spurs meet scab</td></tr><tr><td>Day 3</td><td>Macrophages replace neutrophils; granulation enters</td></tr><tr><td>Day 5</td><td>Granulation fills; max neovascularization; collagen bridges</td></tr><tr><td>Week 2</td><td>Collagen + fibroblasts up; inflammation gone</td></tr><tr><td>Month 1</td><td>Cellular scar; epidermis intact; appendages lost</td></tr><tr><td>Strength</td><td>10% week 1 → 70-80%</td></tr></table></div>
+<h3 style="margin-top:14px">Factors + complications</h3>
+<div style="overflow-x:auto"><table><tr><th>Item</th><th>Key point</th></tr><tr><td>Systemic</td><td>Protein / vitamin C deficiency, diabetes, poor circulation, glucocorticoids</td></tr><tr><td>Local</td><td>Infection #1, mechanical stress, foreign body, size, site</td></tr><tr><td>Hypertrophic scar</td><td>Raised, within boundaries</td></tr><tr><td>Keloid</td><td>Exceeds boundaries, no regression, black people</td></tr><tr><td>Dehiscence</td><td>Deficient scar, abdominal surgery</td></tr><tr><td>Contracture</td><td>Exaggerated contraction, deformity</td></tr></table></div>
+<h3 style="margin-top:14px">🏆 الورقة الذهبية</h3><div class="csg"><div class="cs" style="background:#fff3b8"><b class="cst">🛠️ BIG PICTURE</b><ul><li><bdi dir="ltr">Injury + inflammation → repair</bdi> (<bdi dir="ltr">no inflammation = no healing</bdi>)</li><li><bdi dir="ltr">Repair = restore architecture + function</bdi></li><li><bdi dir="ltr">Regeneration = normal tissue back</bdi> (<bdi dir="ltr">framework intact</bdi>)</li><li><bdi dir="ltr">Healing = fibroblasts → collagen → fibrous scar</bdi> (<bdi dir="ltr">abnormal</bdi>, <bdi dir="ltr">stable</bdi>, <bdi dir="ltr">functional</bdi>)</li><li><bdi dir="ltr">Fibrosis = excess collagen</bdi> (<bdi dir="ltr">chronic inflammation</bdi>, <bdi dir="ltr">infarction</bdi>)</li><li><bdi dir="ltr">Fibrosis + exudate space = organization</bdi></li></ul></div><div class="cs" style="background:#dbeeff"><b class="cst">♻️ STEPS + CELLS</b><ul><li><bdi dir="ltr">5 steps</bdi>: <bdi dir="ltr">scavenging</bdi> (<bdi dir="ltr">macrophages</bdi>) → <bdi dir="ltr">regeneration → granulation → ECM → remodelling</bdi></li><li><bdi dir="ltr">Proliferating</bdi>: <bdi dir="ltr">remnants</bdi>, <bdi dir="ltr">endothelial</bdi>, <bdi dir="ltr">fibroblasts</bdi>; <bdi dir="ltr">driver growth factors</bdi></li><li><bdi dir="ltr">Labile = continuous cycling</bdi> (<bdi dir="ltr">epidermis</bdi>, <bdi dir="ltr">GI epithelium</bdi>; <bdi dir="ltr">skin 40 days</bdi>, <bdi dir="ltr">mucosa 4 days</bdi>)</li><li><bdi dir="ltr">Stable = G0</bdi>, <bdi dir="ltr">divides when injured</bdi> (<bdi dir="ltr">hepatocytes</bdi>)</li><li><bdi dir="ltr">Permanent = no regeneration</bdi> (<bdi dir="ltr">neurons</bdi>, <bdi dir="ltr">cardiac myocytes</bdi>)</li></ul></div><div class="cs" style="background:#ffe3d3"><b class="cst">🍓 GRANULATION</b><ul><li><bdi dir="ltr">Hallmark healing</bdi>: <bdi dir="ltr">pink</bdi>, <bdi dir="ltr">soft</bdi>, <bdi dir="ltr">granular</bdi>, <bdi dir="ltr">leaky</bdi> (<bdi dir="ltr">loose endothelial junctions</bdi>)</li><li><bdi dir="ltr">2 components</bdi>: <bdi dir="ltr">angiogenesis + fibroblastic proliferation</bdi></li><li><bdi dir="ltr">Angiogenesis = neovascularization</bdi>: <bdi dir="ltr">sprouts + bone marrow EPCs</bdi>; <bdi dir="ltr">VEGF + angiopoietin</bdi></li><li><bdi dir="ltr">Uses</bdi>: <bdi dir="ltr">healing</bdi>, <bdi dir="ltr">tumor growth</bdi>, <bdi dir="ltr">revascularization</bdi></li><li><bdi dir="ltr">Fibroblasts</bdi>: <bdi dir="ltr">PDGF</bdi> (<bdi dir="ltr">platelet-derived</bdi>), <bdi dir="ltr">FGF</bdi> (<bdi dir="ltr">fibroblast</bdi>), <bdi dir="ltr">TNF</bdi>, <bdi dir="ltr">IL-1</bdi></li></ul></div><div class="cs" style="background:#e8e0ff"><b class="cst">🧱 ECM + REMODELLING</b><ul><li><bdi dir="ltr">ECM maker = fibroblast</bdi>; <bdi dir="ltr">fibrillar collagen = strength</bdi>; <bdi dir="ltr">day 3-5 → weeks</bdi></li><li><bdi dir="ltr">ECM = fibrils + proteins + glycosaminoglycans</bdi></li><li><bdi dir="ltr">Remodelling = deposition</bdi> ⇄ <bdi dir="ltr">degradation</bdi></li><li><bdi dir="ltr">Metalloproteinases</bdi> (<bdi dir="ltr">collagenases</bdi>): <bdi dir="ltr">zinc</bdi>, <bdi dir="ltr">growth factor-stimulated</bdi></li><li><bdi dir="ltr">Mature scar</bdi>: <bdi dir="ltr">vascular regression</bdi>, <bdi dir="ltr">pale</bdi>, <bdi dir="ltr">avascular</bdi></li></ul></div><div class="cs" style="background:#d8f5e6"><b class="cst">✂️ 1ST INTENTION</b><ul><li><bdi dir="ltr">Clean sutured incision</bdi>, <bdi dir="ltr">opposed edges = primary union</bdi>; <bdi dir="ltr">limited cell death</bdi></li><li><bdi dir="ltr">Clot + fibrin → scab</bdi></li><li><bdi dir="ltr">24 h neutrophils · 24-48 h epithelial spurs seal</bdi></li><li><bdi dir="ltr">Day 3 macrophages</bdi>, <bdi dir="ltr">granulation · Day 5 max neovascularization</bdi>, <bdi dir="ltr">collagen bridges</bdi></li><li><bdi dir="ltr">Week 2 collagen up</bdi>, <bdi dir="ltr">inflammation gone · Month 1 cellular scar</bdi>, <bdi dir="ltr">appendages lost</bdi></li><li><bdi dir="ltr">Strength</bdi>: <bdi dir="ltr">10% week 1 → 70-80%</bdi>; <bdi dir="ltr">rises months</bdi></li></ul></div><div class="cs" style="background:#ffdfe9"><b class="cst">🕳️ 2ND INTENTION</b><ul><li><bdi dir="ltr">Separated edges</bdi>, <bdi dir="ltr">large defect = secondary union</bdi></li><li><bdi dir="ltr">Bigger clot</bdi>, <bdi dir="ltr">more exudate</bdi>, <bdi dir="ltr">intense inflammation</bdi></li><li><bdi dir="ltr">Much more granulation</bdi>; <bdi dir="ltr">bigger scar</bdi>; <bdi dir="ltr">thin epidermis</bdi>; <bdi dir="ltr">long duration</bdi></li><li><bdi dir="ltr">Contraction = myofibroblasts</bdi> (<bdi dir="ltr">fibroblasts + smooth muscle features</bdi>)</li></ul></div><div class="cs" style="background:#fde68a"><b class="cst">🌍 FACTORS</b><ul><li><bdi dir="ltr">Systemic</bdi>: <bdi dir="ltr">protein + vitamin C deficiency</bdi>, <bdi dir="ltr">diabetes</bdi> (<bdi dir="ltr">microangiopathy</bdi>), <bdi dir="ltr">poor circulation</bdi> (<bdi dir="ltr">atherosclerosis</bdi>), <bdi dir="ltr">glucocorticoids</bdi></li><li><bdi dir="ltr">Local</bdi>: <bdi dir="ltr">infection</bdi> #<bdi dir="ltr">1</bdi> (<bdi dir="ltr">persistent injury</bdi>), <bdi dir="ltr">mechanical stress</bdi>, <bdi dir="ltr">foreign body</bdi>, <bdi dir="ltr">size</bdi>, <bdi dir="ltr">site</bdi></li><li><bdi dir="ltr">Small heals faster</bdi>; <bdi dir="ltr">face faster than foot</bdi></li></ul></div><div class="cs" style="background:#fbcfe8"><b class="cst">🎗️ COMPLICATIONS</b><ul><li><bdi dir="ltr">Hypertrophic scar</bdi>: <bdi dir="ltr">excess collagen</bdi>, <bdi dir="ltr">raised</bdi>, <bdi dir="ltr">within boundaries</bdi></li><li><bdi dir="ltr">Keloid</bdi>: <bdi dir="ltr">exceeds boundaries</bdi>, <bdi dir="ltr">no regression</bdi>, <bdi dir="ltr">individual predisposition</bdi>, <bdi dir="ltr">black people</bdi></li><li><bdi dir="ltr">Dehiscence</bdi>: <bdi dir="ltr">deficient scar + inadequate granulation</bdi>, <bdi dir="ltr">abdominal surgery</bdi></li><li><bdi dir="ltr">Contracture</bdi>: <bdi dir="ltr">exaggerated contraction</bdi>, <bdi dir="ltr">deformity</bdi></li><li><bdi dir="ltr">Failure = chronic non-healing ulcers</bdi> / <bdi dir="ltr">hypertrophic fibrosis</bdi></li></ul></div></div></section>`;
+
+/* essay */
+const ES=[["Define repair + regeneration vs healing", "<ul><li>Repair = restore architecture + function</li><li>Regeneration = normal tissue back</li><li>Healing = fibrous scar</li></ul>"], ["Cell types (proliferative capacity)", "<ul><li>Labile: epidermis, GI epithelium</li><li>Stable (G0): hepatocytes</li><li>Permanent: neurons, cardiac myocytes</li></ul>"], ["Granulation tissue + angiogenesis", "<ul><li>Hallmark healing; pink, soft, leaky</li><li>Angiogenesis + fibroblastic proliferation</li><li>VEGF, angiopoietin; sprouts + EPCs</li></ul>"], ["ECM + remodelling", "<ul><li>Fibroblasts deposit collagen day 3-5</li><li>Metalloproteinases (zinc) degrade</li><li>Mature scar pale, avascular</li></ul>"], ["1st vs 2nd intention", "<ul><li>1st: clean, opposed edges, small scar</li><li>2nd: separated edges, more granulation, contraction (myofibroblasts)</li></ul>"], ["Factors + complications", "<ul><li>Infection = #1 local factor</li><li>Hypertrophic scar, keloid, dehiscence, contracture</li></ul>"]];
+html+=`<section class="sec reveal" id="essay" style="background:#e8e0ff"><h2>✍️ أسئلة مقالية</h2><p style="color:var(--mut)">فكّر بجوابك أول، وبعدين دوس.</p>`+
+ES.map((e,i)=>`<div class="rv"><button><span>${i+1}. ${e[0]}</span><span>👁️</span></button><div class="ans">${e[1]}</div></div>`).join('')+`</section>`;
+
+/* flashcards */
+const FC=[["Repair شو بيرجّع؟", "Architecture + function"], ["Regeneration معناها؟", "Normal tissue back"], ["Healing بتنتج شو؟", "Fibrous scar"], ["Fibrosis + exudate؟", "Organization"], ["أول خطوة؟", "Scavenging (macrophages)"], ["Labile مثال؟", "Epidermis · GI epithelium"], ["Stable مثال؟", "Hepatocytes (G0)"], ["Permanent؟", "Neurons · cardiac myocytes"], ["علامة الشفاء؟", "Granulation tissue"], ["Angiogenesis محفّز؟", "VEGF + angiopoietin"], ["EPCs مصدرها؟", "Bone marrow"], ["PDGF معناها؟", "Platelet-derived growth factor"], ["الخلية الرئيسية للـ ECM؟", "Fibroblast"], ["ECM بيبدأ؟", "Day 3-5"], ["Metalloproteinases بتحتاج؟", "Zinc"], ["Neutrophils بيوصلوا؟", "24 hours"], ["Neovascularization ذروة؟", "Day 5"], ["Contraction سببها؟", "Myofibroblasts"], ["أهم سبب موضعي؟", "Infection"], ["Keloid؟", "Exceeds boundaries · no regression"]];
+html+=`<section class="sec reveal" id="flash" style="background:#d8f5e6"><h2>⚡ بطاقات سريعة</h2><div class="score">✅ <span id="sy">0</span> · 🔁 <span id="sn">0</span> / ${FC.length}</div>`+
+FC.map((f,i)=>`<div class="flash" data-i="${i}"><div class="in2"><div class="face f">${T(f[0])}</div><div class="face b">${T(f[1])}</div></div></div><div class="know" data-i="${i}" style="display:none"><button class="y">عرفتها ✅</button><button class="n">أراجعها 🔁</button></div>`).join('')+`</section>`;
+main.innerHTML=T(html);
+
+/* interactions */
+document.querySelectorAll('.mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.querySelectorAll('.rv>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+let sy=0,sn=0;const done={};
+document.querySelectorAll('.flash').forEach(f=>f.onclick=()=>{f.classList.toggle('flip');const k=f.nextElementSibling;k.style.display=f.classList.contains('flip')?'flex':'none'});
+document.querySelectorAll('.know').forEach(k=>{
+  k.querySelector('.y').onclick=()=>mark(k,1);k.querySelector('.n').onclick=()=>mark(k,0)});
+function mark(k,v){const i=k.dataset.i;if(done[i]!==undefined){v?0:0}
+  if(done[i]===1)sy--;if(done[i]===0)sn--;done[i]=v;v?sy++:sn++;
+  document.getElementById('sy').textContent=sy;document.getElementById('sn').textContent=sn;k.style.opacity=.5}
+/* match */
+const MT=[["Labile cells", "Epidermis"], ["Stable cells", "Hepatocytes"], ["Permanent cells", "Cardiac myocytes"], ["Angiogenesis", "VEGF"]];
+const CL=["Epidermis", "Hepatocytes", "Cardiac myocytes", "VEGF"];
+document.getElementById('match').innerHTML=MT.map(m=>`<div style="margin:8px 0"><b class="en">${m[0]}</b> ←<div class="opts" data-a="${m[1]}">${CL.map(c=>`<button>${c}</button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#match .opts').forEach(o=>o.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(b.textContent===o.dataset.a){b.classList.add('ok')}else{b.classList.add('no')}}));
+const TF=[["Labile cells بتقدر تتجدّد", 1, "صح، بتنقسم باستمرار."], ["Neurons Stable cells", 0, "غلط، Permanent وما بتتجدّد."], ["Granulation tissue بيسرّب", 1, "صح، وصلات Endothelial مش محكمة."], ["ECM deposition بيبدأ بعد 3-5 أيام", 1, "صح."], ["Wound contraction أوضح بـ 1st intention", 0, "غلط، بالـ 2nd intention (Myofibroblasts)."], ["Keloid بتضل ضمن حدود الجرح", 0, "غلط، بتتعدّاها وما بترجع."], ["Infection أهم عامل موضعي", 1, "صح."], ["قوة الجرح أسبوع 1 حوالي 10%", 1, "صح."]];
+document.getElementById('tf').innerHTML=TF.map((t,i)=>`<div class="tf"><div>${t[0]}<div class="fb"></div></div><div class="b2"><button data-v="1">صح</button><button data-v="0">غلط</button></div></div>`).join('');
+document.querySelectorAll('#tf .tf').forEach((r,i)=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  const ok=+b.dataset.v===TF[i][1];r.classList.add(ok?'ok':'no');r.querySelector('.fb').innerHTML=T((ok?'🎉 ':'🤔 ')+TF[i][2])}));
+
+/* reveal & progress */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.con').forEach(el=>io.observe(el));
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>document.getElementById(c.dataset.go).scrollIntoView({behavior:'smooth'}));
+
+/* guided tour */
+const IDS=[...CH.map(c=>'ch'+c.n),'games','review','essay','flash'];
+let ti=-1,timer=null,playing=false;
+const badge=document.getElementById('tourbadge'),tog=document.getElementById('toggle');
+function go(i){ti=Math.max(0,Math.min(IDS.length-1,i));document.getElementById(IDS[ti]).scrollIntoView({behavior:'smooth'})}
+function stop(){playing=false;clearInterval(timer);badge.style.display='none'}
+function play(){if(ti<0)go(0);playing=true;badge.style.display='block';clearInterval(timer);timer=setInterval(()=>{if(ti>=IDS.length-1){stop();return}go(ti+1)},12000)}
+document.getElementById('tourBtn').onclick=()=>{ti=-1;play()};
+document.getElementById('next').onclick=()=>{go(ti+1);if(playing)play()};
+document.getElementById('prev').onclick=()=>{go(ti-1);if(playing)play()};
+tog.onclick=()=>playing?stop():play();
+
+/* ===== Golden summary ===== */
+const G=[["#fff3b8", "The big picture", "الصورة الكبيرة", [["Injury + inflammation → dead cells → repair begins", "إصابة والتهاب بيقتلوا خلايا، وهون بيبدأ الترميم {{repair}}"], ["Repair = restore architecture + function", "الترميم = رجوع بنية النسيج ووظيفتو"], ["Regeneration = normal tissue back (framework intact)", "{{Regeneration}} = النسيج بيرجع طبيعي لأنو الإطار سليم"], ["Healing = fibroblasts + collagen → fibrous scar", "{{Healing}} = Fibroblasts وCollagen بيعملوا Scar"], ["Scar = abnormal but stable + functional", "الـ Scar مش طبيعي بس بيمسك العضو ويشتغل"], ["Fibrosis = excess collagen (chronic inflammation, infarction)", "{{Fibrosis}} = كولاجين زيادة بعد التهاب مزمن أو احتشاء"], ["Fibrosis + exudate space = organization", "إذا المكان فيه {{exudate}} اسمو {{organization}}"]]], ["#dbeeff", "Steps + cells", "الخطوات والخلايا", [["5 steps: scavenging, regeneration, granulation, ECM, remodelling", "5 خطوات: تنظيف، تجديد، حبيبي، ECM، صقل"], ["Proliferating cells: remnants, endothelial, fibroblasts", "الخلايا يلي بتتكاثر: بقايا النسيج و{{endothelial}} و{{fibroblasts}}"], ["Driver = growth factors", "المحرّك {{growth factors}}"], ["Labile: continuous cycling, epidermis, GI epithelium (skin 40 days, mucosa 4 days)", "{{Labile}}: دايماً بتنقسم، الجلد كل 40 يوم والـ Mucosa كل 4 أيام"], ["Stable: G0, divides when injured, hepatocytes", "{{Stable}}: واقفة بـ G0 وبتنقسم لما ينضرب، متل الكبد"], ["Permanent: no regeneration, neurons, cardiac myocytes", "{{Permanent}}: ما بتتجدّد، عصب وعضلة قلب"]]], ["#ffe3d3", "Granulation tissue", "النسيج الحبيبي", [["Hallmark healing: pink, soft, granular, leaky", "علامة الشفاء: وردي، طري، حبيبي، وبيسرّب"], ["2 components: angiogenesis + fibroblastic proliferation", "مكوّنين: أوعية جديدة وفيبروبلاست"], ["Angiogenesis = neovascularization: capillary sprouts + bone marrow EPCs", "{{Angiogenesis}}: براعم من أوعية جارة، وخلايا سلف من النخاع"], ["VEGF + angiopoietin; essential healing, tumor growth, revascularization", "المحفّز {{VEGF}} و{{angiopoietin}}، مهم للشفاء والورم وإعادة التروية"], ["Fibroblast drivers: PDGF (platelet-derived), FGF (fibroblast), TNF, IL-1", "محفّزات الفيبروبلاست: {{PDGF}} و{{FGF}} و{{TNF}} و{{IL-1}}"]]], ["#e8e0ff", "ECM + remodelling", "الـ ECM والصقل", [["ECM maker = fibroblast; fibrillar collagen = strength", "الـ {{ECM}} من فيبروبلاست، والكولاجين هو القوة"], ["Starts day 3-5, continues weeks", "بيبدأ يوم 3-5 وبيكمّل أسابيع"], ["ECM components: fibrils, proteins, glycosaminoglycans", "مكوّنات الـ ECM: ألياف وبروتينات و{{glycosaminoglycans}}"], ["Remodelling = deposition ⇄ degradation balance", "الصقل = توازن بين الترسيب والهدم"], ["Metalloproteinases (collagenases): zinc-dependent", "الهدم بـ {{metalloproteinases}} وبتحتاج {{zinc}}"], ["Mature scar: pale + avascular", "الندبة الناضجة شاحبة وبلا أوعية"]]], ["#d8f5e6", "1st intention", "الشفاء الأولي", [["Clean sutured incision, opposed edges = primary union", "جرح نظيف مخيّط حوافو لازقة = {{primary union}}"], ["Limited cell death; clot + fibrin → scab", "موت خلايا محدود، خثرة و{{fibrin}} ثم {{scab}}"], ["24 h neutrophils; 24-48 h epithelial spurs seal wound", "24 ساعة {{neutrophils}}، و24-48 ساعة الظهارة بتسكّر الجرح"], ["Day 3 macrophages replace neutrophils; granulation enters", "يوم 3: {{macrophages}} بدل {{neutrophils}} وبيبدأ الحبيبي"], ["Day 5 granulation fills; max neovascularization; collagen bridges", "يوم 5: أوعية بالذروة وكولاجين بيجسّر"], ["Week 2 collagen up; inflammation + edema gone", "أسبوع 2: كولاجين بيزيد والالتهاب بيروح"], ["Month 1 cellular scar; appendages permanently lost; strength rises months", "شهر 1: ندبة خلوية، شعر وغدد الخط راحوا، والقوة بتزيد شهور"]]], ["#ffdfe9", "2nd intention", "الشفاء الثانوي", [["Separated edges, large defect = secondary union", "حواف بعيدة وحفرة كبيرة = {{secondary union}}"], ["Bigger clot, more exudate, intense inflammation", "خثرة أكبر و{{exudate}} أكتر والتهاب أشدّ"], ["Much more granulation; bigger scar; thin epidermis; long duration", "حبيبي أكتر بكتير، ندبة أكبر، وفترة أطول"], ["Wound contraction = myofibroblasts (fibroblasts + smooth muscle features)", "{{Wound contraction}} من {{myofibroblasts}}"], ["Strength: 10% week 1 → 70-80% (never 100%)", "القوة: 10% بأسبوع، وبعدين 70-80%، ما بترجع 100%"]]], ["#fde68a", "Factors", "العوامل", [["Systemic: protein deficiency, vitamin C deficiency, diabetes (microangiopathy), poor circulation, glucocorticoids", "عامة: نقص {{protein}} و{{vitamin C}}، سكري، تروية ضعيفة، {{glucocorticoids}}"], ["Local: infection #1 (persistent injury + inflammation)", "موضعية: {{infection}} أهم سبب"], ["Local: mechanical stress, foreign body", "ضغط أو حركة بكّيرة، وجسم غريب"], ["Small heals faster; face faster than foot", "الصغير أسرع من الكبير، والوجه أسرع من القدم"]]], ["#fbcfe8", "Complications", "المضاعفات", [["Hypertrophic scar: excess collagen, raised, within boundaries", "{{Hypertrophic scar}}: كولاجين زيادة ومرتفعة بحدود الجرح"], ["Keloid: exceeds boundaries, no regression, black people", "{{Keloid}}: بتتعدّى الحدود وما بترجع، أكتر عند السود"], ["Dehiscence: deficient scar, abdominal surgery", "{{Dehiscence}}: ندبة ناقصة، جراحة البطن"], ["Contracture: exaggerated contraction, deformity", "{{Contracture}}: شدّ زيادة وتشوّه"], ["Failure = chronic non-healing ulcers / hypertrophic fibrosis", "الفشل = قرحات ما بتشفى أو {{hypertrophic fibrosis}}"]]]];
+const GM=[["rep", "two", "fib"], ["steps", "cells", "regen", "types"], ["gran", "angio", "fibro"], ["ecm", "remod"], ["prim", "time1", "time2"], ["sec", "diff", "strength"], ["sysf", "locf"], ["scar", "defic", "cmp"]];
+let gh=`<div class="wrap"><h1>⭐ الملخص الذهبي</h1><p class="sub">كل فكرة بسطر إنكليزي وتحتو شرحها بالعربي. دوس على السطر لما تحفظو (<span id="gp">0</span> / <span id="gt">0</span>).</p>`;
+G.forEach((g,gi)=>{gh+=`<div class="gcard reveal" style="background:${g[0]}"><h3>${g[1]} <small style="color:var(--mut);font-weight:500">· ${g[2]}</small></h3>${g[3].map(x=>`<div class="gi"><div><div class="ge">${x[0]}</div><div class="ga">${x[1]}</div></div></div>`).join('')}${GM[gi]?`<div class="mn"><button><span>🧠 حيلة الحفظ</span><span>⌄</span></button><div class="body">${GM[gi].map(k=>ST[k]).join('<br><br>')}</div></div>`:''}</div>`});
+gh+=`</div>`;
+document.getElementById('v-gold').innerHTML=T(gh);
+document.querySelectorAll('#v-gold .mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.getElementById('gt').textContent=document.querySelectorAll('#v-gold .gi').length;
+document.querySelectorAll('#v-gold .gi').forEach(e=>e.onclick=()=>{e.classList.toggle('got');document.getElementById('gp').textContent=document.querySelectorAll('#v-gold .gi.got').length});
+
+/* ===== Short essay ===== */
+const SQ=[["Q1: Define repair. Differentiate regeneration + healing.", ["Repair = restore tissue architecture + function", "Regeneration = replace damaged components, normal tissue returns", "Healing = fibrous connective tissue → scar", "Scar = abnormal, structurally stable, functional"], "regeneration vs scar"], ["Q2: Define fibrosis + organization.", ["Fibrosis = extensive collagen deposition", "Causes: chronic inflammation, ischemic necrosis (infarction)", "Fibrosis inside inflammatory exudate space = organization", "ECM maker = fibroblast"], "collagen · exudate"], ["Q3: Mention repair cells + factors.", ["Remnants injured tissue (restore structure)", "Endothelial cells (new vessels)", "Fibroblasts (fibrous tissue, scar)", "Driver = growth factors"], "remnants · endothelial · fibroblasts"], ["Q4: Mention healing steps.", ["Scavenging: macrophages remove dead tissue", "Regeneration", "Granulation tissue formation", "ECM synthesis + deposition; tissue remodelling"], "5 steps"], ["Q5: Classify cells (proliferative capacity).", ["Labile (continuous cycling): epidermis, GI epithelium", "Stable (quiescent, G0): hepatocytes", "Permanent: neurons, cardiac myocytes", "Labile + stable regenerate; permanent never"], "labile · stable · permanent"], ["Q6: Define regeneration.", ["Replace dead + lost cells", "Neighbors multiply", "Growth factors stimulate", "Labile + stable cells only"], "neighbors multiply"], ["Q7: Describe granulation tissue.", ["Hallmark healing", "Pink, soft, granular", "2 components: angiogenesis + fibroblastic proliferation", "Leaky (edematous): loose endothelial junctions"], "pink · leaky"], ["Q8: Define angiogenesis + mechanisms.", ["New small vessels = neovascularization", "Capillary sprouts adjacent vessels", "Endothelial precursor cells bone marrow", "VEGF + angiopoietin; healing, tumor growth, revascularization"], "VEGF · sprouts · EPCs"], ["Q9: Describe fibroblastic proliferation.", ["Fibroblasts proliferate + migrate granulation framework", "Growth factors + cytokines: PDGF, FGF, TNF, IL-1", "PDGF = platelet-derived growth factor", "FGF = fibroblast growth factor"], "PDGF · FGF"], ["Q10: Describe ECM deposition.", ["Main cell = fibroblast", "Fibrillar collagen = wound strength", "Starts day 3-5, continues weeks", "ECM = fibrils, proteins, glycosaminoglycans"], "day 3-5 · collagen"], ["Q11: Describe remodelling.", ["Scar maturation + organization", "Deposition ⇄ degradation balance", "Metalloproteinases (collagenases), zinc-dependent", "Vascular regression: pale, avascular scar"], "zinc · pale scar"], ["Q12: Describe 1st intention.", ["Clean incision, opposed edges, sutured", "Limited epithelial + connective tissue death", "Clot + fibrin → scab", "Without inflammation no healing"], "clean · opposed"], ["Q13: Describe 1st intention timeline.", ["24 h neutrophils; 24-48 h epithelial spurs seal wound", "Day 3 macrophages + granulation; day 5 max neovascularization + collagen bridges", "Week 2 collagen + fibroblasts up; inflammation + edema gone", "Month 1 cellular scar; appendages lost; strength rises months"], "1 · 3 · 5 · week 2 · month 1"], ["Q14: Describe 2nd intention + differences.", ["Separated edges, large defect; granulation grows margins", "Bigger clot, more exudate, intense inflammation", "Much more granulation, bigger scar, thin epidermis", "Wound contraction = myofibroblasts"], "contraction · myofibroblasts"], ["Q15: Mention healing factors.", ["Systemic: protein, vitamin C, diabetes, circulation, glucocorticoids", "Local: infection #1, mechanical stress, foreign body", "Wound size, site, type", "Strength: 10% week 1 → 70-80%"], "infection #1"], ["Q16: Mention complications.", ["Hypertrophic scar: excess collagen, raised, within boundaries", "Keloid: exceeds boundaries, no regression, black people", "Dehiscence: deficient scar, abdominal surgery", "Contracture: exaggerated contraction, deformity"], "keloid · dehiscence · contracture"]];
+let sh=`<div class="wrap"><h1>✍️ Short Essay</h1><p class="sub">نفس نمط الامتحان: اكتب جوابك، وبعدين شوف الجواب النموذجي وقيّم حالك من 4.</p>
+<div class="tot">النتيجة: <span id="ts">0</span> / <span id="tm">${SQ.length*4}</span></div>
+<div class="tools"><button id="shuf">🔀 خلّط الأسئلة</button><button id="rst">↺ ابدأ من جديد</button></div><div id="sq"></div></div>`;
+document.getElementById('v-short').innerHTML=sh;
+const sc={};
+function renderSQ(list){
+ document.getElementById('sq').innerHTML=list.map(i=>{const q=SQ[i];return `<div class="qc reveal in" data-i="${i}"><div class="qh"><div class="pt">4 نقاط</div><div class="q">${q[0]}</div></div>
+ <textarea placeholder="إجابتك"></textarea><button class="qbtn">👁️ شوف الجواب</button>
+ <div class="qa"><ol>${q[1].map(x=>`<li class="en" style="display:list-item;direction:ltr;text-align:left">${x}</li>`).join('')}</ol><div class="kw">🔑 ${q[2]}</div>
+ <div class="rate">قيّم إجابتك: ${[0,1,2,3,4].map(n=>`<button data-n="${n}">${n}</button>`).join('')}</div></div></div>`}).join('');
+ document.querySelectorAll('#sq .qc').forEach(c=>{
+  c.querySelector('.qbtn').onclick=()=>c.querySelector('.qa').classList.toggle('show');
+  c.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{c.querySelectorAll('.rate button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');sc[c.dataset.i]=+b.dataset.n;
+   document.getElementById('ts').textContent=Object.values(sc).reduce((a,b)=>a+b,0)})});
+}
+const order=[...SQ.keys()];renderSQ(order);
+document.getElementById('shuf').onclick=()=>{const o=[...SQ.keys()].sort(()=>Math.random()-.5);renderSQ(o)};
+document.getElementById('rst').onclick=()=>{for(const k in sc)delete sc[k];document.getElementById('ts').textContent=0;renderSQ(order)};
+
+/* ===== view routing ===== */
+const VW=['study','gold','short'];
+function showView(v,push){if(!VW.includes(v))v='study';stop();
+ VW.forEach(x=>{document.getElementById('v-'+x).hidden=x!==v});
+ document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ document.getElementById('nav').style.display=v==='study'?'flex':'none';
+ scrollTo(0,0);if(push){try{location.hash=v}catch(e){}}
+ document.querySelectorAll('#v-'+v+' .reveal').forEach(el=>io.observe(el))}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>showView(b.dataset.v,true));
+addEventListener('hashchange',()=>showView(location.hash.slice(1),false));
+showView(location.hash.slice(1),false);
+</script>
+</body>
+</html>

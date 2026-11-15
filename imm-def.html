@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Immunodeficiency & AIDS</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--card:#fff;--ink:#2b2d42;--mut:#6b7090;--mint:#d8f5e6;--sky:#dbeeff;--lav:#e8e0ff;--peach:#ffe3d3;--yel:#fff3b8;--pink:#ffdfe9;--line:#ece5d6;--acc:#5b6cff;--grn:#2e9e6b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;overflow-x:hidden}
+.en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;display:inline-block}
+#bar{position:fixed;top:0;right:0;height:5px;width:0;background:linear-gradient(270deg,#5b6cff,#ff9d6c,#3fcf8e);z-index:50;transition:width .15s}
+#nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:6px 8px;box-shadow:0 6px 24px rgba(60,50,20,.15);max-width:95vw}
+#nav button{border:0;background:var(--lav);border-radius:30px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;font-size:14px}
+#nav button.on{background:var(--acc);color:#fff}
+.hero{padding:56px 18px 30px;text-align:center;background:radial-gradient(1000px 400px at 50% -10%,#e8e0ff 0,transparent 70%),radial-gradient(700px 300px at 90% 20%,#d8f5e6 0,transparent 70%)}
+.hero .big{font-size:64px;animation:flo 3s ease-in-out infinite}
+@keyframes flo{50%{transform:translateY(-8px) rotate(-4deg)}}
+.hero h1{font-size:clamp(28px,7vw,48px);font-weight:800;margin:6px 0}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto 10px;font-size:17px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px auto;max-width:760px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 16px;min-width:105px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.stat b{display:block;font-size:26px;color:var(--acc)}
+.stat span{font-size:12.5px;color:var(--mut)}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--acc);color:#fff;border:0;border-radius:40px;padding:12px 26px;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 8px 20px rgba(91,108,255,.35);transition:transform .2s}
+.cta:hover{transform:translateY(-2px) scale(1.03)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;max-width:1000px;margin:26px auto 0;padding:0 14px}
+.ccard{border-radius:22px;padding:16px;cursor:pointer;text-align:right;border:1px solid rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.ccard:hover{transform:translateY(-6px);box-shadow:0 12px 26px rgba(0,0,0,.1)}
+.ccard .e{font-size:34px}.ccard h3{font-size:18px;font-weight:800}.ccard small{color:var(--mut);display:block;font-size:12.5px}.ccard p{font-size:14px;margin-top:4px}
+main{max-width:860px;margin:0 auto;padding:10px 14px 120px}
+.chap{margin:46px 0;scroll-margin-top:16px}
+.chead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.num{flex:none;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff;background:var(--acc);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.chead .lab{font-size:12.5px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase;direction:ltr;text-align:right}
+.chead h2{font-size:clamp(22px,5.5vw,30px);font-weight:800;line-height:1.3}
+.cap{display:flex;gap:10px;align-items:flex-start;margin:12px 0 18px}
+.cap .av{font-size:34px;flex:none}
+.bubble{background:#fff;border:1px solid var(--line);border-radius:6px 20px 20px 20px;padding:12px 16px;box-shadow:0 3px 10px rgba(0,0,0,.05);font-size:16.5px}
+.con{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 3px 14px rgba(60,50,20,.05)}
+.con h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 10px}
+.chip{background:var(--sky);border-radius:30px;padding:4px 13px;font-weight:700;font-size:14px;opacity:0;transform:translateY(8px) scale(.9);transition:all .4s}
+.chip:nth-child(4n+3){background:var(--mint)}.chip:nth-child(4n+5){background:var(--peach)}.chip:nth-child(4n+7){background:var(--lav)}
+.chip.ar{color:var(--mut);background:none;padding:0 2px;opacity:0}
+.in .chip{opacity:1;transform:none}
+.con ul{padding-right:20px}.con li{margin:5px 0}
+.mn{margin-top:12px;background:var(--yel);border-radius:16px;overflow:hidden}
+.mn button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:800;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between}
+.mn .body{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 14px}
+.mn.open .body{max-height:1200px;padding-bottom:12px}.mn .body{line-height:1.95;font-size:15px}
+.mn.open button span:last-child{transform:rotate(180deg)}
+.hy{margin-top:10px;background:var(--mint);border-right:5px solid var(--grn);border-radius:12px;padding:9px 13px;font-size:15px}
+.hy b{color:var(--grn)}
+.hl{margin:18px 0 0;background:linear-gradient(100deg,var(--yel),#ffe9a0);border-radius:18px;padding:13px 16px;font-weight:800;font-size:15.5px;box-shadow:0 4px 12px rgba(200,160,0,.18)}
+.hl small{display:block;font-size:12px;color:#8a6d00;margin-bottom:2px}
+.sep{color:#b08a00;margin:0 6px}
+table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;font-size:14.5px;margin:10px 0}
+th{background:var(--lav);padding:9px 10px}td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfaf4}
+.sec{border-radius:26px;padding:22px 16px;margin:30px 0}
+.sec h2{font-size:26px;font-weight:800;margin-bottom:6px}
+.rv{background:#fff;border:1px solid var(--line);border-radius:18px;margin:10px 0;overflow:hidden}
+.rv>button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:700;padding:13px 15px;cursor:pointer;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.rv .ans{display:none;padding:0 15px 14px}
+.rv.open .ans{display:block;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}}
+.rv .ans ul{padding-right:20px}
+.flash{perspective:900px;height:130px;margin:10px 0;cursor:pointer}
+.flash .in2{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flash.flip .in2{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border:1px solid var(--line)}
+.face.f{background:var(--sky)}.face.b{background:var(--mint);transform:rotateY(180deg)}
+.score{position:sticky;top:10px;z-index:20;margin:0 auto 10px;width:max-content;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.know{display:flex;gap:6px;justify-content:center;margin-top:-4px;margin-bottom:8px}
+.know button{border:0;border-radius:20px;padding:5px 14px;font:inherit;font-weight:700;cursor:pointer}
+.know .y{background:var(--mint)}.know .n{background:var(--peach)}
+.game{background:#fff;border:2px dashed #c9bff5;border-radius:22px;padding:16px;margin:18px 0}
+.game h4{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:var(--sky);border-radius:14px;padding:7px 12px;font:inherit;font-weight:700;cursor:pointer}
+.opts button.ok{background:#8fe3b4}.opts button.no{background:#ffb4b4}
+.tf{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:9px 0}
+.tf .b2{display:flex;gap:4px;flex:none}
+.tf button{border:0;border-radius:12px;padding:6px 12px;font:inherit;font-weight:800;cursor:pointer;background:var(--lav)}
+.tf.ok{background:#e8fff1}.tf.no{background:#fff0f0}
+.fb{font-size:13.5px;color:var(--mut);margin-top:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);padding:30px 14px 110px;font-size:14px}
+#tourbadge{position:fixed;top:12px;left:12px;z-index:45;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:700;display:none;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.chip{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+#tabs{position:sticky;top:5px;z-index:48;display:flex;gap:6px;justify-content:center;padding:8px;background:rgba(255,250,240,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#tabs button{border:0;background:var(--lav);border-radius:30px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer;font-size:14.5px}
+#tabs button.on{background:var(--acc);color:#fff;box-shadow:0 4px 12px rgba(91,108,255,.35)}
+.view[hidden]{display:none}
+.wrap{max-width:860px;margin:0 auto;padding:22px 14px 120px}
+.wrap>h1{font-size:clamp(26px,6vw,38px);font-weight:800}
+.wrap>p.sub{color:var(--mut);margin-bottom:14px}
+.gcard{border-radius:22px;padding:16px;margin:14px 0;border:1px solid rgba(0,0,0,.05);box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.gcard h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.gi{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;margin:4px 0;background:rgba(255,255,255,.75);border-radius:12px;cursor:pointer;transition:all .25s;font-size:15.5px}
+.gi::before{content:'🔑';flex:none}
+.gi.got{opacity:.45;text-decoration:line-through}
+.gi.got::before{content:'✅'}
+.gnum{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.gnum div{background:#fff;border-radius:16px;padding:8px 14px;text-align:center;border:1px solid var(--line);min-width:92px}
+.gnum b{display:block;font-size:22px;color:var(--acc)}.gnum span{font-size:12px;color:var(--mut)}
+.gprog{font-weight:800;margin:8px 0}
+.qc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;margin:14px 0;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.qh .q{font-weight:800;font-size:17px;direction:ltr;text-align:left;unicode-bidi:isolate}
+.qh .pt{flex:none;color:var(--mut);font-size:13px;white-space:nowrap}
+.qc textarea{width:100%;margin-top:12px;border:0;border-bottom:2px solid var(--line);background:transparent;font:inherit;padding:8px 2px;resize:vertical;min-height:54px;outline:none}
+.qc textarea:focus{border-color:var(--acc)}
+.qa{display:none;margin-top:10px;background:var(--mint);border-radius:16px;padding:12px 14px}
+.qa.show{display:block;animation:pop .35s}
+.qa ol{padding-right:22px}.qa li{margin:3px 0}
+.qa .kw{margin-top:6px;font-size:13px;color:#1d6b49;font-weight:700}
+.rate{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-weight:700;font-size:14px}
+.rate button{border:0;background:#fff;border-radius:12px;padding:4px 12px;font:inherit;font-weight:800;cursor:pointer}
+.rate button.sel{background:var(--acc);color:#fff}
+.qbtn{margin-top:10px;border:0;background:var(--yel);border-radius:14px;padding:8px 16px;font:inherit;font-weight:800;cursor:pointer}
+.tot{position:sticky;top:58px;z-index:20;width:max-content;margin:6px auto 10px;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{border:0;background:var(--lav);border-radius:14px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}
+.ge{direction:ltr;text-align:left;font-weight:700;font-size:15.5px;line-height:1.5;unicode-bidi:isolate}
+.ga{font-size:14px;color:var(--mut);margin-top:3px;line-height:1.6}
+.gcard h3{direction:ltr;text-align:left}
+.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.cheat{background:#ffe3e8;border-right:5px solid #e85d9b;border-radius:12px;padding:9px 13px;margin-top:10px;font-weight:700;line-height:1.9}.say{background:#eef3ff;border-radius:14px;padding:9px 13px;margin:6px 0 10px;font-weight:700;border-right:4px solid var(--acc)}.intro{margin:6px 0 10px;line-height:1.95;font-size:16px}.enul{padding:0!important;list-style:none;text-align:right;font-size:15.5px;direction:rtl;line-height:1.95}.enul li{direction:rtl;text-align:right;unicode-bidi:isolate;margin:0 0 10px}.extra{text-align:left;color:var(--mut);font-size:14px;margin:4px 0}.chips{margin:10px 0}.mn .body{line-height:1.95}.hy{background:#fff3b8;border-right:0;border-left:5px solid #e0a800;text-align:left}.hy b{color:#8a6d00}.trk2{margin:12px 0;background:linear-gradient(100deg,#fbf3dc,#f6ead0);border-inline-start:5px solid #c9ae74;border-radius:16px;padding:10px 14px;color:#5f4d22;font-size:15.5px;line-height:2;font-weight:600;box-shadow:0 6px 16px #c9ae7422}.trk2 b{color:#8a6a2a}</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="tourbadge">▶ الجولة شغّالة</div>
+
+<div id="tabs"><button data-v="study" class="on">🎬 الرحلة</button><button data-v="gold">🏆 الملخص الذهبي</button><button data-v="short">✍️ Short Essay</button></div>
+<div id="v-study" class="view"><section class="hero">
+  <div class="big">🎬🛡️</div>
+  <h1><span class="en">Immunodeficiency</span><br>نقص المناعة والإيدز</h1>
+  <p>Immunopathology 2 · د. هديل العبيدي. النقص الأولي والثانوي، AIDS وKaposi، بالعامية والمصطلحات الإنكليزية بين قوسين، وبآخرها أسئلة تجرّب حالك. 🍿</p>
+  <div class="stats">
+    <div class="stat"><b>4</b><span>مجموعات PID</span></div>
+    <div class="stat"><b>1:850</b><span>IgA deficiency</span></div>
+    <div class="stat"><b>7</b><span>أسباب ثانوية</span></div>
+    <div class="stat"><b>3</b><span>ثلاثية AIDS</span></div>
+  </div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0"><a class="cta" href="#gold" style="text-decoration:none">🏆 الملخص الذهبي</a><a class="cta" href="#short" style="text-decoration:none">✍️ Short Essay</a></div>
+  <button class="cta" id="tourBtn">▶ شغّل الجولة التلقائية</button>
+  <div class="grid" id="cards"></div>
+</section>
+
+<main id="main"></main>
+<footer>🛡️ المصدر: ملف المحاضرة (Immunodeficiency & AIDS · Immunopathology 2، د. هديل العبيدي).</footer>
+
+</div><div id="v-gold" class="view" hidden></div><div id="v-short" class="view" hidden></div>
+<div id="nav"><button id="prev">→ السابق</button><button id="toggle">⏸ / ▶</button><button id="next">التالي ←</button></div>
+
+<script>
+const E=t=>`<span class="en">${t}</span>`;
+const T=x=>x.replace(/\{\{(.+?)\}\}/g,'(<span class="en">$1</span>)');
+const CH=[
+ {
+  "n": 1,
+  "en": "Immune balance",
+  "ar": "توازن المناعة",
+  "emoji": "⚖️",
+  "col": "#ffe3d3",
+  "teaser": "المناعة لازم تكون مظبوطة",
+  "cap": "🎙️",
+  "q": "أنا جهاز المناعة. إذا اشتغلت زيادة بأذي جسمك، وإذا اشتغلت ناقص بتدخل العدوى والسرطان.",
+  "cons": [
+   {
+    "e": "⚖️",
+    "t": "Balanced immune system — ميزان الأمان",
+    "key": "c1",
+    "say": [
+     "المناعة",
+     "لازم ما أزيد ولا أنقص. إذا زدت بضرّ، وإذا نقصت بتدخل العدوى."
+    ],
+    "i": "",
+    "b": [
+     "فكّر بميزان مطبخ. إذا ثقّلت كتير عالكفّة، بيميل. جهاز المناعة (<bdi dir=\"ltr\">Immune system</bdi>) نفس الشي: ميزان لازم يضل متوازن (<bdi dir=\"ltr\">Balanced</bdi>).",
+     "إذا ردّ فعلو زاد (<bdi dir=\"ltr\">Over-reaction</bdi>): بيجيك مناعة ذاتية (<bdi dir=\"ltr\">Autoimmunity</bdi>، مثل <bdi dir=\"ltr\">SLE</bdi> و<bdi dir=\"ltr\">Hashimoto</bdi>) وحساسية (<bdi dir=\"ltr\">Allergy</bdi>، مثل الربو والإكزيما). وإذا نقص (<bdi dir=\"ltr\">Under-reaction</bdi>): بتجيك عدوى (<bdi dir=\"ltr\">Infections</bdi>) وسرطان (<bdi dir=\"ltr\">Cancer</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "Over ↑",
+     "Autoimmunity + Allergy"
+    ],
+    "m": "<bdi dir=\"ltr\">Balanced = optimal · over → autoimmunity/allergy · under → infection/cancer</bdi>",
+    "h": "Balanced = optimal. Over → autoimmunity/allergy · Under → infection/cancer",
+    "c": "الزيادة = مناعة ذاتية وحساسية، والنقص = عدوى وسرطان.",
+    "tr": "⚖️ المناعة ميزان: زيادة بتعمل مناعة ذاتية وحساسية، نقص بيعمل عدوى وسرطان. بهالمحاضرة الجيش ناقص، فالبيت بلا حماية."
+   },
+   {
+    "e": "🕳️",
+    "t": "Immunodeficiency — الجيش ناقص",
+    "key": "c2",
+    "say": null,
+    "i": "",
+    "b": [
+     "نقص المناعة (<bdi dir=\"ltr\">Immunodeficiency</bdi>) معناه إنو المناعة الخلوية (<bdi dir=\"ltr\">Cellular</bdi>) و/أو الخلطية (<bdi dir=\"ltr\">Humoral</bdi>) ناقصة أو غايبة.",
+     "والنتيجتين: عدوى أكتر (↑ <bdi dir=\"ltr\">Susceptibility to infections</bdi>)، وخطر أعلى لأنواع معيّنة من السرطان (↑ <bdi dir=\"ltr\">Risk of certain cancers</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "Weak immunity",
+     "Infections ↑",
+     "Cancer ↑"
+    ],
+    "m": "<bdi dir=\"ltr\">Deficient cellular/humoral immunity → infections + certain cancers</bdi>",
+    "h": "Immunodeficiency: infections + certain cancers",
+    "c": "نقص المناعة = عدوى + سرطانات معيّنة.",
+    "tr": "🏰 جيش ناقص الجنود: البيت بيتعرّض لعدوى وأورام معيّنة. ما بيغزو إلا اللي استغل غياب الحرس."
+   },
+   {
+    "e": "🔀",
+    "t": "Primary vs Secondary — من الولادة ولا بعدين؟",
+    "key": "c3",
+    "say": null,
+    "i": "",
+    "b": [
+     "سؤال بسيط: النقص من الولادة أو بعدين؟ النقص الأولي (<bdi dir=\"ltr\">Primary immunodeficiency</bdi>، <bdi dir=\"ltr\">PID</bdi>) وراثي، موجود من الولادة أو الطفولة. والنقص الثانوي (<bdi dir=\"ltr\">Secondary</bdi>، <bdi dir=\"ltr\">SID</bdi>) مكتسب، بسبب <bdi dir=\"ltr\">HIV</bdi> أو سوء تغذية (<bdi dir=\"ltr\">Malnutrition</bdi>) أو علاج كيماوي (<bdi dir=\"ltr\">Chemotherapy</bdi>).",
+     "والمعلومة الذهبية: الثانوي أشيع من الأولي. اللي بتشوفه بالمستشفى غالباً مكتسب."
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">Primary = inherited at birth · Secondary = acquired</bdi> (<bdi dir=\"ltr\">more common</bdi>)",
+    "h": "Primary = inherited · Secondary = acquired (more common)",
+    "c": "<bdi dir=\"ltr\">Primary</bdi> = وراثي. <bdi dir=\"ltr\">Secondary</bdi> = مكتسب وأشيع.",
+    "tr": "🧬 الأولي (<bdi dir=\"ltr\">Primary</bdi>) خُلقت بجيش ناقص بالوراثة. الثانوي (<bdi dir=\"ltr\">Secondary</bdi>) كان عندك جيش كامل وضعف بعدين، وهيدا الأشيع."
+   }
+  ],
+  "hl": [
+   "Balanced = optimal. Over → autoimmunity/allergy · Under → infection/cancer",
+   "Immunodeficiency: infections + certain cancers",
+   "Primary = inherited · Secondary = acquired (more common)"
+  ]
+ },
+ {
+  "n": 2,
+  "en": "PID classification",
+  "ar": "تصنيف النقص الأولي",
+  "emoji": "🗂️",
+  "col": "#dbeeff",
+  "teaser": "4 مجموعات",
+  "cap": "🧭",
+  "q": "النقص الأولي مش مرض واحد، هو 4 مجموعات. أول ما تحفظها، بتسهل عليك الباقي.",
+  "cons": [
+   {
+    "e": "4️⃣",
+    "t": "Primary immunodeficiency groups — 4 مجموعات",
+    "key": "c4",
+    "say": null,
+    "i": "",
+    "b": [
+     "خلّينا نقسم النقص الأولي لـ <bdi dir=\"ltr\">4</bdi> مجموعات، متل <bdi dir=\"ltr\">4</bdi> خطوط دفاع:",
+     "خلايا <bdi dir=\"ltr\">B</bdi> (<bdi dir=\"ltr\">B-cell</bdi>): أمراض <bdi dir=\"ltr\">Bruton</bdi> (<bdi dir=\"ltr\">X-linked agammaglobulinemia</bdi>) و<bdi dir=\"ltr\">CVID</bdi> ونقص <bdi dir=\"ltr\">IgA</bdi> المعزول. خلايا <bdi dir=\"ltr\">T</bdi> (<bdi dir=\"ltr\">T-cell</bdi>): <bdi dir=\"ltr\">Hyper-IgM</bdi> و<bdi dir=\"ltr\">DiGeorge</bdi> و<bdi dir=\"ltr\">SCID.</bdi> المتمّم (<bdi dir=\"ltr\">Complement deficiencies</bdi>). والبلعميات (<bdi dir=\"ltr\">Phagocytic deficiencies</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "B-cell",
+     "T-cell",
+     "Complement",
+     "Phagocytes"
+    ],
+    "m": "<bdi dir=\"ltr\">B</bdi>: <bdi dir=\"ltr\">Bruton</bdi>, <bdi dir=\"ltr\">CVID</bdi>, <bdi dir=\"ltr\">IgA · T</bdi>: <bdi dir=\"ltr\">Hyper-IgM</bdi>, <bdi dir=\"ltr\">DiGeorge</bdi>, <bdi dir=\"ltr\">SCID · Complement · Phagocytes</bdi>",
+    "h": "B: Bruton, CVID, IgA · T: Hyper-IgM, DiGeorge, SCID",
+    "c": "<bdi dir=\"ltr\">4</bdi> مجموعات: <bdi dir=\"ltr\">B</bdi>، <bdi dir=\"ltr\">T</bdi>، متمّم، بلعميات.",
+    "tr": "🗂️ أربع فرق بالجيش: فرقة B (أجسام)، فرقة T (قيادة)، فرقة المتمّم (شرطة)، فرقة البلعميات (عمّال نظافة). أي فرقة تنقص بتعرف شو المرض."
+   }
+  ],
+  "hl": [
+   "B: Bruton, CVID, IgA · T: Hyper-IgM, DiGeorge, SCID"
+  ]
+ },
+ {
+  "n": 3,
+  "en": "T-cell deficiencies",
+  "ar": "نقص خلايا T",
+  "emoji": "🧒",
+  "col": "#e8e0ff",
+  "teaser": "SCID · DiGeorge · Hyper-IgM",
+  "cap": "🏫",
+  "q": "خلايا T بتتعلّم بالغدة الزعترية. إذا خربت الغدة أو الخلايا، المناعة بتنهار.",
+  "cons": [
+   {
+    "e": "🫧",
+    "t": "SCID: X-linked — ولد الفقاعة",
+    "key": "c5",
+    "say": [
+     "خلايا T",
+     "سمعنا في أمر \"كبروا!\" بس الراديو خربان."
+    ],
+    "i": "",
+    "b": [
+     "تخيّل ولد بيعيش داخل فقاعة بلاستيك لأنو أي ميكروب بيقتلو. هيدا <bdi dir=\"ltr\">SCID</bdi> (<bdi dir=\"ltr\">Severe combined immunodeficiency</bdi>): نقص مناعة شديد مشترك، المناعة الخلطية والخلوية (<bdi dir=\"ltr\">Humoral + cellular</bdi>) كلتاهما ضعيفة جداً.",
+     "عدوى متكررة شديدة: فطرية (<bdi dir=\"ltr\">Candida</bdi>)، فيروسية، وبكتيرية. أشيع نوع <bdi dir=\"ltr\">X-linked</bdi> (<bdi dir=\"ltr\">50-60%</bdi>)، وبيصيب الصبيان. السبب: طفرة بجين مستقبل السايتوكين (<bdi dir=\"ltr\">Cytokine receptor gene</bdi>، سلسلة γ)."
+    ],
+    "x": "",
+    "flow": [
+     "Cytokine receptor ↓",
+     "T-cell dysfunction",
+     "Severe infections ↑"
+    ],
+    "m": "<bdi dir=\"ltr\">X-linked SCID</bdi> (<bdi dir=\"ltr\">50-60%</bdi>) → <bdi dir=\"ltr\">boys</bdi> → γ-<bdi dir=\"ltr\">chain cytokine receptor mutation</bdi>",
+    "h": "X-linked SCID: most common, boys, cytokine receptor defect",
+    "c": "<bdi dir=\"ltr\">X-linked SCID</bdi> = الأشيع، صبيان، مستقبل سايتوكين.",
+    "tr": "🫧 ولد الفقاعة (<bdi dir=\"ltr\">SCID</bdi>): ما بيعرف يستلم رسايل السايتوكين لأنو المستقبل مكسور. صبيان وهيدا الأشيع، فبيعيش جوّا فقاعة معقّمة."
+   },
+   {
+    "e": "🗑️",
+    "t": "SCID: Autosomal recessive — سلة النفايات المكسورة",
+    "key": "c6",
+    "say": null,
+    "i": "",
+    "b": [
+     "باقي أنواع <bdi dir=\"ltr\">SCID</bdi> وراثتها جسمية متنحية (<bdi dir=\"ltr\">Autosomal recessive</bdi>). وأشيع سبب: نقص إنزيم <bdi dir=\"ltr\">ADA</bdi> (<bdi dir=\"ltr\">Adenosine deaminase</bdi>).",
+     "تخيّل <bdi dir=\"ltr\">ADA</bdi> سلة نفايات: لما تنكسر، النفايات (سموم) بتتراكم وبتقتل الخلايا التائية (<bdi dir=\"ltr\">T-cell death</bdi>). حفظ سريع: <bdi dir=\"ltr\">ADA</bdi> = سلة النفايات."
+    ],
+    "x": "",
+    "flow": [
+     "ADA ↓",
+     "T cells die"
+    ],
+    "m": "<bdi dir=\"ltr\">AR SCID → ADA deficiency → toxic metabolites → T-cell death</bdi>",
+    "h": "AR SCID: ADA deficiency → T-cell death",
+    "c": "<bdi dir=\"ltr\">ADA</bdi> = سلة النفايات. نقصو يقتل <bdi dir=\"ltr\">T cells.</bdi>",
+    "tr": "🗑️ (<bdi dir=\"ltr\">ADA</bdi>) سلة النفايات. إذا انكسرت بتتراكم السموم وبتموت الخلايا التائية. نقص الإنزيم هو السبب بنمط الوراثة المتنحي."
+   },
+   {
+    "e": "🏫",
+    "t": "DiGeorge syndrome — ما في مدرسة",
+    "key": "c7",
+    "say": [
+     "T cells",
+     "أجينا نتعلّم، ما لقينا مدرسة."
+    ],
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">DiGeorge</bdi>: تخيّل مدرسة <bdi dir=\"ltr\">T cells</bdi> هي الغدة الزعترية (<bdi dir=\"ltr\">Thymus</bdi>). بـ <bdi dir=\"ltr\">DiGeorge</bdi> ما في مدرسة أصلاً: ضمور أو غياب الزعترية (<bdi dir=\"ltr\">Thymic hypoplasia</bdi> / <bdi dir=\"ltr\">aplasia</bdi>)، فنقص خلايا <bdi dir=\"ltr\">T.</bdi>",
+     "السبب: حذف بالكروموسوم <bdi dir=\"ltr\">22q11</bdi> (<bdi dir=\"ltr\">22q11 deletion</bdi>). والحفظ بكلمة <bdi dir=\"ltr\">CATCH 22</bdi>: <bdi dir=\"ltr\">Cardiac</bdi> (قلب)، <bdi dir=\"ltr\">Abnormal facies</bdi> (وجه)، <bdi dir=\"ltr\">Thymic aplasia</bdi>، <bdi dir=\"ltr\">Cleft palate</bdi> (شق حنك)، <bdi dir=\"ltr\">Hypocalcemia</bdi> (نقص كالسيوم)."
+    ],
+    "x": "",
+    "flow": [
+     "Thymus ✗",
+     "T cells ↓"
+    ],
+    "m": "<bdi dir=\"ltr\">Thymic aplasia · 22q11 deletion → CATCH 22</bdi>",
+    "h": "DiGeorge: thymic aplasia · 22q11 deletion · CATCH 22",
+    "c": "<bdi dir=\"ltr\">DiGeorge</bdi> = ما في <bdi dir=\"ltr\">Thymus. CATCH 22.</bdi>",
+    "tr": "🏫 (<bdi dir=\"ltr\">DiGeorge</bdi>) ما في مدرسة (<bdi dir=\"ltr\">Thymus</bdi>)، فالتلاميذ (<bdi dir=\"ltr\">T cells</bdi>) ما بيتعلموا. الاسم الحركي (<bdi dir=\"ltr\">CATCH 22</bdi>): حذف بالكروموسوم 22q11."
+   },
+   {
+    "e": "📺",
+    "t": "X-linked Hyper-IgM — زر الريموت مكسور",
+    "key": "c8",
+    "say": [
+     "CD4 T cell",
+     "كبست الزر ليبدّل التلفزيون القناة، بس ما صار شي!"
+    ],
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">Hyper-IgM</bdi>: تخيّل خلية <bdi dir=\"ltr\">T</bdi> (<bdi dir=\"ltr\">CD4</bdi>) عندها زر ريموت (<bdi dir=\"ltr\">CD40L</bdi>) بدها تضغطو على زر الخلية <bdi dir=\"ltr\">B</bdi> (<bdi dir=\"ltr\">CD40</bdi>) لتغيّر نوع الأجسام. بس الزر مكسور (طفرة <bdi dir=\"ltr\">X-linked</bdi> بـ <bdi dir=\"ltr\">CD40L</bdi>). فالخلية <bdi dir=\"ltr\">B</bdi> ما بتقدر تبدّل (<bdi dir=\"ltr\">Isotype switching</bdi>).",
+     "النتيجة: <bdi dir=\"ltr\">IgM</bdi> و<bdi dir=\"ltr\">IgD</bdi> عاليين، و<bdi dir=\"ltr\">IgG</bdi> و<bdi dir=\"ltr\">IgA</bdi> و<bdi dir=\"ltr\">IgE</bdi> واطيين. المريض بيجيه التهابات قيحية (<bdi dir=\"ltr\">Pyogenic infections</bdi>) والالتهاب الرئوي بـ <bdi dir=\"ltr\">Pneumocystis jiroveci.</bdi>"
+    ],
+    "x": "",
+    "flow": [
+     "CD40L ✗",
+     "Isotype switching ✗",
+     "IgM ↑↑"
+    ],
+    "m": "<bdi dir=\"ltr\">CD40L mutation → no isotype switching</bdi> → ↑ <bdi dir=\"ltr\">IgM</bdi> · ↓ <bdi dir=\"ltr\">IgG</bdi>, <bdi dir=\"ltr\">IgA</bdi>, <bdi dir=\"ltr\">IgE</bdi>",
+    "h": "Hyper-IgM: CD40L mutation → no isotype switching → ↑ IgM",
+    "c": "<bdi dir=\"ltr\">Hyper-IgM = CD40L</bdi> مكسور، ما في <bdi dir=\"ltr\">isotype switching.</bdi>",
+    "tr": "📺 (<bdi dir=\"ltr\">Hyper-IgM</bdi>) ريموت (<bdi dir=\"ltr\">CD40L</bdi>) مكسور. الخلية B ما بتقدر تبدّل القناة (<bdi dir=\"ltr\">Isotype switching</bdi>)، فبتضل عالقة عمحطة IgM وتزيد بالدم."
+   }
+  ],
+  "hl": [
+   "X-linked SCID: most common, boys, cytokine receptor defect",
+   "AR SCID: ADA deficiency → T-cell death",
+   "DiGeorge: thymic aplasia · 22q11 deletion · CATCH 22",
+   "Hyper-IgM: CD40L mutation → no isotype switching → ↑ IgM"
+  ]
+ },
+ {
+  "n": 4,
+  "en": "B-cell deficiencies",
+  "ar": "نقص خلايا B",
+  "emoji": "🧬",
+  "col": "#ffdfe9",
+  "teaser": "Bruton · CVID · IgA",
+  "cap": "🧪",
+  "q": "خلايا B هني مصنع الأجسام المضادة. إذا المصنع تعطّل، العدوى بتتكرر.",
+  "cons": [
+   {
+    "e": "🎟️",
+    "t": "X-linked agammaglobulinemia (Bruton) — ما معهم تذكرة دخول",
+    "key": "c9",
+    "say": [
+     "pre-B cell",
+     "ما في Btk، فالباب مسكّر!"
+    ],
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">Bruton</bdi> (<bdi dir=\"ltr\">X-linked agammaglobulinemia</bdi>): الخلايا <bdi dir=\"ltr\">B</bdi> الأولية (<bdi dir=\"ltr\">Pro-B</bdi> / <bdi dir=\"ltr\">Pre-B</bdi>) ما بتنضج لأنو الإنزيم <bdi dir=\"ltr\">Btk</bdi> (<bdi dir=\"ltr\">B-cell tyrosine kinase</bdi>) معطّل. تخيّل ولاد ما معهم تذكرة دخول للمدرسة، فما بيتخرجوا.",
+     "النتيجة: خلايا <bdi dir=\"ltr\">B</bdi> قليلة أو غايبة، وكل أنواع الأجسام واطية (<bdi dir=\"ltr\">Agammaglobulinemia</bdi>). بيصيب الصبيان (<bdi dir=\"ltr\">X-linked</bdi>)، والأعراض بتبلّش بعد <bdi dir=\"ltr\">6</bdi> أشهر (لأنو أجسام الأم بتحميهم أول فترة). عدوى الأذن الوسطى والجلد والتنفسي: <bdi dir=\"ltr\">S. pneumoniae</bdi> و<bdi dir=\"ltr\">S. aureus.</bdi>"
+    ],
+    "x": "",
+    "flow": [
+     "Btk ✗",
+     "B cells absent",
+     "Ig ↓↓"
+    ],
+    "m": "<bdi dir=\"ltr\">Btk mutation → pre-B cells arrest</bdi> → ↓ <bdi dir=\"ltr\">B cells + all Ig → boys</bdi>, ><bdi dir=\"ltr\">6 months</bdi>",
+    "h": "XLA: Btk · boys · >6 months · all Ig ↓",
+    "c": "<bdi dir=\"ltr\">Bruton = Btk</bdi>، صبيان، بعد <bdi dir=\"ltr\">6</bdi> أشهر، كل الـ <bdi dir=\"ltr\">Ig</bdi> واطية.",
+    "tr": "🎟️ (<bdi dir=\"ltr\">Bruton</bdi>) ما معهم تذكرة دخول: الإنزيم (<bdi dir=\"ltr\">Btk</bdi>) مكسور، فخلايا B ما بتنضج. صبيان، بيبلّش بعد 6 أشهر، وكل الأجسام (<bdi dir=\"ltr\">Ig</bdi>) واطية."
+   },
+   {
+    "e": "🎓",
+    "t": "Common variable immunodeficiency (CVID) — عددهم تمام بس ما بيتخرّجوا",
+    "key": "c10",
+    "say": null,
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">CVID</bdi> (<bdi dir=\"ltr\">Common variable immunodeficiency</bdi>): الفرق عن <bdi dir=\"ltr\">Bruton</bdi> إنو عدد خلايا <bdi dir=\"ltr\">B</bdi> تمام، بس ما بتقدر تتمايز لخلايا بلازما (<bdi dir=\"ltr\">Plasma cells</bdi>). متل طلاب كتار بس ما بيتخرّجوا.",
+     "بتبان بالطفولة المتأخرة بنقص أجسام (<bdi dir=\"ltr\">Hypogammaglobulinemia</bdi>) وعدوى متكررة. الصبيان والبنات سواء. وبعدين خطر أعلى لسرطان المعدة (<bdi dir=\"ltr\">Gastric cancer</bdi>) واللمفوما (<bdi dir=\"ltr\">Lymphoma</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "B cells normal",
+     "No plasma cells",
+     "Ig ↓"
+    ],
+    "m": "<bdi dir=\"ltr\">Normal B cells · no plasma cell differentiation</bdi> → ↓ <bdi dir=\"ltr\">Ig → gastric cancer + lymphoma</bdi>",
+    "h": "CVID: normal B cells, no plasma cells; gastric cancer + lymphoma",
+    "c": "<bdi dir=\"ltr\">CVID = B cells</bdi> موجودة بس ما بتصير <bdi dir=\"ltr\">plasma cells.</bdi>",
+    "tr": "🎓 (<bdi dir=\"ltr\">CVID</bdi>) العدد تمام، بس ما بيتخرّجوا. خلايا B موجودة بس ما بتصير (<bdi dir=\"ltr\">Plasma cells</bdi>). وبيزيد خطر سرطان المعدة واللمفوما."
+   },
+   {
+    "e": "🚪",
+    "t": "Isolated IgA deficiency — الحارس غايب",
+    "key": "c11",
+    "say": null,
+    "i": "",
+    "b": [
+     "نقص <bdi dir=\"ltr\">IgA</bdi> المعزول (<bdi dir=\"ltr\">Isolated IgA deficiency</bdi>): أشيع نقص مناعة خلقي (<bdi dir=\"ltr\">1</bdi>:<bdi dir=\"ltr\">850</bdi>). <bdi dir=\"ltr\">IgA</bdi> هو حارس الأغشية المخاطية، وهون الحارس غايب.",
+     "خلايا <bdi dir=\"ltr\">B</bdi> ما بتتمايز لخلايا بلازما تفرز <bdi dir=\"ltr\">IgA.</bdi> كتير مرضى ما عندهم أعراض. وإذا في أعراض: عدوى مخاطية (جيوب أنفية، رئة، بول، إسهال). وبترتبط بالحساسية التنفسية والمناعة الذاتية (<bdi dir=\"ltr\">SLE</bdi>، التهاب المفاصل الروماتويدي)."
+    ],
+    "x": "",
+    "flow": [
+     "IgA ✗",
+     "Mucosal infections ↑"
+    ],
+    "m": "<bdi dir=\"ltr\">Most common</bdi> (<bdi dir=\"ltr\">1</bdi>:<bdi dir=\"ltr\">850</bdi>) → <bdi dir=\"ltr\">no IgA plasma cells → mucosal infections + allergy + autoimmunity</bdi>",
+    "h": "IgA deficiency: 1:850 · mucosal infections",
+    "c": "<bdi dir=\"ltr\">IgA</bdi> = حارس المخاطيات. <bdi dir=\"ltr\">1</bdi>:<bdi dir=\"ltr\">850.</bdi>",
+    "tr": "🛡️ (<bdi dir=\"ltr\">IgA deficiency</bdi>) الحارس غايب عالأبواب: IgA هو حارس المخاطيات. وبتحصل مع 1 من 850، فالعدوى بتجي من المخاطيات."
+   }
+  ],
+  "hl": [
+   "XLA: Btk · boys · >6 months · all Ig ↓",
+   "CVID: normal B cells, no plasma cells; gastric cancer + lymphoma",
+   "IgA deficiency: 1:850 · mucosal infections"
+  ]
+ },
+ {
+  "n": 5,
+  "en": "Phagocytes & complement",
+  "ar": "البلعميات والمتمّم",
+  "emoji": "🍽️",
+  "col": "#d8f5e6",
+  "teaser": "CGD · Chediak-Higashi · C2-C9",
+  "cap": "🧹",
+  "q": "أنا فرقة التنضيف: بلعميات ومتمّم. بنبلع المكروب وبنحرقو.",
+  "cons": [
+   {
+    "e": "🔥",
+    "t": "Chronic granulomatous disease (CGD) — بلا ولاعة",
+    "key": "c12",
+    "say": null,
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">CGD</bdi> (<bdi dir=\"ltr\">Chronic granulomatous disease</bdi>): خلايا البلع (<bdi dir=\"ltr\">Phagocytes</bdi>) بتبلع الميكروب بس ما بتقدر تقتلو لأنو عندها \"ولاعة\" معطّلة. الإنزيم <bdi dir=\"ltr\">NADPH oxidase</bdi> ناقص، فما في انفجار تنفسي (<bdi dir=\"ltr\">Respiratory burst</bdi>) ينتج أنواع أكسجين تفاعلية (<bdi dir=\"ltr\">ROS</bdi>).",
+     "علاماتها: تضخّم عقد (<bdi dir=\"ltr\">Lymphadenopathy</bdi>)، تضخّم كبد وطحال (<bdi dir=\"ltr\">Hepato-splenomegaly</bdi>)، وعقد لمفاوية مزمنة بتنزّ."
+    ],
+    "x": "",
+    "flow": [
+     "NADPH oxidase ✗",
+     "No ROS",
+     "Chronic infections"
+    ],
+    "m": "<bdi dir=\"ltr\">NADPH oxidase deficiency → no respiratory burst</bdi> (<bdi dir=\"ltr\">ROS</bdi>) → <bdi dir=\"ltr\">granuloma</bdi>",
+    "h": "CGD: NADPH oxidase deficiency → no respiratory burst",
+    "c": "<bdi dir=\"ltr\">CGD = NADPH oxidase</bdi>، ما في <bdi dir=\"ltr\">ROS.</bdi>",
+    "tr": "🔥 (<bdi dir=\"ltr\">CGD</bdi>) عمّال نظافة بلا ولاعة: الإنزيم (<bdi dir=\"ltr\">NADPH oxidase</bdi>) مكسور، فما في (<bdi dir=\"ltr\">ROS</bdi>) ولا حرق للجراثيم. بيبلعوها بس ما بيقتلوها."
+   },
+   {
+    "e": "🚛",
+    "t": "Chediak-Higashi syndrome — شاحنتين ما عم يندمجوا",
+    "key": "c13",
+    "say": [
+     "Phagosome وLysosome",
+     "لازم ندمج حتى نوصل أدوات الهضم للميكروب. بس الاندماج عنا فاشل!"
+    ],
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">Chediak-Higashi</bdi>: تخيّل شاحنتين لازم يندمجوا، وما بيندمجوا. البلعم (<bdi dir=\"ltr\">Phagosome</bdi>) والليزوزوم (<bdi dir=\"ltr\">Lysosome</bdi>) ما بيتّحدوا (<bdi dir=\"ltr\">Phagosome-lysosome fusion failure</bdi>)، فالميكروب المبلوع ما بيموت.",
+     "كمان الحركة الكيميائية (<bdi dir=\"ltr\">Chemotaxis</bdi>) أضعف، والقتل داخل الخلية (<bdi dir=\"ltr\">Intracellular killing</bdi>) أضعف، ونقص إنزيمات هاضمة (<bdi dir=\"ltr\">Proteinase deficiency</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "Fusion ✗",
+     "Killing ↓",
+     "Chemotaxis ↓"
+    ],
+    "m": "<bdi dir=\"ltr\">No phagosome-lysosome fusion</bdi> → ↓ <bdi dir=\"ltr\">chemotaxis</bdi> + ↓ <bdi dir=\"ltr\">intracellular killing</bdi>",
+    "h": "Chediak-Higashi: no phagosome-lysosome fusion",
+    "c": "<bdi dir=\"ltr\">Chediak-Higashi</bdi> = ما في دمج بين <bdi dir=\"ltr\">phagosome</bdi> و <bdi dir=\"ltr\">lysosome.</bdi>",
+    "tr": "🚚 (<bdi dir=\"ltr\">Chediak-Higashi</bdi>) شاحنتين ما عم يندمجوا: شاحنة الجرثومة (<bdi dir=\"ltr\">Phagosome</bdi>) وشاحنة الإنزيمات (<bdi dir=\"ltr\">Lysosome</bdi>). فما بيصير الحرق."
+   },
+   {
+    "e": "🧲",
+    "t": "Complement: functions — الشرطي وأدواتو",
+    "key": "c14",
+    "say": null,
+    "i": "",
+    "b": [
+     "المتمّم (<bdi dir=\"ltr\">Complement</bdi>) متل شرطي معو <bdi dir=\"ltr\">3</bdi> أدوات: التهاب (<bdi dir=\"ltr\">Inflammation</bdi>)، قتل مباشر (<bdi dir=\"ltr\">Direct killing</bdi>)، وتغليف (<bdi dir=\"ltr\">Opsonization</bdi>، الملصق \"كلني\" للبلاعم)."
+    ],
+    "x": "",
+    "flow": [
+     "Inflammation",
+     "Direct killing",
+     "Opsonization"
+    ],
+    "m": "<bdi dir=\"ltr\">Complement</bdi>: <bdi dir=\"ltr\">inflammation · direct killing · opsonization</bdi>",
+    "h": "Complement: inflammation · direct killing · opsonization",
+    "c": "<bdi dir=\"ltr\">3</bdi> وظايف: التهاب، قتل، تغليف.",
+    "tr": "👮 المتمّم شرطي بتلات أدوات: التهاب، قتل مباشر، وتغليف (<bdi dir=\"ltr\">Opsonization</bdi>). كل مرض بيعطّل أداة."
+   },
+   {
+    "e": "🥇",
+    "t": "C2 deficiency — الأشيع بالنقص",
+    "key": "c15",
+    "say": null,
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">C2 deficiency</bdi>: أشيع نقص بمكوّنات المتمّم (<bdi dir=\"ltr\">Most common complement deficiency</bdi>)، وغالباً خفيف (<bdi dir=\"ltr\">Mild</bdi>)."
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">C2 deficiency = most common · usually mild</bdi>",
+    "h": "C2: most common complement deficiency",
+    "c": "<bdi dir=\"ltr\">C2</bdi> = الأشيع، خفيف.",
+    "tr": "🔸 (<bdi dir=\"ltr\">C2</bdi>) الأشيع بين نقص المتمّم، وخفيف. متل شرطي غايب شوي، البيت بيتدبّر."
+   },
+   {
+    "e": "🪜",
+    "t": "C2 + C4 deficiency — خلل ببداية الطريق",
+    "key": "c16",
+    "say": null,
+    "i": "",
+    "b": [
+     "نقص <bdi dir=\"ltr\">C2</bdi> و<bdi dir=\"ltr\">C4</bdi> (و<bdi dir=\"ltr\">C1q</bdi>): خلل ببداية الطريق الكلاسيكي. بتصير عدوى بكتيرية وفيروسية أكتر، بس كتير مرضى بلا أعراض لأنو المسار البديل (<bdi dir=\"ltr\">Alternative pathway</bdi>) بيعوّض أغلب العدوى.",
+     "وبيرتبط بمرض شبيه بـ <bdi dir=\"ltr\">SLE</bdi> (<bdi dir=\"ltr\">SLE-like</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "C2 / C4 ↓",
+     "Classical pathway ✗",
+     "Alternative pathway compensates"
+    ],
+    "m": "<bdi dir=\"ltr\">C2/C4/C1q deficiency → SLE-like</bdi>; <bdi dir=\"ltr\">alternative pathway compensates</bdi>",
+    "h": "C2/C4/C1q: SLE-like; alternative pathway compensates",
+    "c": "<bdi dir=\"ltr\">C2/C4</bdi>: بداية الطريق، <bdi dir=\"ltr\">SLE-like</bdi>، المسار البديل بيعوّض.",
+    "tr": "🚧 (<bdi dir=\"ltr\">C2 / C4 / C1q</bdi>) الخلل ببداية الطريق. بيعمل شي شبيه الذئبة (<bdi dir=\"ltr\">SLE-like</bdi>)، والمسار البديل (<bdi dir=\"ltr\">Alternative pathway</bdi>) بيعوّض."
+   },
+   {
+    "e": "🏛️",
+    "t": "C3 deficiency — عمود السلّم",
+    "key": "c17",
+    "say": null,
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">C3</bdi> هو عمود السلّم: كل مسارات المتمّم بتمرّ فيه. نقصو نادر، وهو الأخطر (<bdi dir=\"ltr\">Most serious</bdi>).",
+     "الأسباب: ضعف تصنيع <bdi dir=\"ltr\">C3</bdi>، أو نقص <bdi dir=\"ltr\">Factor I</bdi> أو <bdi dir=\"ltr\">Factor H.</bdi> النتيجة: عدوى قيحية شديدة (<bdi dir=\"ltr\">Severe pyogenic infections</bdi>) والتهاب كبب بالمعقّدات المناعية (<bdi dir=\"ltr\">Immune complex-mediated GN</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "C3 ↓↓",
+     "Severe pyogenic infections",
+     "Immune complex GN"
+    ],
+    "m": "<bdi dir=\"ltr\">C3 deficiency → rare</bdi>, <bdi dir=\"ltr\">most serious → pyogenic infections + immune complex GN</bdi>",
+    "h": "C3: most serious · pyogenic infections + immune complex GN",
+    "c": "<bdi dir=\"ltr\">C3</bdi> = الأخطر، عدوى قيحية + <bdi dir=\"ltr\">GN.</bdi>",
+    "tr": "🪜 (<bdi dir=\"ltr\">C3</bdi>) عمود السلّم: كل الطرق بتعدي منو، فنقصو هو الأخطر. عدوى قيحية (<bdi dir=\"ltr\">Pyogenic</bdi>) والتهاب كلى (<bdi dir=\"ltr\">GN</bdi>)."
+   },
+   {
+    "e": "🚪",
+    "t": "C5–C9 deficiency — بوابة Neisseria",
+    "key": "c18",
+    "say": null,
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">C5</bdi> لـ <bdi dir=\"ltr\">C9</bdi> هنّي المكوّنات المتأخرة اللي بتعمل ثقب بغشاء الميكروب (<bdi dir=\"ltr\">Membrane attack complex</bdi>). نقصها = بوابة مفتوحة لـ <bdi dir=\"ltr\">Neisseria.</bdi>",
+     "فبتصير عدوى <bdi dir=\"ltr\">Neisseria</bdi> متكررة: السيلان (<bdi dir=\"ltr\">Gonococcal</bdi>) والمكورات السحائية (<bdi dir=\"ltr\">Meningococcal</bdi>، التهاب السحايا)."
+    ],
+    "x": "",
+    "flow": [
+     "C5–C9 ↓",
+     "Complement-mediated lysis ↓",
+     "Neisseria infections ↑"
+    ],
+    "m": "<bdi dir=\"ltr\">C5-C9 deficiency → membrane attack defect → recurrent Neisseria</bdi>",
+    "h": "C5–C9: membrane attack defect → recurrent Neisseria",
+    "c": "<bdi dir=\"ltr\">C5-C9 = Neisseria</bdi> (سيلان + سحايا).",
+    "tr": "🚪 (<bdi dir=\"ltr\">C5-C9</bdi>) بوابة النيسيريا: بدونها ما في (<bdi dir=\"ltr\">Membrane attack</bdi>)، فبتتكرر عدوى النيسيريا: سيلان وسحايا."
+   }
+  ],
+  "hl": [
+   "CGD: NADPH oxidase deficiency → no respiratory burst",
+   "Chediak-Higashi: no phagosome-lysosome fusion",
+   "Complement: inflammation · direct killing · opsonization",
+   "C2: most common complement deficiency",
+   "C2/C4/C1q: SLE-like; alternative pathway compensates",
+   "C3: most serious · pyogenic infections + immune complex GN",
+   "C5–C9: membrane attack defect → recurrent Neisseria"
+  ]
+ },
+ {
+  "n": 6,
+  "en": "Secondary immunodeficiency",
+  "ar": "النقص الثانوي",
+  "emoji": "🌍",
+  "col": "#fff3b8",
+  "teaser": "المناعة كانت منيحة وبعدين ضعفت",
+  "cap": "🧑‍✈️",
+  "q": "هالمرة مش شرط يكون في خلل جيني من الولادة. في عوامل إجت بعدين وأضعفت الجيش.",
+  "cons": [
+   {
+    "e": "🌍",
+    "t": "Secondary immunodeficiency (SID) — ضعفت بعد ما كانت منيحة",
+    "key": "c19",
+    "say": [
+     "الكابتن",
+     "هالمرة مش شرط يكون في خلل جيني. في عوامل إجت بعدين وأضعفت الجيش."
+    ],
+    "i": "",
+    "b": [
+     "النقص الثانوي (<bdi dir=\"ltr\">Secondary immunodeficiency</bdi>) أشيع من الأولي، وأسبابو <bdi dir=\"ltr\">7</bdi>: (<bdi dir=\"ltr\">1</bdi>) سوء تغذية (<bdi dir=\"ltr\">Malnutrition</bdi>)، (<bdi dir=\"ltr\">2</bdi>) سكري وأمراض استقلابية (<bdi dir=\"ltr\">Diabetes + metabolic</bdi>)، (<bdi dir=\"ltr\">3</bdi>) العدوى، وأهمها <bdi dir=\"ltr\">HIV/AIDS</bdi>، (<bdi dir=\"ltr\">4</bdi>) السرطان: سرطان الدم واللمفوما، (<bdi dir=\"ltr\">5</bdi>) أمراض الكلى (<bdi dir=\"ltr\">Renal diseases</bdi>)، (<bdi dir=\"ltr\">6</bdi>) علاج كيماوي أو إشعاعي، (<bdi dir=\"ltr\">7</bdi>) أدوية كبت المناعة (<bdi dir=\"ltr\">Immunosuppressive therapy</bdi>) لمنع رفض الزرع."
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">Malnutrition · diabetes · HIV · cancer · renal · chemo/radio · immunosuppressants</bdi>",
+    "h": "SID: more common than PID · 7 main causes",
+    "c": "النقص الثانوي: <bdi dir=\"ltr\">7</bdi> أسباب، أشيع من الأولي.",
+    "tr": "📉 (<bdi dir=\"ltr\">SID</bdi>) كانت منيحة وضعفت: أشيع من الأولي، وإلها 7 أسباب. مثل بيت اتهدّم بعد زلزال."
+   }
+  ],
+  "hl": [
+   "SID: more common than PID · 7 main causes"
+  ]
+ },
+ {
+  "n": 7,
+  "en": "AIDS",
+  "ar": "الإيدز",
+  "emoji": "🎗️",
+  "col": "#ffe3d3",
+  "teaser": "HIV ضرب القيادة",
+  "cap": "🦠",
+  "q": "HIV بيضرب خلايا CD4. هي القيادة. بدونها الجيش بيضيع وبتدخل الميكروبات الانتهازية.",
+  "cons": [
+   {
+    "e": "🕵️",
+    "t": "AIDS: definition — HIV قتل القيادة",
+    "key": "c20",
+    "say": null,
+    "i": "",
+    "b": [
+     "<bdi dir=\"ltr\">HIV</bdi> هو الفيروس (<bdi dir=\"ltr\">Human Immunodeficiency Virus</bdi>)، و<bdi dir=\"ltr\">AIDS</bdi> هو المتلازمة (<bdi dir=\"ltr\">Acquired Immune Deficiency Syndrome</bdi>). تخيّل <bdi dir=\"ltr\">HIV</bdi> بيقتل القائد (خلايا <bdi dir=\"ltr\">CD4</bdi>)، فالجيش بيصير بلا توجيه.",
+     "الثلاثية المميزة: عدوى انتهازية (<bdi dir=\"ltr\">Opportunistic infections</bdi>)، أورام ثانوية (<bdi dir=\"ltr\">Secondary neoplasms</bdi>)، وأعراض عصبية (<bdi dir=\"ltr\">Neurologic manifestations</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "HIV",
+     "CD4 ↓",
+     "Triad"
+    ],
+    "m": "<bdi dir=\"ltr\">HIV → AIDS → opportunistic infections + neoplasms + neurologic</bdi>",
+    "h": "AIDS triad: opportunistic infections + neoplasms + neurologic",
+    "c": "<bdi dir=\"ltr\">AIDS</bdi> ثلاثية: عدوى + أورام + أعصاب.",
+    "tr": "👑 (<bdi dir=\"ltr\">AIDS</bdi>) فيروس (<bdi dir=\"ltr\">HIV</bdi>) قتل القيادة (<bdi dir=\"ltr\">CD4</bdi>). النتيجة ثلاثية: عدوى انتهازية، أورام، ومشاكل عصبية."
+   },
+   {
+    "e": "🦠",
+    "t": "Opportunistic infections — ضيوف بلا دعوة",
+    "key": "c21",
+    "say": null,
+    "i": "",
+    "b": [
+     "العدوى الانتهازية (<bdi dir=\"ltr\">Opportunistic infections</bdi>) هي ضيوف بلا دعوة: ميكروبات ما بتأذي شخص سليم، بس بتقتل مريض الإيدز. وهي سبب أغلب الوفيات.",
+     "الأمثلة: التهاب رئوي <bdi dir=\"ltr\">Pneumocystis jiroveci</bdi>، <bdi dir=\"ltr\">Candida albicans</bdi> (بالفم والمريء والمهبل والرئة)، التهاب أمعاء ورئة بالـ <bdi dir=\"ltr\">CMV</bdi>، متفطّرات لانمطية (<bdi dir=\"ltr\">M. avium-intracellulare</bdi>) بالجهاز الهضمي، سحايا <bdi dir=\"ltr\">Cryptococcus neoformans</bdi>، وإسهال <bdi dir=\"ltr\">Cryptosporidium.</bdi>"
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">Pneumocystis · Candida · CMV · M. avium · Cryptococcus · Cryptosporidium</bdi>",
+    "h": "Opportunistic infections: most deaths in AIDS",
+    "c": "العدوى الانتهازية = أغلب وفيات الإيدز.",
+    "tr": "🎭 العدوى الانتهازية ضيوف بلا دعوة: دخلوا لما غابت القيادة، وهنّي سبب أغلب وفيات الإيدز."
+   },
+   {
+    "e": "🎗️",
+    "t": "HIV-associated neoplasms — أورام الحارس الغايب",
+    "key": "c22",
+    "say": null,
+    "i": "",
+    "b": [
+     "بما إنو المراقبة المناعية غايبة، الأورام بتطلع: ساركوما كابوزي (<bdi dir=\"ltr\">Kaposi sarcoma</bdi>، المميّزة للإيدز)، اللمفوما اللاهودجكينية (<bdi dir=\"ltr\">Non-Hodgkin lymphoma</bdi>)، سرطان عنق الرحم (<bdi dir=\"ltr\">Cervical carcinoma</bdi>)، وسرطان الجلد الحرشفي (<bdi dir=\"ltr\">Squamous cell carcinoma of the skin</bdi>)."
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">Kaposi sarcoma</bdi> (<bdi dir=\"ltr\">AIDS-defining</bdi>) · <bdi dir=\"ltr\">NHL · cervical ca · skin SCC</bdi>",
+    "h": "Kaposi sarcoma = AIDS-defining",
+    "c": "<bdi dir=\"ltr\">Kaposi</bdi> = ورم الإيدز المميّز.",
+    "tr": "🟣 ورم الحارس الغايب: الأورام بتطلع لما المراقبة بتغيب. وأشهرها (<bdi dir=\"ltr\">Kaposi</bdi>) علامة الإيدز."
+   }
+  ],
+  "hl": [
+   "AIDS triad: opportunistic infections + neoplasms + neurologic",
+   "Opportunistic infections: most deaths in AIDS",
+   "Kaposi sarcoma = AIDS-defining"
+  ]
+ },
+ {
+  "n": 8,
+  "en": "Kaposi sarcoma",
+  "ar": "ساركوما كابوزي",
+  "emoji": "🟣",
+  "col": "#e8e0ff",
+  "teaser": "ورم أوعية بنفسجي",
+  "cap": "🔬",
+  "q": "ورم بالأوعية، بيتعرّف من لونو البنفسجي، وبيجي كتير مع AIDS.",
+  "cons": [
+   {
+    "e": "🟣",
+    "t": "Kaposi sarcoma: basics — كدمة بنفسجية",
+    "key": "c23",
+    "say": null,
+    "i": "",
+    "b": [
+     "ساركوما كابوزي: تخيّل كدمة بنفسجية ما بتروح. هي ورم وعائي (<bdi dir=\"ltr\">Vascular tumor</bdi>) درجة متوسطة (<bdi dir=\"ltr\">Borderline</bdi>).",
+     "سببها: فيروس <bdi dir=\"ltr\">HHV8</bdi> (<bdi dir=\"ltr\">Kaposi sarcoma herpesvirus</bdi>) مع نقص مناعة <bdi dir=\"ltr\">T.</bdi> الأشيع عند مرضى الإيدز وهي معيار تشخيصي. وإلها <bdi dir=\"ltr\">4</bdi> أشكال: كلاسيكي (<bdi dir=\"ltr\">Classic</bdi>)، أفريقي متوطّن (<bdi dir=\"ltr\">Endemic</bdi>)، مرتبط بالزرع (<bdi dir=\"ltr\">Transplant-associated</bdi>)، ومرتبط بالإيدز (<bdi dir=\"ltr\">Epidemic</bdi>)."
+    ],
+    "x": "",
+    "flow": [
+     "HHV8",
+     "T-cell defect",
+     "Kaposi"
+    ],
+    "m": "<bdi dir=\"ltr\">HHV8 + T-cell defect → vascular tumor → 4 forms</bdi>",
+    "h": "Kaposi: HHV8 + T-cell defect · 4 forms",
+    "c": "<bdi dir=\"ltr\">Kaposi = HHV8</bdi> + نقص <bdi dir=\"ltr\">T cells</bdi>، <bdi dir=\"ltr\">4</bdi> أشكال.",
+    "tr": "🟣 (<bdi dir=\"ltr\">Kaposi</bdi>) كدمة بنفسجية: فيروس (<bdi dir=\"ltr\">HHV8</bdi>) بيشتغل لما تنقص الخلايا التائية. إلو 4 أشكال."
+   },
+   {
+    "e": "🔬",
+    "t": "Kaposi sarcoma: pathology — شو بتشوف",
+    "key": "c24",
+    "say": null,
+    "i": "",
+    "b": [
+     "وبالنسيج: بالعين صفائح بنفسجية بارزة (<bdi dir=\"ltr\">Violaceous raised plaques</bdi>). تحت المجهر: فراغات وعائية متوسّعة بشكل شقوق (<bdi dir=\"ltr\">Dilated slit-like vascular spaces</bdi>) مع خلايا مغزلية ممتلئة (<bdi dir=\"ltr\">Plump spindle cells</bdi>).",
+     "وكمان خلايا حمرا خارج الوعاء (<bdi dir=\"ltr\">Extravasated erythrocytes</bdi>)، وبلاعم محمّلة بالهيموسيديرين (<bdi dir=\"ltr\">Hemosiderin-laden macrophages</bdi>)، وخلايا التهابية أخرى."
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">Violaceous plaques · slit-like vascular spaces + spindle cells + extravasated RBC</bdi>",
+    "h": "Kaposi: spindle cells + slit-like vascular spaces",
+    "c": "<bdi dir=\"ltr\">Kaposi</bdi> مجهرياً: <bdi dir=\"ltr\">spindle cells + slit-like vessels.</bdi>",
+    "tr": "🔍 مجهرياً: خلايا مغزلية (<bdi dir=\"ltr\">Spindle cells</bdi>) متل خيوط، وشقوق وعائية (<bdi dir=\"ltr\">Slit-like vessels</bdi>) متل مجاري ضيقة."
+   }
+  ],
+  "hl": [
+   "Kaposi: HHV8 + T-cell defect · 4 forms",
+   "Kaposi: spindle cells + slit-like vascular spaces"
+  ]
+ },
+ {
+  "n": 9,
+  "en": "Summary",
+  "ar": "الملخص",
+  "emoji": "📊",
+  "col": "#d8f5e6",
+  "teaser": "رجّع كل شي بدقيقة",
+  "cap": "🧮",
+  "q": "هيدا الجدول بيلخّص النقص الأولي كلو.",
+  "cons": [
+   {
+    "e": "📊",
+    "t": "PID summary — رجّع القصة",
+    "key": "c25",
+    "say": null,
+    "i": "",
+    "b": [
+     "خلّيني ألخّص القصة. <bdi dir=\"ltr\">SCID</bdi>: <bdi dir=\"ltr\">X-linked</bdi> بمستقبل السايتوكين، أو <bdi dir=\"ltr\">AR</bdi> بـ <bdi dir=\"ltr\">ADA. DiGeorge</bdi>: ما في <bdi dir=\"ltr\">Thymus</bdi>، <bdi dir=\"ltr\">22q11</bdi>، <bdi dir=\"ltr\">CATCH 22. Hyper-IgM</bdi>: <bdi dir=\"ltr\">CD40L</bdi>، <bdi dir=\"ltr\">IgM</bdi> عالي. <bdi dir=\"ltr\">Bruton</bdi>: <bdi dir=\"ltr\">Btk</bdi>، صبيان، بعد <bdi dir=\"ltr\">6</bdi> أشهر. <bdi dir=\"ltr\">CVID</bdi>: ما في <bdi dir=\"ltr\">plasma cells. IgA</bdi>: <bdi dir=\"ltr\">1</bdi>:<bdi dir=\"ltr\">850.</bdi>",
+     "<bdi dir=\"ltr\">CGD</bdi>: <bdi dir=\"ltr\">NADPH oxidase. Chediak-Higashi</bdi>: ما في دمج. المتمّم: <bdi dir=\"ltr\">C2</bdi> الأشيع، <bdi dir=\"ltr\">C3</bdi> الأخطر، <bdi dir=\"ltr\">C5-C9 Neisseria.</bdi>"
+    ],
+    "x": "",
+    "flow": [],
+    "m": "<bdi dir=\"ltr\">SCID · DiGeorge · Hyper-IgM · Bruton · CVID · IgA · CGD · CHS · complement</bdi>",
+    "h": "Memorize the table",
+    "c": "احفظ الجدول: كل مرض بكلمة مفتاح.",
+    "tr": "📚 رجّع القصة: لكل مرض كلمة مفتاح: فقاعة، سلة، مدرسة، ريموت، تذكرة، تخرّج، حارس، ولاعة، شاحنتين."
+   }
+  ],
+  "hl": [
+   "Memorize the table"
+  ]
+ }
+];
+const ST={
+"c1": "<bdi dir=\"ltr\">Balanced = optimal · over → autoimmunity/allergy · under → infection/cancer</bdi>",
+"c2": "<bdi dir=\"ltr\">Deficient cellular/humoral immunity → infections + certain cancers</bdi>",
+"c3": "<bdi dir=\"ltr\">Primary = inherited at birth · Secondary = acquired</bdi> (<bdi dir=\"ltr\">more common</bdi>)",
+"c4": "<bdi dir=\"ltr\">B</bdi>: <bdi dir=\"ltr\">Bruton</bdi>, <bdi dir=\"ltr\">CVID</bdi>, <bdi dir=\"ltr\">IgA · T</bdi>: <bdi dir=\"ltr\">Hyper-IgM</bdi>, <bdi dir=\"ltr\">DiGeorge</bdi>, <bdi dir=\"ltr\">SCID · Complement · Phagocytes</bdi>",
+"c5": "<bdi dir=\"ltr\">X-linked SCID</bdi> (<bdi dir=\"ltr\">50-60%</bdi>) → <bdi dir=\"ltr\">boys</bdi> → γ-<bdi dir=\"ltr\">chain cytokine receptor mutation</bdi>",
+"c6": "<bdi dir=\"ltr\">AR SCID → ADA deficiency → toxic metabolites → T-cell death</bdi>",
+"c7": "<bdi dir=\"ltr\">Thymic aplasia · 22q11 deletion → CATCH 22</bdi>",
+"c8": "<bdi dir=\"ltr\">CD40L mutation → no isotype switching</bdi> → ↑ <bdi dir=\"ltr\">IgM</bdi> · ↓ <bdi dir=\"ltr\">IgG</bdi>, <bdi dir=\"ltr\">IgA</bdi>, <bdi dir=\"ltr\">IgE</bdi>",
+"c9": "<bdi dir=\"ltr\">Btk mutation → pre-B cells arrest</bdi> → ↓ <bdi dir=\"ltr\">B cells + all Ig → boys</bdi>, ><bdi dir=\"ltr\">6 months</bdi>",
+"c10": "<bdi dir=\"ltr\">Normal B cells · no plasma cell differentiation</bdi> → ↓ <bdi dir=\"ltr\">Ig → gastric cancer + lymphoma</bdi>",
+"c11": "<bdi dir=\"ltr\">Most common</bdi> (<bdi dir=\"ltr\">1</bdi>:<bdi dir=\"ltr\">850</bdi>) → <bdi dir=\"ltr\">no IgA plasma cells → mucosal infections + allergy + autoimmunity</bdi>",
+"c12": "<bdi dir=\"ltr\">NADPH oxidase deficiency → no respiratory burst</bdi> (<bdi dir=\"ltr\">ROS</bdi>) → <bdi dir=\"ltr\">granuloma</bdi>",
+"c13": "<bdi dir=\"ltr\">No phagosome-lysosome fusion</bdi> → ↓ <bdi dir=\"ltr\">chemotaxis</bdi> + ↓ <bdi dir=\"ltr\">intracellular killing</bdi>",
+"c14": "<bdi dir=\"ltr\">Complement</bdi>: <bdi dir=\"ltr\">inflammation · direct killing · opsonization</bdi>",
+"c15": "<bdi dir=\"ltr\">C2 deficiency = most common · usually mild</bdi>",
+"c16": "<bdi dir=\"ltr\">C2/C4/C1q deficiency → SLE-like</bdi>; <bdi dir=\"ltr\">alternative pathway compensates</bdi>",
+"c17": "<bdi dir=\"ltr\">C3 deficiency → rare</bdi>, <bdi dir=\"ltr\">most serious → pyogenic infections + immune complex GN</bdi>",
+"c18": "<bdi dir=\"ltr\">C5-C9 deficiency → membrane attack defect → recurrent Neisseria</bdi>",
+"c19": "<bdi dir=\"ltr\">Malnutrition · diabetes · HIV · cancer · renal · chemo/radio · immunosuppressants</bdi>",
+"c20": "<bdi dir=\"ltr\">HIV → AIDS → opportunistic infections + neoplasms + neurologic</bdi>",
+"c21": "<bdi dir=\"ltr\">Pneumocystis · Candida · CMV · M. avium · Cryptococcus · Cryptosporidium</bdi>",
+"c22": "<bdi dir=\"ltr\">Kaposi sarcoma</bdi> (<bdi dir=\"ltr\">AIDS-defining</bdi>) · <bdi dir=\"ltr\">NHL · cervical ca · skin SCC</bdi>",
+"c23": "<bdi dir=\"ltr\">HHV8 + T-cell defect → vascular tumor → 4 forms</bdi>",
+"c24": "<bdi dir=\"ltr\">Violaceous plaques · slit-like vascular spaces + spindle cells + extravasated RBC</bdi>",
+"c25": "<bdi dir=\"ltr\">SCID · DiGeorge · Hyper-IgM · Bruton · CVID · IgA · CGD · CHS · complement</bdi>"
+};
+const MNMAP={"1.0": "c1", "1.1": "c2", "1.2": "c3", "2.0": "c4", "3.0": "c5", "3.1": "c6", "3.2": "c7", "3.3": "c8", "4.0": "c9", "4.1": "c10", "4.2": "c11", "5.0": "c12", "5.1": "c13", "5.2": "c14", "5.3": "c15", "5.4": "c16", "5.5": "c17", "5.6": "c18", "6.0": "c19", "7.0": "c20", "7.1": "c21", "7.2": "c22", "8.0": "c23", "8.1": "c24", "9.0": "c25"};
+CH.forEach(c=>c.cons.forEach((k,j)=>{const key=MNMAP[c.n+'.'+j];if(key)k.m=ST[key]}));
+const main=document.getElementById('main'),cards=document.getElementById('cards');
+const cols=['#ffe3d3','#dbeeff','#ffdfe9','#e8e0ff','#d8f5e6','#fff3b8','#dbeeff','#ffe3d3'];
+let html='';
+CH.forEach((c,i)=>{
+  cards.insertAdjacentHTML('beforeend',`<div class="ccard" style="background:${c.col}" data-go="ch${c.n}"><div class="e">${c.emoji}</div><h3>${c.ar}</h3><small>${c.en}</small><p>${c.teaser}</p></div>`);
+  html+=`<section class="chap reveal" id="ch${c.n}">
+  <div class="chead"><div class="num" style="background:${['#5b6cff','#ff8a5b','#e85d9b','#8b5cf6','#2e9e6b','#e0a800','#3b9ae1','#e86a3d'][i]}">${c.n}</div><div><div class="lab">${c.en}</div><h2>${c.emoji} ${c.ar}</h2></div></div>
+  <div class="cap"><div class="av">${c.cap}</div><div class="bubble">${c.q}</div></div>`;
+  c.cons.forEach(k=>{
+    html+=`<div class="con reveal"><h3>${k.e} ${k.t}</h3>
+    ${k.say?`<div class="say"><b>${k.say[0]}:</b> «${k.say[1]}»</div>`:''}
+    ${k.flow&&k.flow.length?`<div class="chips" dir="ltr">${k.flow.map((f,j)=>(j?'<span class="chip ar" style="transition-delay:'+(j*.12)+'s">→</span>':'')+'<span class="chip" style="transition-delay:'+(j*.12)+'s">'+f+'</span>').join('')}</div>`:''}
+    <ul class="enul" dir="rtl">${k.b.map(x=>'<li>'+x+'</li>').join('')}</ul>
+    ${k.x?`<p class="extra" dir="ltr">${k.x}</p>`:''}
+    ${k.m?`<div class="mn open"><button><span>🧩 بسطر واحد</span><span>⌄</span></button><div class="body">${k.m}</div></div>`:''}
+    
+    ${k.tr?`<div class="trk2">🎭 <b>حيلة الحفظ:</b> ${k.tr}</div>`:''}
+    ${k.c?`<div class="cheat"><b>⭐ أهم شي تنتبه عليه:</b> ${k.c}</div>`:''}
+    ${k.h?`<div class="hy" dir="ltr"><b>HIGHLIGHT:</b> ${k.h}</div>`:''}</div>`;
+  });
+  html+=`<div class="hl"><small>⭐ HIGHLIGHT</small>${c.hl.join('<span class="sep">|</span>')}</div></section>`;
+});
+
+/* mini games */
+html+=`<section class="chap reveal" id="games"><div class="chead"><div class="num" style="background:#2e9e6b">🎮</div><div><div class="lab">Mini games</div><h2>جرّب حالك</h2></div></div>
+<div class="game"><h4>🧩 وصّل المرض بنوعو</h4><div id="match"></div></div>
+<div class="game"><h4>✅❌ صح ولا غلط؟</h4><div id="tf"></div></div></section>`;
+
+/* final review */
+html+=`<section class="sec reveal" id="review" style="background:#fff3d6"><h2>📝 المراجعة الأخيرة</h2>
+<div class="hl" style="margin-top:6px"><small>سطر لكل موضوع</small>
+<b>PID:</b> B · T · complement · phagocytic<br><b>SCID:</b> X-linked / ADA<br><b>DiGeorge:</b> 22q11, CATCH 22<br><b>Hyper-IgM:</b> CD40L<br><b>Bruton:</b> Btk<br><b>CVID:</b> no plasma cells<br><b>IgA:</b> 1:850<br><b>AIDS:</b> HIV, triad, Kaposi</div>
+<h3 style="margin-top:14px">Primary immunodeficiency: comprehensive table</h3>
+<div style="overflow-x:auto"><table><tr><th>Disease</th><th>Defect</th><th>Key features</th><th>Who / when</th></tr>
+<tr><td>X-linked SCID</td><td>Cytokine receptor (γ chain)</td><td>Severe fungal, viral, bacterial; humoral + cellular ↓</td><td>Boys, 50-60%</td></tr>
+<tr><td>AR SCID</td><td>ADA deficiency</td><td>T-cell death</td><td>AR</td></tr>
+<tr><td>DiGeorge</td><td>Thymic aplasia, 22q11 del</td><td>CATCH 22</td><td>—</td></tr>
+<tr><td>Hyper-IgM</td><td>CD40L (X)</td><td>↑ IgM, IgD; ↓ IgG, IgA, IgE; pyogenic + Pneumocystis</td><td>X-linked</td></tr>
+<tr><td>Bruton (XLA)</td><td>Btk</td><td>B cells absent, all Ig ↓; otitis, S. pneumoniae</td><td>Boys, &gt; 6 months</td></tr>
+<tr><td>CVID</td><td>No plasma cell differentiation</td><td>Hypogammaglobulinemia; gastric cancer, lymphoma</td><td>Boys = girls, late childhood</td></tr>
+<tr><td>IgA deficiency</td><td>IgA plasma cell block</td><td>Mucosal infections; allergy; SLE, RA</td><td>1:850</td></tr></table></div>
+<h3>Phagocytic and complement</h3>
+<div style="overflow-x:auto"><table><tr><th>Disease</th><th>Defect</th><th>Key features</th></tr>
+<tr><td>CGD</td><td>NADPH oxidase</td><td>No respiratory burst; lymphadenopathy, hepato-splenomegaly</td></tr>
+<tr><td>Chediak-Higashi</td><td>No phagosome-lysosome fusion</td><td>↓ killing + chemotaxis; NK, platelet, neurologic</td></tr>
+<tr><td>C2 (most common)</td><td>Classical pathway early</td><td>Mild; SLE-like</td></tr>
+<tr><td>C3 (most serious)</td><td>↓ synthesis / factor I / H</td><td>Severe pyogenic + immune complex GN</td></tr>
+<tr><td>C5-C9</td><td>Late components</td><td>Recurrent Neisseria, meningitis</td></tr></table></div>
+<h3>AIDS</h3>
+<div style="overflow-x:auto"><table><tr><th>Item</th><th>Key points</th></tr>
+<tr><td>Cause</td><td>HIV; immunosuppression</td></tr>
+<tr><td>Triad</td><td>Opportunistic infections · secondary neoplasms · neurologic</td></tr>
+<tr><td>Infections</td><td>Pneumocystis · Candida · CMV · M. avium · Cryptococcus · Cryptosporidium</td></tr>
+<tr><td>Neoplasms</td><td>Kaposi · non-Hodgkin lymphoma · cervical ca · skin SCC</td></tr>
+<tr><td>Kaposi</td><td>HHV8; violaceous plaques; slit-like vessels + spindle cells</td></tr></table></div>
+<h3 style="margin-top:14px">🕵️ ورقة الغش</h3><div class="csg"><div class="cs" style="background:#d8f5e6"><b class="cst">🗂️ PID: 4 groups</b><ul><li><bdi dir="ltr">B</bdi> · <bdi dir="ltr">T</bdi> · <bdi dir="ltr">Complement</bdi> · <bdi dir="ltr">Phagocytes</bdi></li><li><bdi dir="ltr">Primary</bdi> = <bdi dir="ltr">inherited</bdi> · <bdi dir="ltr">Secondary</bdi> = <bdi dir="ltr">acquired</bdi> (<bdi dir="ltr">more common</bdi>)</li></ul></div><div class="cs" style="background:#ffe3d3"><b class="cst">🫧 SCID</b><ul><li><bdi dir="ltr">X-linked 50-60</bdi>%: <bdi dir="ltr">cytokine receptor</bdi> (<bdi dir="ltr">boys</bdi>)</li><li><bdi dir="ltr">AR</bdi>: <bdi dir="ltr">ADA deficiency</bdi> → <bdi dir="ltr">T-cell death</bdi></li></ul></div><div class="cs" style="background:#e8e0ff"><b class="cst">🏫 DiGeorge</b><ul><li><bdi dir="ltr">Thymic aplasia</bdi> · 22<bdi dir="ltr">q11 deletion</bdi></li><li><bdi dir="ltr">CATCH 22</bdi>: <bdi dir="ltr">Cardiac</bdi> · <bdi dir="ltr">Abnormal facies</bdi> · <bdi dir="ltr">Thymic aplasia</bdi> · <bdi dir="ltr">Cleft palate</bdi> · <bdi dir="ltr">Hypocalcemia</bdi></li></ul></div><div class="cs" style="background:#dbeeff"><b class="cst">📺 Hyper-IgM</b><ul><li><bdi dir="ltr">CD40L mutation</bdi> (<bdi dir="ltr">X-linked</bdi>)</li><li>↑ <bdi dir="ltr">IgM</bdi> · ↓ <bdi dir="ltr">IgG</bdi>, <bdi dir="ltr">IgA</bdi>, <bdi dir="ltr">IgE</bdi> · <bdi dir="ltr">isotype switching defect</bdi></li></ul></div><div class="cs" style="background:#ffdfe9"><b class="cst">🎟️ B-cell</b><ul><li><bdi dir="ltr">Bruton</bdi>: <bdi dir="ltr">Btk</bdi> · <bdi dir="ltr">boys</bdi> · &<bdi dir="ltr">gt</bdi>;6 <bdi dir="ltr">months</bdi> · <bdi dir="ltr">all Ig</bdi> ↓</li><li><bdi dir="ltr">CVID</bdi>: <bdi dir="ltr">no plasma cells</bdi> · <bdi dir="ltr">gastric cancer</bdi> + <bdi dir="ltr">lymphoma</bdi></li><li><bdi dir="ltr">IgA</bdi>: 1:850 · <bdi dir="ltr">mucosal infections</bdi></li></ul></div><div class="cs" style="background:#fff3b8"><b class="cst">🔥 Phagocytes</b><ul><li><bdi dir="ltr">CGD</bdi>: <bdi dir="ltr">NADPH oxidase</bdi> → <bdi dir="ltr">no respiratory burst</bdi></li><li><bdi dir="ltr">Chediak-Higashi</bdi>: <bdi dir="ltr">no phagosome-lysosome fusion</bdi></li></ul></div><div class="cs" style="background:#eef3ff"><b class="cst">🧲 Complement</b><ul><li><bdi dir="ltr">C2</bdi> = <bdi dir="ltr">most common</bdi> · <bdi dir="ltr">C3</bdi> = <bdi dir="ltr">most serious</bdi> (<bdi dir="ltr">pyogenic</bdi> + <bdi dir="ltr">immune complex GN</bdi>)</li><li><bdi dir="ltr">C5-C9</bdi> = <bdi dir="ltr">Neisseria</bdi></li></ul></div><div class="cs" style="background:#fde68a"><b class="cst">🌍 Secondary: 7 causes</b><ul><li><bdi dir="ltr">Malnutrition</bdi> · <bdi dir="ltr">Diabetes</bdi> · <bdi dir="ltr">Infection</bdi> (<bdi dir="ltr">HIV</bdi>) · <bdi dir="ltr">Cancer</bdi> · <bdi dir="ltr">Renal disease</bdi> · <bdi dir="ltr">Chemo/radio</bdi> · <bdi dir="ltr">Immunosuppressants</bdi></li></ul></div><div class="cs" style="background:#ffe3e8"><b class="cst">🎗️ AIDS</b><ul><li><bdi dir="ltr">HIV</bdi> · <bdi dir="ltr">triad</bdi>: <bdi dir="ltr">opportunistic infections</bdi> + <bdi dir="ltr">neoplasms</bdi> + <bdi dir="ltr">neurologic</bdi></li><li><bdi dir="ltr">Pneumocystis</bdi> · <bdi dir="ltr">Candida</bdi> · <bdi dir="ltr">CMV</bdi> · <bdi dir="ltr">M. avium</bdi> · <bdi dir="ltr">Cryptococcus</bdi> · <bdi dir="ltr">Cryptosporidium</bdi></li><li><bdi dir="ltr">Kaposi</bdi>: <bdi dir="ltr">HHV8</bdi> · <bdi dir="ltr">AIDS-defining</bdi> · <bdi dir="ltr">spindle cells</bdi> + <bdi dir="ltr">slit-like vessels</bdi></li></ul></div></div></section>`;
+
+/* essay */
+const ES=[
+['عرّف نقص المناعة وصنّفو','<ul><li>Deficient cellular and/or humoral immunity</li><li>Primary (inherited) vs secondary (acquired, more common)</li><li>PID: B-cell · T-cell · complement · phagocytic</li></ul>'],
+['T-cell deficiencies','<ul><li>SCID: X-linked cytokine receptor (50-60%) / AR ADA</li><li>DiGeorge: thymic aplasia, 22q11, CATCH 22</li><li>Hyper-IgM: CD40L, isotype switching defect</li></ul>'],
+['B-cell deficiencies','<ul><li>Bruton: Btk, boys, after 6 months</li><li>CVID: no plasma cells, gastric cancer + lymphoma</li><li>IgA: 1:850, mucosal infections, SLE/RA</li></ul>'],
+['Phagocytic + complement deficiencies','<ul><li>CGD: NADPH oxidase, respiratory burst</li><li>Chediak-Higashi: phagosome-lysosome fusion</li><li>Complement: C2 common · C3 serious · C5-C9 Neisseria</li></ul>'],
+['Secondary immunodeficiency','<ul><li>Malnutrition · diabetes · HIV · cancer</li><li>Renal disease · chemo/radiotherapy · immunosuppressants</li></ul>'],
+['AIDS و Kaposi sarcoma','<ul><li>HIV; triad: opportunistic infections, neoplasms, neurologic</li><li>Pneumocystis, Candida, CMV, M. avium, Cryptococcus, Cryptosporidium</li><li>Kaposi: HHV8, AIDS-defining, violaceous plaques, spindle cells</li></ul>'],
+];
+html+=`<section class="sec reveal" id="essay" style="background:#e8e0ff"><h2>✍️ أسئلة مقالية</h2><p style="color:var(--mut)">فكّر بجوابك أول، وبعدين دوس.</p>`+
+ES.map((e,i)=>`<div class="rv"><button><span>${i+1}. ${e[0]}</span><span>👁️</span></button><div class="ans">${e[1]}</div></div>`).join('')+`</section>`;
+
+/* flashcards */
+const FC=[
+['الفرق بين PID و SID؟','Primary = وراثي · Secondary = مكتسب (الأشيع)'],
+['شو 4 مجموعات PID؟','B-cell · T-cell · Complement · Phagocytic'],
+['أشيع SCID؟','X-linked (50-60%) cytokine receptor'],
+['سبب AR SCID؟','ADA deficiency'],
+['DiGeorge: أي كروموسوم؟','22q11 deletion'],
+['CATCH 22؟','Cardiac · Abnormal facies · Thymic aplasia · Cleft palate · Hypocalcemia'],
+['Hyper-IgM: أي طفرة؟','CD40L (X-linked)'],
+['Hyper-IgM: أي خلل؟','Isotype switching'],
+['Bruton: أي إنزيم؟','B-cell tyrosine kinase (Btk)'],
+['Bruton: إيمتى الأعراض؟','بعد 6 شهور، بالصبيان'],
+['CVID: شو المشكلة؟','B cells ما بتتمايز لـ plasma cells'],
+['CVID: أي سرطانات لاحقاً؟','Gastric cancer + lymphoma'],
+['أشيع نقص مناعة خلقي؟','Isolated IgA deficiency (1:850)'],
+['CGD: أي إنزيم؟','NADPH oxidase ← respiratory burst'],
+['Chediak-Higashi: شو الخلل؟','No phagosome-lysosome fusion'],
+['وظايف المتمّم؟','Inflammation · direct killing · opsonization'],
+['أشيع نقص متمّم؟','C2'],
+['نقص C5-C9 بيعطي؟','Neisserial infections / meningitis'],
+['ثلاثية AIDS؟','Opportunistic infections · neoplasms · neurologic'],
+['Kaposi: أي فيروس؟','HHV8'],
+];
+html+=`<section class="sec reveal" id="flash" style="background:#d8f5e6"><h2>⚡ بطاقات سريعة</h2><div class="score">✅ <span id="sy">0</span> · 🔁 <span id="sn">0</span> / ${FC.length}</div>`+
+FC.map((f,i)=>`<div class="flash" data-i="${i}"><div class="in2"><div class="face f">${T(f[0])}</div><div class="face b">${T(f[1])}</div></div></div><div class="know" data-i="${i}" style="display:none"><button class="y">عرفتها ✅</button><button class="n">أراجعها 🔁</button></div>`).join('')+`</section>`;
+main.innerHTML=T(html);
+
+/* interactions */
+document.querySelectorAll('.mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.querySelectorAll('.rv>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+let sy=0,sn=0;const done={};
+document.querySelectorAll('.flash').forEach(f=>f.onclick=()=>{f.classList.toggle('flip');const k=f.nextElementSibling;k.style.display=f.classList.contains('flip')?'flex':'none'});
+document.querySelectorAll('.know').forEach(k=>{
+  k.querySelector('.y').onclick=()=>mark(k,1);k.querySelector('.n').onclick=()=>mark(k,0)});
+function mark(k,v){const i=k.dataset.i;if(done[i]!==undefined){v?0:0}
+  if(done[i]===1)sy--;if(done[i]===0)sn--;done[i]=v;v?sy++:sn++;
+  document.getElementById('sy').textContent=sy;document.getElementById('sn').textContent=sn;k.style.opacity=.5}
+/* match */
+const MT=[['Bruton disease','Btk mutation'],['DiGeorge syndrome','22q11 deletion'],['Hyper-IgM syndrome','CD40L mutation'],['CGD','NADPH oxidase deficiency']];
+const CL=['Btk mutation','22q11 deletion','CD40L mutation','NADPH oxidase deficiency'];
+document.getElementById('match').innerHTML=MT.map(m=>`<div style="margin:8px 0"><b class="en">${m[0]}</b> ←<div class="opts" data-a="${m[1]}">${CL.map(c=>`<button>${c}</button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#match .opts').forEach(o=>o.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(b.textContent===o.dataset.a){b.classList.add('ok')}else{b.classList.add('no')}}));
+const TF=[['النقص الثانوي أشيع من الأولي',1,'صح.'],['SCID فيه نقص بالمناعة الخلطية والخلوية',1,'صح — الاتنين.'],['Bruton بيصيب البنات والصبيان بالتساوي',0,'غلط — صبيان (X-linked)؛ CVID هو اللي بالتساوي.'],['Hyper-IgM فيه IgM منخفض',0,'غلط — IgM عالي وIgG/IgA/IgE منخفض.'],['CGD سببو نقص NADPH oxidase',1,'صح — ما في respiratory burst.'],['نقص C3 أخف من نقص C2',0,'غلط — C3 هو الأخطر، C2 الأشيع والأخف.'],['Kaposi sarcoma سببو HHV8',1,'صح.'],['IgA deficiency نادر جداً',0,'غلط — أشيع نقص مناعة خلقي (1:850).']];
+document.getElementById('tf').innerHTML=TF.map((t,i)=>`<div class="tf"><div>${t[0]}<div class="fb"></div></div><div class="b2"><button data-v="1">صح</button><button data-v="0">غلط</button></div></div>`).join('');
+document.querySelectorAll('#tf .tf').forEach((r,i)=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  const ok=+b.dataset.v===TF[i][1];r.classList.add(ok?'ok':'no');r.querySelector('.fb').innerHTML=T((ok?'🎉 ':'🤔 ')+TF[i][2])}));
+
+/* reveal & progress */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.con').forEach(el=>io.observe(el));
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>document.getElementById(c.dataset.go).scrollIntoView({behavior:'smooth'}));
+
+/* guided tour */
+const IDS=[...CH.map(c=>'ch'+c.n),'games','review','essay','flash'];
+let ti=-1,timer=null,playing=false;
+const badge=document.getElementById('tourbadge'),tog=document.getElementById('toggle');
+function go(i){ti=Math.max(0,Math.min(IDS.length-1,i));document.getElementById(IDS[ti]).scrollIntoView({behavior:'smooth'})}
+function stop(){playing=false;clearInterval(timer);badge.style.display='none'}
+function play(){if(ti<0)go(0);playing=true;badge.style.display='block';clearInterval(timer);timer=setInterval(()=>{if(ti>=IDS.length-1){stop();return}go(ti+1)},12000)}
+document.getElementById('tourBtn').onclick=()=>{ti=-1;play()};
+document.getElementById('next').onclick=()=>{go(ti+1);if(playing)play()};
+document.getElementById('prev').onclick=()=>{go(ti-1);if(playing)play()};
+tog.onclick=()=>playing?stop():play();
+
+/* ===== Golden summary ===== */
+const G=[
+['#fff3b8','Basics','الأساسيات',[
+ ['Balanced immune system: over-reaction → autoimmunity + allergy · under-reaction → infection + cancer','المناعة المتوازنة: إذا زادت ← مناعة ذاتية {{autoimmune}} وحساسية {{allergy}}. وإذا نقصت ← عدوى {{infection}} وسرطان {{cancer}}'],
+ ['Immunodeficiency: deficient / absent cellular and/or humoral function','نقص المناعة: المناعة الخلوية {{cellular}} و/أو الخلطية {{humoral}} ضعيفة أو غايبة'],
+ ['Clinical: increased susceptibility to infections + certain cancers','سريرياً: المريض بيلتقط العدوى بسهولة وعندو خطر أعلى لبعض السرطانات'],
+ ['Primary: inherited, genetic · birth / childhood','الأولي {{primary}}: وراثي، بيبيّن عند الولادة أو بالطفولة'],
+ ['Secondary: acquired (disease, HIV, chemotherapy); more common','الثانوي {{secondary}}: مكتسب، من مرض أو علاج (HIV، كيماوي). وهو الأشيع']]],
+['#dbeeff','Primary classification','تصنيف الأولي',[
+ ['Defect in any step of lymphocyte development','خطوة وحدة بتتعطّل بنمو اللمفاويات {{lymphocyte development}}'],
+ ['B-cell: Bruton (XLA) · CVID · isolated IgA','نقص B: Bruton · CVID · نقص IgA'],
+ ['T-cell: Hyper-IgM · DiGeorge · SCID','نقص T: Hyper-IgM · DiGeorge · SCID'],
+ ['Complement deficiencies · phagocytic deficiencies','نقص المتمّم {{complement}} ونقص البلعميات {{phagocytes}}']]],
+['#e8e0ff','SCID','SCID',[
+ ['Severe recurrent infections: fungal (Candida), viral, bacterial','عدوى شديدة ومتكررة: فطريات (Candida)، فيروسات، بكتيريا'],
+ ['Humoral + cellular immunity severely reduced','المناعة الخلطية والخلوية الاتنين ضعيفين كتير'],
+ ['Genetic defects varied, many unknown','الخلل الجيني بيختلف، وبكتير حالات ما بيتعرف'],
+ ['X-linked SCID: most common (50-60%), boys, cytokine receptor gene (γ chain)','X-linked: الأشيع (50-60%)، صبيان، الطفرة بمستقبلات السيتوكين {{cytokine receptor}}'],
+ ['Autosomal recessive SCID: ADA deficiency → T-cell death','AR: نقص إنزيم ADA {{adenosine deaminase}} ← خلايا T بتموت']]],
+['#ffdfe9','DiGeorge','DiGeorge',[
+ ['T-cell deficiency: abnormal thymus development (hypoplasia / aplasia)','نقص T cells لأنو الزعترية {{thymus}} ما نمت منيح أو غايبة'],
+ ['Chromosome 22q11 deletion','حذف {{deletion}} بالكروموسوم 22q11'],
+ ['CATCH 22: Cardiac · Abnormal facies · Thymic aplasia · Cleft palate · Hypocalcemia','CATCH 22: قلب · وجه · زعترية · حنك · كالسيوم']]],
+['#d8f5e6','Hyper-IgM','Hyper-IgM',[
+ ['↑ IgM + IgD · ↓ IgG, IgA, IgE → isotype switching defect','IgM وIgD عالي، وIgG وIgA وIgE قليلين ← خلل بتبديل النوع {{isotype switching}}'],
+ ['Isotype switching: B cell changes antibody class (IgM → IgG) via constant heavy chain','تبديل النوع: خلية B بتغيّر نوع الجسم المضاد (من IgM لـ IgG)'],
+ ['Defect in CD4 T cells: cofactors for B-cell stimulation + switching','الخلل بخلايا CD4 T: هي اللي بتعطي B الإشارة لتتفعّل وتبدّل النوع'],
+ ['X-linked CD40L mutation (ligand on CD4 binds CD40 on B cell)','طفرة CD40L على X: البروتين اللي عـCD4 بيرتبط بـ CD40 عـ B'],
+ ['Pyogenic infections + Pneumocystis jiroveci','عدوى قيحية {{pyogenic}} وPneumocystis jiroveci']]],
+['#ffe3d3','Bruton (XLA)','Bruton',[
+ ['Pro-B / pre-B cells fail to mature: B-cell tyrosine kinase (Btk) mutation','pro-B وpre-B ما بتنضج: طفرة بإنزيم {{Btk}}'],
+ ['B cells absent / ↓; all Ig classes ↓ (agammaglobulinemia)','B cells شبه غايبة، وكل الأجسام المضادة قليلة {{agammaglobulinemia}}'],
+ ['Boys (X-linked)','صبيان (X-linked)'],
+ ['Onset after 6 months','الأعراض بتبلّش بعد 6 شهور'],
+ ['Otitis media, skin + respiratory infections: S. pneumoniae, S. aureus (normally opsonized)','التهاب أذن، عدوى جلد وتنفس: S. pneumoniae وS. aureus (عادةً بينغلّفوا بالأجسام المضادة)']]],
+['#eab30833','CVID & IgA deficiency','CVID و IgA',[
+ ['CVID: normal B-cell numbers, no differentiation into plasma cells','CVID: عدد B طبيعي، بس ما بتصير plasma cells'],
+ ['Late-childhood hypogammaglobulinemia + recurrent infections','نقص أجسام مضادة {{hypogammaglobulinemia}} وعدوى متكررة، بيبلّش متأخر بالطفولة'],
+ ['Boys = girls; later gastric cancer + lymphoma','صبيان وبنات بالتساوي؛ وبعدين خطر سرطان معدة وليمفوما'],
+ ['IgA deficiency: most common congenital (1:850)','نقص IgA: أشيع نقص مناعة خلقي (1 من 850)'],
+ ['Naive B → IgA plasma cell impaired; many asymptomatic','خلايا B الساذجة ما بتصير بلازما بتصنع IgA؛ كتير ناس بلا أعراض'],
+ ['Mucosal: recurrent sinusitis, pulmonary + urinary infections, diarrhea','على المخاطيات: التهاب جيوب متكرر، عدوى رئة وبول، وإسهال'],
+ ['↑ respiratory allergy + autoimmunity (SLE, rheumatoid arthritis)','بيزيد خطر حساسية تنفسية ومناعة ذاتية (SLE، روماتويد)']]],
+['#10b98122','Phagocytic defects','عيوب البلعميات',[
+ ['CGD: lymphadenopathy, hepato-splenomegaly, chronic draining nodes','CGD: تضخّم عقد، كبد وطحال، عقد بتفرز قيح مزمن'],
+ ['NADPH oxidase deficiency → no respiratory burst (O2 consumption → ROS)','نقص NADPH oxidase ← ما في respiratory burst (ما بينتج ROS)'],
+ ['Chediak-Higashi: ↓ intracellular killing, ↓ chemotaxis','Chediak-Higashi: قتل أبطأ وحركة كيميائية {{chemotaxis}} أبطأ'],
+ ['No phagosome-lysosome fusion; proteinase deficiency','الفاغوزوم والليزوزوم ما بيندمجوا؛ نقص proteinase'],
+ ['NK defect, platelet + neurologic disorders','خلل بخلايا NK، ومشاكل بالصفيحات والأعصاب']]],
+['#8b5cf622','Complement','المتمّم',[
+ ['Functions: inflammation · direct killing · opsonization','وظايف المتمّم: التهاب · قتل مباشر · تغليف {{opsonization}}'],
+ ['Most serious: C3 deficiency (↓ synthesis or factor I / H)','الأخطر: نقص C3 (إنتاج قليل أو نقص عامل I / H)'],
+ ['C2 deficiency = most common, mild','نقص C2 = الأشيع، وخفيف'],
+ ['C2 / C4 (classical pathway early): ↑ infections; many asymptomatic (alternative pathway compensates)','C2 وC4: عدوى أكتر، بس كتير بلا أعراض (المسار البديل بيعوّض)'],
+ ['C2, C4, C1q: SLE-like autoimmunity (immune complex clearance)','C2 وC4 وC1q: مناعة ذاتية شبيهة بـ SLE (بينظّفوا المعقّدات)'],
+ ['C3: rare, severe pyogenic infections + immune complex GN','C3: نادر، عدوى قيحية شديدة + التهاب كبب بمعقّدات'],
+ ['C5-C9: recurrent Neisserial (gonococcal, meningococcal) infections / meningitis (thin cell wall)','C5-C9: عدوى نيسيريا متكررة والتهاب سحايا (جدارها رقيق)']]],
+['#f9731622','Secondary immunodeficiency','النقص الثانوي',[
+ ['More common than primary','الثانوي أشيع من الأولي'],
+ ['1 Malnutrition · 2 Diabetes / metabolic diseases · 3 Infection (HIV/AIDS)','1 سوء تغذية · 2 سكري وأيض · 3 عدوى (HIV/AIDS)'],
+ ['4 Cancer (leukemia, lymphoma) · 5 Renal diseases','4 سرطان (لوكيميا، ليمفوما) · 5 أمراض كلى'],
+ ['6 Chemotherapy / radiotherapy · 7 Immunosuppressive therapy (graft rejection)','6 كيماوي أو إشعاعي · 7 أدوية مثبّطة للمناعة (بعد الزرع)']]],
+['#3b82f622','AIDS','الإيدز',[
+ ['HIV = Human Immunodeficiency Virus · AIDS = Acquired Immune Deficiency Syndrome','HIV = فيروس نقص المناعة البشري · AIDS = متلازمة نقص المناعة المكتسب'],
+ ['Infectious disease caused by HIV: immunosuppression','مرض معدي سببو HIV، بيعمل كبت بالمناعة {{immunosuppression}}'],
+ ['Triad: opportunistic infections · secondary neoplasms · neurologic manifestations','الثلاثية: عدوى انتهازية · أورام ثانوية · أعراض عصبية'],
+ ['Opportunistic infections: most deaths','العدوى الانتهازية هي سبب أغلب الوفيات'],
+ ['Pneumocystis jiroveci pneumonia · Candida (mouth, esophagus, vagina, lungs) · CMV enteritis / pneumonitis','Pneumocystis (رئة) · Candida (فم، مريء، مهبل، رئة) · CMV (أمعاء، رئة)'],
+ ['M. avium-intracellulare (GI) · Cryptococcus meningitis · Cryptosporidium enteritis','M. avium (هضمي) · Cryptococcus (سحايا) · Cryptosporidium (إسهال)'],
+ ['Neoplasms: Kaposi sarcoma · non-Hodgkin lymphoma · cervical carcinoma · skin squamous cell carcinoma','أورام: Kaposi · non-Hodgkin lymphoma · عنق الرحم · حرشفي جلدي'],
+ ['Kaposi sarcoma = AIDS-defining','Kaposi بتحدّد إنو المريض عندو AIDS {{AIDS-defining}}']]],
+['#ec489922','Kaposi sarcoma','ساركوما كابوزي',[
+ ['Vascular intermediate-grade (borderline) tumor','ورم أوعية متوسط الخبث (حدّي)'],
+ ['HHV8 (Kaposi sarcoma herpesvirus) + altered T-cell immunity','سببو HHV8 مع مناعة T ضعيفة'],
+ ['Most common in AIDS; used as diagnostic criterion','الأشيع عند مرضى AIDS، ووجودو معيار تشخيصي'],
+ ['4 forms: Classic · Endemic African · Transplant-associated · AIDS-associated (epidemic)','4 أشكال: Classic · Endemic African · Transplant · AIDS (epidemic)'],
+ ['Gross: violaceous raised plaques','بالعين: لويحات بنفسجية بارزة'],
+ ['Micro: dilated slit-like vascular spaces + plump spindle cells','مجهرياً: مسافات وعائية شقّية {{slit-like}} + خلايا مغزلية {{spindle cells}}'],
+ ['Extravasated RBCs, hemosiderin-laden macrophages, mononuclear cells','كريات حمرا خرجت من الأوعية، بلاعم فيها hemosiderin، وخلايا التهابية']]]
+];
+const GM=[['bal','pvs'],['four'],['scid'],['dg'],['hyperigm'],['xla'],['cvid','iga'],['cgd','chs'],['compf','compd'],['sec'],['aids','opp','neo'],['ks','kspath']];
+let gh=`<div class="wrap"><h1>⭐ الملخص الذهبي</h1><p class="sub">كل فكرة بسطر إنكليزي وتحتو شرحها بالعربي. دوس على السطر لما تحفظو (<span id="gp">0</span> / <span id="gt">0</span>).</p>`;
+G.forEach((g,gi)=>{gh+=`<div class="gcard reveal" style="background:${g[0]}"><h3>${g[1]} <small style="color:var(--mut);font-weight:500">· ${g[2]}</small></h3>${g[3].map(x=>`<div class="gi"><div><div class="ge">${x[0]}</div><div class="ga">${x[1]}</div></div></div>`).join('')}${GM[gi]?`<div class="mn"><button><span>🧠 حيلة الحفظ</span><span>⌄</span></button><div class="body">${GM[gi].map(k=>ST[k]).join('<br><br>')}</div></div>`:''}</div>`});
+gh+=`</div>`;
+document.getElementById('v-gold').innerHTML=T(gh);
+document.querySelectorAll('#v-gold .mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.getElementById('gt').textContent=document.querySelectorAll('#v-gold .gi').length;
+document.querySelectorAll('#v-gold .gi').forEach(e=>e.onclick=()=>{e.classList.toggle('got');document.getElementById('gp').textContent=document.querySelectorAll('#v-gold .gi.got').length});
+
+/* ===== Short essay ===== */
+const SQ=[
+['Q1: Define immunodeficiency and classify it.',['Deficient or absent cellular and/or humoral immune function','Increased susceptibility to infections + certain cancers','Primary: inherited / genetic','Secondary: acquired (HIV, malnutrition, chemotherapy...)'],'primary = inherited · secondary = acquired'],
+['Q2: Classify primary immunodeficiency.',['B-cell: Bruton (XLA), CVID, isolated IgA deficiency','T-cell: Hyper-IgM, DiGeorge, SCID','Complement deficiencies','Phagocytic deficiencies'],'B · T · complement · phagocytic'],
+['Q3: Describe severe combined immunodeficiency (SCID).',['Severe recurrent fungal (Candida), viral, bacterial infections','Humoral + cellular immunity severely reduced','X-linked (50-60%): cytokine receptor gene mutation, boys','Autosomal recessive: ADA deficiency (T-cell death)'],'humoral + cellular · X-linked · ADA'],
+['Q4: Describe DiGeorge syndrome.',['T-cell deficiency: thymic hypoplasia / aplasia','Chromosome 22q11 deletion','CATCH 22: Cardiac, Abnormal facies, Thymic aplasia, Cleft palate, Hypocalcemia','Hypocalcemia is part of the syndrome'],'thymus · 22q11 · CATCH 22'],
+['Q5: Describe X-linked hyper-IgM syndrome.',['High IgM + IgD; low IgG, IgA, IgE','Defect in isotype switching','CD40L mutation (X chromosome) on CD4 T cells; binds CD40 on B cells','Pyogenic infections + Pneumocystis jiroveci'],'CD40L · isotype switching'],
+['Q6: Describe X-linked agammaglobulinemia (Bruton).',['Pro-B / pre-B cells fail to mature (Btk mutation)','B cells absent; all immunoglobulin classes low','Boys; symptoms after 6 months','Otitis media, skin + respiratory infections (S. pneumoniae, S. aureus)'],'Btk · boys · >6 months'],
+['Q7: Describe common variable immunodeficiency (CVID).',['Normal / near-normal B-cell numbers','B cells cannot differentiate into plasma cells','Late-childhood hypogammaglobulinemia + recurrent infections','Boys = girls; gastric cancer + lymphoma later'],'no plasma cells · malignancy'],
+['Q8: Describe isolated IgA deficiency.',['Most common congenital immunodeficiency (1:850)','Impaired differentiation of naive B cells to IgA plasma cells','Many asymptomatic; mucosal infections: sinusitis, pulmonary, urinary, diarrhea','Respiratory allergy + autoimmunity (SLE, rheumatoid arthritis)'],'1:850 · mucosal'],
+['Q9: Describe chronic granulomatous disease.',['Defect of phagocytic system','Lymphadenopathy, hepato-splenomegaly, chronic draining nodes','NADPH oxidase deficiency','No respiratory burst (ROS)'],'NADPH oxidase · respiratory burst'],
+['Q10: Describe Chediak-Higashi syndrome.',['Reduced intracellular killing + chemotaxis','No phagosome-lysosome fusion','Proteinase deficiency','NK defect, platelet + neurologic disorders'],'phagosome-lysosome fusion'],
+['Q11: Mention the functions of complement.',['Inflammation','Direct killing','Opsonization','Deficiency increases infections; C3 most serious'],'inflammation · killing · opsonization'],
+['Q12: Describe complement deficiencies.',['C2 most common, mild','C2 / C4 / C1q: SLE-like autoimmunity','C3: severe pyogenic infections + immune complex GN','C5-C9: recurrent Neisserial infections / meningitis'],'C2 · C3 · C5-C9 Neisseria'],
+['Q13: Mention 4 causes of secondary immunodeficiency.',['Malnutrition','Diabetes / metabolic diseases','HIV/AIDS infection','Cancer, renal disease, chemotherapy/radiotherapy, immunosuppressants'],'malnutrition · diabetes · HIV · cancer'],
+['Q14: Define AIDS.',['Infectious disease caused by HIV','Immunosuppression','Triad: opportunistic infections, secondary neoplasms, neurologic manifestations','Opportunistic infections cause most deaths'],'HIV · triad'],
+['Q15: Mention opportunistic infections and neoplasms in AIDS.',['Pneumocystis jiroveci pneumonia, Candida, CMV','M. avium-intracellulare, Cryptococcus meningitis, Cryptosporidium','Kaposi sarcoma, non-Hodgkin lymphoma','Cervical carcinoma, skin squamous cell carcinoma'],'Pneumocystis · Candida · Kaposi · NHL'],
+['Q16: Describe Kaposi sarcoma.',['Vascular intermediate-grade tumor; HHV8 + altered T-cell immunity','Most common in AIDS; used as diagnostic criterion','4 forms: classic, endemic African, transplant, AIDS-associated','Violaceous plaques; slit-like vascular spaces + spindle cells'],'HHV8 · spindle cells'],
+];
+let sh=`<div class="wrap"><h1>✍️ Short Essay</h1><p class="sub">نفس نمط الامتحان: اكتب جوابك، وبعدين شوف الجواب النموذجي وقيّم حالك من 4.</p>
+<div class="tot">النتيجة: <span id="ts">0</span> / <span id="tm">${SQ.length*4}</span></div>
+<div class="tools"><button id="shuf">🔀 خلّط الأسئلة</button><button id="rst">↺ ابدأ من جديد</button></div><div id="sq"></div></div>`;
+document.getElementById('v-short').innerHTML=sh;
+const sc={};
+function renderSQ(list){
+ document.getElementById('sq').innerHTML=list.map(i=>{const q=SQ[i];return `<div class="qc reveal in" data-i="${i}"><div class="qh"><div class="pt">4 نقاط</div><div class="q">${q[0]}</div></div>
+ <textarea placeholder="إجابتك"></textarea><button class="qbtn">👁️ شوف الجواب</button>
+ <div class="qa"><ol>${q[1].map(x=>`<li class="en" style="display:list-item;direction:ltr;text-align:left">${x}</li>`).join('')}</ol><div class="kw">🔑 ${q[2]}</div>
+ <div class="rate">قيّم إجابتك: ${[0,1,2,3,4].map(n=>`<button data-n="${n}">${n}</button>`).join('')}</div></div></div>`}).join('');
+ document.querySelectorAll('#sq .qc').forEach(c=>{
+  c.querySelector('.qbtn').onclick=()=>c.querySelector('.qa').classList.toggle('show');
+  c.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{c.querySelectorAll('.rate button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');sc[c.dataset.i]=+b.dataset.n;
+   document.getElementById('ts').textContent=Object.values(sc).reduce((a,b)=>a+b,0)})});
+}
+const order=[...SQ.keys()];renderSQ(order);
+document.getElementById('shuf').onclick=()=>{const o=[...SQ.keys()].sort(()=>Math.random()-.5);renderSQ(o)};
+document.getElementById('rst').onclick=()=>{for(const k in sc)delete sc[k];document.getElementById('ts').textContent=0;renderSQ(order)};
+
+/* ===== view routing ===== */
+const VW=['study','gold','short'];
+function showView(v,push){if(!VW.includes(v))v='study';stop();
+ VW.forEach(x=>{document.getElementById('v-'+x).hidden=x!==v});
+ document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ document.getElementById('nav').style.display=v==='study'?'flex':'none';
+ scrollTo(0,0);if(push){try{location.hash=v}catch(e){}}
+ document.querySelectorAll('#v-'+v+' .reveal').forEach(el=>io.observe(el))}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>showView(b.dataset.v,true));
+addEventListener('hashchange',()=>showView(location.hash.slice(1),false));
+showView(location.hash.slice(1),false);
+</script>
+</body>
+</html>

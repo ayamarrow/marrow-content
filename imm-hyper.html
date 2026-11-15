@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hypersensitivity Reactions</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--card:#fff;--ink:#2b2d42;--mut:#6b7090;--mint:#d8f5e6;--sky:#dbeeff;--lav:#e8e0ff;--peach:#ffe3d3;--yel:#fff3b8;--pink:#ffdfe9;--line:#ece5d6;--acc:#5b6cff;--grn:#2e9e6b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;overflow-x:hidden}
+.en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;display:inline-block}
+#bar{position:fixed;top:0;right:0;height:5px;width:0;background:linear-gradient(270deg,#5b6cff,#ff9d6c,#3fcf8e);z-index:50;transition:width .15s}
+#nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:6px 8px;box-shadow:0 6px 24px rgba(60,50,20,.15);max-width:95vw}
+#nav button{border:0;background:var(--lav);border-radius:30px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;font-size:14px}
+#nav button.on{background:var(--acc);color:#fff}
+.hero{padding:56px 18px 30px;text-align:center;background:radial-gradient(1000px 400px at 50% -10%,#e8e0ff 0,transparent 70%),radial-gradient(700px 300px at 90% 20%,#d8f5e6 0,transparent 70%)}
+.hero .big{font-size:64px;animation:flo 3s ease-in-out infinite}
+@keyframes flo{50%{transform:translateY(-8px) rotate(-4deg)}}
+.hero h1{font-size:clamp(28px,7vw,48px);font-weight:800;margin:6px 0}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto 10px;font-size:17px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px auto;max-width:760px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 16px;min-width:105px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.stat b{display:block;font-size:26px;color:var(--acc)}
+.stat span{font-size:12.5px;color:var(--mut)}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--acc);color:#fff;border:0;border-radius:40px;padding:12px 26px;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 8px 20px rgba(91,108,255,.35);transition:transform .2s}
+.cta:hover{transform:translateY(-2px) scale(1.03)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;max-width:1000px;margin:26px auto 0;padding:0 14px}
+.ccard{border-radius:22px;padding:16px;cursor:pointer;text-align:right;border:1px solid rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.ccard:hover{transform:translateY(-6px);box-shadow:0 12px 26px rgba(0,0,0,.1)}
+.ccard .e{font-size:34px}.ccard h3{font-size:18px;font-weight:800}.ccard small{color:var(--mut);display:block;font-size:12.5px}.ccard p{font-size:14px;margin-top:4px}
+main{max-width:860px;margin:0 auto;padding:10px 14px 120px}
+.chap{margin:46px 0;scroll-margin-top:16px}
+.chead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.num{flex:none;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff;background:var(--acc);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.chead .lab{font-size:12.5px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase;direction:ltr;text-align:right}
+.chead h2{font-size:clamp(22px,5.5vw,30px);font-weight:800;line-height:1.3}
+.cap{display:flex;gap:10px;align-items:flex-start;margin:12px 0 18px}
+.cap .av{font-size:34px;flex:none}
+.bubble{background:#fff;border:1px solid var(--line);border-radius:6px 20px 20px 20px;padding:12px 16px;box-shadow:0 3px 10px rgba(0,0,0,.05);font-size:16.5px}
+.con{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 3px 14px rgba(60,50,20,.05)}
+.con h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 10px}
+.chip{background:var(--sky);border-radius:30px;padding:4px 13px;font-weight:700;font-size:14px;opacity:0;transform:translateY(8px) scale(.9);transition:all .4s}
+.chip:nth-child(4n+3){background:var(--mint)}.chip:nth-child(4n+5){background:var(--peach)}.chip:nth-child(4n+7){background:var(--lav)}
+.chip.ar{color:var(--mut);background:none;padding:0 2px;opacity:0}
+.in .chip{opacity:1;transform:none}
+.con ul{padding-right:20px}.con li{margin:5px 0}
+.mn{margin-top:12px;background:var(--yel);border-radius:16px;overflow:hidden}
+.mn button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:800;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between}
+.mn .body{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 14px}
+.mn.open .body{max-height:1200px;padding-bottom:12px}.mn .body{line-height:1.95;font-size:15px}
+.mn.open button span:last-child{transform:rotate(180deg)}
+.hy{margin-top:10px;background:var(--mint);border-right:5px solid var(--grn);border-radius:12px;padding:9px 13px;font-size:15px}
+.hy b{color:var(--grn)}
+.hl{margin:18px 0 0;background:linear-gradient(100deg,var(--yel),#ffe9a0);border-radius:18px;padding:13px 16px;font-weight:800;font-size:15.5px;box-shadow:0 4px 12px rgba(200,160,0,.18)}
+.hl small{display:block;font-size:12px;color:#8a6d00;margin-bottom:2px}
+.sep{color:#b08a00;margin:0 6px}
+table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;font-size:14.5px;margin:10px 0}
+th{background:var(--lav);padding:9px 10px}td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfaf4}
+.sec{border-radius:26px;padding:22px 16px;margin:30px 0}
+.sec h2{font-size:26px;font-weight:800;margin-bottom:6px}
+.rv{background:#fff;border:1px solid var(--line);border-radius:18px;margin:10px 0;overflow:hidden}
+.rv>button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:700;padding:13px 15px;cursor:pointer;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.rv .ans{display:none;padding:0 15px 14px}
+.rv.open .ans{display:block;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}}
+.rv .ans ul{padding-right:20px}
+.flash{perspective:900px;height:130px;margin:10px 0;cursor:pointer}
+.flash .in2{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flash.flip .in2{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border:1px solid var(--line)}
+.face.f{background:var(--sky)}.face.b{background:var(--mint);transform:rotateY(180deg)}
+.score{position:sticky;top:10px;z-index:20;margin:0 auto 10px;width:max-content;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.know{display:flex;gap:6px;justify-content:center;margin-top:-4px;margin-bottom:8px}
+.know button{border:0;border-radius:20px;padding:5px 14px;font:inherit;font-weight:700;cursor:pointer}
+.know .y{background:var(--mint)}.know .n{background:var(--peach)}
+.game{background:#fff;border:2px dashed #c9bff5;border-radius:22px;padding:16px;margin:18px 0}
+.game h4{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:var(--sky);border-radius:14px;padding:7px 12px;font:inherit;font-weight:700;cursor:pointer}
+.opts button.ok{background:#8fe3b4}.opts button.no{background:#ffb4b4}
+.tf{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:9px 0}
+.tf .b2{display:flex;gap:4px;flex:none}
+.tf button{border:0;border-radius:12px;padding:6px 12px;font:inherit;font-weight:800;cursor:pointer;background:var(--lav)}
+.tf.ok{background:#e8fff1}.tf.no{background:#fff0f0}
+.fb{font-size:13.5px;color:var(--mut);margin-top:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);padding:30px 14px 110px;font-size:14px}
+#tourbadge{position:fixed;top:12px;left:12px;z-index:45;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:700;display:none;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.chip{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+#tabs{position:sticky;top:5px;z-index:48;display:flex;gap:6px;justify-content:center;padding:8px;background:rgba(255,250,240,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#tabs button{border:0;background:var(--lav);border-radius:30px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer;font-size:14.5px}
+#tabs button.on{background:var(--acc);color:#fff;box-shadow:0 4px 12px rgba(91,108,255,.35)}
+.view[hidden]{display:none}
+.wrap{max-width:860px;margin:0 auto;padding:22px 14px 120px}
+.wrap>h1{font-size:clamp(26px,6vw,38px);font-weight:800}
+.wrap>p.sub{color:var(--mut);margin-bottom:14px}
+.gcard{border-radius:22px;padding:16px;margin:14px 0;border:1px solid rgba(0,0,0,.05);box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.gcard h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.gi{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;margin:4px 0;background:rgba(255,255,255,.75);border-radius:12px;cursor:pointer;transition:all .25s;font-size:15.5px}
+.gi::before{content:'🔑';flex:none}
+.gi.got{opacity:.45;text-decoration:line-through}
+.gi.got::before{content:'✅'}
+.gnum{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.gnum div{background:#fff;border-radius:16px;padding:8px 14px;text-align:center;border:1px solid var(--line);min-width:92px}
+.gnum b{display:block;font-size:22px;color:var(--acc)}.gnum span{font-size:12px;color:var(--mut)}
+.gprog{font-weight:800;margin:8px 0}
+.qc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;margin:14px 0;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.qh .q{font-weight:800;font-size:17px;direction:ltr;text-align:left;unicode-bidi:isolate}
+.qh .pt{flex:none;color:var(--mut);font-size:13px;white-space:nowrap}
+.qc textarea{width:100%;margin-top:12px;border:0;border-bottom:2px solid var(--line);background:transparent;font:inherit;padding:8px 2px;resize:vertical;min-height:54px;outline:none}
+.qc textarea:focus{border-color:var(--acc)}
+.qa{display:none;margin-top:10px;background:var(--mint);border-radius:16px;padding:12px 14px}
+.qa.show{display:block;animation:pop .35s}
+.qa ol{padding-right:22px}.qa li{margin:3px 0}
+.qa .kw{margin-top:6px;font-size:13px;color:#1d6b49;font-weight:700}
+.rate{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-weight:700;font-size:14px}
+.rate button{border:0;background:#fff;border-radius:12px;padding:4px 12px;font:inherit;font-weight:800;cursor:pointer}
+.rate button.sel{background:var(--acc);color:#fff}
+.qbtn{margin-top:10px;border:0;background:var(--yel);border-radius:14px;padding:8px 16px;font:inherit;font-weight:800;cursor:pointer}
+.tot{position:sticky;top:58px;z-index:20;width:max-content;margin:6px auto 10px;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{border:0;background:var(--lav);border-radius:14px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}
+.ge{direction:ltr;text-align:left;font-weight:700;font-size:15.5px;line-height:1.5;unicode-bidi:isolate}
+.ga{font-size:14px;color:var(--mut);margin-top:3px;line-height:1.6}
+.gcard h3{direction:ltr;text-align:left}
+.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.cheat{background:#ffe3e8;border-right:5px solid #e85d9b;border-radius:12px;padding:9px 13px;margin-top:10px;font-weight:700;line-height:1.9}.say{background:#eef3ff;border-radius:14px;padding:9px 13px;margin:6px 0 10px;font-weight:700;border-right:4px solid var(--acc)}.intro{margin:6px 0 10px;line-height:1.95;font-size:16px}.enul{padding:0!important;list-style:none;text-align:right;font-size:15.5px;direction:rtl;line-height:1.95}.enul li{direction:rtl;text-align:right;unicode-bidi:isolate;margin:0 0 10px}.extra{text-align:left;color:var(--mut);font-size:14px;margin:4px 0}.chips{margin:10px 0}.mn .body{line-height:1.95}.hy{background:#fff3b8;border-right:0;border-left:5px solid #e0a800;text-align:left}.hy b{color:#8a6d00}.trk2{margin:12px 0;background:linear-gradient(100deg,#fbf3dc,#f6ead0);border-inline-start:5px solid #c9ae74;border-radius:16px;padding:10px 14px;color:#5f4d22;font-size:15.5px;line-height:2;font-weight:600;box-shadow:0 6px 16px #c9ae7422}.trk2 b{color:#8a6a2a}</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="tourbadge">▶ الجولة شغّالة</div>
+
+<div id="tabs"><button data-v="study" class="on">🎬 الرحلة</button><button data-v="gold">🏆 الملخص الذهبي</button><button data-v="short">✍️ Short Essay</button></div>
+<div id="v-study" class="view"><section class="hero">
+  <div class="big">🎬🛡️</div>
+  <h1><span class="en">Hypersensitivity</span><br>تفاعلات فرط الحساسية</h1>
+  <p>Immunopathology · د. هديل العبيدي. الأنواع الأربعة، آلياتها وأمثلتها، بالعامية والمصطلحات الإنكليزية بين قوسين، وبآخرها أسئلة تجرّب حالك. 🍿</p>
+  <div class="stats">
+    <div class="stat"><b>4</b><span>أنواع (ACID)</span></div>
+    <div class="stat"><b>5-10</b><span>دقيقة Type I</span></div>
+    <div class="stat"><b>7-12</b><span>يوم serum sickness</span></div>
+    <div class="stat"><b>48-72</b><span>ساعة Type IV</span></div>
+  </div>
+  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0"><a class="cta" href="#gold" style="text-decoration:none">🏆 الملخص الذهبي</a><a class="cta" href="#short" style="text-decoration:none">✍️ Short Essay</a></div>
+  <button class="cta" id="tourBtn">▶ شغّل الجولة التلقائية</button>
+  <div class="grid" id="cards"></div>
+</section>
+
+<main id="main"></main>
+<footer>🛡️ المصدر: ملف المحاضرة (Hypersensitivity reactions · Immunopathology، د. هديل العبيدي).</footer>
+
+</div><div id="v-gold" class="view" hidden></div><div id="v-short" class="view" hidden></div>
+<div id="nav"><button id="prev">→ السابق</button><button id="toggle">⏸ / ▶</button><button id="next">التالي ←</button></div>
+
+<script>
+const E=t=>`<span class="en">${t}</span>`;
+const T=x=>x.replace(/\{\{(.+?)\}\}/g,'(<span class="en">$1</span>)');
+const CH=[
+ {
+  "n": 1,
+  "en": "Hypersensitivity basics",
+  "ar": "أساسيات فرط الحساسية",
+  "emoji": "🛡️",
+  "col": "#ffe3d3",
+  "teaser": "جهاز مناعة بيبالغ برد فعلو",
+  "cap": "🎙️",
+  "q": "أنا جهاز المناعة {{immune system}}: شغلتي أحمي الجسم، بس أحياناً بغلط وبرد فعل مبالغ فيه وبأذي جسمي.",
+  "cons": [
+   {
+    "e": "🛡️",
+    "t": "جهاز المناعة وفرط الحساسية Immune system & hypersensitivity",
+    "flow": [
+     "Recognition self vs non-self",
+     "Specific response",
+     "Memory",
+     "Exaggerated response",
+     "Tissue injury"
+    ],
+    "b": [
+     "جرّب هالتجربة: أول ما حدا بيدخل بيتك، كلبك بينبح. هيدا إنذار، ومفيد. بس تخيّل الكلب نبح وعضّ ساعي البريد! ردّ فعل مبالغ فيه. هيدا بالضبط فرط الحساسية (<bdi dir=\"ltr\">Hypersensitivity</bdi>).",
+     "المناعة (<bdi dir=\"ltr\">Immunity</bdi>) عادةً بتحميك: بتميّز الذات من غير الذات (<bdi dir=\"ltr\">Self vs non-self antigen</bdi>)، وبتعمل ردّ فعل نوعي (<bdi dir=\"ltr\">Specific response</bdi>)، وذاكرة (<bdi dir=\"ltr\">Memory</bdi>)، وأجسام مضادة (<bdi dir=\"ltr\">Antibodies</bdi>)، وتفاعلات خلوية (<bdi dir=\"ltr\">Cell-mediated reactions</bdi>).",
+     "وفرط الحساسية: ردّ فعل مناعي مرضي (<bdi dir=\"ltr\">Pathological</bdi>) ومؤذي ضد مستضد (<bdi dir=\"ltr\">Antigen</bdi>)، بيعمل أذية نسيج (<bdi dir=\"ltr\">Tissue injury</bdi>) وأحياناً موت، عند شخص صار حسّاس (<bdi dir=\"ltr\">Sensitized</bdi>)."
+    ],
+    "key": "c1",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Exaggerated immune response → tissue injury</bdi>",
+    "c": "فرط الحساسية = مناعة مبالغ فيها وبتأذي جسمك.",
+    "h": "Exaggerated immune response → tissue injury",
+    "say": null,
+    "tr": "🔫 جهاز المناعة حارس أمن شاطر بس عصبي. فرط الحساسية يعني الحارس بيطلق النار عالموظفين مش عالحرامي: رد فعل مبالغ فيه وبيخرّب البيت."
+   },
+   {
+    "e": "🔑",
+    "t": "الصفات العامة General features",
+    "flow": [
+     "Priming (prior exposure)",
+     "Any antigen",
+     "Genetic susceptibility (HLA)",
+     "Genes + exposure"
+    ],
+    "b": [
+     "السؤال الأول: ليش أنا بتحسّس من الفول السوداني وأخوي لأ؟ جاوب بكلمتين: تعرّض سابق وجينات.",
+     "لازم يصير تحسيس مسبق (<bdi dir=\"ltr\">Priming</bdi> / <bdi dir=\"ltr\">Sensitization</bdi>) من تعرّض أول للمادة المحسِّسة (<bdi dir=\"ltr\">Allergen</bdi>). يعني أول مرة الجسم \"بيسجّل الاسم\"، وتاني مرة بيهاجم. وأي مادة بتقدر تعمل استجابة مناعية ممكن تصير مسبّب حساسية (<bdi dir=\"ltr\">Allergen</bdi>).",
+     "والجينات (<bdi dir=\"ltr\">Genetic susceptibility</bdi>): الأمراض بترتبط بجينات <bdi dir=\"ltr\">HLA</bdi>، والتحسّس نتيجة تفاعل معقّد (<bdi dir=\"ltr\">Complex interaction</bdi>) بين الجينات والتعرّض."
+    ],
+    "h": "Priming + genetic susceptibility (HLA)",
+    "key": "c2",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Priming + genetic susceptibility</bdi> (<bdi dir=\"ltr\">HLA</bdi>) → <bdi dir=\"ltr\">hypersensitivity</bdi>",
+    "c": "لازم تعرّض أول (<bdi dir=\"ltr\">Priming</bdi>) + جينات، بدونهن ما في حساسية.",
+    "say": null,
+    "tr": "📜 الحارس ما بيطلق عالضيف الجديد أول مرة. لازم يشوفو مرة (<bdi dir=\"ltr\">Priming</bdi>) ويتعلّم شكلو. وفي ورقة تعليمات مكتوبة بالوراثة (<bdi dir=\"ltr\">HLA</bdi>) بتقرر مين عصبي. بدون الاتنين ما في حساسية."
+   },
+   {
+    "e": "🧪",
+    "t": "طبيعة المستضدات Nature of antigens",
+    "flow": [
+     "Exogenous",
+     "Endogenous"
+    ],
+    "b": [
+     "المستضدات (<bdi dir=\"ltr\">Antigens</bdi>) إما جاية من برّا أو من جوّا. خلّيني أسألك: الغبار والأكل من وين؟ برّا طبعاً.",
+     "الخارجية المنشأ (<bdi dir=\"ltr\">Exogenous</bdi>): غبار، حبوب لقاح (<bdi dir=\"ltr\">Pollens</bdi>)، أكل، أدوية، ميكروبات، كيماويات، وشوي منتجات دم.",
+     "والداخلية المنشأ (<bdi dir=\"ltr\">Endogenous</bdi>): من الجسم نفسو، من خلاياه أو مواد بتنصنع جواتو، يعني مستضدات ذاتية (<bdi dir=\"ltr\">Self antigens</bdi>)."
+    ],
+    "key": "c3",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Exogenous</bdi> (<bdi dir=\"ltr\">dust</bdi>, <bdi dir=\"ltr\">pollen</bdi>, <bdi dir=\"ltr\">food</bdi>, <bdi dir=\"ltr\">drugs</bdi>) <bdi dir=\"ltr\">vs endogenous</bdi> (<bdi dir=\"ltr\">self antigens</bdi>)",
+    "c": "<bdi dir=\"ltr\">Exogenous</bdi> = من برّا، <bdi dir=\"ltr\">Endogenous</bdi> = من جسمك.",
+    "h": "Exogenous (dust, pollen, food, drugs) vs endogenous (self antigens)",
+    "say": null,
+    "tr": "🚪 الخطر إمّا غريب عالباب (<bdi dir=\"ltr\">Exogenous</bdi>): غبار، طلع، أكل، دوا. أو الحارس عم يعامل أهل البيت كغرباء (<bdi dir=\"ltr\">Endogenous</bdi>): مستضدات الجسم نفسو."
+   }
+  ],
+  "hl": [
+   "Exaggerated immune response → tissue injury",
+   "Priming + genetic susceptibility (HLA)",
+   "Exogenous (dust, pollen, food, drugs) vs endogenous (self antigens)"
+  ]
+ },
+ {
+  "n": 2,
+  "en": "Classification",
+  "ar": "تصنيف فرط الحساسية",
+  "emoji": "🗂️",
+  "col": "#dbeeff",
+  "teaser": "4 أنواع",
+  "cap": "🕵️",
+  "q": "عندي 4 أنواع، كل نوع بجسم مضاد أو خلية معيّنة وسرعة معيّنة.",
+  "cons": [
+   {
+    "e": "4️⃣",
+    "t": "الأنواع الأربعة 4 types",
+    "flow": [
+     "I Immediate",
+     "II Antibody-mediated",
+     "III Immune complex",
+     "IV Cell-mediated (delayed)"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">4</bdi> أنواع، وحفظها بكلمة وحدة: <bdi dir=\"ltr\">ACID. A</bdi> لـ <bdi dir=\"ltr\">Anaphylactic</bdi> (النوع <bdi dir=\"ltr\">I</bdi>)، <bdi dir=\"ltr\">C</bdi> لـ <bdi dir=\"ltr\">Cytotoxic</bdi> (النوع <bdi dir=\"ltr\">II</bdi>)، <bdi dir=\"ltr\">I</bdi> لـ <bdi dir=\"ltr\">Immune complex</bdi> (النوع <bdi dir=\"ltr\">III</bdi>)، <bdi dir=\"ltr\">D</bdi> لـ <bdi dir=\"ltr\">Delayed</bdi> (النوع <bdi dir=\"ltr\">IV</bdi>).",
+     "النوع الأول (<bdi dir=\"ltr\">Type I</bdi>): فوري (<bdi dir=\"ltr\">Immediate</bdi>). التاني (<bdi dir=\"ltr\">Type II</bdi>): بوساطة الأجسام المضادة (<bdi dir=\"ltr\">Antibody-mediated</bdi>). التالت (<bdi dir=\"ltr\">Type III</bdi>): بوساطة المعقّدات المناعية (<bdi dir=\"ltr\">Immune complex-mediated</bdi>). الرابع (<bdi dir=\"ltr\">Type IV</bdi>): بوساطة الخلايا أو متأخر (<bdi dir=\"ltr\">Cell-mediated</bdi> / <bdi dir=\"ltr\">Delayed type</bdi>)."
+    ],
+    "h": "I-IV: IgE · IgG/IgM على الخلية · معقّدات · T cells",
+    "key": "c4",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">I</bdi>: <bdi dir=\"ltr\">IgE · II</bdi>: <bdi dir=\"ltr\">IgG/IgM on cell · III</bdi>: <bdi dir=\"ltr\">immune complex · IV</bdi>: <bdi dir=\"ltr\">T cells</bdi>",
+    "c": "<bdi dir=\"ltr\">ACID = Anaphylactic · Cytotoxic · Immune complex · Delayed.</bdi>",
+    "say": null,
+    "tr": "🧪 كلمة (<bdi dir=\"ltr\">ACID</bdi>) حامض بيحرق. الأربع طرق: A زر إنذار، C ملصق عالهدف، I زبالة بالمصرف، D جيش بيوصل متأخر. هيدا خيط القصة لآخر المحاضرة."
+   }
+  ],
+  "hl": [
+   "I-IV: IgE · IgG/IgM على الخلية · معقّدات · T cells"
+  ]
+ },
+ {
+  "n": 3,
+  "en": "Type I",
+  "ar": "النوع الأول: الفوري",
+  "emoji": "⚡",
+  "col": "#ffdfe9",
+  "teaser": "IgE وخلايا الماست",
+  "cap": "🤧",
+  "q": "أنا Type I! سريع متل البرق: دقايق وبتبلّش الحساسية.",
+  "cons": [
+   {
+    "e": "⏱️",
+    "t": "التعريف والصفات Definition & characteristics",
+    "flow": [
+     "Allergen",
+     "IgE on mast cells",
+     "5-10 minutes",
+     "Atopic individual"
+    ],
+    "b": [
+     "خلّينا نبلّش بالنوع الأول، الأسرع. تخيّل حدا أكل فستق وبعد <bdi dir=\"ltr\">5</bdi> دقايق وجهو انتفخ. هيدا فرط الحساسية الفوري (<bdi dir=\"ltr\">Type I</bdi>) أو الاضطرابات التحسّسية (<bdi dir=\"ltr\">Allergic</bdi> / <bdi dir=\"ltr\">Atopic disorders</bdi>)، والمواد المسبّبة بتسمّى <bdi dir=\"ltr\">Allergens.</bdi>",
+     "الآلية: المستضد (<bdi dir=\"ltr\">Allergen</bdi>) بيتفاعل مع جسم مضاد <bdi dir=\"ltr\">IgE</bdi> مرتبط بخلايا الماست (<bdi dir=\"ltr\">Mast cells</bdi>) عند شخص حسّاس، وبيصير التفاعل خلال <bdi dir=\"ltr\">5-10</bdi> دقايق. بيصير عند <bdi dir=\"ltr\">10-20%</bdi> من الناس.",
+     "الأتوبيين (<bdi dir=\"ltr\">Atopic</bdi>) عندهم <bdi dir=\"ltr\">IgE</bdi> عالي بالمصل (<bdi dir=\"ltr\">Serum IgE</bdi>) وقابلية وراثية. وأغلب المسبّبات (عث الغبار، حبوب لقاح، وبر الحيوانات، عفن) مش مؤذية لأغلب الناس. أمثلة: الربو القصبي (<bdi dir=\"ltr\">Bronchial asthma</bdi>)، حمّى القش (<bdi dir=\"ltr\">Hay fever</bdi>)، حساسية الأكل (<bdi dir=\"ltr\">Food allergies</bdi>)."
+    ],
+    "h": "IgE + mast cells + eosinophils · 5-10 min",
+    "key": "c5",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Allergen + IgE on mast cells → degranulation in 5-10 min</bdi>",
+    "c": "<bdi dir=\"ltr\">Type I = IgE + Mast cells</bdi> + دقايق.",
+    "say": null,
+    "tr": "🚨 النوع الأول زر الإنذار. أجسام (<bdi dir=\"ltr\">IgE</bdi>) جاهزة فوق الخلايا البدينة (<bdi dir=\"ltr\">Mast cells</bdi>) متل ألغام. أول ما الحساسية (<bdi dir=\"ltr\">Allergen</bdi>) تلمسها بتنفجر بخمس لعشر دقايق."
+   },
+   {
+    "e": "📍",
+    "t": "النوع الأول الموضّع Localized type I",
+    "flow": [
+     "Hay fever",
+     "Extrinsic asthma",
+     "Allergic nasal polyp"
+    ],
+    "b": [
+     "موضعي (<bdi dir=\"ltr\">Localized</bdi>) يعني بعضو واحد. خد حمّى القش (<bdi dir=\"ltr\">Hay fever</bdi>) والربو الخارجي (<bdi dir=\"ltr\">Extrinsic asthma</bdi>): بيمشوا بالعيلة وغالباً بيسبقن إكزيما أتوبية (<bdi dir=\"ltr\">Atopic eczema</bdi>) بالطفولة.",
+     "حمّى القش: التهاب حاد (<bdi dir=\"ltr\">Acute inflammation</bdi>) بمخاطية الأنف والملتحمة (<bdi dir=\"ltr\">Nasal + conjunctival mucosae</bdi>) مع عطاس (<bdi dir=\"ltr\">Sneezing</bdi>) وإفراز زايد، بعد دقايق من حبوب لقاح العشب أو الأكل. الربو القصبي: صفير (<bdi dir=\"ltr\">Wheezes</bdi>) وضيق نفس بسبب تشنّج قصبي (<bdi dir=\"ltr\">Bronchospasm</bdi>) وزيادة مخاط، بعد غبار البيت أو وبر الحيوانات.",
+     "نسيجياً: سليلة أنفية تحسّسية (<bdi dir=\"ltr\">Allergic nasal polyp</bdi>): لحمة وذمية (<bdi dir=\"ltr\">Edematous stroma</bdi>) فيها ارتشاح التهابي أغلبو خلايا حمضة (<bdi dir=\"ltr\">Eosinophils</bdi>)."
+    ],
+    "key": "c6",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Hay fever</bdi> (<bdi dir=\"ltr\">nose + eyes</bdi>) · <bdi dir=\"ltr\">asthma</bdi> (<bdi dir=\"ltr\">bronchospasm</bdi>) · <bdi dir=\"ltr\">eosinophils</bdi>",
+    "c": "حمّى القش = أنف وعيون، الربو = قصبات. وبالنسيج: <bdi dir=\"ltr\">Eosinophils.</bdi>",
+    "h": "Hay fever (nose + eyes) · asthma (bronchospasm) · eosinophils",
+    "say": null,
+    "tr": "📍 الإنذار بمكان واحد: أنف وعيون (<bdi dir=\"ltr\">Hay fever</bdi>)، أو قصبات (<bdi dir=\"ltr\">Asthma</bdi>). وشرطة الاحتياط (<bdi dir=\"ltr\">Eosinophils</bdi>) بتوصل عالمكان."
+   },
+   {
+    "e": "🚨",
+    "t": "النوع الأول الجهازي Systemic: anaphylaxis",
+    "flow": [
+     "Drug injection (penicillin)",
+     "Anaphylactic shock",
+     "Hypotension",
+     "Urticaria + dyspnea"
+    ],
+    "b": [
+     "ولو الحساسية تعمّمت بكل الجسم؟ هيدا التأق (<bdi dir=\"ltr\">Anaphylaxis</bdi>): فرط حساسية جهازي (<bdi dir=\"ltr\">Systemic type I</bdi>)، ممكن يوصل لصدمة تأقية (<bdi dir=\"ltr\">Anaphylactic shock</bdi>).",
+     "علاماتو <bdi dir=\"ltr\">3</bdi>: هبوط ضغط (<bdi dir=\"ltr\">Hypotension</bdi>)، شرى منتشر (<bdi dir=\"ltr\">Widespread urticaria</bdi>)، وضيق نفس (<bdi dir=\"ltr\">Dyspnea</bdi>). مثال: حقنة بنسيلين (<bdi dir=\"ltr\">Penicillin</bdi>) لمريض حسّاس. وهي حالة طوارئ (<bdi dir=\"ltr\">Medical emergency</bdi>) وممكن تكون قاتلة."
+    ],
+    "h": "Anaphylaxis = systemic type I (penicillin) = emergency",
+    "key": "c7",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Systemic type I → hypotension + urticaria + dyspnea → shock</bdi>",
+    "c": "<bdi dir=\"ltr\">Anaphylaxis</bdi> = طوارئ: ضغط يهبط + شرى + ضيق نفس.",
+    "say": null,
+    "tr": "🔥 الإنذار دقّ بكل الطوابق مرة وحدة: ضغط بينزل، شرى، ضيق نفس. هيدا (<bdi dir=\"ltr\">Anaphylaxis</bdi>) وطوارئ، مثلاً بعد البنسلين."
+   }
+  ],
+  "hl": [
+   "IgE + mast cells + eosinophils · 5-10 min",
+   "Hay fever (nose + eyes) · asthma (bronchospasm) · eosinophils",
+   "Anaphylaxis = systemic type I (penicillin) = emergency"
+  ]
+ },
+ {
+  "n": 4,
+  "en": "Type II",
+  "ar": "النوع التاني: بوساطة الأجسام المضادة",
+  "emoji": "🎯",
+  "col": "#e8e0ff",
+  "teaser": "أجسام مضادة ضد مستضد على الخلية",
+  "cap": "🔫",
+  "q": "أنا Type II! أجسام مضادة بتصيب مستضدات ثابتة عسطح الخلايا وبتخرّب الخلية.",
+  "cons": [
+   {
+    "e": "📌",
+    "t": "التعريف والصفات Definition & characteristics",
+    "flow": [
+     "Ab vs cell-surface antigen",
+     "IgG (usually) / IgM (rarely)",
+     "Lysis of target cell"
+    ],
+    "b": [
+     "النوع التاني (<bdi dir=\"ltr\">Type II</bdi>) بيتصرّف بالعكس: الأجسام المضادة هون ما بتدوّر على مستضد عايم، بتهاجم مستضدات ثابتة عسطح الخلايا. وبتسبّب تحلّل الخلية الهدف (<bdi dir=\"ltr\">Lysis of target cells</bdi>).",
+     "الأجسام: <bdi dir=\"ltr\">IgG</bdi> غالباً و<bdi dir=\"ltr\">IgM</bdi> نادراً. المستضد ممكن يكون داخلي (<bdi dir=\"ltr\">Endogenous</bdi>) أو خارجي (<bdi dir=\"ltr\">Exogenous</bdi>)، حتى مستقلب دوا (<bdi dir=\"ltr\">Drug metabolite</bdi>) يلتصق عسطح الخلية.",
+     "لما يصير تفاعل مستضد-جسم مضاد (<bdi dir=\"ltr\">Ag-Ab reaction</bdi>) عسطح الخلية، النتيجة وحدة من <bdi dir=\"ltr\">3</bdi> تأثيرات: متمّم، <bdi dir=\"ltr\">ADCC</bdi>، أو خلل وظيفي."
+    ],
+    "h": "3 effects: complement · ADCC · cellular dysfunction",
+    "key": "c8",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Ab</bdi> (<bdi dir=\"ltr\">IgG/IgM</bdi>) <bdi dir=\"ltr\">vs cell-surface Ag → complement · ADCC · dysfunction</bdi>",
+    "c": "<bdi dir=\"ltr\">Type II</bdi> = أجسام ضد مستضد عسطح الخلية. <bdi dir=\"ltr\">3</bdi> تأثيرات.",
+    "say": null,
+    "tr": "🏷️ النوع التاني ملصق عالهدف. الأجسام (<bdi dir=\"ltr\">IgG/IgM</bdi>) ما بتدوّر على شي عايم، بتلزق عمستضد ثابت عسطح الخلية. والخلية الملصوقة بتتعاقب بتلات عقوبات: متمّم، ADCC، أو خلل وظيفي."
+   },
+   {
+    "e": "🧲",
+    "t": "التأثير 1: معتمد على المتمّم Complement-dependent",
+    "flow": [
+     "IgG / IgM on cell",
+     "Complement C3b",
+     "Opsonization",
+     "Phagocytosis / lysis"
+    ],
+    "b": [
+     "التأثير الأول: المتمّم (<bdi dir=\"ltr\">Complement-dependent</bdi>). الجسم المضاد (<bdi dir=\"ltr\">IgG</bdi> أو <bdi dir=\"ltr\">IgM</bdi>) بيفعّل المتمّم، وبيطلع <bdi dir=\"ltr\">C3b</bdi> اللي بيشتغل كمغلّف (<bdi dir=\"ltr\">Opsonin</bdi>). والتغليف (<bdi dir=\"ltr\">Opsonization</bdi>) متل ما تحط ملصق \"كلني\" عالمسبّب: البلاعم بتبلعو أسهل (<bdi dir=\"ltr\">Phagocytosis</bdi>).",
+     "مثالين: تفاعل نقل دم انحلالي حاد (<bdi dir=\"ltr\">Acute hemolytic transfusion reaction</bdi>) من عدم توافق <bdi dir=\"ltr\">ABO</bdi> أو <bdi dir=\"ltr\">Rh</bdi>، وفقر الدم الانحلالي المناعي الذاتي (<bdi dir=\"ltr\">AIHA</bdi>): أجسام ضد الكريات الحمرا نفسها (<bdi dir=\"ltr\">Autoantibodies</bdi>)."
+    ],
+    "key": "c9",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">IgG/IgM → complement → C3b opsonin → phagocytosis → lysis</bdi>",
+    "c": "<bdi dir=\"ltr\">C3b</bdi> = ملصق \"كلني\" (<bdi dir=\"ltr\">Opsonin</bdi>). مثال: نقل دم غلط.",
+    "h": "IgG/IgM → complement → C3b opsonin → phagocytosis → lysis",
+    "say": null,
+    "tr": "🍽️ العقوبة الأولى: المتمّم بيحط ملصق «كلني» (<bdi dir=\"ltr\">C3b Opsonin</bdi>) عالخلية، فالبلعم بياكلها. مثال: نقل دم غلط، الكريات الغلط معلّمة."
+   },
+   {
+    "e": "🔗",
+    "t": "التأثير 2: ADCC Antibody-dependent cellular cytotoxicity",
+    "flow": [
+     "Antibody links NK/macrophage",
+     "To target cell antigen",
+     "Perforin + granzyme",
+     "Apoptosis"
+    ],
+    "b": [
+     "التأثير التاني: <bdi dir=\"ltr\">ADCC</bdi> (<bdi dir=\"ltr\">Antibody-dependent cellular cytotoxicity</bdi>). تخيّل الجسم المضاد جسر بين خلية قاتلة والهدف: بيمسك الهدف بإيد وبيمسك الخلية القاتلة (<bdi dir=\"ltr\">NK cell</bdi> أو <bdi dir=\"ltr\">Macrophage</bdi>) بإيد، وهيك بيربطوا.",
+     "هون ما في متمّم ولا بلعمة. الخلية القاتلة بتحفر ثقوب بالبيرفورين (<bdi dir=\"ltr\">Perforin</bdi>) والغرانزايم (<bdi dir=\"ltr\">Granzyme</bdi>)، وبيفعّلوا موت الخلية المبرمج (<bdi dir=\"ltr\">Apoptosis</bdi>)."
+    ],
+    "key": "c10",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Ab bridge → NK cell → perforin + granzyme → apoptosis</bdi>",
+    "c": "<bdi dir=\"ltr\">ADCC</bdi> = جسم مضاد جسر + <bdi dir=\"ltr\">NK</bdi>، بلا متمّم وبلا بلعمة.",
+    "h": "Ab bridge → NK cell → perforin + granzyme → apoptosis",
+    "say": null,
+    "tr": "🪢 العقوبة التانية (<bdi dir=\"ltr\">ADCC</bdi>): الجسم المضاد حبل بين الشرطي القاتل (<bdi dir=\"ltr\">NK</bdi>) والمطلوب. الشرطي بيرمي (<bdi dir=\"ltr\">Perforin + Granzyme</bdi>) فبتموت الخلية. بدون متمّم ولا بلع."
+   },
+   {
+    "e": "📡",
+    "t": "التأثير 3: خلل وظيفي خلوي Antibody-mediated cellular dysfunction",
+    "flow": [
+     "Ab vs receptor",
+     "No cell injury",
+     "No inflammation",
+     "Impaired function"
+    ],
+    "b": [
+     "التأثير التالت أغرب: ما في موت للخلية ولا التهاب. الجسم المضاد بيستهدف مستقبل (<bdi dir=\"ltr\">Receptor</bdi>) عسطح الخلية وبيخرّب وظيفتو. تخيّل حدا حط لصاقة على زر المصعد: المصعد سليم بس ما بيشتغل.",
+     "<bdi dir=\"ltr\">Hashimoto</bdi> (حسب الشريحة): أجسام ضد مستقبل <bdi dir=\"ltr\">TSH</bdi> بتسكّر مكان عمل <bdi dir=\"ltr\">TSH</bdi>، فقصور الدرق (<bdi dir=\"ltr\">Hypothyroidism</bdi>).",
+     "<bdi dir=\"ltr\">Graves</bdi>: الأجسام ضد نفس المستقبل بتشتغل هي نفسها كـ <bdi dir=\"ltr\">TSH</bdi>، فتنبيه مستمر للدرق وفرط نشاطها (<bdi dir=\"ltr\">Thyrotoxicosis</bdi>). يعني نفس المستقبل، وتأثيرين معاكسين."
+    ],
+    "h": "Graves = antibodies stimulate TSH receptor → thyrotoxicosis",
+    "key": "c11",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Anti-TSH receptor</bdi>: <bdi dir=\"ltr\">block → hypothyroid</bdi> (<bdi dir=\"ltr\">Hashimoto</bdi>) · <bdi dir=\"ltr\">stimulate → thyrotoxicosis</bdi> (<bdi dir=\"ltr\">Graves</bdi>)",
+    "c": "<bdi dir=\"ltr\">Graves</bdi> = الأجسام بتنبّه مستقبل <bdi dir=\"ltr\">TSH</bdi>، ما بتقتل.",
+    "say": null,
+    "tr": "🎚️ العقوبة التالتة ما فيها قتل: الأجسام بتضغط زر مستقبل (<bdi dir=\"ltr\">TSH</bdi>) وبتعلّقو عالآخر، فالدرق بيشتغل بلا توقف (<bdi dir=\"ltr\">Graves</bdi>). وإذا سدّت الزر الدرق بيكسل (<bdi dir=\"ltr\">Hashimoto</bdi>)."
+   },
+   {
+    "e": "🩸",
+    "t": "أمثلة النوع التاني Examples of type II",
+    "flow": [
+     "Blood cells",
+     "Tissue components"
+    ],
+    "b": [
+     "شو الأمراض اللي بتجي من <bdi dir=\"ltr\">Type II</bdi>؟ قسّمها لقسمين.",
+     "أجسام ضد خلايا الدم (<bdi dir=\"ltr\">Antibodies to blood cells</bdi>): <bdi dir=\"ltr\">AIHA</bdi>، تفاعلات نقل الدم (<bdi dir=\"ltr\">Transfusion reactions</bdi>)، مرض الوليد الانحلالي (<bdi dir=\"ltr\">Hemolytic disease of newborn</bdi>)، فرفرية نقص الصفيحات (<bdi dir=\"ltr\">ITP</bdi>)، وأدوية بتسبّب أجسام سامة للخلايا.",
+     "أجسام ضد مكوّنات النسيج (<bdi dir=\"ltr\">Antibodies to tissue components</bdi>): <bdi dir=\"ltr\">Graves</bdi>، الوهن العضلي (<bdi dir=\"ltr\">Myasthenia gravis</bdi>)، سكري النوع <bdi dir=\"ltr\">1</bdi> (<bdi dir=\"ltr\">Type 1 diabetes</bdi>) بأجسام ضد خلايا الجزر (<bdi dir=\"ltr\">Islet cell autoantibodies</bdi>)، والرفض فوق الحاد (<bdi dir=\"ltr\">Hyperacute rejection</bdi>) بأجسام ضد مستضدات الواهب."
+    ],
+    "key": "c12",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Blood cells</bdi> (<bdi dir=\"ltr\">AIHA</bdi>, <bdi dir=\"ltr\">ITP</bdi>, <bdi dir=\"ltr\">HDN</bdi>) · <bdi dir=\"ltr\">tissue</bdi> (<bdi dir=\"ltr\">Graves</bdi>, <bdi dir=\"ltr\">MG</bdi>, <bdi dir=\"ltr\">T1DM</bdi>, <bdi dir=\"ltr\">hyperacute rejection</bdi>)",
+    "c": "<bdi dir=\"ltr\">Type II</bdi> = دم (<bdi dir=\"ltr\">AIHA/ITP</bdi>) أو نسيج (<bdi dir=\"ltr\">Graves/MG/T1DM</bdi>).",
+    "h": "Blood cells (AIHA, ITP, HDN) · tissue (Graves, MG, T1DM, hyperacute rejection)",
+    "say": null,
+    "tr": "🩸 ملصقات عالدم: كريات حمرا (<bdi dir=\"ltr\">AIHA</bdi>)، صفائح (<bdi dir=\"ltr\">ITP</bdi>)، ولادة (<bdi dir=\"ltr\">HDN</bdi>). وملصقات عالبيت: درق (<bdi dir=\"ltr\">Graves</bdi>)، عضل (<bdi dir=\"ltr\">MG</bdi>)، سكري (<bdi dir=\"ltr\">T1DM</bdi>)، رفض زرع فوري."
+   },
+   {
+    "e": "💥",
+    "t": "كيف بتصير أذية النسيج Tissue injury mechanism",
+    "flow": [
+     "Ab on basement membrane / matrix",
+     "Complement activation",
+     "C5a: chemotaxis",
+     "Leukocyte enzymes + ROS"
+    ],
+    "b": [
+     "وكيف الأجسام الملتصقة بالنسيج بتخرّب؟ تخيّل الأجسام ملصقة على الغشاء القاعدي (<bdi dir=\"ltr\">Basement membrane</bdi>) أو المصفوفة (<bdi dir=\"ltr\">Extracellular matrix</bdi>) متل شخص عمّال يرسم على الحيط، وبعدين بيجي الحرس.",
+     "تفعيل المتمّم: <bdi dir=\"ltr\">C5a</bdi> بيجذب العدلات والوحيدات (<bdi dir=\"ltr\">Neutrophils + Monocytes</bdi>) بالانجذاب الكيميائي (<bdi dir=\"ltr\">Chemotaxis</bdi>). <bdi dir=\"ltr\">C3a</bdi> و<bdi dir=\"ltr\">C5a</bdi> بيزيدوا نفوذية الأوعية (<bdi dir=\"ltr\">Vascular permeability</bdi>) وبسمّوهم <bdi dir=\"ltr\">Anaphylatoxins.</bdi>",
+     "الكريات المفعّلة بتطلّع إنزيمات هاضمة (<bdi dir=\"ltr\">Proteolytic enzymes</bdi>) وأنواع أكسجين تفاعلية (<bdi dir=\"ltr\">ROS</bdi>)، فأذية نسيج. وهيك بتتضرّر بعض التهابات الكبب (<bdi dir=\"ltr\">Glomerulonephritis</bdi>)، والرفض الوعائي (<bdi dir=\"ltr\">Vascular rejection</bdi>)، وأمراض المناعة الذاتية."
+    ],
+    "key": "c13",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Ab on tissue → complement → C5a chemotaxis → enzymes + ROS → injury</bdi>",
+    "c": "<bdi dir=\"ltr\">Ab</bdi> ملصق، <bdi dir=\"ltr\">C5a</bdi> يجيب العدلات، العدلات تخرّب.",
+    "h": "Ab on tissue → complement → C5a chemotaxis → enzymes + ROS → injury",
+    "say": null,
+    "tr": "📣 الملصق بيفعّل (<bdi dir=\"ltr\">C5a</bdi>): صفارة بتنده العدلات. العدلات بتوصل وبترش إنزيمات وجذور (<bdi dir=\"ltr\">ROS</bdi>) وبتخرّب النسيج كلو، مش بس الهدف."
+   }
+  ],
+  "hl": [
+   "3 effects: complement · ADCC · cellular dysfunction",
+   "IgG/IgM → complement → C3b opsonin → phagocytosis → lysis",
+   "Ab bridge → NK cell → perforin + granzyme → apoptosis",
+   "Graves = antibodies stimulate TSH receptor → thyrotoxicosis",
+   "Blood cells (AIHA, ITP, HDN) · tissue (Graves, MG, T1DM, hyperacute rejection)",
+   "Ab on tissue → complement → C5a chemotaxis → enzymes + ROS → injury"
+  ]
+ },
+ {
+  "n": 5,
+  "en": "Type III",
+  "ar": "النوع التالت: المعقّدات المناعية",
+  "emoji": "🧩",
+  "col": "#d8f5e6",
+  "teaser": "مستضد + جسم مضاد = ترسّب",
+  "cap": "🧱",
+  "q": "أنا Type III! معقّدات مستضد-جسم مضاد بتترسّب بالأنسجة وبتولّع التهاب.",
+  "cons": [
+   {
+    "e": "🧬",
+    "t": "الصفات والآلية Characteristics & mechanism",
+    "flow": [
+     "Immune complex forms (local / circulating)",
+     "Deposits in tissues",
+     "Complement fixation",
+     "Inflammation"
+    ],
+    "b": [
+     "النوع التالت (<bdi dir=\"ltr\">Type III</bdi>) غير. المشكلة مش جسم مضاد على سطح خلية، المشكلة معقّدات عايمة. المعقّد المناعي (<bdi dir=\"ltr\">Immune complex</bdi>) = مستضد + جسم مضاد، بيتكوّن موضعياً أو دايراً بالدم (<bdi dir=\"ltr\">Circulating</bdi>) وبيترسّب بأنسجة مختلفة.",
+     "الأجسام اللي بتثبّت المتمّم (<bdi dir=\"ltr\">Complement-fixing</bdi>): <bdi dir=\"ltr\">IgG</bdi> و<bdi dir=\"ltr\">IgM</bdi> وأحياناً <bdi dir=\"ltr\">IgA.</bdi> المستضد الخارجي (<bdi dir=\"ltr\">Exogenous</bdi>): بروتينات غريبة (مثل مضاد توكسين الخناق، أو <bdi dir=\"ltr\">globulin</bdi> الحصان المضاد للتيموس). الداخلي (<bdi dir=\"ltr\">Endogenous</bdi>): مستضد <bdi dir=\"ltr\">DNA.</bdi>",
+     "التسلسل: معقّدات، ترسّب بجدران الأوعية، تثبيت متمّم، التهاب وأذية نسيج. تخيّل زبالة ترسّبت بالمصرف فسدّتو."
+    ],
+    "h": "Immune complex + complement: IgG, IgM, IgA",
+    "key": "c14",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Immune complexes → vessel wall deposition → complement → inflammation</bdi>",
+    "c": "<bdi dir=\"ltr\">Type III</bdi> = معقّدات عايمة بتترسّب، متل زبالة بالمصرف.",
+    "say": null,
+    "tr": "🗑️ النوع التالت زبالة بالمصرف. معقّدات (<bdi dir=\"ltr\">Ag-Ab</bdi>) عايمة بالدم، ما حدا إلها، بتترسّب بجدار الوعاء، والمتمّم بيشتغل فبيولّع التهاب."
+   },
+   {
+    "e": "💉",
+    "t": "Arthus reaction (موضّع) Localized",
+    "flow": [
+     "Antigen injected intradermally",
+     "Local immune complexes",
+     "Vasculitis",
+     "Fibrinoid necrosis + thrombosis"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">Arthus reaction</bdi> هو <bdi dir=\"ltr\">Type III</bdi> الموضعي (<bdi dir=\"ltr\">Localized</bdi>): نخر نسيجي موضّع غالباً بالجلد، سببو التهاب أوعية حاد بالمعقّدات (<bdi dir=\"ltr\">Acute immune complex vasculitis</bdi>).",
+     "تجريبياً: حقن مستضد بالجلد بحيوان تمنّع سابقاً (عنده أجسام مضادة دايرة). المستضد بينتشر لجدار الوعا وبيرتبط بالجسم المضاد، فمعقّدات كبيرة بمكان الحقن. الترسّب بيعمل نخر ليفيني (<bdi dir=\"ltr\">Fibrinoid necrosis</bdi>) وتخثّر (<bdi dir=\"ltr\">Thrombosis</bdi>) فأذية إقفارية.",
+     "سريرياً: نادر، بعد التطعيم: ألم وتورّم وتصلّب (<bdi dir=\"ltr\">Induration</bdi>) ووذمة (<bdi dir=\"ltr\">Edema</bdi>)، وأحياناً نخر. الخفيف بيشفى بلا علاج."
+    ],
+    "key": "c15",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Intradermal Ag + circulating Ab → local complexes → fibrinoid necrosis + thrombosis</bdi>",
+    "c": "<bdi dir=\"ltr\">Arthus = Type III</bdi> موضعي، ناتج عن حقن (تطعيم).",
+    "h": "Intradermal Ag + circulating Ab → local complexes → fibrinoid necrosis + thrombosis",
+    "say": null,
+    "tr": "💉 (<bdi dir=\"ltr\">Arthus</bdi>) الزبالة تكوّمت مكان الحقنة: مستضد انحقن بالجلد وفي أجسام دايرة، التقوا بمكانن فصار نخر (<bdi dir=\"ltr\">Fibrinoid</bdi>) وتخثّر."
+   },
+   {
+    "e": "🦋",
+    "t": "ذئبة حمامية جهازية SLE Systemic lupus erythematosus",
+    "flow": [
+     "Autoantibodies vs nuclear components",
+     "Complexes deposit (glomeruli, lungs, joints, skin, lymph nodes)",
+     "Complement + inflammation"
+    ],
+    "b": [
+     "الذئبة (<bdi dir=\"ltr\">SLE</bdi>: <bdi dir=\"ltr\">Systemic lupus erythematosus</bdi>) مثال كلاسيكي. بتصير أجسام مضادة ذاتية (<bdi dir=\"ltr\">Autoantibodies</bdi>) ضد مكوّنات النواة (<bdi dir=\"ltr\">Nuclear components</bdi>): <bdi dir=\"ltr\">DNA</bdi> وهيستونات (<bdi dir=\"ltr\">Histones</bdi>).",
+     "هالمكوّنات عادةً محبوسة بالنواة ومخبّأة عن المناعة، بتنطلق بعد أذية نسيج (متل التهاب فيروسي) وبتنربط بسرعة بأجسام المريض.",
+     "المعقّدات بتترسّب بالأغشية القاعدية للكبب (<bdi dir=\"ltr\">Glomeruli</bdi>) والرئتين والمفاصل والجلد والعقد اللمفاوية، فتثبيت متمّم والتهاب."
+    ],
+    "h": "SLE = anti-nuclear antibodies (DNA, histones)",
+    "key": "c16",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Nuclear Ag released → anti-nuclear Ab → complexes → glomeruli</bdi>, <bdi dir=\"ltr\">lungs</bdi>, <bdi dir=\"ltr\">joints</bdi>, <bdi dir=\"ltr\">skin</bdi>",
+    "c": "<bdi dir=\"ltr\">SLE</bdi> = أجسام ضد النواة (<bdi dir=\"ltr\">DNA + histones</bdi>).",
+    "say": null,
+    "tr": "🔬 (<bdi dir=\"ltr\">SLE</bdi>) الحارس عم يعتبر ختم البيت عدو: أجسام ضد النواة (<bdi dir=\"ltr\">DNA, Histones</bdi>). زبالتها بتسكّر كلى ومفاصل وجلد ورئة."
+   },
+   {
+    "e": "🐴",
+    "t": "داء المصل Serum sickness",
+    "flow": [
+     "1 Antibody formation 7-12 days",
+     "2 Deposition",
+     "3 Inflammation"
+    ],
+    "b": [
+     "داء المصل (<bdi dir=\"ltr\">Serum sickness</bdi>) كان شائع بعد لقاحات قديمة بمصل حصان وأرنب. هلق نادر، بيصير عند ناس بياخدوا أجسام من نوع تاني، متل <bdi dir=\"ltr\">globulin</bdi> الحصان المضاد للتيموس (<bdi dir=\"ltr\">Antithymocyte globulin</bdi>) لإزالة <bdi dir=\"ltr\">T cells</bdi> عند مستقبلي أعضاء.",
+     "<bdi dir=\"ltr\">3</bdi> مراحل. (<bdi dir=\"ltr\">1</bdi>) تشكّل المعقّدات (<bdi dir=\"ltr\">Formation</bdi>): الجسم المضاد بيتكوّن بعد <bdi dir=\"ltr\">7-12</bdi> يوم من حقن البروتين الغريب. (<bdi dir=\"ltr\">2</bdi>) الترسّب (<bdi dir=\"ltr\">Deposition</bdi>): بالأوعية (<bdi dir=\"ltr\">Vasculitis</bdi>)، الكبب (<bdi dir=\"ltr\">Glomerulonephritis</bdi>)، المفاصل (<bdi dir=\"ltr\">Arthritis</bdi>). (<bdi dir=\"ltr\">3</bdi>) التفاعل الالتهابي وأذية النسيج.",
+     "العلامات: حرارة (<bdi dir=\"ltr\">Fever</bdi>)، شرى (<bdi dir=\"ltr\">Urticaria</bdi>)، ألم مفاصل (<bdi dir=\"ltr\">Arthralgias</bdi>)، تضخّم عقد (<bdi dir=\"ltr\">Lymph node enlargement</bdi>)، وبروتين بالبول (<bdi dir=\"ltr\">Proteinuria</bdi>)."
+    ],
+    "key": "c17",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Foreign serum protein → Ab after 7-12 days → complexes deposit → fever</bdi>, <bdi dir=\"ltr\">urticaria</bdi>, <bdi dir=\"ltr\">arthralgia</bdi>",
+    "c": "<bdi dir=\"ltr\">Serum sickness</bdi> = بعد <bdi dir=\"ltr\">7-12</bdi> يوم من الحقن. <bdi dir=\"ltr\">3</bdi> مراحل.",
+    "h": "Foreign serum protein → Ab after 7-12 days → complexes deposit → fever, urticaria, arthralgia",
+    "say": null,
+    "tr": "🧾 (<bdi dir=\"ltr\">Serum sickness</bdi>) متل فاتورة بتوصل بعد أسبوع: انحقن مصل غريب، والجسم بيحتاج 7-12 يوم يصنع الأجسام. لمّا بتجهز بتلاقي المصل لسا موجود، فبتتكوّن الزبالة: حرارة، شرى، ألم مفاصل."
+   },
+   {
+    "e": "🧫",
+    "t": "أمثلة تانية Other immune complex diseases",
+    "flow": [
+     "Post-streptococcal GN",
+     "Acute arthritis"
+    ],
+    "b": [
+     "أمثلة تانية من <bdi dir=\"ltr\">Type III</bdi>: التهاب الكبب الحاد بعد المكورات العقدية (<bdi dir=\"ltr\">Acute post-streptococcal glomerulonephritis</bdi>) والتهاب مفاصل حاد (<bdi dir=\"ltr\">Acute arthritis</bdi>)."
+    ],
+    "key": "c18",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Post-strep GN · acute arthritis</bdi>",
+    "c": "<bdi dir=\"ltr\">Post-strep GN</bdi> = من <bdi dir=\"ltr\">Type III.</bdi>",
+    "h": "Post-strep GN · acute arthritis",
+    "say": null,
+    "tr": "🦠 (<bdi dir=\"ltr\">Post-strep GN</bdi>) زبالة الجرثومة السبحية بتسكّر مصفاة الكلى. وبنفس الطريقة التهاب مفاصل حاد."
+   }
+  ],
+  "hl": [
+   "Immune complex + complement: IgG, IgM, IgA",
+   "Intradermal Ag + circulating Ab → local complexes → fibrinoid necrosis + thrombosis",
+   "SLE = anti-nuclear antibodies (DNA, histones)",
+   "Foreign serum protein → Ab after 7-12 days → complexes deposit → fever, urticaria, arthralgia",
+   "Post-strep GN · acute arthritis"
+  ]
+ },
+ {
+  "n": 6,
+  "en": "Type IV",
+  "ar": "النوع الرابع: المتأخر بوساطة الخلايا",
+  "emoji": "🐢",
+  "col": "#fff3b8",
+  "teaser": "T cells و 48-72 ساعة",
+  "cap": "⏳",
+  "q": "أنا Type IV! ما في أجسام مضادة، خلايا T بتشتغل، وبتأخر 2-3 أيام.",
+  "cons": [
+   {
+    "e": "🕒",
+    "t": "الصفات Characteristics",
+    "flow": [
+     "T cells CD4+ / CD8+",
+     "48-72 hours",
+     "Delayed-type hypersensitivity (DTH)"
+    ],
+    "b": [
+     "النوع الرابع (<bdi dir=\"ltr\">Type IV</bdi>) مختلف تماماً: ما في أجسام مضادة! الخلايا هي اللي بتشتغل: خلايا <bdi dir=\"ltr\">T</bdi> اللمفاوية (<bdi dir=\"ltr\">T lymphocytes</bdi>، <bdi dir=\"ltr\">CD4+</bdi> و<bdi dir=\"ltr\">CD8+</bdi>). لهيك اسمو فرط حساسية خلوي (<bdi dir=\"ltr\">Cell-mediated</bdi>).",
+     "وبيتأخر <bdi dir=\"ltr\">48-72</bdi> ساعة، لهيك اسمو المتأخر (<bdi dir=\"ltr\">Delayed-type hypersensitivity</bdi>، <bdi dir=\"ltr\">DTH</bdi>). تخيّل ساعة رمل: الرمل بياخد يومين لتنزل. خلايا <bdi dir=\"ltr\">CD4+</bdi> بتتفعّل بعوامل صعب هدمها (<bdi dir=\"ltr\">Non-degradable agents</bdi>) متل البكتيريا والفطريات والأوالي (<bdi dir=\"ltr\">Protozoa</bdi>)."
+    ],
+    "h": "No antibodies · T cells · 48-72 h",
+    "key": "c19",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">T cells</bdi> (<bdi dir=\"ltr\">CD4+</bdi>, <bdi dir=\"ltr\">CD8+</bdi>) · <bdi dir=\"ltr\">48-72 h · no antibodies</bdi>",
+    "c": "<bdi dir=\"ltr\">Type IV</bdi> = بلا أجسام مضادة، <bdi dir=\"ltr\">T cells</bdi>، <bdi dir=\"ltr\">48-72</bdi> ساعة.",
+    "say": null,
+    "tr": "🪖 النوع الرابع جيش بيوصل متأخر. ما في أجسام، بس خلايا (<bdi dir=\"ltr\">T cells</bdi>)، وبتوصل بعد 48-72 ساعة. السبب المتأخر بالاسم (<bdi dir=\"ltr\">Delayed</bdi>)."
+   },
+   {
+    "e": "🔵",
+    "t": "الورم الحبيبي Granulomatous inflammation",
+    "flow": [
+     "Persistent microbe (tubercle bacilli)",
+     "Activated macrophages",
+     "Epithelioid cells",
+     "Lymphocyte collar + Langhans giant cell"
+    ],
+    "b": [
+     "لما الـ <bdi dir=\"ltr\">DTH</bdi> يطوّل ضد ميكروبات مستمرة (مثل عصيّة السل، <bdi dir=\"ltr\">Tubercle bacilli</bdi>) أو أجسام غريبة ما بتتهدم، بيعمل التهاب حبيبي (<bdi dir=\"ltr\">Granulomatous inflammation</bdi>).",
+     "البلاعم المفعّلة (<bdi dir=\"ltr\">Activated macrophages</bdi>) بتعطي خلايا ظهارية الشكل (<bdi dir=\"ltr\">Epithelioid cells</bdi>)، وبيتحاط حواليها طوق من اللمفاويات، فبيتكوّن ورم حبيبي (<bdi dir=\"ltr\">Granuloma</bdi>): خلايا ظهارية الشكل محاطة باللمفاويات مع خلية عملاقة نوع <bdi dir=\"ltr\">Langhans.</bdi>"
+    ],
+    "h": "Granuloma = epithelioid cells + lymphocytes + Langhans giant cell",
+    "key": "c20",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Persistent DTH → activated macrophages → epithelioid cells + lymphocyte collar + Langhans giant cell</bdi>",
+    "c": "<bdi dir=\"ltr\">Granuloma</bdi> = ظهارية الشكل + لمفاويات + <bdi dir=\"ltr\">Langhans.</bdi>",
+    "say": null,
+    "tr": "🧱 الجيش لمّا ما يقدر يقتل العدو، بيبني سور حواليه (<bdi dir=\"ltr\">Granuloma</bdi>): خلايا ظهارية متل البلاط، لمفاويات حزام، وقائد ضخم (<bdi dir=\"ltr\">Langhans giant cell</bdi>)."
+   },
+   {
+    "e": "💉",
+    "t": "اختبار السلين وأمثلة CD4 Tuberculin & contact dermatitis",
+    "flow": [
+     "PPD intradermal",
+     "Red + indurated 8-12 h",
+     "Peak 24-72 h (1-2 cm)",
+     "Perivascular cuffing"
+    ],
+    "b": [
+     "اختبار التيوبركولين (<bdi dir=\"ltr\">Mantoux</bdi>) هو نموذج لـ <bdi dir=\"ltr\">DTH</bdi>: بتحقن <bdi dir=\"ltr\">PPD</bdi> (بروتين من عصيّة السل) داخل الجلد. عند شخص حسّاس سابقاً، مكان الحقن بيحمرّ وبيتصلّب (<bdi dir=\"ltr\">Indurated</bdi>) بعد <bdi dir=\"ltr\">8-12</bdi> ساعة، وبيوصل الذروة (عادةً <bdi dir=\"ltr\">1-2</bdi> سم) بعد <bdi dir=\"ltr\">24-72</bdi> ساعة، وبعدين بيهدى.",
+     "مجهرياً: تجمّع حول الأوعية (<bdi dir=\"ltr\">Perivascular cuffing</bdi>) من <bdi dir=\"ltr\">CD4+ T cells</bdi> وبلاعم.",
+     "ومثال تاني: التهاب الجلد التماسّي (<bdi dir=\"ltr\">Contact dermatitis</bdi>)، من التماس مع مواد كيماوية، وبيطلع كالتهاب جلد حويصلي (<bdi dir=\"ltr\">Vesicular dermatitis</bdi>)."
+    ],
+    "key": "c21",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">PPD intradermal → induration 24-72 h → perivascular CD4+ cuffing</bdi>",
+    "c": "<bdi dir=\"ltr\">Mantoux</bdi> ذروتو <bdi dir=\"ltr\">24-72</bdi> ساعة. تحت المجهر: <bdi dir=\"ltr\">perivascular cuffing.</bdi>",
+    "h": "PPD intradermal → induration 24-72 h → perivascular CD4+ cuffing",
+    "say": null,
+    "tr": "🚪 (<bdi dir=\"ltr\">Mantoux</bdi>) دقّة عالباب: بتحقن (<bdi dir=\"ltr\">PPD</bdi>) بالجلد. إذا الجيش جاهز بيتصلّب الجلد (<bdi dir=\"ltr\">Induration</bdi>) بعد 24-72 ساعة، وتحت المجهر لمفاويات (<bdi dir=\"ltr\">CD4+</bdi>) حول الأوعية."
+   },
+   {
+    "e": "🗡️",
+    "t": "قتل مباشر بـ CD8+ CD8+ cytotoxic T cells",
+    "flow": [
+     "CD8+ CTL",
+     "Recognizes target antigen",
+     "Kills virus-infected / tumor cells"
+    ],
+    "b": [
+     "أذية النسيج هون ممكن تجي بطريقة تانية: مباشرة بالقتل. خلايا <bdi dir=\"ltr\">CD8+</bdi> (<bdi dir=\"ltr\">Cytotoxic T lymphocytes</bdi>، <bdi dir=\"ltr\">CTLs</bdi>) بتقتل الخلايا اللي عليها المستضد.",
+     "أمثلة: قتل الخلايا المصابة بفيروسات وبعض الخلايا الورمية (<bdi dir=\"ltr\">Tumor cells</bdi>)."
+    ],
+    "h": "CD8+ CTL kill virus-infected + tumor cells",
+    "key": "c22",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">CD8+ CTL → kill virus-infected + tumor cells</bdi>",
+    "c": "<bdi dir=\"ltr\">CD8+</bdi> = القاتل المباشر.",
+    "say": null,
+    "tr": "🎯 (<bdi dir=\"ltr\">CD8+</bdi>) القاتل المباشر. ما بيستنى أجسام ولا ملصقات، بيروح لخلية مصابة بفيروس أو ورم وبيقتلها بإيدو."
+   },
+   {
+    "e": "📋",
+    "t": "أمثلة النوع الرابع Examples of type IV",
+    "flow": [
+     "TB / leprosy",
+     "Transplant rejection / GVHD",
+     "Virus-infected cells",
+     "Malignant cells"
+    ],
+    "b": [
+     "شو الأمراض والظواهر اللي من <bdi dir=\"ltr\">Type IV</bdi>؟ <bdi dir=\"ltr\">4</bdi> مجموعات.",
+     "تفاعل ضد عدوى المتفطّرات (<bdi dir=\"ltr\">Mycobacterial infection</bdi>): تفاعل التيوبركولين، التهاب حبيبي بالسل (<bdi dir=\"ltr\">Tuberculosis</bdi>) والجذام (<bdi dir=\"ltr\">Leprosy</bdi>). تفاعل ضد زرع الأعضاء: رفض الزرع (<bdi dir=\"ltr\">Transplant rejection</bdi>) وتفاعل الطعم ضد المضيف (<bdi dir=\"ltr\">GVHD</bdi>). تفاعل ضد خلايا مصابة بفيروس. وتفاعل ضد الخلايا الخبيثة."
+    ],
+    "key": "c23",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Mycobacteria</bdi> (<bdi dir=\"ltr\">TB</bdi>, <bdi dir=\"ltr\">leprosy</bdi>) · <bdi dir=\"ltr\">transplant · virus-infected · malignant cells</bdi>",
+    "c": "<bdi dir=\"ltr\">Type IV</bdi> = سل وجذام، زرع، فيروسات، أورام.",
+    "h": "Mycobacteria (TB, leprosy) · transplant · virus-infected · malignant cells",
+    "say": null,
+    "tr": "🕵️ سل وجذام، زرع، فيروسات، أورام: كلها العدو مخبّا جوّا الخلية، فلازم الجنود تفتّش من جوّا."
+   }
+  ],
+  "hl": [
+   "No antibodies · T cells · 48-72 h",
+   "Granuloma = epithelioid cells + lymphocytes + Langhans giant cell",
+   "PPD intradermal → induration 24-72 h → perivascular CD4+ cuffing",
+   "CD8+ CTL kill virus-infected + tumor cells",
+   "Mycobacteria (TB, leprosy) · transplant · virus-infected · malignant cells"
+  ]
+ },
+ {
+  "n": 7,
+  "en": "Comparison",
+  "ar": "الملخص: مقارنة الأنواع",
+  "emoji": "📊",
+  "col": "#d8f5e6",
+  "teaser": "مهم جداً حسب الدكتورة",
+  "cap": "🧮",
+  "q": "هيدا الجدول مهم جداً حسب كلام الدكتورة: احفظو.",
+  "cons": [
+   {
+    "e": "📊",
+    "t": "مقارنة الأنواع الأربعة Different types of HSR",
+    "flow": [
+     "I anaphylactic",
+     "II cytotoxic",
+     "III immune complex",
+     "IV delayed"
+    ],
+    "b": [
+     "جدول الامتحان: قارن الأنواع الأربعة. نوع <bdi dir=\"ltr\">I</bdi>: <bdi dir=\"ltr\">IgE</bdi>، مستضد خارجي، دقايق، خلايا الماست والحمضات، ربو وحمّى القش. نوع <bdi dir=\"ltr\">II</bdi>: <bdi dir=\"ltr\">IgG</bdi> و<bdi dir=\"ltr\">IgM</bdi>، مستضد عسطح الخلية، دقايق-ساعات، جسم مضاد + متمّم، <bdi dir=\"ltr\">erythroblastosis fetalis</bdi> وعدم توافق <bdi dir=\"ltr\">ABO.</bdi>",
+     "نوع <bdi dir=\"ltr\">III</bdi>: <bdi dir=\"ltr\">IgG</bdi> و<bdi dir=\"ltr\">IgM</bdi>، مستضد ذايب (<bdi dir=\"ltr\">Soluble</bdi>)، ساعات إلى شهور أو سنين، معقّدات + متمّم + بلاعم، <bdi dir=\"ltr\">SLE</bdi> و<bdi dir=\"ltr\">GN.</bdi> نوع <bdi dir=\"ltr\">IV</bdi>: بدون جسم مضاد، مستضد أنسجة وميكروبات، <bdi dir=\"ltr\">2-3</bdi> أيام، وحيدات ولمفاويات، بينتقل بخلايا <bdi dir=\"ltr\">T</bdi>، السل والأورام الحبيبية."
+    ],
+    "h": "Ab: IgE | IgG/IgM | IgG/IgM | none",
+    "key": "c24",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">I</bdi>: <bdi dir=\"ltr\">IgE</bdi> | <bdi dir=\"ltr\">II</bdi>: <bdi dir=\"ltr\">IgG/IgM</bdi> | <bdi dir=\"ltr\">III</bdi>: <bdi dir=\"ltr\">IgG/IgM</bdi> (<bdi dir=\"ltr\">complexes</bdi>) | <bdi dir=\"ltr\">IV</bdi>: <bdi dir=\"ltr\">none</bdi> (<bdi dir=\"ltr\">T cells</bdi>)",
+    "c": "<bdi dir=\"ltr\">I</bdi> و <bdi dir=\"ltr\">II</bdi> و <bdi dir=\"ltr\">III</bdi> بالأجسام، <bdi dir=\"ltr\">IV</bdi> بالخلايا.",
+    "say": null,
+    "tr": "🏁 لمّ القصة: I و II و III بالأجسام (ألغام، ملصق، زبالة). IV بالجنود بدون أجسام."
+   }
+  ],
+  "hl": [
+   "Ab: IgE | IgG/IgM | IgG/IgM | none"
+  ]
+ }
+];
+const ST={
+"c1": "<bdi dir=\"ltr\">Exaggerated immune response → tissue injury</bdi>",
+"c2": "<bdi dir=\"ltr\">Priming + genetic susceptibility</bdi> (<bdi dir=\"ltr\">HLA</bdi>) → <bdi dir=\"ltr\">hypersensitivity</bdi>",
+"c3": "<bdi dir=\"ltr\">Exogenous</bdi> (<bdi dir=\"ltr\">dust</bdi>, <bdi dir=\"ltr\">pollen</bdi>, <bdi dir=\"ltr\">food</bdi>, <bdi dir=\"ltr\">drugs</bdi>) <bdi dir=\"ltr\">vs endogenous</bdi> (<bdi dir=\"ltr\">self antigens</bdi>)",
+"c4": "<bdi dir=\"ltr\">I</bdi>: <bdi dir=\"ltr\">IgE · II</bdi>: <bdi dir=\"ltr\">IgG/IgM on cell · III</bdi>: <bdi dir=\"ltr\">immune complex · IV</bdi>: <bdi dir=\"ltr\">T cells</bdi>",
+"c5": "<bdi dir=\"ltr\">Allergen + IgE on mast cells → degranulation in 5-10 min</bdi>",
+"c6": "<bdi dir=\"ltr\">Hay fever</bdi> (<bdi dir=\"ltr\">nose + eyes</bdi>) · <bdi dir=\"ltr\">asthma</bdi> (<bdi dir=\"ltr\">bronchospasm</bdi>) · <bdi dir=\"ltr\">eosinophils</bdi>",
+"c7": "<bdi dir=\"ltr\">Systemic type I → hypotension + urticaria + dyspnea → shock</bdi>",
+"c8": "<bdi dir=\"ltr\">Ab</bdi> (<bdi dir=\"ltr\">IgG/IgM</bdi>) <bdi dir=\"ltr\">vs cell-surface Ag → complement · ADCC · dysfunction</bdi>",
+"c9": "<bdi dir=\"ltr\">IgG/IgM → complement → C3b opsonin → phagocytosis → lysis</bdi>",
+"c10": "<bdi dir=\"ltr\">Ab bridge → NK cell → perforin + granzyme → apoptosis</bdi>",
+"c11": "<bdi dir=\"ltr\">Anti-TSH receptor</bdi>: <bdi dir=\"ltr\">block → hypothyroid</bdi> (<bdi dir=\"ltr\">Hashimoto</bdi>) · <bdi dir=\"ltr\">stimulate → thyrotoxicosis</bdi> (<bdi dir=\"ltr\">Graves</bdi>)",
+"c12": "<bdi dir=\"ltr\">Blood cells</bdi> (<bdi dir=\"ltr\">AIHA</bdi>, <bdi dir=\"ltr\">ITP</bdi>, <bdi dir=\"ltr\">HDN</bdi>) · <bdi dir=\"ltr\">tissue</bdi> (<bdi dir=\"ltr\">Graves</bdi>, <bdi dir=\"ltr\">MG</bdi>, <bdi dir=\"ltr\">T1DM</bdi>, <bdi dir=\"ltr\">hyperacute rejection</bdi>)",
+"c13": "<bdi dir=\"ltr\">Ab on tissue → complement → C5a chemotaxis → enzymes + ROS → injury</bdi>",
+"c14": "<bdi dir=\"ltr\">Immune complexes → vessel wall deposition → complement → inflammation</bdi>",
+"c15": "<bdi dir=\"ltr\">Intradermal Ag + circulating Ab → local complexes → fibrinoid necrosis + thrombosis</bdi>",
+"c16": "<bdi dir=\"ltr\">Nuclear Ag released → anti-nuclear Ab → complexes → glomeruli</bdi>, <bdi dir=\"ltr\">lungs</bdi>, <bdi dir=\"ltr\">joints</bdi>, <bdi dir=\"ltr\">skin</bdi>",
+"c17": "<bdi dir=\"ltr\">Foreign serum protein → Ab after 7-12 days → complexes deposit → fever</bdi>, <bdi dir=\"ltr\">urticaria</bdi>, <bdi dir=\"ltr\">arthralgia</bdi>",
+"c18": "<bdi dir=\"ltr\">Post-strep GN · acute arthritis</bdi>",
+"c19": "<bdi dir=\"ltr\">T cells</bdi> (<bdi dir=\"ltr\">CD4+</bdi>, <bdi dir=\"ltr\">CD8+</bdi>) · <bdi dir=\"ltr\">48-72 h · no antibodies</bdi>",
+"c20": "<bdi dir=\"ltr\">Persistent DTH → activated macrophages → epithelioid cells + lymphocyte collar + Langhans giant cell</bdi>",
+"c21": "<bdi dir=\"ltr\">PPD intradermal → induration 24-72 h → perivascular CD4+ cuffing</bdi>",
+"c22": "<bdi dir=\"ltr\">CD8+ CTL → kill virus-infected + tumor cells</bdi>",
+"c23": "<bdi dir=\"ltr\">Mycobacteria</bdi> (<bdi dir=\"ltr\">TB</bdi>, <bdi dir=\"ltr\">leprosy</bdi>) · <bdi dir=\"ltr\">transplant · virus-infected · malignant cells</bdi>",
+"c24": "<bdi dir=\"ltr\">I</bdi>: <bdi dir=\"ltr\">IgE</bdi> | <bdi dir=\"ltr\">II</bdi>: <bdi dir=\"ltr\">IgG/IgM</bdi> | <bdi dir=\"ltr\">III</bdi>: <bdi dir=\"ltr\">IgG/IgM</bdi> (<bdi dir=\"ltr\">complexes</bdi>) | <bdi dir=\"ltr\">IV</bdi>: <bdi dir=\"ltr\">none</bdi> (<bdi dir=\"ltr\">T cells</bdi>)"
+};
+const MNMAP={"1.0": "c1", "1.1": "c2", "1.2": "c3", "2.0": "c4", "3.0": "c5", "3.1": "c6", "3.2": "c7", "4.0": "c8", "4.1": "c9", "4.2": "c10", "4.3": "c11", "4.4": "c12", "4.5": "c13", "5.0": "c14", "5.1": "c15", "5.2": "c16", "5.3": "c17", "5.4": "c18", "6.0": "c19", "6.1": "c20", "6.2": "c21", "6.3": "c22", "6.4": "c23", "7.0": "c24"};
+CH.forEach(c=>c.cons.forEach((k,j)=>{const key=MNMAP[c.n+'.'+j];if(key)k.m=ST[key]}));
+const main=document.getElementById('main'),cards=document.getElementById('cards');
+const cols=['#ffe3d3','#dbeeff','#ffdfe9','#e8e0ff','#d8f5e6','#fff3b8','#dbeeff','#ffe3d3'];
+let html='';
+CH.forEach((c,i)=>{
+  cards.insertAdjacentHTML('beforeend',`<div class="ccard" style="background:${c.col}" data-go="ch${c.n}"><div class="e">${c.emoji}</div><h3>${c.ar}</h3><small>${c.en}</small><p>${c.teaser}</p></div>`);
+  html+=`<section class="chap reveal" id="ch${c.n}">
+  <div class="chead"><div class="num" style="background:${['#5b6cff','#ff8a5b','#e85d9b','#8b5cf6','#2e9e6b','#e0a800','#3b9ae1','#e86a3d'][i]}">${c.n}</div><div><div class="lab">${c.en}</div><h2>${c.emoji} ${c.ar}</h2></div></div>
+  <div class="cap"><div class="av">${c.cap}</div><div class="bubble">${c.q}</div></div>`;
+  c.cons.forEach(k=>{
+    html+=`<div class="con reveal"><h3>${k.e} ${k.t}</h3>
+    ${k.say?`<div class="say"><b>${k.say[0]}:</b> «${k.say[1]}»</div>`:''}
+    ${k.flow&&k.flow.length?`<div class="chips" dir="ltr">${k.flow.map((f,j)=>(j?'<span class="chip ar" style="transition-delay:'+(j*.12)+'s">→</span>':'')+'<span class="chip" style="transition-delay:'+(j*.12)+'s">'+f+'</span>').join('')}</div>`:''}
+    <ul class="enul" dir="rtl">${k.b.map(x=>'<li>'+x+'</li>').join('')}</ul>
+    ${k.x?`<p class="extra" dir="ltr">${k.x}</p>`:''}
+    ${k.m?`<div class="mn open"><button><span>🧩 بسطر واحد</span><span>⌄</span></button><div class="body">${k.m}</div></div>`:''}
+    
+    ${k.tr?`<div class="trk2">🎭 <b>حيلة الحفظ:</b> ${k.tr}</div>`:''}
+    ${k.c?`<div class="cheat"><b>⭐ أهم شي تنتبه عليه:</b> ${k.c}</div>`:''}
+    ${k.h?`<div class="hy" dir="ltr"><b>HIGHLIGHT:</b> ${k.h}</div>`:''}</div>`;
+  });
+  html+=`<div class="hl"><small>⭐ HIGHLIGHT</small>${c.hl.join('<span class="sep">|</span>')}</div></section>`;
+});
+
+/* mini games */
+html+=`<section class="chap reveal" id="games"><div class="chead"><div class="num" style="background:#2e9e6b">🎮</div><div><div class="lab">Mini games</div><h2>جرّب حالك</h2></div></div>
+<div class="game"><h4>🧩 وصّل المرض بنوعو</h4><div id="match"></div></div>
+<div class="game"><h4>✅❌ صح ولا غلط؟</h4><div id="tf"></div></div></section>`;
+
+/* final review */
+html+=`<section class="sec reveal" id="review" style="background:#fff3d6"><h2>📝 المراجعة الأخيرة</h2>
+<div class="hl" style="margin-top:6px"><small>سطر لكل نوع</small>
+<b>I:</b> IgE · mast cells · 5-10 min<br><b>II:</b> IgG/IgM · cell surface · complement / ADCC / dysfunction<br><b>III:</b> immune complex · IgG/IgM/IgA · Arthus, SLE, serum sickness<br><b>IV:</b> T cells · 48-72 h · granuloma, Mantoux</div>
+<h3 style="margin-top:14px">Different types of HSR (exam summary)</h3>
+<div style="overflow-x:auto"><table><tr><th></th><th>I Anaphylactic</th><th>II Cytotoxic</th><th>III Immune complex</th><th>IV Delayed</th></tr>
+<tr><td>Antibody</td><td>IgE</td><td>IgG, IgM</td><td>IgG, IgM</td><td>None</td></tr>
+<tr><td>Antigen</td><td>Exogenous</td><td>Cell surface</td><td>Soluble</td><td>Tissues, M.O.</td></tr>
+<tr><td>Response time</td><td>Minutes</td><td>Minutes-hours</td><td>Hours-months/years</td><td>2-3 days</td></tr>
+<tr><td>Main component</td><td>Basophil &amp; eosinophil</td><td>Antibody &amp; complement</td><td>Ag-Ab, complement, phagocytes</td><td>Monocytes &amp; lymphocytes</td></tr>
+<tr><td>Transferred with</td><td>Antibody</td><td>Antibody</td><td>Antibody</td><td>T cells</td></tr>
+<tr><td>Examples</td><td>Asthma, hay fever</td><td>Erythroblastosis fetalis, ABO</td><td>SLE, GN</td><td>TB, granuloma</td></tr></table></div>
+<h3>Type II mechanisms</h3>
+<div style="overflow-x:auto"><table><tr><th>Mechanism</th><th>Key points</th><th>Example</th></tr>
+<tr><td>Complement-dependent</td><td>C3b opsonization → phagocytosis / lysis (IgG, IgM)</td><td>ABO / Rh transfusion, AIHA</td></tr>
+<tr><td>ADCC</td><td>Ab links NK / macrophage to target; perforin + granzyme → apoptosis; no complement, no phagocytosis</td><td>—</td></tr>
+<tr><td>Cellular dysfunction</td><td>Ab vs receptors; no injury, no inflammation</td><td>Graves (stimulates TSH-R); Hashimoto (blocks, per slide)</td></tr></table></div>
+<h3>Type III examples</h3>
+<div style="overflow-x:auto"><table><tr><th>Disease</th><th>Antigen / site</th><th>Key</th></tr>
+<tr><td>Arthus</td><td>Local, skin</td><td>Vasculitis, fibrinoid necrosis, thrombosis</td></tr>
+<tr><td>SLE</td><td>Nuclear (DNA, histones)</td><td>Glomeruli, lungs, joints, skin, nodes</td></tr>
+<tr><td>Serum sickness</td><td>Foreign serum protein</td><td>Ab at 7-12 d; fever, urticaria, arthralgia</td></tr>
+<tr><td>Post-strep GN</td><td>—</td><td>Acute glomerulonephritis</td></tr></table></div>
+<h3>Type IV</h3>
+<div style="overflow-x:auto"><table><tr><th>Item</th><th>Key points</th></tr>
+<tr><td>Cells</td><td>CD4+ (DTH) · CD8+ (cytotoxic)</td></tr>
+<tr><td>Timing</td><td>48-72 h</td></tr>
+<tr><td>Granuloma</td><td>Epithelioid cells + lymphocyte collar + Langhans giant cell</td></tr>
+<tr><td>Mantoux</td><td>PPD; red + indurated 8-12 h; peak 24-72 h (1-2 cm); perivascular cuffing</td></tr></table></div>
+<h3 style="margin-top:14px">🕵️ ورقة الغش</h3><div class="csg"><div class="cs" style="background:#ffe3d3"><b class="cst">⚡ Type I: Immediate</b><ul><li><bdi dir="ltr">IgE</bdi> · <bdi dir="ltr">minutes</bdi> (5-10) · <bdi dir="ltr">mast cells</bdi> + <bdi dir="ltr">eosinophils</bdi></li><li><bdi dir="ltr">Atopic</bdi>: <bdi dir="ltr">asthma</bdi> · <bdi dir="ltr">hay fever</bdi> · <bdi dir="ltr">food allergy</bdi></li><li><bdi dir="ltr">Anaphylaxis</bdi> (<bdi dir="ltr">penicillin</bdi>) = <bdi dir="ltr">shock</bdi>, <bdi dir="ltr">emergency</bdi></li></ul></div><div class="cs" style="background:#dbeeff"><b class="cst">🎯 Type II: Antibody</b><ul><li><bdi dir="ltr">IgG</bdi> / <bdi dir="ltr">IgM vs cell surface antigens</bdi></li><li>3 <bdi dir="ltr">effects</bdi>: <bdi dir="ltr">complement-dependent</bdi> · <bdi dir="ltr">ADCC</bdi> · <bdi dir="ltr">cellular dysfunction</bdi></li><li><bdi dir="ltr">ABO transfusion</bdi> · <bdi dir="ltr">AIHA</bdi> · <bdi dir="ltr">Graves</bdi> (<bdi dir="ltr">stimulate TSH-R</bdi>) · <bdi dir="ltr">Myasthenia</bdi> · <bdi dir="ltr">hyperacute rejection</bdi></li></ul></div><div class="cs" style="background:#e8e0ff"><b class="cst">🧩 Type III: Immune complex</b><ul><li><bdi dir="ltr">IgG</bdi> / <bdi dir="ltr">IgM</bdi> + <bdi dir="ltr">antigen</bdi> → <bdi dir="ltr">vessel deposition</bdi> → <bdi dir="ltr">complement</bdi></li><li><bdi dir="ltr">Arthus</bdi> = <bdi dir="ltr">local necrosis</bdi> (<bdi dir="ltr">skin</bdi>) · <bdi dir="ltr">SLE</bdi> = <bdi dir="ltr">DNA</bdi>, <bdi dir="ltr">histones</bdi></li><li><bdi dir="ltr">Serum sickness</bdi>: 7-12 <bdi dir="ltr">days</bdi> · <bdi dir="ltr">fever</bdi>, <bdi dir="ltr">urticaria</bdi>, <bdi dir="ltr">arthralgia</bdi>, <bdi dir="ltr">proteinuria</bdi></li><li><bdi dir="ltr">Post-strep GN</bdi></li></ul></div><div class="cs" style="background:#d8f5e6"><b class="cst">🕐 Type IV: Cell-mediated</b><ul><li><bdi dir="ltr">T cells</bdi>, <bdi dir="ltr">no antibodies</bdi> · 48-72 <bdi dir="ltr">h</bdi> (<bdi dir="ltr">DTH</bdi>)</li><li><bdi dir="ltr">CD4+</bdi> → <bdi dir="ltr">granuloma</bdi> (<bdi dir="ltr">TB</bdi>) · <bdi dir="ltr">Mantoux</bdi> (<bdi dir="ltr">PPD</bdi>) · <bdi dir="ltr">contact dermatitis</bdi></li><li><bdi dir="ltr">CD8+ CTL</bdi> → <bdi dir="ltr">viral</bdi> / <bdi dir="ltr">tumor cells</bdi> · <bdi dir="ltr">graft rejection</bdi> · <bdi dir="ltr">GVHD</bdi></li></ul></div><div class="cs" style="background:#fff3b8"><b class="cst">🧠 Complement tools</b><ul><li><bdi dir="ltr">C5a</bdi> = <bdi dir="ltr">chemotaxis</bdi> (<bdi dir="ltr">neutrophils</bdi>, <bdi dir="ltr">monocytes</bdi>)</li><li><bdi dir="ltr">C3a</bdi> + <bdi dir="ltr">C5a</bdi> = <bdi dir="ltr">anaphylatoxins</bdi> → <bdi dir="ltr">permeability</bdi> ↑</li><li><bdi dir="ltr">Opsonin</bdi> = <bdi dir="ltr">IgG</bdi> + <bdi dir="ltr">C3b</bdi></li></ul></div><div class="cs" style="background:#eef3ff"><b class="cst">📊 Summary</b><table class="cst2"><tr><td></td><td>Ab</td><td>Time</td><td>Example</td></tr><tr><td>I</td><td>IgE</td><td>minutes</td><td>asthma</td></tr><tr><td>II</td><td>IgG/IgM</td><td>min-hours</td><td>ABO</td></tr><tr><td>III</td><td>IgG/IgM</td><td>hours-years</td><td>SLE</td></tr><tr><td>IV</td><td>none (T cells)</td><td>2-3 days</td><td>TB</td></tr></table></div></div></section>`;
+
+/* essay */
+const ES=[
+['عرّف فرط الحساسية وصنّفو','<ul><li>Pathological injurious immune response to antigen, sensitized individual</li><li>Priming + genetic susceptibility (HLA)</li><li>I immediate · II antibody-mediated · III immune complex · IV cell-mediated/delayed</li></ul>'],
+['Type I: الصفات + أمثلة','<ul><li>IgE على mast cells، 5-10 دقايق، 10-20%</li><li>Atopic: IgE مرتفع؛ eosinophils</li><li>Localized: hay fever، asthma، nasal polyp</li><li>Systemic: anaphylaxis (hypotension, urticaria, dyspnea)</li></ul>'],
+['Type II: الآليات + أمثلة','<ul><li>IgG/IgM ضد مستضد سطح الخلية</li><li>Complement (C3b opsonization) · ADCC (perforin, granzyme) · dysfunction (Graves)</li><li>AIHA · transfusion reaction · erythroblastosis fetalis · ITP · myasthenia</li><li>Injury: C5a chemotaxis، enzymes + ROS</li></ul>'],
+['Type III: الآلية + أمثلة','<ul><li>Immune complex deposition → complement → inflammation</li><li>IgG, IgM, IgA</li><li>Arthus (local) · SLE · serum sickness · post-strep GN</li><li>Serum sickness: 7-12 days، fever, urticaria, arthralgia, proteinuria</li></ul>'],
+['Type IV: الآلية + أمثلة','<ul><li>T cells (CD4+, CD8+)، 48-72 h</li><li>Granuloma: epithelioid + Langhans + lymphocytes</li><li>Mantoux (PPD)، contact dermatitis</li><li>CD8+ CTL: virus-infected + tumor cells؛ TB، leprosy، rejection، GVHD</li></ul>'],
+['قارن الأنواع الأربعة','<ul><li>I: IgE، دقايق، asthma</li><li>II: IgG/IgM، سطح الخلية، erythroblastosis fetalis</li><li>III: IgG/IgM، ذايب، SLE/GN</li><li>IV: T cells، 2-3 أيام، TB</li></ul>'],
+];
+html+=`<section class="sec reveal" id="essay" style="background:#e8e0ff"><h2>✍️ أسئلة مقالية</h2><p style="color:var(--mut)">فكّر بجوابك أول، وبعدين دوس.</p>`+
+ES.map((e,i)=>`<div class="rv"><button><span>${i+1}. ${e[0]}</span><span>👁️</span></button><div class="ans">${e[1]}</div></div>`).join('')+`</section>`;
+
+/* flashcards */
+const FC=[
+['شو الـ Hypersensitivity؟','رد مناعي مبالغ فيه ومؤذي ضد مستضد عند شخص حسّاس'],
+['شو بيلزم قبل ما يصير فرط حساسية؟','Priming (تعرّض سابق)'],
+['كم نوع؟ وشو أول حروفهم؟','4: ACID — Anaphylactic · Cytotoxic · Immune complex · Delayed'],
+['الجسم المضاد بـ Type I؟','IgE'],
+['إيمتى بيصير Type I؟','5-10 دقايق'],
+['الخلايا الأساسية بـ Type I؟','Mast cells + eosinophils'],
+['شو الأتوبي atopic؟','IgE مرتفع بالمصل + قابلية وراثية'],
+['علامات الأنافيلاكسيس؟','Hypotension · Urticaria · Dyspnea'],
+['الأجسام بـ Type II؟','IgG (غالباً) · IgM (نادراً)'],
+['3 تأثيرات Type II؟','Complement · ADCC · Cellular dysfunction'],
+['C3b شو بيعمل؟','Opsonin ← phagocytosis'],
+['بـ ADCC شو بتستعمل NK؟','Perforin + granzyme ← apoptosis'],
+['Graves بـ Type II شو سببو؟','أجسام مضادة بتنبّه مستقبل TSH ← thyrotoxicosis'],
+['C5a شو بيعمل؟','Chemotaxis للعدلات والوحيدات'],
+['أجسام Type III؟','IgG · IgM · أحياناً IgA'],
+['Arthus reaction؟','نخر موضّع من immune complex vasculitis'],
+['SLE: ضد شو؟','Nuclear components (DNA, histones)'],
+['Serum sickness: إيمتى بيتكوّن الجسم المضاد؟','7-12 يوم'],
+['Type IV: كم بيتأخر؟','48-72 ساعة (DTH)'],
+['Mantoux: شو بيشوفو مجهرياً؟','Perivascular cuffing (CD4+ + macrophages)'],
+];
+html+=`<section class="sec reveal" id="flash" style="background:#d8f5e6"><h2>⚡ بطاقات سريعة</h2><div class="score">✅ <span id="sy">0</span> · 🔁 <span id="sn">0</span> / ${FC.length}</div>`+
+FC.map((f,i)=>`<div class="flash" data-i="${i}"><div class="in2"><div class="face f">${T(f[0])}</div><div class="face b">${T(f[1])}</div></div></div><div class="know" data-i="${i}" style="display:none"><button class="y">عرفتها ✅</button><button class="n">أراجعها 🔁</button></div>`).join('')+`</section>`;
+main.innerHTML=T(html);
+
+/* interactions */
+document.querySelectorAll('.mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.querySelectorAll('.rv>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+let sy=0,sn=0;const done={};
+document.querySelectorAll('.flash').forEach(f=>f.onclick=()=>{f.classList.toggle('flip');const k=f.nextElementSibling;k.style.display=f.classList.contains('flip')?'flex':'none'});
+document.querySelectorAll('.know').forEach(k=>{
+  k.querySelector('.y').onclick=()=>mark(k,1);k.querySelector('.n').onclick=()=>mark(k,0)});
+function mark(k,v){const i=k.dataset.i;if(done[i]!==undefined){v?0:0}
+  if(done[i]===1)sy--;if(done[i]===0)sn--;done[i]=v;v?sy++:sn++;
+  document.getElementById('sy').textContent=sy;document.getElementById('sn').textContent=sn;k.style.opacity=.5}
+/* match */
+const MT=[['Hay fever','Type I'],['Graves disease','Type II'],['SLE','Type III'],['Mantoux test','Type IV']];
+const CL=['Type I','Type II','Type III','Type IV'];
+document.getElementById('match').innerHTML=MT.map(m=>`<div style="margin:8px 0"><b class="en">${m[0]}</b> ←<div class="opts" data-a="${m[1]}">${CL.map(c=>`<button>${c}</button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#match .opts').forEach(o=>o.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(b.textContent===o.dataset.a){b.classList.add('ok')}else{b.classList.add('no')}}));
+const TF=[['Type I بيعتمد على IgE',1,'صح — IgE عسطح الماست سل.'],['Type IV بيعتمد على أجسام مضادة',0,'غلط — T cells بس، بلا أجسام مضادة.'],['Graves = أجسام مضادة بتنبّه مستقبل TSH',1,'صح — thyrotoxicosis.'],['ADCC بيحتاج متمّم وبلعمة',0,'غلط — بلا متمّم وبلا بلعمة؛ perforin + granzyme.'],['Arthus reaction مثال على Type III',1,'صح — local immune complex vasculitis.'],['Serum sickness: الجسم المضاد بيتكوّن بعد 7-12 يوم',1,'صح.'],['Mantoux = Type I',0,'غلط — Type IV (DTH).'],['SLE ضد مكوّنات النواة',1,'صح — DNA وhistones.']];
+document.getElementById('tf').innerHTML=TF.map((t,i)=>`<div class="tf"><div>${t[0]}<div class="fb"></div></div><div class="b2"><button data-v="1">صح</button><button data-v="0">غلط</button></div></div>`).join('');
+document.querySelectorAll('#tf .tf').forEach((r,i)=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  const ok=+b.dataset.v===TF[i][1];r.classList.add(ok?'ok':'no');r.querySelector('.fb').innerHTML=T((ok?'🎉 ':'🤔 ')+TF[i][2])}));
+
+/* reveal & progress */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.con').forEach(el=>io.observe(el));
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>document.getElementById(c.dataset.go).scrollIntoView({behavior:'smooth'}));
+
+/* guided tour */
+const IDS=[...CH.map(c=>'ch'+c.n),'games','review','essay','flash'];
+let ti=-1,timer=null,playing=false;
+const badge=document.getElementById('tourbadge'),tog=document.getElementById('toggle');
+function go(i){ti=Math.max(0,Math.min(IDS.length-1,i));document.getElementById(IDS[ti]).scrollIntoView({behavior:'smooth'})}
+function stop(){playing=false;clearInterval(timer);badge.style.display='none'}
+function play(){if(ti<0)go(0);playing=true;badge.style.display='block';clearInterval(timer);timer=setInterval(()=>{if(ti>=IDS.length-1){stop();return}go(ti+1)},12000)}
+document.getElementById('tourBtn').onclick=()=>{ti=-1;play()};
+document.getElementById('next').onclick=()=>{go(ti+1);if(playing)play()};
+document.getElementById('prev').onclick=()=>{go(ti-1);if(playing)play()};
+tog.onclick=()=>playing?stop():play();
+
+/* ===== Golden summary ===== */
+const G=[
+['#fff3b8','Hypersensitivity','فرط الحساسية',[
+ ['Hypersensitivity: pathological, injurious immune response to antigen → tissue injury, disease, sometimes death (sensitized individual)','فرط الحساسية {{hypersensitivity}}: رد مناعي مرضي ومؤذي ضد مستضد ← أذية نسيج أو مرض وأحياناً موت عند شخص حسّاس {{sensitized}}'],
+ ['= Exaggerated immune response to antigen','= استجابة مبالغ فيها {{exaggerated}} لمستضد'],
+ ['Requires priming (prior exposure)','لازم تحسيس {{priming}} بتعرّض سابق'],
+ ['Any antigen = potential allergen','أي مستضد ممكن يصير مسبّب حساسية {{allergen}}'],
+ ['Genetic susceptibility (HLA) + exposure','قابلية وراثية {{genetic susceptibility}} (HLA) + تعرّض'],
+ ['Exogenous antigens: dust, pollens, foods, drugs, microbes, chemicals, blood products','مستضدات خارجية {{exogenous}}: غبار، حبوب لقاح، أكل، أدوية، ميكروبات، كيماويات، منتجات دم'],
+ ['Endogenous antigens: self antigens','مستضدات داخلية {{endogenous}}: ذاتية {{self antigens}}']]],
+['#dbeeff','Classification','التصنيف',[
+ ['Type I: immediate','النوع I: فوري {{immediate}}'],
+ ['Type II: antibody-mediated','النوع II: بوساطة أجسام مضادة {{antibody-mediated}}'],
+ ['Type III: immune complex-mediated','النوع III: بوساطة معقّدات مناعية {{immune complex}}'],
+ ['Type IV: cell-mediated / delayed','النوع IV: بوساطة خلايا {{cell-mediated}} / متأخر {{delayed}}']]],
+['#ffdfe9','Type I: characteristics','النوع I: الصفات',[
+ ['Allergic / atopic disorders; antigens = allergens','اضطرابات تحسّسية {{allergic / atopic}}؛ المستضدات = {{allergens}}'],
+ ['Rapid: 5-10 minutes after allergen + IgE bound to mast cells','سريع: 5-10 دقايق بعد تفاعل المسبّب مع IgE عسطح خلايا الماست {{mast cells}}'],
+ ['Occurs in 10-20% of population','10-20% من الناس'],
+ ['Antibody: IgE; atopic = elevated serum IgE','الجسم المضاد: IgE؛ الأتوبي {{atopic}} = IgE مرتفع بالمصل'],
+ ['Genetically susceptible, previously sensitized','قابلية وراثية + تحسّس سابق'],
+ ['Allergens harmless to most: dust mite, pollens, animal dander, moulds','مسبّبات غير مؤذية لأغلب الناس: عث الغبار، حبوب لقاح، وبر الحيوانات، عفن'],
+ ['Main cells: mast cells, eosinophils','الخلايا: ماست {{mast cells}} + حمضات {{eosinophils}}']]],
+['#e8e0ff','Type I: examples','النوع I: الأمثلة',[
+ ['Localized: hay fever, extrinsic asthma, food allergy','موضّع {{localized}}: حمّى القش، ربو خارجي، حساسية أكل'],
+ ['Often familial; preceded by atopic eczema in childhood','بيمشي بالعيلة؛ غالباً قبلو إكزيما أتوبية بالطفولة'],
+ ['Hay fever: nasal + conjunctival inflammation, sneezing, hypersecretion','حمّى القش: التهاب الأنف والملتحمة، عطاس، إفراز زايد'],
+ ['Asthma: wheezes, respiratory distress (bronchospasm + mucus)','الربو: صفير وضيق نفس (تشنّج قصبي + مخاط)'],
+ ['Allergic nasal polyp: edematous stroma, eosinophils','سليلة أنفية تحسّسية: لحمة وذمية، حمضات'],
+ ['Systemic: anaphylaxis → shock: hypotension, urticaria, dyspnea','جهازي {{systemic}}: أنافيلاكسيس ← صدمة {{shock}}: هبوط ضغط، شرى، ضيق نفس'],
+ ['E.g., penicillin injection; medical emergency, may be fatal','مثال: حقنة بنسلين؛ طوارئ وممكن قاتلة']]],
+['#d8f5e6','Type II: characteristics','النوع II: الصفات',[
+ ['Antibodies vs cell-surface antigens → target cell lysis','أجسام مضادة ضد مستضدات سطح الخلية ← تحلّل {{lysis}} الخلية الهدف'],
+ ['Antibodies: IgG (usually), IgM (rarely)','الأجسام: IgG (غالباً)، IgM (نادراً)'],
+ ['Antigens: endogenous or exogenous (adsorbed, e.g., drug metabolite)','مستضدات داخلية أو خارجية (ملتصقة، مثلاً مستقلب دوا)'],
+ ['3 effects: complement-dependent · ADCC · cellular dysfunction','3 تأثيرات: معتمد على المتمّم · ADCC · خلل وظيفي']]],
+['#ffe3d3','Type II: mechanisms','النوع II: الآليات',[
+ ['Complement-dependent: C3b opsonization → phagocytosis / lysis (IgG, IgM)','معتمد على المتمّم {{complement}}: C3b تغليف {{opsonization}} ← بلعمة {{phagocytosis}}'],
+ ['E.g., ABO/Rh incompatible transfusion, AIHA (autoantibodies vs RBCs)','مثال: نقل دم غير متوافق ABO/Rh، AIHA (أجسام ذاتية ضد RBCs)'],
+ ['Opsonin = tags pathogen (IgG, C3b); IgM activates complement → C3b','المغلّف {{opsonin}} = علامة عالمسبّب (IgG، C3b)؛ IgM بيفعّل المتمّم ← C3b'],
+ ['ADCC: antibody links NK / macrophage to target; no phagocytosis, no complement','ADCC: الجسم المضاد جسر {{link}} بين NK / بلعم والهدف؛ بلا بلعمة وبلا متمّم'],
+ ['Perforin + granzyme → apoptosis','بيرفورين + غرانزايم ← موت مبرمج {{apoptosis}}'],
+ ['Cellular dysfunction: Ab vs receptors, no cell injury, no inflammation','خلل وظيفي: أجسام ضد المستقبلات، بلا أذية وبلا التهاب'],
+ ['Graves: Ab stimulate TSH receptor → thyrotoxicosis','Graves: الأجسام بتنبّه مستقبل TSH ← فرط نشاط الدرق'],
+ ['Hashimoto (slide): Ab block TSH receptor → hypothyroidism','Hashimoto (حسب الشريحة): بتسدّ مستقبل TSH ← قصور درق']]],
+['#eab30833','Type II: examples & injury','النوع II: أمثلة وأذية',[
+ ['Blood cells: AIHA, transfusion reactions, erythroblastosis fetalis, ITP, drug-induced','خلايا الدم: AIHA، نقل دم، erythroblastosis fetalis، ITP، أدوية'],
+ ['Tissue: Graves, myasthenia gravis, type 1 diabetes (islet autoantibodies), hyperacute rejection','أنسجة: Graves، myasthenia gravis، سكري 1 (أجسام ذاتية ضد الجزر)، رفض فوق حاد'],
+ ['Ab on basement membrane / matrix → complement → inflammation','أجسام عالغشاء القاعدي / المصفوفة ← متمّم ← التهاب'],
+ ['C5a: chemotaxis (neutrophils, monocytes)','C5a: انجذاب كيميائي {{chemotaxis}} (عدلات، وحيدات)'],
+ ['C3a + C5a: anaphylatoxins → vascular permeability ↑','C3a + C5a: anaphylatoxins ← نفوذية الأوعية {{vascular permeability}} ↑'],
+ ['Leukocytes: proteolytic enzymes + ROS → tissue injury','كريات بيضا: إنزيمات هاضمة + ROS ← أذية نسيج'],
+ ['Examples: glomerulonephritis, vascular graft rejection, autoimmune diseases','أمثلة: التهاب كبب، رفض وعائي، أمراض مناعة ذاتية']]],
+['#10b98122','Type III: characteristics','النوع III: الصفات',[
+ ['Immune complex: local or circulating → deposition in tissues','معقّد مناعي: موضّع أو دايِر {{circulating}} ← ترسّب {{deposition}} بالأنسجة'],
+ ['Antibodies: complement-fixing IgG, IgM, occasionally IgA','أجسام مثبّتة للمتمّم: IgG، IgM، أحياناً IgA'],
+ ['Exogenous antigen: foreign serum proteins (diphtheria antitoxin, horse anti-thymocyte globulin) or microbial','مستضد خارجي: بروتينات مصل غريبة (مضاد توكسين الخناق، globulin الحصان) أو ميكروبية'],
+ ['Endogenous antigen: DNA','مستضد داخلي: DNA'],
+ ['Sequence: complexes → vessel deposition → complement → inflammation','التسلسل: معقّدات ← ترسّب بالأوعية ← متمّم ← التهاب']]],
+['#8b5cf622','Type III: Arthus & SLE','Arthus و SLE',[
+ ['Arthus: local necrosis (skin), acute immune complex vasculitis','Arthus: نخر موضّع (جلد)، التهاب أوعية حاد'],
+ ['Intradermal antigen in pre-immunized host → large complexes → fibrinoid necrosis + thrombosis → ischemia','مستضد داخل الجلد بمضيف ممنّع سابقاً ← معقّدات كبيرة ← نخر ليفيني + تخثّر ← إقفار'],
+ ['Clinical: after vaccination; pain, swelling, induration, edema ± necrosis/ulcer','سريرياً: بعد تطعيم؛ ألم، تورّم، تصلّب، وذمة ± نخر/تقرّح'],
+ ['SLE: autoantibodies vs nuclear components (DNA, histones)','SLE: أجسام ذاتية ضد مكوّنات النواة (DNA، هيستونات)'],
+ ['Released after tissue injury (e.g., viral infection) → complexes deposit in glomeruli, lungs, joints, skin, lymph nodes','بتنطلق بعد أذية (مثل التهاب فيروسي) ← معقّدات ترسب بالكبب والرئة والمفاصل والجلد والعقد']]],
+['#f9731622','Serum sickness & others','داء المصل وغيره',[
+ ['Serum sickness: foreign proteins (horse/rabbit serum, antithymocyte globulin)','داء المصل: بروتينات غريبة (مصل حصان/أرنب، antithymocyte globulin)'],
+ ['3 phases: (1) complex formation, Ab at 7-12 days (2) deposition: vessels, glomeruli, joints (3) inflammation','3 مراحل: (1) تشكّل المعقّدات، الجسم المضاد بعد 7-12 يوم (2) ترسّب: أوعية، كبب، مفاصل (3) التهاب'],
+ ['Features: fever, urticaria, arthralgias, lymphadenopathy, proteinuria','علامات: حرارة، شرى، ألم مفاصل، تضخّم عقد، بيلة بروتينية'],
+ ['Other: acute post-streptococcal GN, acute arthritis','غيرها: GN بعد المكورات العقدية، التهاب مفاصل حاد']]],
+['#3b82f622','Type IV: characteristics','النوع IV: الصفات',[
+ ['Cell-mediated, no antibodies','بوساطة خلايا، بلا أجسام مضادة'],
+ ['T lymphocytes: CD4+ and CD8+','لمفاويات T: CD4+ وCD8+'],
+ ['Delay: 48-72 hours → delayed-type hypersensitivity (DTH)','تأخّر: 48-72 ساعة ← DTH'],
+ ['CD4+ activated by non-degradable agents: bacteria, fungi, protozoa','CD4+ بتتفعّل بعوامل غير قابلة للتحطيم: بكتيريا، فطريات، أوالي']]],
+['#ec489922','Granuloma & Mantoux','Granuloma و Mantoux',[
+ ['Persistent microbe (tubercle bacilli) / foreign body → granulomatous inflammation','ميكروب مستمر (عصيّة السل) / جسم غريب ← التهاب حبيبي'],
+ ['Activated macrophages → epithelioid cells + lymphocyte collar = granuloma','بلاعم مفعّلة ← خلايا ظهارية الشكل + طوق لمفاويات = granuloma'],
+ ['Langhans-type giant cell','خلية عملاقة نوع Langhans'],
+ ['Tuberculin (Mantoux): intradermal PPD','Mantoux: حقن PPD داخل الجلد'],
+ ['Red + indurated at 8-12 h; peak 24-72 h (1-2 cm)','احمرار + تصلّب بعد 8-12 ساعة؛ ذروة 24-72 ساعة (1-2 سم)'],
+ ['Microscopy: perivascular cuffing (CD4+ T cells + macrophages)','مجهرياً: perivascular cuffing (CD4+ + بلاعم)'],
+ ['Contact dermatitis: chemical contact → vesicular dermatitis','التهاب جلد تماسّي: مواد كيماوية ← حويصلات']]],
+['#eab30833','CD8+ & examples','CD8+ وأمثلة',[
+ ['CD8+ cytotoxic T lymphocytes (CTLs) kill antigen-bearing cells','CD8+ CTLs بتقتل الخلايا الحاملة للمستضد'],
+ ['Virus-infected cells, tumor cells','خلايا مصابة بفيروس، خلايا ورمية'],
+ ['Examples: TB, leprosy (granulomas)','أمثلة: السل، الجذام (granulomas)'],
+ ['Transplant rejection, graft versus host','رفض الزرع، graft versus host'],
+ ['Reaction against virally infected + malignant cells','تفاعل ضد خلايا مصابة بفيروس + خلايا خبيثة']]],
+['#10b98133','Summary table','جدول المقارنة',[
+ ['I: IgE · exogenous · minutes · basophil/eosinophil (mast cells) · transferred by antibody · asthma, hay fever','I: IgE · خارجي · دقايق · ماست/حمضات · بالجسم المضاد · ربو، حمّى قش'],
+ ['II: IgG, IgM · cell surface · minutes-hours · antibody + complement · transferred by antibody · erythroblastosis fetalis, ABO','II: IgG، IgM · سطح الخلية · دقايق-ساعات · جسم مضاد + متمّم · بالجسم المضاد · erythroblastosis، ABO'],
+ ['III: IgG, IgM · soluble · hours-months/years · Ag-Ab + complement + phagocytes · transferred by antibody · SLE, GN','III: IgG، IgM · ذايب · ساعات-شهور/سنين · معقّد + متمّم + بلاعم · بالجسم المضاد · SLE، GN'],
+ ['IV: no antibody · tissues, microbes · 2-3 days · monocytes + lymphocytes · transferred by T cells · TB, granuloma','IV: بلا جسم مضاد · أنسجة، ميكروبات · 2-3 أيام · وحيدات + لمفاويات · بخلايا T · TB، granuloma']]]
+];
+const GM=[['hsr','feat','ants'],['four'],['t1'],['t1loc','ana'],['t2'],['comp','adcc','dys'],['ex2','inj'],['t3'],['arthus','sle'],['serum','oth3'],['t4'],['gran','tb'],['ctl','ex4'],['cmp']];
+let gh=`<div class="wrap"><h1>⭐ الملخص الذهبي</h1><p class="sub">كل فكرة بسطر إنكليزي وتحتو شرحها بالعربي. دوس على السطر لما تحفظو (<span id="gp">0</span> / <span id="gt">0</span>).</p>`;
+G.forEach((g,gi)=>{gh+=`<div class="gcard reveal" style="background:${g[0]}"><h3>${g[1]} <small style="color:var(--mut);font-weight:500">· ${g[2]}</small></h3>${g[3].map(x=>`<div class="gi"><div><div class="ge">${x[0]}</div><div class="ga">${x[1]}</div></div></div>`).join('')}${GM[gi]?`<div class="mn"><button><span>🧠 حيلة الحفظ</span><span>⌄</span></button><div class="body">${GM[gi].map(k=>ST[k]).join('<br><br>')}</div></div>`:''}</div>`});
+gh+=`</div>`;
+document.getElementById('v-gold').innerHTML=T(gh);
+document.querySelectorAll('#v-gold .mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.getElementById('gt').textContent=document.querySelectorAll('#v-gold .gi').length;
+document.querySelectorAll('#v-gold .gi').forEach(e=>e.onclick=()=>{e.classList.toggle('got');document.getElementById('gp').textContent=document.querySelectorAll('#v-gold .gi.got').length});
+
+/* ===== Short essay ===== */
+const SQ=[
+['Q1: Define hypersensitivity.',['Pathological, injurious immune response to antigen','Leads to tissue injury, disease or death','Occurs in sensitized individual','= Exaggerated immune response to antigen'],'pathological · exaggerated · sensitized'],
+['Q2: Mention the general features of hypersensitivity disorders.',['Priming / sensitization (prior exposure)','Any antigen can be an allergen','Genetic susceptibility (e.g., HLA genes)','Complex interaction: genes + exposure'],'priming · any antigen · HLA'],
+['Q3: Classify hypersensitivity reactions.',['Type I: immediate','Type II: antibody-mediated','Type III: immune complex-mediated','Type IV: cell-mediated / delayed'],'I · II · III · IV'],
+['Q4: Mention the characteristics of type I hypersensitivity.',['Rapid: 5-10 minutes','Mediated by IgE bound to mast cells','Occurs in 10-20%; atopic individuals have elevated serum IgE','Genetically susceptible, previously sensitized'],'IgE · mast cells · 5-10 min · atopic'],
+['Q5: Mention 4 examples of type I hypersensitivity.',['Bronchial (extrinsic) asthma','Hay fever','Food allergy','Anaphylaxis (e.g., penicillin)'],'asthma · hay fever · food · anaphylaxis'],
+['Q6: Describe systemic type I hypersensitivity.',['Anaphylactic reaction → anaphylactic shock','Hypotension, widespread urticaria, dyspnea','After injection of a drug (e.g., penicillin) in sensitive patient','Medical emergency, may be fatal'],'hypotension · urticaria · dyspnea'],
+['Q7: Mention the characteristics of type II hypersensitivity.',['Antibodies against cell-surface antigens → lysis of target cells','Antibodies: IgG (usually), IgM (rarely)','Antigens: endogenous or exogenous (e.g., drug metabolite)','3 effects: complement-dependent, ADCC, cellular dysfunction'],'IgG/IgM · surface Ag · 3 effects'],
+['Q8: Mention the mechanisms of type II hypersensitivity.',['Complement-dependent: C3b opsonization, phagocytosis','ADCC: antibody links NK cell / macrophage to target; perforin + granzyme','Antibody-mediated cellular dysfunction (antibodies vs receptors)','No cell injury or inflammation in dysfunction'],'complement · ADCC · dysfunction'],
+['Q9: Mention 4 examples of type II hypersensitivity.',['Autoimmune hemolytic anemia / transfusion reaction','Erythroblastosis fetalis / ITP','Graves disease / myasthenia gravis','Hyperacute rejection / type 1 diabetes'],'AIHA · fetalis · Graves · myasthenia'],
+['Q10: Explain how tissue injury occurs in type II hypersensitivity.',['Antibody binds basement membrane / matrix → complement activation','C5a: chemotaxis of neutrophils and monocytes','C3a + C5a: increased vascular permeability','Leukocytes release proteolytic enzymes + ROS'],'C5a · anaphylatoxins · enzymes · ROS'],
+['Q11: Mention the characteristics of type III hypersensitivity.',['Immune complex formation (local or circulating)','Deposition in tissues → complement fixation → inflammation','Antibodies: IgG, IgM, occasionally IgA','Antigens: exogenous (foreign serum protein) or endogenous (DNA)'],'complexes · deposition · IgG/IgM/IgA'],
+['Q12: Describe Arthus reaction.',['Local tissue necrosis (skin) from acute immune complex vasculitis','Intradermal antigen in pre-immunized host','Complexes in vessel wall → fibrinoid necrosis + thrombosis → ischemia','Pain, swelling, induration, edema ± necrosis after vaccination'],'local · vasculitis · fibrinoid necrosis'],
+['Q13: Describe serum sickness.',['Foreign proteins (horse/rabbit serum, antithymocyte globulin)','Phases: complex formation (7-12 days), deposition, inflammation','Deposition: vessels (vasculitis), glomeruli (GN), joints (arthritis)','Fever, urticaria, arthralgia, lymphadenopathy, proteinuria'],'3 phases · 7-12 days'],
+['Q14: Mention the characteristics of type IV hypersensitivity.',['Cell-mediated, not antibody','CD4+ and CD8+ T lymphocytes','Delayed 48-72 hours (DTH)','CD4+ activated by non-degradable agents (bacteria, fungi, protozoa)'],'T cells · 48-72 h · DTH'],
+['Q15: Describe granuloma formation and the tuberculin reaction.',['Persistent microbe → activated macrophages → epithelioid cells + lymphocyte collar','Langhans-type giant cell','Mantoux: intradermal PPD; red + indurated 8-12 h; peak 24-72 h (1-2 cm)','Perivascular cuffing of CD4+ T cells + macrophages'],'epithelioid · Langhans · PPD'],
+['Q16: Compare the 4 types of hypersensitivity.',['I: IgE, minutes, mast cells, asthma/hay fever','II: IgG/IgM, cell surface, complement, erythroblastosis fetalis','III: IgG/IgM, soluble antigen, complexes, SLE/GN','IV: no antibody, 2-3 days, T cells, TB'],'IgE · cell surface · soluble · T cells'],
+];
+let sh=`<div class="wrap"><h1>✍️ Short Essay</h1><p class="sub">نفس نمط الامتحان: اكتب جوابك، وبعدين شوف الجواب النموذجي وقيّم حالك من 4.</p>
+<div class="tot">النتيجة: <span id="ts">0</span> / <span id="tm">${SQ.length*4}</span></div>
+<div class="tools"><button id="shuf">🔀 خلّط الأسئلة</button><button id="rst">↺ ابدأ من جديد</button></div><div id="sq"></div></div>`;
+document.getElementById('v-short').innerHTML=sh;
+const sc={};
+function renderSQ(list){
+ document.getElementById('sq').innerHTML=list.map(i=>{const q=SQ[i];return `<div class="qc reveal in" data-i="${i}"><div class="qh"><div class="pt">4 نقاط</div><div class="q">${q[0]}</div></div>
+ <textarea placeholder="إجابتك"></textarea><button class="qbtn">👁️ شوف الجواب</button>
+ <div class="qa"><ol>${q[1].map(x=>`<li class="en" style="display:list-item;direction:ltr;text-align:left">${x}</li>`).join('')}</ol><div class="kw">🔑 ${q[2]}</div>
+ <div class="rate">قيّم إجابتك: ${[0,1,2,3,4].map(n=>`<button data-n="${n}">${n}</button>`).join('')}</div></div></div>`}).join('');
+ document.querySelectorAll('#sq .qc').forEach(c=>{
+  c.querySelector('.qbtn').onclick=()=>c.querySelector('.qa').classList.toggle('show');
+  c.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{c.querySelectorAll('.rate button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');sc[c.dataset.i]=+b.dataset.n;
+   document.getElementById('ts').textContent=Object.values(sc).reduce((a,b)=>a+b,0)})});
+}
+const order=[...SQ.keys()];renderSQ(order);
+document.getElementById('shuf').onclick=()=>{const o=[...SQ.keys()].sort(()=>Math.random()-.5);renderSQ(o)};
+document.getElementById('rst').onclick=()=>{for(const k in sc)delete sc[k];document.getElementById('ts').textContent=0;renderSQ(order)};
+
+/* ===== view routing ===== */
+const VW=['study','gold','short'];
+function showView(v,push){if(!VW.includes(v))v='study';stop();
+ VW.forEach(x=>{document.getElementById('v-'+x).hidden=x!==v});
+ document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ document.getElementById('nav').style.display=v==='study'?'flex':'none';
+ scrollTo(0,0);if(push){try{location.hash=v}catch(e){}}
+ document.querySelectorAll('#v-'+v+' .reveal').forEach(el=>io.observe(el))}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>showView(b.dataset.v,true));
+addEventListener('hashchange',()=>showView(location.hash.slice(1),false));
+showView(location.hash.slice(1),false);
+</script>
+</body>
+</html>

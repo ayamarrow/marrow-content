@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genetic Disorders: Lectures 3 & 4</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--card:#fff;--ink:#2b2d42;--mut:#6b7090;--mint:#d8f5e6;--sky:#dbeeff;--lav:#e8e0ff;--peach:#ffe3d3;--yel:#fff3b8;--pink:#ffdfe9;--line:#ece5d6;--acc:#5b6cff;--grn:#2e9e6b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;overflow-x:hidden}
+.en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;display:inline-block}
+#bar{position:fixed;top:0;right:0;height:5px;width:0;background:linear-gradient(270deg,#5b6cff,#ff9d6c,#3fcf8e);z-index:50;transition:width .15s}
+#nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:6px 8px;box-shadow:0 6px 24px rgba(60,50,20,.15);max-width:95vw}
+#nav button{border:0;background:var(--lav);border-radius:30px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;font-size:14px}
+#nav button.on{background:var(--acc);color:#fff}
+.hero{padding:56px 18px 30px;text-align:center;background:radial-gradient(1000px 400px at 50% -10%,#e8e0ff 0,transparent 70%),radial-gradient(700px 300px at 90% 20%,#d8f5e6 0,transparent 70%)}
+.hero .big{font-size:64px;animation:flo 3s ease-in-out infinite}
+@keyframes flo{50%{transform:translateY(-8px) rotate(-4deg)}}
+.hero h1{font-size:clamp(28px,7vw,48px);font-weight:800;margin:6px 0}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto 10px;font-size:17px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px auto;max-width:760px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 16px;min-width:105px;box-shadow:0 3px 10px rgba(0,0,0,.04)}
+.stat b{display:block;font-size:26px;color:var(--acc)}
+.stat span{font-size:12.5px;color:var(--mut)}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--acc);color:#fff;border:0;border-radius:40px;padding:12px 26px;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 8px 20px rgba(91,108,255,.35);transition:transform .2s}
+.cta:hover{transform:translateY(-2px) scale(1.03)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;max-width:1000px;margin:26px auto 0;padding:0 14px}
+.ccard{border-radius:22px;padding:16px;cursor:pointer;text-align:right;border:1px solid rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.ccard:hover{transform:translateY(-6px);box-shadow:0 12px 26px rgba(0,0,0,.1)}
+.ccard .e{font-size:34px}.ccard h3{font-size:18px;font-weight:800}.ccard small{color:var(--mut);display:block;font-size:12.5px}.ccard p{font-size:14px;margin-top:4px}
+main{max-width:860px;margin:0 auto;padding:10px 14px 120px}
+.chap{margin:46px 0;scroll-margin-top:16px}
+.chead{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.num{flex:none;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff;background:var(--acc);box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.chead .lab{font-size:12.5px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase;direction:ltr;text-align:right}
+.chead h2{font-size:clamp(22px,5.5vw,30px);font-weight:800;line-height:1.3}
+.cap{display:flex;gap:10px;align-items:flex-start;margin:12px 0 18px}
+.cap .av{font-size:34px;flex:none}
+.bubble{background:#fff;border:1px solid var(--line);border-radius:6px 20px 20px 20px;padding:12px 16px;box-shadow:0 3px 10px rgba(0,0,0,.05);font-size:16.5px}
+.con{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 3px 14px rgba(60,50,20,.05)}
+.con h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 10px}
+.chip{background:var(--sky);border-radius:30px;padding:4px 13px;font-weight:700;font-size:14px;opacity:0;transform:translateY(8px) scale(.9);transition:all .4s}
+.chip:nth-child(4n+3){background:var(--mint)}.chip:nth-child(4n+5){background:var(--peach)}.chip:nth-child(4n+7){background:var(--lav)}
+.chip.ar{color:var(--mut);background:none;padding:0 2px;opacity:0}
+.in .chip{opacity:1;transform:none}
+.con ul{padding-right:20px}.con li{margin:5px 0}
+.mn{margin-top:12px;background:var(--yel);border-radius:16px;overflow:hidden}
+.mn button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:800;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between}
+.mn .body{max-height:0;overflow:hidden;transition:max-height .4s;padding:0 14px}
+.mn.open .body{max-height:1200px;padding-bottom:12px}.mn .body{line-height:1.95;font-size:15px}
+.mn.open button span:last-child{transform:rotate(180deg)}
+.hy{margin-top:10px;background:var(--mint);border-right:5px solid var(--grn);border-radius:12px;padding:9px 13px;font-size:15px}
+.hy b{color:var(--grn)}
+.hl{margin:18px 0 0;background:linear-gradient(100deg,var(--yel),#ffe9a0);border-radius:18px;padding:13px 16px;font-weight:800;font-size:15.5px;box-shadow:0 4px 12px rgba(200,160,0,.18)}
+.hl small{display:block;font-size:12px;color:#8a6d00;margin-bottom:2px}
+.sep{color:#b08a00;margin:0 6px}
+table{width:100%;border-collapse:separate;border-spacing:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;font-size:14.5px;margin:10px 0}
+th{background:var(--lav);padding:9px 10px}td{padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:#fcfaf4}
+.sec{border-radius:26px;padding:22px 16px;margin:30px 0}
+.sec h2{font-size:26px;font-weight:800;margin-bottom:6px}
+.rv{background:#fff;border:1px solid var(--line);border-radius:18px;margin:10px 0;overflow:hidden}
+.rv>button{width:100%;text-align:right;background:none;border:0;font:inherit;font-weight:700;padding:13px 15px;cursor:pointer;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.rv .ans{display:none;padding:0 15px 14px}
+.rv.open .ans{display:block;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}}
+.rv .ans ul{padding-right:20px}
+.flash{perspective:900px;height:130px;margin:10px 0;cursor:pointer}
+.flash .in2{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flash.flip .in2{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:12px 16px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border:1px solid var(--line)}
+.face.f{background:var(--sky)}.face.b{background:var(--mint);transform:rotateY(180deg)}
+.score{position:sticky;top:10px;z-index:20;margin:0 auto 10px;width:max-content;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.know{display:flex;gap:6px;justify-content:center;margin-top:-4px;margin-bottom:8px}
+.know button{border:0;border-radius:20px;padding:5px 14px;font:inherit;font-weight:700;cursor:pointer}
+.know .y{background:var(--mint)}.know .n{background:var(--peach)}
+.game{background:#fff;border:2px dashed #c9bff5;border-radius:22px;padding:16px;margin:18px 0}
+.game h4{font-size:18px;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:var(--sky);border-radius:14px;padding:7px 12px;font:inherit;font-weight:700;cursor:pointer}
+.opts button.ok{background:#8fe3b4}.opts button.no{background:#ffb4b4}
+.tf{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:9px 0}
+.tf .b2{display:flex;gap:4px;flex:none}
+.tf button{border:0;border-radius:12px;padding:6px 12px;font:inherit;font-weight:800;cursor:pointer;background:var(--lav)}
+.tf.ok{background:#e8fff1}.tf.no{background:#fff0f0}
+.fb{font-size:13.5px;color:var(--mut);margin-top:3px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);padding:30px 14px 110px;font-size:14px}
+#tourbadge{position:fixed;top:12px;left:12px;z-index:45;background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;font-weight:700;display:none;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.chip{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+#tabs{position:sticky;top:5px;z-index:48;display:flex;gap:6px;justify-content:center;padding:8px;background:rgba(255,250,240,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#tabs button{border:0;background:var(--lav);border-radius:30px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer;font-size:14.5px}
+#tabs button.on{background:var(--acc);color:#fff;box-shadow:0 4px 12px rgba(91,108,255,.35)}
+.view[hidden]{display:none}
+.wrap{max-width:860px;margin:0 auto;padding:22px 14px 120px}
+.wrap>h1{font-size:clamp(26px,6vw,38px);font-weight:800}
+.wrap>p.sub{color:var(--mut);margin-bottom:14px}
+.gcard{border-radius:22px;padding:16px;margin:14px 0;border:1px solid rgba(0,0,0,.05);box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.gcard h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.gi{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;margin:4px 0;background:rgba(255,255,255,.75);border-radius:12px;cursor:pointer;transition:all .25s;font-size:15.5px}
+.gi::before{content:'🔑';flex:none}
+.gi.got{opacity:.45;text-decoration:line-through}
+.gi.got::before{content:'✅'}
+.gnum{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.gnum div{background:#fff;border-radius:16px;padding:8px 14px;text-align:center;border:1px solid var(--line);min-width:92px}
+.gnum b{display:block;font-size:22px;color:var(--acc)}.gnum span{font-size:12px;color:var(--mut)}
+.gprog{font-weight:800;margin:8px 0}
+.qc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px;margin:14px 0;box-shadow:0 3px 12px rgba(0,0,0,.05)}
+.qh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.qh .q{font-weight:800;font-size:17px;direction:ltr;text-align:left;unicode-bidi:isolate}
+.qh .pt{flex:none;color:var(--mut);font-size:13px;white-space:nowrap}
+.qc textarea{width:100%;margin-top:12px;border:0;border-bottom:2px solid var(--line);background:transparent;font:inherit;padding:8px 2px;resize:vertical;min-height:54px;outline:none}
+.qc textarea:focus{border-color:var(--acc)}
+.qa{display:none;margin-top:10px;background:var(--mint);border-radius:16px;padding:12px 14px}
+.qa.show{display:block;animation:pop .35s}
+.qa ol{padding-right:22px}.qa li{margin:3px 0}
+.qa .kw{margin-top:6px;font-size:13px;color:#1d6b49;font-weight:700}
+.rate{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;font-weight:700;font-size:14px}
+.rate button{border:0;background:#fff;border-radius:12px;padding:4px 12px;font:inherit;font-weight:800;cursor:pointer}
+.rate button.sel{background:var(--acc);color:#fff}
+.qbtn{margin-top:10px;border:0;background:var(--yel);border-radius:14px;padding:8px 16px;font:inherit;font-weight:800;cursor:pointer}
+.tot{position:sticky;top:58px;z-index:20;width:max-content;margin:6px auto 10px;background:#fff;border:1px solid var(--line);padding:6px 16px;border-radius:30px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.tools button{border:0;background:var(--lav);border-radius:14px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}
+.ge{direction:ltr;text-align:left;font-weight:700;font-size:15.5px;line-height:1.5;unicode-bidi:isolate}
+.ga{font-size:14px;color:var(--mut);margin-top:3px;line-height:1.6}
+.gcard h3{direction:ltr;text-align:left}
+.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.csg{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:700px){.csg{grid-template-columns:1fr}}.cs{border-radius:14px;padding:9px 12px;font-size:13.5px;line-height:1.7}.cs ul{margin:4px 0 0;padding:0 0 0 18px;direction:ltr;text-align:left}.cs li{margin:2px 0}.cst{font-size:15px;display:block;direction:ltr;text-align:left}.cs b{font-weight:800}.cst2{width:100%;border-collapse:collapse;font-size:12.5px;direction:ltr}.cst2 td{border-top:1px solid #0002;padding:2px 4px}.cheat{background:#ffe3e8;border-right:5px solid #e85d9b;border-radius:12px;padding:9px 13px;margin-top:10px;font-weight:700;line-height:1.9}.say{background:#eef3ff;border-radius:14px;padding:9px 13px;margin:6px 0 10px;font-weight:700;border-right:4px solid var(--acc)}.intro{margin:6px 0 10px;line-height:1.95;font-size:16px}.enul{padding:0!important;list-style:none;text-align:right;font-size:15.5px;direction:rtl;line-height:1.95}.enul li{direction:rtl;text-align:right;unicode-bidi:isolate;margin:0 0 10px}.extra{text-align:left;color:var(--mut);font-size:14px;margin:4px 0}.chips{margin:10px 0}.mn .body{line-height:1.95}.hy{background:#fff3b8;border-right:0;border-left:5px solid #e0a800;text-align:left}.hy b{color:#8a6d00}.trk2{margin:12px 0;background:linear-gradient(100deg,#fbf3dc,#f6ead0);border-inline-start:5px solid #c9ae74;border-radius:16px;padding:10px 14px;color:#5f4d22;font-size:15.5px;line-height:2;font-weight:600;box-shadow:0 6px 16px #c9ae7422}.trk2 b{color:#8a6a2a}</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="tourbadge">▶ الجولة شغّالة</div>
+
+<div id="tabs"><button data-v="study" class="on">🎬 الرحلة</button><button data-v="gold">🏆 الملخص الذهبي</button><button data-v="short">✍️ Short Essay</button></div>
+<div id="v-study" class="view"><section class="hero">
+  <div class="big">🎬🧬</div>
+  <h1><span class="en">Genetic Disorders</span><br>الجينات = وصفات الجسم</h1>
+  <p>محاضرتين 3 و 4 · باثولوجي · د. إحسان. كل شي مشروح بقصص سهلة وبالعامية، والمصطلحات الإنكليزية بين قوسين، وبآخرها أسئلة لتجرّب حالك. 🍿</p>
+  <div class="stats">
+    <div class="stat"><b>4</b><span>عيلات رئيسية</span></div>
+    <div class="stat"><b>5</b><span>فئات جين واحد (single-gene)</span></div>
+    <div class="stat"><b>4</b><span>استثناءات مندل</span></div>
+    <div class="stat"><b>4</b><span>خطوات FISH</span></div>
+  </div>
+  <button class="cta" id="tourBtn">▶ شغّل الجولة التلقائية</button>
+  <div class="grid" id="cards"></div>
+</section>
+
+<main id="main"></main>
+<footer>🧬 المصدر: ملفات محاضرات Genetic disorders 3 و4.</footer>
+
+</div><div id="v-gold" class="view" hidden></div><div id="v-short" class="view" hidden></div>
+<div id="nav"><button id="prev">→ السابق</button><button id="toggle">⏸ / ▶</button><button id="next">التالي ←</button></div>
+
+<script>
+const E=t=>`<span class="en">${t}</span>`;
+const T=x=>x.replace(/\{\{(.+?)\}\}/g,'(<span class="en">$1</span>)');
+const CH=[
+ {
+  "n": 1,
+  "en": "The big picture",
+  "ar": "الخريطة الكبيرة",
+  "emoji": "🗺️",
+  "col": "#ffe3d3",
+  "teaser": "4 عيلات للأمراض الوراثية",
+  "cap": "🎙️",
+  "q": "أنا دمّو! الجينات {{genes}} هيي وصفات الجسم، وأي غلطة بالوصفة بتطلّع مرض. المحاضرة كلها بتدخل بـ 4 عيلات.",
+  "cons": [
+   {
+    "e": "📚",
+    "t": "العيلات الأربعة",
+    "flow": [
+     "A. Single-gene",
+     "B. Mendelian exceptions",
+     "C. Multifactorial",
+     "D. Genetic analysis"
+    ],
+    "b": [
+     "خلّينا نرسم خريطة المحاضرة بـ <bdi dir=\"ltr\">4</bdi> عيلات، متل <bdi dir=\"ltr\">4</bdi> غرف ببيت:",
+     "الغرفة <bdi dir=\"ltr\">A</bdi>: مرض سببو جين واحد خربان (<bdi dir=\"ltr\">Single-gene</bdi>)، وبنصنّفو حسب البروتين اللي خرب. الغرفة <bdi dir=\"ltr\">B</bdi>: أمراض بجين واحد بس ما بتمشي على قواعد مندل الكلاسيكية (<bdi dir=\"ltr\">Mendelian exceptions</bdi>). الغرفة <bdi dir=\"ltr\">C</bdi>: جينات كتيرة مع البيئة (<bdi dir=\"ltr\">Multifactorial</bdi>). والغرفة <bdi dir=\"ltr\">D</bdi>: كيف منفحص ومنشخّص (<bdi dir=\"ltr\">Genetic analysis</bdi>): قبل الولادة (<bdi dir=\"ltr\">Prenatal</bdi>) وبعدها (<bdi dir=\"ltr\">Postnatal</bdi>)، <bdi dir=\"ltr\">Karyotype</bdi> و<bdi dir=\"ltr\">FISH.</bdi>"
+    ],
+    "m": "<bdi dir=\"ltr\">A single-gene · B exceptions · C multifactorial · D analysis</bdi>",
+    "key": "c1",
+    "i": "",
+    "x": "",
+    "c": "<bdi dir=\"ltr\">4</bdi> عيلات: جين واحد، استثناءات، متعددة العوامل، وفحوصات.",
+    "h": "A single-gene · B exceptions · C multifactorial · D analysis",
+    "say": null,
+    "tr": "🍳 الجينات وصفات الجسم. أربع عيلات: وصفة وحدة (جين واحد)، استثناءات، وصفات مختلطة (متعددة العوامل)، وفحص الوصفات (<bdi dir=\"ltr\">Analysis</bdi>)."
+   }
+  ],
+  "hl": [
+   "A single-gene · B exceptions · C multifactorial · D analysis"
+  ]
+ },
+ {
+  "n": 2,
+  "en": "Single-gene (Mendelian)",
+  "ar": "أمراض الجين الواحد",
+  "emoji": "🔧",
+  "col": "#dbeeff",
+  "teaser": "5 فئات حسب البروتين اللي خرب",
+  "cap": "🧑‍🍳",
+  "q": "جين واحد = وصفة وحدة. منصنّف المرض حسب البروتين اللي خرب: عامل بالمصنع، باب، سقالة، شمسية، أو دعسة بنزين وفرامل!",
+  "cons": [
+   {
+    "e": "🏷️",
+    "t": "الفئات الخمسة",
+    "flow": [
+     "Enzyme",
+     "Membrane & transport",
+     "Structural protein",
+     "Drug reaction",
+     "Cell growth"
+    ],
+    "b": [
+     "أمراض الجين الواحد بتتقسم لـ <bdi dir=\"ltr\">5</bdi> فئات حسب نوع البروتين المعطوب. حفظها بكلمات: \"إنزيم، غشاء، بنية، دوا، نمو\".",
+     "<bdi dir=\"ltr\">1</bdi>) عيوب الإنزيمات (<bdi dir=\"ltr\">Enzyme defects</bdi>). <bdi dir=\"ltr\">2</bdi>) عيوب مستقبلات الغشاء وأنظمة النقل (<bdi dir=\"ltr\">Membrane receptors + transport</bdi>). <bdi dir=\"ltr\">3</bdi>) عيوب البروتينات البنيوية (<bdi dir=\"ltr\">Structural proteins</bdi>). <bdi dir=\"ltr\">4</bdi>) طفرات بتعمل ردود فعل غريبة للأدوية (<bdi dir=\"ltr\">Unusual drug reactions</bdi>). <bdi dir=\"ltr\">5</bdi>) عيوب بروتينات تنظيم نمو الخلية (<bdi dir=\"ltr\">Cell-growth regulating proteins</bdi>)."
+    ],
+    "key": "c2",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Enzyme · membrane/transport · structure · drug reaction · cell growth</bdi>",
+    "c": "<bdi dir=\"ltr\">5</bdi> فئات: إنزيم، غشاء، بنية، دوا، نمو.",
+    "h": "Enzyme · membrane/transport · structure · drug reaction · cell growth",
+    "say": null,
+    "tr": "📚 خمس فئات للوصفات: إنزيم، غشاء ونقل، بنية، رد فعل دوا، ونمو الخلية."
+   },
+   {
+    "e": "🏭",
+    "t": "1) الإنزيمات — PKU",
+    "flow": [
+     "PAH deficient",
+     "Phe ✕ Tyrosine",
+     "Phe → Phenylpyruvate"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">PKU</bdi> (<bdi dir=\"ltr\">Phenylketonuria</bdi>): تخيّل مصنع يحوّل مادة <bdi dir=\"ltr\">Phe</bdi> لمادة <bdi dir=\"ltr\">Tyrosine</bdi>، والآلة <bdi dir=\"ltr\">PAH</bdi> (<bdi dir=\"ltr\">Phenylalanine hydroxylase</bdi>) معطّلة. فالمادة الأولى بتتراكم وبتتسمّم.",
+     "وراثتو جسمية متنحية (<bdi dir=\"ltr\">Autosomal recessive</bdi>، <bdi dir=\"ltr\">AR</bdi>). نقص شديد بإنزيم <bdi dir=\"ltr\">PAH</bdi> بسبب طفرة بجين <bdi dir=\"ltr\">PAH.</bdi> وهيدا نمط كل عيوب الإنزيمات: تراكم مواد سامّة (<bdi dir=\"ltr\">Toxic buildup</bdi>)، خلل بالتمثيل الغذائي (<bdi dir=\"ltr\">Metabolic imbalance</bdi>)، وضعف وظايف الخلية."
+    ],
+    "h": "الجسم مش قادر يحوّل Phe لـ Tyrosine لأنو إنزيم PAH ناقص.",
+    "key": "c3",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">PAH deficiency</bdi> (<bdi dir=\"ltr\">AR</bdi>) → <bdi dir=\"ltr\">Phe not converted to Tyrosine → toxic buildup</bdi>",
+    "c": "<bdi dir=\"ltr\">PKU = PAH</bdi> ناقص، فـ <bdi dir=\"ltr\">Phe</bdi> ما بيصير <bdi dir=\"ltr\">Tyrosine.</bdi>",
+    "say": null,
+    "tr": "🔧 (<bdi dir=\"ltr\">PKU</bdi>) الآلة ناقصة: إنزيم (<bdi dir=\"ltr\">PAH</bdi>) ناقص، فـ(<bdi dir=\"ltr\">Phe</bdi>) ما بيتحوّل (<bdi dir=\"ltr\">Tyrosine</bdi>) وبيتكدّس."
+   },
+   {
+    "e": "🚪",
+    "t": "2) الغشاء والنقل — Cystic fibrosis (CF)",
+    "flow": [
+     "CFTR mutation",
+     "Defective Cl⁻ transport",
+     "Thick mucus",
+     "Lung + pancreas"
+    ],
+    "b": [
+     "التليّف الكيسي (<bdi dir=\"ltr\">Cystic fibrosis</bdi>، <bdi dir=\"ltr\">CF</bdi>): المشكلة بالنقل. البروتين <bdi dir=\"ltr\">CFTR</bdi> (<bdi dir=\"ltr\">Cystic fibrosis transmembrane conductance regulator</bdi>) هو بوابة بتمرّق الكلور (<bdi dir=\"ltr\">Chloride</bdi>) عبر الظهارة. لما يتعطّل، المخاط بيصير سميك (<bdi dir=\"ltr\">Thick mucus</bdi>) متل العسل.",
+     "وراثتو <bdi dir=\"ltr\">AR</bdi>، واضطراب نقل الأيونات بالظهارة (<bdi dir=\"ltr\">Epithelial ion transport</bdi>). المخاط السميك بيطلع بالعرق (<bdi dir=\"ltr\">Sweat</bdi>) والرئة (<bdi dir=\"ltr\">Lungs</bdi>) والبنكرياس (<bdi dir=\"ltr\">Pancreas</bdi>)، وإفراز الغدد الخارجية (<bdi dir=\"ltr\">Exocrine glands</bdi>) وبطانة الجهاز التنفسي والهضمي والتناسلي بيتأثر.",
+     "المظاهر: مرض رئة مزمن (<bdi dir=\"ltr\">Chronic lung disease</bdi>)، أنف وحلق، بنكرياس (<bdi dir=\"ltr\">Steatorrhea</bdi>، براز دهني)، وكبد. الأخطر: الرئة."
+    ],
+    "h": "رئة · أنف وحلق · بنكرياس (steatorrhea) · كبد. الأخطر: الرئة.",
+    "key": "c4",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">CFTR defect</bdi> (<bdi dir=\"ltr\">AR</bdi>) → <bdi dir=\"ltr\">chloride transport defect → thick mucus → lung · pancreas · liver</bdi>",
+    "c": "<bdi dir=\"ltr\">CF = CFTR</bdi>، مخاط سميك، الأخطر الرئة.",
+    "say": null,
+    "tr": "🛢️ (<bdi dir=\"ltr\">CF</bdi>) بوابة الكلور (<bdi dir=\"ltr\">CFTR</bdi>) خربانة، فالمخاط سميك. الرئة هي الأخطر، وبعدها البنكرياس (<bdi dir=\"ltr\">Steatorrhea</bdi>)."
+   },
+   {
+    "e": "🏗️",
+    "t": "3) البروتينات البنيوية — Marfan",
+    "flow": [
+     "M",
+     "A",
+     "R",
+     "F",
+     "A",
+     "N",
+     "S"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">Marfan</bdi>: تخيّل ورشة بنا فيها سقالة (<bdi dir=\"ltr\">Scaffold</bdi>) بتمسك الإيلاستين (<bdi dir=\"ltr\">Elastin</bdi>، الجزء المرن). السقالة هي <bdi dir=\"ltr\">fibrillin 1</bdi>، من جين <bdi dir=\"ltr\">FBN1</bdi> على كروموسوم <bdi dir=\"ltr\">15.</bdi> إذا طفر الجين، السقالة ضعيفة والنسيج بيفقد قوتو ومرونتو. وراثتو سائدة (<bdi dir=\"ltr\">AD</bdi>).",
+     "الإيلاستين كتير بالأبهر (<bdi dir=\"ltr\">Aorta</bdi>) والأربطة (<bdi dir=\"ltr\">Ligaments</bdi>) وألياف تعليق العدسة (<bdi dir=\"ltr\">Ciliary zonules</bdi>). فبتتأثر <bdi dir=\"ltr\">3</bdi> أجهزة: الهيكل (<bdi dir=\"ltr\">Skeleton</bdi>) والعين (<bdi dir=\"ltr\">Eye</bdi>) والقلب والأوعية (<bdi dir=\"ltr\">Cardiovascular</bdi>).",
+     "الشرايين المرنة (<bdi dir=\"ltr\">Elastic arteries</bdi>): الألياف المرنة بتضعف. وفحص <bdi dir=\"ltr\">nitroprusside</bdi> بيفرّق <bdi dir=\"ltr\">Marfan</bdi> عن <bdi dir=\"ltr\">homocystinuria</bdi> (بيطلع إيجابي بـ <bdi dir=\"ltr\">homocystinuria</bdi>). الاتنين بيتشابهوا: أطراف طويلة وخلع عدسة."
+    ],
+    "h": "فحص nitroprusside بيفرّق Marfan عن homocystinuria (بيطلع إيجابي بـ homocystinuria). الاتنين بيتشابهوا: أطراف طويلة وخلع عدسة.",
+    "key": "c5",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">FBN1 mutation</bdi> (<bdi dir=\"ltr\">AD</bdi>, <bdi dir=\"ltr\">chr 15</bdi>) → <bdi dir=\"ltr\">fibrillin 1 scaffold defect → skeleton + eye + cardiovascular</bdi>",
+    "c": "<bdi dir=\"ltr\">Marfan = FBN1/fibrillin 1</bdi>، سائد. <bdi dir=\"ltr\">nitroprusside</bdi> يفرّق عن <bdi dir=\"ltr\">homocystinuria.</bdi>",
+    "say": null,
+    "tr": "🦒 (<bdi dir=\"ltr\">Marfan</bdi>) كولاجين طويل: (<bdi dir=\"ltr\">FBN1 / Fibrillin 1</bdi>)، سائد. فحص (<bdi dir=\"ltr\">Nitroprusside</bdi>) بيفرّق عن (<bdi dir=\"ltr\">Homocystinuria</bdi>)."
+   },
+   {
+    "e": "🤸",
+    "t": "3) كمان بنيوي — Ehlers-Danlos (EDS)",
+    "flow": [
+     "AD",
+     "Collagen I + III",
+     "Hypermobile joints + hyper-elastic skin"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">Ehlers-Danlos</bdi> (<bdi dir=\"ltr\">EDS</bdi>): اضطراب نسيج ضام (<bdi dir=\"ltr\">Connective tissue disorder</bdi>)، وراثتو سائدة (<bdi dir=\"ltr\">AD</bdi>). مجموعة نادرة فيها أنواع فرعية كتيرة (<bdi dir=\"ltr\">Subtypes</bdi>).",
+     "العيب بتصنيع الكولاجين (<bdi dir=\"ltr\">Collagen</bdi>) النوع <bdi dir=\"ltr\">I</bdi> والنوع <bdi dir=\"ltr\">III.</bdi> تخيّل حبل مطّاط بدل حبل قوي. العلامات: مفاصل مرنة زيادة (<bdi dir=\"ltr\">Joint hypermobility</bdi>) وجلد مطّاطي (<bdi dir=\"ltr\">Hyper-elastic skin</bdi>)، فرط تمدد (<bdi dir=\"ltr\">Hyperextension</bdi>)، كدمات بسهولة (<bdi dir=\"ltr\">Easy bruising</bdi>)، وخشونة مفاصل بكّير (<bdi dir=\"ltr\">Early-onset osteoarthritis</bdi>)."
+    ],
+    "key": "c6",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Collagen I + III defect</bdi> (<bdi dir=\"ltr\">AD</bdi>) → <bdi dir=\"ltr\">hypermobile joints + stretchy skin + easy bruising</bdi>",
+    "c": "<bdi dir=\"ltr\">EDS</bdi> = كولاجين <bdi dir=\"ltr\">I</bdi> و<bdi dir=\"ltr\">III</bdi>، مفاصل مرنة، جلد مطّاطي.",
+    "h": "Collagen I + III defect (AD) → hypermobile joints + stretchy skin + easy bruising",
+    "say": null,
+    "tr": "🤸 (<bdi dir=\"ltr\">EDS</bdi>) كولاجين (<bdi dir=\"ltr\">I + III</bdi>) مرن زيادة: مفاصل مرنة، جلد مطّاط، كدمات."
+   },
+   {
+    "e": "☂️",
+    "t": "4) ردود فعل الأدوية — G6PD deficiency",
+    "flow": [
+     "G6PD deficient",
+     "Primaquine",
+     "Oxidative stress unchecked",
+     "Hemolysis"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">G6PD deficiency</bdi>: <bdi dir=\"ltr\">G6PD</bdi> هو \"درع\" بيحمي الكريات الحمرا (<bdi dir=\"ltr\">Red blood cells</bdi>) من الأكسدة (<bdi dir=\"ltr\">Oxidative stress</bdi>). ملاحظة الشريحة: مرتبط بالكروموسوم <bdi dir=\"ltr\">X</bdi> (<bdi dir=\"ltr\">X-linked</bdi>).",
+     "دوا متل <bdi dir=\"ltr\">primaquine</bdi> بيعطّل <bdi dir=\"ltr\">G6PD</bdi>، فالكرية بدون درع بتنفجر: انحلال دم شديد (<bdi dir=\"ltr\">Severe hemolysis</bdi>). وكمان <bdi dir=\"ltr\">favism</bdi>: الفول، حسب ملاحظة الشريحة."
+    ],
+    "key": "c7",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">G6PD deficiency</bdi> (<bdi dir=\"ltr\">X-linked</bdi>) + <bdi dir=\"ltr\">oxidative stress</bdi> (<bdi dir=\"ltr\">primaquine</bdi>, <bdi dir=\"ltr\">fava beans</bdi>) → <bdi dir=\"ltr\">hemolysis</bdi>",
+    "c": "<bdi dir=\"ltr\">G6PD</bdi> = درع الكريات الحمرا. <bdi dir=\"ltr\">Primaquine</bdi> = انحلال.",
+    "h": "G6PD deficiency (X-linked) + oxidative stress (primaquine, fava beans) → hemolysis",
+    "say": null,
+    "tr": "🛡️ (<bdi dir=\"ltr\">G6PD</bdi>) درع الكريات الحمرا. مع (<bdi dir=\"ltr\">Primaquine</bdi>) أو (<bdi dir=\"ltr\">Fava beans</bdi>) الدرع بيخلص فتنحلّ الكريات."
+   },
+   {
+    "e": "🚗",
+    "t": "5) نمو الخلية cell growth",
+    "flow": [
+     "Proto-oncogenes = gas pedal",
+     "Tumor suppressors = brakes",
+     "One broken → cancer"
+    ],
+    "b": [
+     "وبالفئة الخامسة: الجينات اللي بتتحكم بنمو الخلية. إذا طفرت، الخلية بتتكاثر بلا ضوابط (<bdi dir=\"ltr\">Uncontrolled proliferation</bdi>) والنتيجة سرطان (<bdi dir=\"ltr\">Cancer</bdi>). تخيّل سيارة: <bdi dir=\"ltr\">proto-oncogene</bdi> دواسة البنزين، و<bdi dir=\"ltr\">tumor suppressor gene</bdi> الفرامل.",
+     "طفرات السرطان غالباً جسدية (<bdi dir=\"ltr\">Somatic</bdi>) يعني مكتسبة (<bdi dir=\"ltr\">Acquired</bdi>). بس <bdi dir=\"ltr\">5%</bdi> عيلية (<bdi dir=\"ltr\">Familial</bdi>)، وأغلبها سائدة (<bdi dir=\"ltr\">AD</bdi>)."
+    ],
+    "key": "c8",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Proto-oncogene</bdi> (<bdi dir=\"ltr\">gas</bdi>) + <bdi dir=\"ltr\">tumor suppressor</bdi> (<bdi dir=\"ltr\">brake</bdi>) → <bdi dir=\"ltr\">uncontrolled proliferation → cancer</bdi>",
+    "c": "نمو الخلية: <bdi dir=\"ltr\">5%</bdi> بس وراثي، الباقي مكتسب.",
+    "h": "Proto-oncogene (gas) + tumor suppressor (brake) → uncontrolled proliferation → cancer",
+    "say": null,
+    "tr": "🚗 نمو الخلية: (<bdi dir=\"ltr\">Proto-oncogene</bdi>) دعسة بنزين و(<bdi dir=\"ltr\">Tumor suppressor</bdi>) فرامل. إذا انكسروا بيصير سرطان."
+   }
+  ],
+  "hl": [
+   "Enzyme · membrane/transport · structure · drug reaction · cell growth",
+   "الجسم مش قادر يحوّل Phe لـ Tyrosine لأنو إنزيم PAH ناقص.",
+   "رئة · أنف وحلق · بنكرياس (steatorrhea) · كبد. الأخطر: الرئة.",
+   "فحص nitroprusside بيفرّق Marfan عن homocystinuria (بيطلع إيجابي بـ homocystinuria). الاتنين بيتشابهوا: أطراف طويلة وخلع عدسة.",
+   "Collagen I + III defect (AD) → hypermobile joints + stretchy skin + easy bruising",
+   "G6PD deficiency (X-linked) + oxidative stress (primaquine, fava beans) → hemolysis",
+   "Proto-oncogene (gas) + tumor suppressor (brake) → uncontrolled proliferation → cancer"
+  ]
+ },
+ {
+  "n": 3,
+  "en": "Multifactorial",
+  "ar": "متعددة العوامل",
+  "emoji": "🎯",
+  "col": "#ffdfe9",
+  "teaser": "جينات كتيرة + بيئة",
+  "cap": "🔫",
+  "q": "الجينات بتعبّي البارودة، والبيئة بتكبس الزناد!",
+  "cons": [
+   {
+    "e": "🧩",
+    "t": "يعني شو؟",
+    "flow": [
+     "Multiple genes",
+     "+ Environmental factors",
+     "= Disease"
+    ],
+    "b": [
+     "المتعدد العوامل (<bdi dir=\"ltr\">Multifactorial</bdi> / <bdi dir=\"ltr\">Polygenic</bdi>): مش جين واحد، جينات كتير مع البيئة. فكّر بصفات عادية: الوزن (<bdi dir=\"ltr\">Weight</bdi>)، الطول (<bdi dir=\"ltr\">Height</bdi>)، ضغط الدم (<bdi dir=\"ltr\">Blood pressure</bdi>)، لون الشعر (<bdi dir=\"ltr\">Hair color</bdi>). كلها بتتحكم فيها جينات كتيرة.",
+     "والخطر بيتبع عدد الجينات الطافرة (<bdi dir=\"ltr\">Mutant genes</bdi>) اللي بيرثها الشخص."
+    ],
+    "key": "c9",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Many genes + environment → risk</bdi> ∝ <bdi dir=\"ltr\">number of mutant genes</bdi>",
+    "c": "<bdi dir=\"ltr\">Multifactorial</bdi> = جينات كتير + بيئة.",
+    "h": "Many genes + environment → risk ∝ number of mutant genes",
+    "say": null,
+    "tr": "🎲 (<bdi dir=\"ltr\">Multifactorial</bdi>) جينات كتير + بيئة. الخطر بيزيد مع عدد الجينات الطافرة."
+   },
+   {
+    "e": "🧬",
+    "t": "القابلية الوراثية Genetic liability",
+    "flow": [
+     "Liability",
+     "+ Environment",
+     "Disease"
+    ],
+    "b": [
+     "القابلية الوراثية (<bdi dir=\"ltr\">Genetic liability</bdi>) وحدها ما بتكفي: لازم عوامل بيئية (<bdi dir=\"ltr\">Environmental factors</bdi>) تحرّكها. تخيّل بارود بحاجة لشرارة.",
+     "أمثلة: ضغط (<bdi dir=\"ltr\">Hypertension</bdi>)، سكري نوع <bdi dir=\"ltr\">2</bdi> (<bdi dir=\"ltr\">Type II DM</bdi>)، نقرس (<bdi dir=\"ltr\">Gout</bdi>)، شفة وحنك مشقوق (<bdi dir=\"ltr\">Cleft lip/palate</bdi>)، تضيّق البواب (<bdi dir=\"ltr\">Pyloric stenosis</bdi>)، أمراض قلب خلقية (<bdi dir=\"ltr\">CHD</bdi>)، وسرطان (<bdi dir=\"ltr\">Cancer</bdi>)."
+    ],
+    "key": "c10",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Genetic liability + environmental trigger → disease</bdi>",
+    "c": "القابلية = البارود، والبيئة = الشرارة.",
+    "h": "Genetic liability + environmental trigger → disease",
+    "say": null,
+    "tr": "🧨 القابلية الوراثية (<bdi dir=\"ltr\">Liability</bdi>) هي البارود، والبيئة هي الشرارة."
+   },
+   {
+    "e": "👨‍👩‍👧",
+    "t": "التاريخ العيلي والخطر Family history and risk",
+    "flow": [
+     "First-degree: 2–7%",
+     "Two affected siblings: 9%"
+    ],
+    "b": [
+     "كل ما زادوا المصابين بالعيلة، زاد الخطر. هيدا هو الدليل على إنو الجينات إلها دور.",
+     "أقارب الدرجة الأولى (<bdi dir=\"ltr\">First-degree relatives</bdi>) عندهم خطر <bdi dir=\"ltr\">2-7%.</bdi> وبعد أخوين مصابين (<bdi dir=\"ltr\">Two affected siblings</bdi>) الخطر بيرتفع لـ <bdi dir=\"ltr\">9%.</bdi> حفظ: <bdi dir=\"ltr\">2-7%</bdi> ثم <bdi dir=\"ltr\">9%.</bdi>"
+    ],
+    "h": "بعد أخوين مصابين {{two affected siblings}}: <b>9%</b>.",
+    "key": "c11",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">First-degree</bdi>: <bdi dir=\"ltr\">2-7% → two affected siblings</bdi>: <bdi dir=\"ltr\">9%</bdi>",
+    "c": "الخطر <bdi dir=\"ltr\">2-7%</bdi>، وبعد أخوين مصابين <bdi dir=\"ltr\">9%.</bdi>",
+    "say": null,
+    "tr": "👪 الخطر بالعيلة 2-7%، وبعد أخوين مصابين بيصير 9%."
+   }
+  ],
+  "hl": [
+   "Many genes + environment → risk ∝ number of mutant genes",
+   "Genetic liability + environmental trigger → disease",
+   "بعد أخوين مصابين {{two affected siblings}}: <b>9%</b>."
+  ]
+ },
+ {
+  "n": 4,
+  "en": "Non-classic inheritance",
+  "ar": "استثناءات مندل",
+  "emoji": "🎭",
+  "col": "#e8e0ff",
+  "teaser": "4 أنواع بتكسر القواعد",
+  "cap": "🕵️",
+  "q": "هدول 4 أمراض بجين واحد بس ما بيمشوا على قواعد مندل. سؤال الامتحان: Classify the non-classical disease of single gene disorders.",
+  "cons": [
+   {
+    "e": "4️⃣",
+    "t": "الأنواع الأربعة",
+    "flow": [
+     "Triplet repeat",
+     "Mitochondrial",
+     "Genomic imprinting",
+     "Gonadal mosaicism"
+    ],
+    "b": [
+     "استثناءات مندل (<bdi dir=\"ltr\">Non-classic inheritance</bdi>) أربعة، حفظها بحرف: <bdi dir=\"ltr\">T-M-I-G.</bdi>",
+     "<bdi dir=\"ltr\">1.</bdi> التكرار الثلاثي (<bdi dir=\"ltr\">Trinucleotide-repeat mutations</bdi>). <bdi dir=\"ltr\">2.</bdi> الميتوكوندريا (<bdi dir=\"ltr\">Mitochondrial gene mutations</bdi>). <bdi dir=\"ltr\">3.</bdi> البصم الجيني (<bdi dir=\"ltr\">Genomic imprinting</bdi>). <bdi dir=\"ltr\">4.</bdi> الفسيفساء بالمناسل (<bdi dir=\"ltr\">Gonadal mosaicism</bdi>)."
+    ],
+    "key": "c12",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Triplet repeat · Mitochondrial · Imprinting · Gonadal mosaicism</bdi>",
+    "c": "<bdi dir=\"ltr\">4</bdi> استثناءات: <bdi dir=\"ltr\">T · M · I · G.</bdi>",
+    "h": "Triplet repeat · Mitochondrial · Imprinting · Gonadal mosaicism",
+    "say": null,
+    "tr": "🧩 استثناءات مندل: T M I G. تكرار ثلاثي، ميتوكوندريا، (<bdi dir=\"ltr\">Imprinting</bdi>)، فسيفساء مناسل."
+   },
+   {
+    "e": "🔁",
+    "t": "التكرار الثلاثي",
+    "flow": [
+     "DNA repeat sequence",
+     "Repeats beyond normal",
+     "Expansion → disease"
+    ],
+    "b": [
+     "التكرار الثلاثي: تخيّل أسطوانة عالقة بتكرّر نفس المقطع. تسلسلات <bdi dir=\"ltr\">DNA</bdi> المتكررة (<bdi dir=\"ltr\">Repeat sequences</bdi>) بتتوسّع (<bdi dir=\"ltr\">Expansion</bdi>) فوق طولها الطبيعي، والتوسّع بيسبّب المرض. كل ما زاد التكرار، صار المرض.",
+     "مثال (من خارج المحاضرة): <bdi dir=\"ltr\">Fragile X</bdi> و<bdi dir=\"ltr\">Huntington.</bdi>"
+    ],
+    "key": "c13",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Repeat sequence expansion → more repeats → disease</bdi>",
+    "c": "التكرار الثلاثي: كل ما زادت التكرارات، زاد المرض.",
+    "h": "Repeat sequence expansion → more repeats → disease",
+    "say": null,
+    "tr": "📏 (<bdi dir=\"ltr\">Triplet repeat</bdi>) كل ما زاد التكرار زاد المرض: متل كلمة بتتكرر وبتخرّب الجملة."
+   },
+   {
+    "e": "⚡",
+    "t": "الميتوكوندريا",
+    "flow": [
+     "Mitochondrial genes"
+    ],
+    "b": [
+     "الميتوكوندريا (<bdi dir=\"ltr\">Mitochondria</bdi>) بتنوَّرث من الأم بس (مثال من خارج المحاضرة). لأنو البويضة بتعطي الميتوكوندريا، والحيوان المنوي لأ."
+    ],
+    "key": "c14",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Mitochondrial DNA → maternal inheritance only</bdi>",
+    "c": "الميتوكوندريا = من الأم بس.",
+    "h": "Mitochondrial DNA → maternal inheritance only",
+    "say": null,
+    "tr": "👩 (<bdi dir=\"ltr\">Mitochondrial</bdi>) من الأم بس: لأنو البيضة بتعطي الميتوكوندريا."
+   },
+   {
+    "e": "🏷️",
+    "t": "Imprinting",
+    "flow": [
+     "Gene from father or mother is active"
+    ],
+    "b": [
+     "البصم الجيني (<bdi dir=\"ltr\">Imprinting</bdi>): تخيّل جين بنسختين، واحدة من الأب وواحدة من الأم، ونسخة واحدة \"مطفية\" حسب الأصل. مثال من خارج المحاضرة: <bdi dir=\"ltr\">Prader-Willi</bdi> و<bdi dir=\"ltr\">Angelman.</bdi>"
+    ],
+    "key": "c15",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Imprinting</bdi>: <bdi dir=\"ltr\">parent-of-origin gene silencing → Prader-Willi</bdi>, <bdi dir=\"ltr\">Angelman</bdi>",
+    "c": "<bdi dir=\"ltr\">Imprinting</bdi> = النسخة بتتطفّى حسب الأب أو الأم.",
+    "h": "Imprinting: parent-of-origin gene silencing → Prader-Willi, Angelman",
+    "say": null,
+    "tr": "🔇 (<bdi dir=\"ltr\">Imprinting</bdi>) نسخة بتتطفّى حسب مين ورّثها: أبوي أو أمي. (<bdi dir=\"ltr\">Prader-Willi</bdi>) و(<bdi dir=\"ltr\">Angelman</bdi>)."
+   },
+   {
+    "e": "🥚",
+    "t": "فسيفساء المناسل",
+    "flow": [
+     "Healthy parents",
+     "Affected child",
+     "Recurrence possible"
+    ],
+    "b": [
+     "الفسيفساء بالمناسل (<bdi dir=\"ltr\">Gonadal mosaicism</bdi>): الأهل أصحّا (<bdi dir=\"ltr\">Healthy parents</bdi>) والولد مصاب (<bdi dir=\"ltr\">Affected child</bdi>)، والتكرار ممكن (<bdi dir=\"ltr\">Recurrence possible</bdi>). ليش؟ لأنو بعض خلايا المناسل عند أحد الأهل عندها الطفرة، بس باقي الجسم سليم."
+    ],
+    "key": "c16",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Healthy parents + gonadal mutation → affected child → recurrence possible</bdi>",
+    "c": "<bdi dir=\"ltr\">Gonadal mosaicism</bdi> = أهل أصحّا وولد مصاب، والتكرار ممكن.",
+    "h": "Healthy parents + gonadal mutation → affected child → recurrence possible",
+    "say": null,
+    "tr": "🥚 (<bdi dir=\"ltr\">Gonadal mosaicism</bdi>) أهل أصحّا وولد مصاب: الطفرة بالمناسل. التكرار ممكن."
+   }
+  ],
+  "hl": [
+   "Triplet repeat · Mitochondrial · Imprinting · Gonadal mosaicism",
+   "Repeat sequence expansion → more repeats → disease",
+   "Mitochondrial DNA → maternal inheritance only",
+   "Imprinting: parent-of-origin gene silencing → Prader-Willi, Angelman",
+   "Healthy parents + gonadal mutation → affected child → recurrence possible"
+  ]
+ },
+ {
+  "n": 5,
+  "en": "Prenatal & carrier screening",
+  "ar": "الفحص قبل الولادة",
+  "emoji": "🤰",
+  "col": "#d8f5e6",
+  "teaser": "NIPS · بزل السلى · CVS",
+  "cap": "🩺",
+  "q": "الفحص متل التحرّي: أول فحص سريع بيشكّ {{screening}}، والتاني بيأكّد {{diagnostic}}.",
+  "cons": [
+   {
+    "e": "🔍",
+    "t": "NIPS — الفحص غير الباضع",
+    "flow": [
+     "Ultrasound",
+     "+ Maternal blood markers",
+     "= Risk only"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">NIPS</bdi> (<bdi dir=\"ltr\">Non-invasive prenatal screening</bdi>): فحص غير باضع. بيجمع السونار (<bdi dir=\"ltr\">Ultrasound</bdi>) مع مؤشرات كيميائية بدم الأم (<bdi dir=\"ltr\">Maternal blood markers</bdi>).",
+     "بيبيّن خطر أعلى (<bdi dir=\"ltr\">Higher risk</bdi>) بس، يعني تغيّر عدد الكروموسومات. ما بيشخّص (<bdi dir=\"ltr\">No diagnosis</bdi>). متل جرس إنذار، مش حكم قضائي."
+    ],
+    "key": "c17",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Ultrasound + maternal blood markers → higher risk only</bdi> (<bdi dir=\"ltr\">no diagnosis</bdi>)",
+    "c": "<bdi dir=\"ltr\">NIPS</bdi> = خطر بس، مش تشخيص.",
+    "h": "Ultrasound + maternal blood markers → higher risk only (no diagnosis)",
+    "say": null,
+    "tr": "📡 (<bdi dir=\"ltr\">NIPS</bdi>) فحص بدون إبرة: بيعطي خطر مش تشخيص."
+   },
+   {
+    "e": "💉",
+    "t": "IPD — الفحص الباضع التشخيصي",
+    "flow": [
+     "Increased risk on screening",
+     "Amniocentesis / CVS",
+     "DNA tested",
+     "Confirms"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">IPD</bdi> (<bdi dir=\"ltr\">Invasive prenatal diagnosis</bdi>): الخطوة اللي بعد <bdi dir=\"ltr\">NIPS</bdi> لما يطلع خطر زايد. هون بيأكّدوا فروقات الكروموسومات (<bdi dir=\"ltr\">Chromosomal differences</bdi>).",
+     "الإجراءات: بزل السلى (<bdi dir=\"ltr\">Amniocentesis</bdi>) و<bdi dir=\"ltr\">CVS</bdi> (من الجزء الجنيني للمشيمة، <bdi dir=\"ltr\">Fetal part of placenta</bdi>). بيستخرجوا <bdi dir=\"ltr\">DNA</bdi> الجنين وبيفحصوه فيصير تشخيص."
+    ],
+    "key": "c18",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">High risk → amniocentesis</bdi> / <bdi dir=\"ltr\">CVS → fetal DNA → diagnosis</bdi>",
+    "c": "<bdi dir=\"ltr\">IPD</bdi> = التشخيص النهائي (بزل السلى أو <bdi dir=\"ltr\">CVS</bdi>).",
+    "h": "High risk → amniocentesis / CVS → fetal DNA → diagnosis",
+    "say": null,
+    "tr": "💉 (<bdi dir=\"ltr\">IPD</bdi>) تشخيص نهائي: (<bdi dir=\"ltr\">Amniocentesis</bdi>) أو (<bdi dir=\"ltr\">CVS</bdi>)."
+   },
+   {
+    "e": "📋",
+    "t": "الاستطبابات قبل الولادة Prenatal indications",
+    "flow": [
+     "Age >34",
+     "Previous chromosomal-abnormal child",
+     "X-linked sex determination"
+    ],
+    "b": [
+     "الاستطبابات قبل الولادة (<bdi dir=\"ltr\">Prenatal indications</bdi>) <bdi dir=\"ltr\">3</bdi>: عمر الأم المتقدم (<bdi dir=\"ltr\">Advanced maternal age</bdi>، ><bdi dir=\"ltr\">34</bdi>)، خطر تثلّث أعلى. ولد سابق بشذوذ كروموسومي (<bdi dir=\"ltr\">Chromosomal abnormality</bdi>). وتحديد جنس الجنين (<bdi dir=\"ltr\">Sex determination</bdi>) لما الزوج حامل مؤكّد لمرض مرتبط بـ <bdi dir=\"ltr\">X</bdi> (<bdi dir=\"ltr\">X-linked carrier</bdi>)."
+    ],
+    "key": "c19",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Age</bdi> ><bdi dir=\"ltr\">34 · previous chromosomal abnormality · X-linked carrier sex determination</bdi>",
+    "c": "<bdi dir=\"ltr\">3</bdi> استطبابات: عمر ><bdi dir=\"ltr\">34</bdi>، ولد سابق، حامل <bdi dir=\"ltr\">X-linked.</bdi>",
+    "h": "Age >34 · previous chromosomal abnormality · X-linked carrier sex determination",
+    "say": null,
+    "tr": "🚩 تلات إشارات حمرا: عمر الأم فوق 34، ولد سابق بشذوذ كروموسومي، أو حامل (<bdi dir=\"ltr\">X-linked</bdi>) لتحديد الجنس."
+   },
+   {
+    "e": "💑",
+    "t": "فحص الحاملين قبل الحمل Carrier screening",
+    "flow": [
+     "Before pregnancy",
+     "Saliva (most common)",
+     "AR or X-linked"
+    ],
+    "b": [
+     "فحص الحاملين (<bdi dir=\"ltr\">Carrier screening</bdi>) قبل الحمل (<bdi dir=\"ltr\">Preconception</bdi>) لتخطيط العيلة. بيكشف حاملي أمراض جين واحد متنحية (<bdi dir=\"ltr\">AR</bdi>) أو مرتبطة بـ <bdi dir=\"ltr\">X.</bdi>",
+     "العينة: لعاب (<bdi dir=\"ltr\">Saliva</bdi>) هو الأشيع، أو مسحة خد (<bdi dir=\"ltr\">Buccal swab</bdi>) أو دم. وبحالات: عقم (<bdi dir=\"ltr\">Infertility</bdi>) منستبعد شذوذ الكروموسومات الجنسية، وإجهاضات متكررة منستبعد انتقال متوازن (<bdi dir=\"ltr\">Balanced translocation</bdi>) عند الأهل."
+    ],
+    "key": "c20",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Preconception carrier screening → saliva/buccal/blood · infertility → sex chromosomes · recurrent abortions → balanced translocation</bdi>",
+    "c": "<bdi dir=\"ltr\">Carrier screening</bdi>: لعاب هو الأشيع.",
+    "h": "Preconception carrier screening → saliva/buccal/blood · infertility → sex chromosomes · recurrent abortions → balanced translocation",
+    "say": null,
+    "tr": "🧬 (<bdi dir=\"ltr\">Carrier screening</bdi>) قبل الحمل: لعاب، خد، أو دم. العقم يعني فحص كروموسومات جنسية. إجهاضات متكررة تعني (<bdi dir=\"ltr\">Balanced translocation</bdi>)."
+   }
+  ],
+  "hl": [
+   "Ultrasound + maternal blood markers → higher risk only (no diagnosis)",
+   "High risk → amniocentesis / CVS → fetal DNA → diagnosis",
+   "Age >34 · previous chromosomal abnormality · X-linked carrier sex determination",
+   "Preconception carrier screening → saliva/buccal/blood · infertility → sex chromosomes · recurrent abortions → balanced translocation"
+  ]
+ },
+ {
+  "n": 6,
+  "en": "Postnatal & karyotype",
+  "ar": "بعد الولادة والكاريوتايب",
+  "emoji": "📸",
+  "col": "#fff3b8",
+  "teaser": "تصوير الكروموسومات",
+  "cap": "📷",
+  "q": "بعد الولادة منسحب دم محيطي {{peripheral blood}} من الولد لما نشكّ بمرض وراثي، ومنصوّر الكروموسومات ومنرتّبها أزواج.",
+  "cons": [
+   {
+    "e": "👶",
+    "t": "الاستطبابات بعد الولادة Postnatal",
+    "flow": [
+     "Anomalies",
+     "Metabolic",
+     "Delay",
+     "Aneuploidy",
+     "Monogenic"
+    ],
+    "b": [
+     "الفحص بعد الولادة (<bdi dir=\"ltr\">Postnatal</bdi>): العينة دم محيطي (<bdi dir=\"ltr\">Peripheral blood</bdi>). الاستطبابات <bdi dir=\"ltr\">5</bdi>: (<bdi dir=\"ltr\">1</bdi>) تشوهات خلقية متعددة، (<bdi dir=\"ltr\">2</bdi>) اشتباه متلازمة استقلابية، (<bdi dir=\"ltr\">3</bdi>) تخلّف عقلي أو تأخر نمو بلا سبب (<bdi dir=\"ltr\">Developmental delay</bdi>)، (<bdi dir=\"ltr\">4</bdi>) اشتباه اختلال عدد الكروموسومات (<bdi dir=\"ltr\">Aneuploidy</bdi>، مثل داون) أو تشوه كروموسومي (حذف <bdi dir=\"ltr\">Deletion</bdi>، انقلاب <bdi dir=\"ltr\">Inversion</bdi>)، (<bdi dir=\"ltr\">5</bdi>) اشتباه مرض جين واحد (<bdi dir=\"ltr\">Monogenic</bdi>)."
+    ],
+    "key": "c21",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Peripheral blood · congenital anomalies · metabolic · delay · aneuploidy · monogenic</bdi>",
+    "c": "<bdi dir=\"ltr\">Postnatal</bdi>: دم محيطي، <bdi dir=\"ltr\">5</bdi> استطبابات.",
+    "h": "Peripheral blood · congenital anomalies · metabolic · delay · aneuploidy · monogenic",
+    "say": null,
+    "tr": "🍼 بعد الولادة: دم محيطي (<bdi dir=\"ltr\">Peripheral blood</bdi>). الاستطبابات: تشوّهات، استقلاب، تأخّر، (<bdi dir=\"ltr\">Aneuploidy</bdi>)، (<bdi dir=\"ltr\">Monogenic</bdi>)."
+   },
+   {
+    "e": "🔬",
+    "t": "التشخيص نوعين",
+    "flow": [
+     "Cytogenetic = chromosomes",
+     "Molecular = genes"
+    ],
+    "b": [
+     "التشخيص بنوعين: <bdi dir=\"ltr\">Cytogenetic</bdi> (<bdi dir=\"ltr\">Karyotyping</bdi>) لشذوذ الكروموسومات (<bdi dir=\"ltr\">Chromosome abnormalities</bdi>)، و<bdi dir=\"ltr\">Molecular</bdi> لشذوذ الجينات (<bdi dir=\"ltr\">Gene abnormalities</bdi>). الأول بيشوف الكتاب كامل، والتاني بيقرا الجملة."
+    ],
+    "key": "c22",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Cytogenetic</bdi> (<bdi dir=\"ltr\">karyotype</bdi>) = <bdi dir=\"ltr\">chromosomes · Molecular = genes</bdi>",
+    "c": "<bdi dir=\"ltr\">Karyotype</bdi> للكروموسومات، <bdi dir=\"ltr\">Molecular</bdi> للجينات.",
+    "h": "Cytogenetic (karyotype) = chromosomes · Molecular = genes",
+    "say": null,
+    "tr": "🔬 (<bdi dir=\"ltr\">Karyotype</bdi>) بيشوف الكروموسومات الكبيرة، و(<bdi dir=\"ltr\">Molecular</bdi>) بيشوف الجينات."
+   },
+   {
+    "e": "🖼️",
+    "t": "Karyotype — 4 خطوات",
+    "flow": [
+     "Culture + arrest at metaphase",
+     "Stain → bands",
+     "Microscope + photo",
+     "Arrange in pairs"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">Karyotype</bdi> تقنية مخبرية (<bdi dir=\"ltr\">Lab technique</bdi>) لفحص بنية الكروموسومات وعددها وترتيبها، متل ما ترتّب صور عيلة. العينة: دم، سائل أمنيوسي (<bdi dir=\"ltr\">Amniotic fluid</bdi>)، أو نسيج.",
+     "التطبيقات: تثلّث (<bdi dir=\"ltr\">Trisomy</bdi>، داون) وانتقال (<bdi dir=\"ltr\">Translocation</bdi>) متل كروموسوم فيلادلفيا بسرطان الدم النقوي المزمن (<bdi dir=\"ltr\">CML</bdi>). وإذا الخلل أصغر من المجهر الضوئي، منستخدم التهجين (<bdi dir=\"ltr\">Hybridization</bdi>).",
+     "الخطوات الأربعة: زرع الخلايا ووقفها بـ <bdi dir=\"ltr\">Metaphase</bdi>، صبغ، تصوير بالمجهر، وترتيب الأزواج."
+    ],
+    "key": "c23",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Culture + metaphase → stain → image → arrange pairs</bdi>",
+    "c": "<bdi dir=\"ltr\">Karyotype 4</bdi> خطوات. للحجم الكبير بس.",
+    "h": "Culture + metaphase → stain → image → arrange pairs",
+    "say": null,
+    "tr": "📸 (<bdi dir=\"ltr\">Karyotype</bdi>) 4 خطوات: زرع وانقسام (<bdi dir=\"ltr\">Metaphase</bdi>)، صبغ، تصوير، ترتيب الأزواج."
+   }
+  ],
+  "hl": [
+   "Peripheral blood · congenital anomalies · metabolic · delay · aneuploidy · monogenic",
+   "Cytogenetic (karyotype) = chromosomes · Molecular = genes",
+   "Culture + metaphase → stain → image → arrange pairs"
+  ]
+ },
+ {
+  "n": 7,
+  "en": "FISH",
+  "ar": "التهجين الفلوري",
+  "emoji": "💡",
+  "col": "#dbeeff",
+  "teaser": "مسبار مضوّي بيفتّش على قفلو",
+  "cap": "🔦",
+  "q": "FISH متل مفتاح بيضوّي بيفتّش على قفلو بالضبط بالـ DNA. اللي بتشوفو بالمجهر بيقلّك شو الخلل!",
+  "cons": [
+   {
+    "e": "🧪",
+    "t": "المبدأ والخطوات",
+    "flow": [
+     "Denaturation",
+     "Add probe",
+     "Hybridization",
+     "Fluorescence microscope"
+    ],
+    "b": [
+     "<bdi dir=\"ltr\">FISH</bdi> (<bdi dir=\"ltr\">Fluorescent in-situ hybridization</bdi>) بيجمع البيولوجيا الجزيئية (<bdi dir=\"ltr\">Molecular biology</bdi>) والخلوي الوراثي (<bdi dir=\"ltr\">Cytogenetics</bdi>)، وبيعطي تفاصيل أدق من الطريقة التقليدية.",
+     "المبدأ: تكامل سلاسل <bdi dir=\"ltr\">DNA</bdi> (<bdi dir=\"ltr\">Complementarity</bdi>). المسبار (<bdi dir=\"ltr\">Probe</bdi>) = صبغة فلورية (<bdi dir=\"ltr\">Fluorescent dye</bdi>) + تسلسل <bdi dir=\"ltr\">DNA</bdi> مكمّل. تخيّل مفتاح مضوّي بيلاقي قفلو وبيضوّي. بيشخّص أمراض وراثية وسرطان."
+    ],
+    "key": "c24",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Probe</bdi> (<bdi dir=\"ltr\">dye + complementary DNA</bdi>) → <bdi dir=\"ltr\">binds target → fluoresces</bdi>",
+    "c": "<bdi dir=\"ltr\">FISH</bdi> = مسبار مضوّي بيلاقي هدفو.",
+    "h": "Probe (dye + complementary DNA) → binds target → fluoresces",
+    "say": null,
+    "tr": "🔦 (<bdi dir=\"ltr\">FISH</bdi>) مسبار مضوّي بيدوّر على الهدف، وبيشع لما يلاقيه."
+   },
+   {
+    "e": "🚦",
+    "t": "الإشارات",
+    "flow": [
+     "Deletion = lost",
+     "Duplication = extra",
+     "Translocation = moved/merged"
+    ],
+    "b": [
+     "كيف بنقرا إشارات <bdi dir=\"ltr\">FISH</bdi>؟ حذف (<bdi dir=\"ltr\">Deletion</bdi>): الإشارة بتختفي. تضاعف (<bdi dir=\"ltr\">Duplication</bdi>): إشارات أكتر. انتقال (<bdi dir=\"ltr\">Translocation</bdi>): مواقع الإشارات بتتغيّر أو بتندمج.",
+     "والشريحة: <bdi dir=\"ltr\">Down syndrome</bdi> = تلات إشارات للكروموسوم <bdi dir=\"ltr\">21</bdi> بنواة وحدة (<bdi dir=\"ltr\">Trisomy 21</bdi>)."
+    ],
+    "key": "c25",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">Deletion = signal lost · duplication = extra signals · translocation = signals move/merge</bdi>",
+    "c": "حذف = اختفاء، تضاعف = زيادة، انتقال = تحرّك.",
+    "h": "Deletion = signal lost · duplication = extra signals · translocation = signals move/merge",
+    "say": null,
+    "tr": "💡 حذف = الضو اختفى، تضاعف = ضو زيادة، انتقال = الضو تحرّك أو اندمج."
+   }
+  ],
+  "hl": [
+   "Probe (dye + complementary DNA) → binds target → fluoresces",
+   "Deletion = signal lost · duplication = extra signals · translocation = signals move/merge"
+  ]
+ },
+ {
+  "n": 8,
+  "en": "Genetic services",
+  "ar": "مين بيستفيد؟",
+  "emoji": "👪",
+  "col": "#ffe3d3",
+  "teaser": "10 فئات للاستشارة الوراثية",
+  "cap": "🧑‍⚕️",
+  "q": "الاستشارة الوراثية {{genetic services}} مش لكل الناس، في 10 فئات بتستفيد منها.",
+  "cons": [
+   {
+    "e": "🔟",
+    "t": "الفئات العشر",
+    "flow": [
+     "Parents",
+     "Families",
+     "Children",
+     "Hormonal",
+     "Reproductive",
+     "Short stature",
+     "History",
+     "Relatives",
+     "Environment",
+     "Maternal age"
+    ],
+    "b": [
+     "مين بيستفيد من الخدمات الوراثية (<bdi dir=\"ltr\">Genetic services</bdi>)؟ <bdi dir=\"ltr\">10</bdi> فئات. أهل أولاد مصابين بأمراض سائدة أو متنحية أو مرتبطة بـ <bdi dir=\"ltr\">X.</bdi> عيل فيها حالات شديدة أو متكررة (صمم، شلل، قصر قامة، تخلّف عقلي، عمى). ولاد بتأخر نمو وملامح غريبة. مشاكل هرمونية أو أعضاء تناسلية غامضة (<bdi dir=\"ltr\">Ambiguous genitalia</bdi>). مشاكل إنجاب: صعوبة حمل، إجهاضات، ولادات ميتة (<bdi dir=\"ltr\">Stillbirths</bdi>)، وفيات رضّع. وفئات تانية بالشريحة."
+    ],
+    "key": "c26",
+    "i": "",
+    "x": "",
+    "m": "<bdi dir=\"ltr\">10 groups</bdi>: <bdi dir=\"ltr\">affected families · severe/recurrent · delay · hormonal · reproductive · others</bdi>",
+    "c": "<bdi dir=\"ltr\">10</bdi> فئات بتستفيد من الخدمات الوراثية.",
+    "h": "10 groups: affected families · severe/recurrent · delay · hormonal · reproductive · others",
+    "say": null,
+    "tr": "🏥 عشر فئات بتستفيد: عيلات مصابة، حالات شديدة ومتكررة، تأخّر، هرمونات، إنجاب..."
+   }
+  ],
+  "hl": [
+   "10 groups: affected families · severe/recurrent · delay · hormonal · reproductive · others"
+  ]
+ }
+];
+const ST={
+"c1": "<bdi dir=\"ltr\">A single-gene · B exceptions · C multifactorial · D analysis</bdi>",
+"c2": "<bdi dir=\"ltr\">Enzyme · membrane/transport · structure · drug reaction · cell growth</bdi>",
+"c3": "<bdi dir=\"ltr\">PAH deficiency</bdi> (<bdi dir=\"ltr\">AR</bdi>) → <bdi dir=\"ltr\">Phe not converted to Tyrosine → toxic buildup</bdi>",
+"c4": "<bdi dir=\"ltr\">CFTR defect</bdi> (<bdi dir=\"ltr\">AR</bdi>) → <bdi dir=\"ltr\">chloride transport defect → thick mucus → lung · pancreas · liver</bdi>",
+"c5": "<bdi dir=\"ltr\">FBN1 mutation</bdi> (<bdi dir=\"ltr\">AD</bdi>, <bdi dir=\"ltr\">chr 15</bdi>) → <bdi dir=\"ltr\">fibrillin 1 scaffold defect → skeleton + eye + cardiovascular</bdi>",
+"c6": "<bdi dir=\"ltr\">Collagen I + III defect</bdi> (<bdi dir=\"ltr\">AD</bdi>) → <bdi dir=\"ltr\">hypermobile joints + stretchy skin + easy bruising</bdi>",
+"c7": "<bdi dir=\"ltr\">G6PD deficiency</bdi> (<bdi dir=\"ltr\">X-linked</bdi>) + <bdi dir=\"ltr\">oxidative stress</bdi> (<bdi dir=\"ltr\">primaquine</bdi>, <bdi dir=\"ltr\">fava beans</bdi>) → <bdi dir=\"ltr\">hemolysis</bdi>",
+"c8": "<bdi dir=\"ltr\">Proto-oncogene</bdi> (<bdi dir=\"ltr\">gas</bdi>) + <bdi dir=\"ltr\">tumor suppressor</bdi> (<bdi dir=\"ltr\">brake</bdi>) → <bdi dir=\"ltr\">uncontrolled proliferation → cancer</bdi>",
+"c9": "<bdi dir=\"ltr\">Many genes + environment → risk</bdi> ∝ <bdi dir=\"ltr\">number of mutant genes</bdi>",
+"c10": "<bdi dir=\"ltr\">Genetic liability + environmental trigger → disease</bdi>",
+"c11": "<bdi dir=\"ltr\">First-degree</bdi>: <bdi dir=\"ltr\">2-7% → two affected siblings</bdi>: <bdi dir=\"ltr\">9%</bdi>",
+"c12": "<bdi dir=\"ltr\">Triplet repeat · Mitochondrial · Imprinting · Gonadal mosaicism</bdi>",
+"c13": "<bdi dir=\"ltr\">Repeat sequence expansion → more repeats → disease</bdi>",
+"c14": "<bdi dir=\"ltr\">Mitochondrial DNA → maternal inheritance only</bdi>",
+"c15": "<bdi dir=\"ltr\">Imprinting</bdi>: <bdi dir=\"ltr\">parent-of-origin gene silencing → Prader-Willi</bdi>, <bdi dir=\"ltr\">Angelman</bdi>",
+"c16": "<bdi dir=\"ltr\">Healthy parents + gonadal mutation → affected child → recurrence possible</bdi>",
+"c17": "<bdi dir=\"ltr\">Ultrasound + maternal blood markers → higher risk only</bdi> (<bdi dir=\"ltr\">no diagnosis</bdi>)",
+"c18": "<bdi dir=\"ltr\">High risk → amniocentesis</bdi> / <bdi dir=\"ltr\">CVS → fetal DNA → diagnosis</bdi>",
+"c19": "<bdi dir=\"ltr\">Age</bdi> ><bdi dir=\"ltr\">34 · previous chromosomal abnormality · X-linked carrier sex determination</bdi>",
+"c20": "<bdi dir=\"ltr\">Preconception carrier screening → saliva/buccal/blood · infertility → sex chromosomes · recurrent abortions → balanced translocation</bdi>",
+"c21": "<bdi dir=\"ltr\">Peripheral blood · congenital anomalies · metabolic · delay · aneuploidy · monogenic</bdi>",
+"c22": "<bdi dir=\"ltr\">Cytogenetic</bdi> (<bdi dir=\"ltr\">karyotype</bdi>) = <bdi dir=\"ltr\">chromosomes · Molecular = genes</bdi>",
+"c23": "<bdi dir=\"ltr\">Culture + metaphase → stain → image → arrange pairs</bdi>",
+"c24": "<bdi dir=\"ltr\">Probe</bdi> (<bdi dir=\"ltr\">dye + complementary DNA</bdi>) → <bdi dir=\"ltr\">binds target → fluoresces</bdi>",
+"c25": "<bdi dir=\"ltr\">Deletion = signal lost · duplication = extra signals · translocation = signals move/merge</bdi>",
+"c26": "<bdi dir=\"ltr\">10 groups</bdi>: <bdi dir=\"ltr\">affected families · severe/recurrent · delay · hormonal · reproductive · others</bdi>"
+};
+const MNMAP={"1.0": "c1", "2.0": "c2", "2.1": "c3", "2.2": "c4", "2.3": "c5", "2.4": "c6", "2.5": "c7", "2.6": "c8", "3.0": "c9", "3.1": "c10", "3.2": "c11", "4.0": "c12", "4.1": "c13", "4.2": "c14", "4.3": "c15", "4.4": "c16", "5.0": "c17", "5.1": "c18", "5.2": "c19", "5.3": "c20", "6.0": "c21", "6.1": "c22", "6.2": "c23", "7.0": "c24", "7.1": "c25", "8.0": "c26"};
+CH.forEach(c=>c.cons.forEach((k,j)=>{const key=MNMAP[c.n+'.'+j];if(key)k.m=ST[key]}));
+const main=document.getElementById('main'),cards=document.getElementById('cards');
+const cols=['#ffe3d3','#dbeeff','#ffdfe9','#e8e0ff','#d8f5e6','#fff3b8','#dbeeff','#ffe3d3'];
+let html='';
+CH.forEach((c,i)=>{
+  cards.insertAdjacentHTML('beforeend',`<div class="ccard" style="background:${c.col}" data-go="ch${c.n}"><div class="e">${c.emoji}</div><h3>${c.ar}</h3><small>${c.en}</small><p>${c.teaser}</p></div>`);
+  html+=`<section class="chap reveal" id="ch${c.n}">
+  <div class="chead"><div class="num" style="background:${['#5b6cff','#ff8a5b','#e85d9b','#8b5cf6','#2e9e6b','#e0a800','#3b9ae1','#e86a3d'][i]}">${c.n}</div><div><div class="lab">${c.en}</div><h2>${c.emoji} ${c.ar}</h2></div></div>
+  <div class="cap"><div class="av">${c.cap}</div><div class="bubble">${c.q}</div></div>`;
+  c.cons.forEach(k=>{
+    html+=`<div class="con reveal"><h3>${k.e} ${k.t}</h3>
+    ${k.say?`<div class="say"><b>${k.say[0]}:</b> «${k.say[1]}»</div>`:''}
+    ${k.flow&&k.flow.length?`<div class="chips" dir="ltr">${k.flow.map((f,j)=>(j?'<span class="chip ar" style="transition-delay:'+(j*.12)+'s">→</span>':'')+'<span class="chip" style="transition-delay:'+(j*.12)+'s">'+f+'</span>').join('')}</div>`:''}
+    <ul class="enul" dir="rtl">${k.b.map(x=>'<li>'+x+'</li>').join('')}</ul>
+    ${k.x?`<p class="extra" dir="ltr">${k.x}</p>`:''}
+    ${k.m?`<div class="mn open"><button><span>🧩 بسطر واحد</span><span>⌄</span></button><div class="body">${k.m}</div></div>`:''}
+    
+    ${k.tr?`<div class="trk2">🎭 <b>حيلة الحفظ:</b> ${k.tr}</div>`:''}
+    ${k.c?`<div class="cheat"><b>⭐ أهم شي تنتبه عليه:</b> ${k.c}</div>`:''}
+    ${k.h?`<div class="hy" dir="ltr"><b>HIGHLIGHT:</b> ${k.h}</div>`:''}</div>`;
+  });
+  html+=`<div class="hl"><small>⭐ HIGHLIGHT</small>${c.hl.join('<span class="sep">|</span>')}</div></section>`;
+});
+
+/* mini games */
+html+=`<section class="chap reveal" id="games"><div class="chead"><div class="num" style="background:#2e9e6b">🎮</div><div><div class="lab">Mini games</div><h2>جرّب حالك</h2></div></div>
+<div class="game"><h4>🧩 وصّل المرض بنوعو</h4><div id="match"></div></div>
+<div class="game"><h4>✅❌ صح ولا غلط؟</h4><div id="tf"></div></div></section>`;
+
+/* final review */
+html+=`<section class="sec reveal" id="review" style="background:#fff3d6"><h2>📝 المراجعة الأخيرة</h2>
+<div class="hl" style="margin-top:6px"><small>سطر لكل موضوع</small>
+<b>جين واحد {{single-gene}}:</b> 5 فئات (إنزيم · غشاء · بنية · دوا · نمو)<br><b>متعددة العوامل {{multifactorial}}:</b> جينات + بيئة، 2–7% و 9%<br><b>استثناءات مندل {{Mendelian exceptions}}:</b> triplet · mito · imprinting · mosaicism<br><b>قبل الولادة {{prenatal}}:</b> NIPS شكّ ← IPD تأكيد<br><b>Karyotype:</b> 4 خطوات · <b>FISH:</b> 4 خطوات<br><b>الخدمات الوراثية {{genetic services}}:</b> 10 فئات</div>
+<h3 style="margin-top:14px">وصّل المرض بآليتو</h3>
+<table><tr><th>المرض</th><th>الفئة</th><th>تفاصيل</th><th>حيلة</th></tr>
+<tr><td>PKU</td><td>إنزيم {{enzyme}}</td><td>AR · PAH</td><td>عامل 🏭</td></tr>
+<tr><td>CF</td><td>غشاء/نقل {{membrane}}</td><td>AR · CFTR</td><td>بوّاب 🚪</td></tr>
+<tr><td>Marfan</td><td>بنية {{structural}}</td><td>AD · FBN1 (chr 15) · fibrillin 1</td><td>سقالة 🏗️</td></tr>
+<tr><td>EDS</td><td>بنية (نسيج ضام)</td><td>AD · collagen I, III</td><td>حبال 🤸</td></tr>
+<tr><td>G6PD</td><td>دوا {{drug reaction}}</td><td>X-linked (ملاحظة الشريحة) · primaquine</td><td>شمسية ☂️</td></tr>
+<tr><td>سرطان {{cancer}}</td><td>نمو الخلية {{cell growth}}</td><td>proto-oncogenes / suppressors · 5% عيلي</td><td>دعسة+فرامل 🚗</td></tr></table>
+<h3>قبل الولادة vs بعد الولادة</h3>
+<table><tr><th></th><th>Prenatal</th><th>Postnatal</th></tr>
+<tr><td>إيمتى</td><td>خلال الحمل</td><td>بعد الولادة</td></tr>
+<tr><td>الفحص</td><td>NIPS وبعدين تشخيص (بزل سلى، CVS)</td><td>دم محيطي {{peripheral blood}}</td></tr>
+<tr><td>الاستطبابات {{indications}}</td><td>عمر >34 · ولد سابق مصاب · جنس X-linked</td><td>تشوهات · أيض · تأخر نمو · aneuploidy · monogenic</td></tr></table>
+<h3>NIPS vs IPD</h3>
+<table><tr><th></th><th>NIPS</th><th>IPD</th></tr>
+<tr><td>النوع</td><td>Screening (فحص)</td><td>Diagnostic (تشخيصي)</td></tr>
+<tr><td>الطريقة</td><td>سونار + دم الأم</td><td>بزل سلى / CVS وبعدين فحص DNA</td></tr>
+<tr><td>النتيجة</td><td>بيبيّن خطر أعلى بس</td><td>بيأكّد الفروقات الكروموسومية</td></tr></table>
+<h3>Karyotype vs FISH</h3>
+<table><tr><th></th><th>Karyotype</th><th>FISH</th></tr>
+<tr><td>الفئة</td><td>Cytogenetic</td><td>Molecular + cytogenetic</td></tr>
+<tr><td>الدقة</td><td>مجهر ضوئي {{light microscope}}</td><td>أدق، مجهر فلوري</td></tr>
+<tr><td>بيكشف</td><td>تثلّث (داون)، انتقال (فيلادلفيا CML)</td><td>حذف، تضاعف، انتقال</td></tr></table>
+<h3 style="margin-top:14px">🕵️ ورقة الغش</h3><div class="csg"><div class="cs" style="background:#d8f5e6"><b class="cst">🧬 Single-gene: 5 classes</b><ul><li><bdi dir="ltr">Enzyme</bdi> · <bdi dir="ltr">Membrane/transport</bdi> · <bdi dir="ltr">Structural protein</bdi> · <bdi dir="ltr">Drug reaction</bdi> · <bdi dir="ltr">Cell growth</bdi></li></ul></div><div class="cs" style="background:#ffe3d3"><b class="cst">🥛 PKU</b><ul><li><bdi dir="ltr">Autosomal recessive</bdi></li><li><bdi dir="ltr">PAH mutation</bdi> → <bdi dir="ltr">no phenylalanine hydroxylase</bdi></li><li><bdi dir="ltr">Phenylalanine</bdi> → <bdi dir="ltr">phenylpyruvate</bdi> (<bdi dir="ltr">not tyrosine</bdi>)</li></ul></div><div class="cs" style="background:#dbeeff"><b class="cst">🫁 Cystic fibrosis</b><ul><li><bdi dir="ltr">Autosomal recessive</bdi> · <bdi dir="ltr">CFTR</bdi></li><li><bdi dir="ltr">Defective chloride transport</bdi> → <bdi dir="ltr">thick mucus</bdi></li><li><bdi dir="ltr">Lungs</bdi> (<bdi dir="ltr">worst</bdi>) · <bdi dir="ltr">pancreas insufficiency</bdi> · <bdi dir="ltr">some cirrhosis</bdi></li></ul></div><div class="cs" style="background:#e8e0ff"><b class="cst">🕷️ Marfan</b><ul><li><bdi dir="ltr">Autosomal dominant</bdi> · <bdi dir="ltr">FBN1</bdi> (<bdi dir="ltr">chr 15</bdi>) → <bdi dir="ltr">fibrillin 1</bdi></li><li><bdi dir="ltr">MARFANS</bdi>: <bdi dir="ltr">Mitral prolapse</bdi> · <bdi dir="ltr">Aortic aneurysm</bdi> · <bdi dir="ltr">Retinal detachment</bdi> · <bdi dir="ltr">Fibrillin</bdi> · <bdi dir="ltr">Arachnodactyly</bdi> · <bdi dir="ltr">Negative nitroprusside</bdi> · <bdi dir="ltr">Subluxated lens</bdi></li><li><bdi dir="ltr">Nitroprusside positive</bdi> = <bdi dir="ltr">homocystinuria</bdi></li></ul></div><div class="cs" style="background:#fff3b8"><b class="cst">🤸 Ehlers-Danlos</b><ul><li><bdi dir="ltr">Autosomal dominant</bdi> · <bdi dir="ltr">collagen I</bdi> + <bdi dir="ltr">III</bdi></li><li><bdi dir="ltr">Joint hypermobility</bdi> · <bdi dir="ltr">hyper-elastic skin</bdi> · <bdi dir="ltr">easy bruising</bdi></li></ul></div><div class="cs" style="background:#ffdfe9"><b class="cst">💊 G6PD</b><ul><li><bdi dir="ltr">X-linked</bdi> · <bdi dir="ltr">protects RBC from oxidative stress</bdi></li><li><bdi dir="ltr">Primaquine</bdi> → <bdi dir="ltr">hemolysis</bdi> · <bdi dir="ltr">favism</bdi></li></ul></div><div class="cs" style="background:#fde68a"><b class="cst">🎲 Multifactorial</b><ul><li><bdi dir="ltr">Genes</bdi> + <bdi dir="ltr">environment</bdi> · <bdi dir="ltr">risk rises with number of mutant genes</bdi></li><li><bdi dir="ltr">Recurrence</bdi>: 2–7% <bdi dir="ltr">first-degree</bdi> · 9% <bdi dir="ltr">after 2 siblings</bdi></li><li><bdi dir="ltr">HTN</bdi> · <bdi dir="ltr">type II DM</bdi> · <bdi dir="ltr">gout</bdi> · <bdi dir="ltr">cleft lip/palate</bdi> · <bdi dir="ltr">pyloric stenosis</bdi> · <bdi dir="ltr">CHD</bdi></li></ul></div><div class="cs" style="background:#d8f5e6"><b class="cst">🧩 Non-classic</b><ul><li><bdi dir="ltr">Triplet repeat</bdi> · <bdi dir="ltr">Mitochondrial</bdi> · <bdi dir="ltr">Genomic imprinting</bdi> · <bdi dir="ltr">Gonadal mosaicism</bdi></li><li><bdi dir="ltr">Gonadal mosaicism</bdi>: <bdi dir="ltr">healthy parents</bdi>, <bdi dir="ltr">affected child</bdi>, <bdi dir="ltr">recurrence possible</bdi></li></ul></div><div class="cs" style="background:#eef3ff"><b class="cst">🤰 Prenatal + carrier</b><ul><li><bdi dir="ltr">NIPS</bdi> = <bdi dir="ltr">risk only</bdi> (<bdi dir="ltr">ultrasound</bdi> + <bdi dir="ltr">maternal blood</bdi>)</li><li><bdi dir="ltr">IPD</bdi> = <bdi dir="ltr">amniocentesis</bdi> / <bdi dir="ltr">CVS</bdi> → <bdi dir="ltr">confirms</bdi></li><li><bdi dir="ltr">Indications</bdi>: <bdi dir="ltr">age</bdi> &<bdi dir="ltr">gt</bdi>;34 · <bdi dir="ltr">previous chromosomal child</bdi> · <bdi dir="ltr">X-linked carrier</bdi></li><li><bdi dir="ltr">Carrier screening</bdi>: <bdi dir="ltr">before pregnancy</bdi> · <bdi dir="ltr">AR</bdi> / <bdi dir="ltr">X-linked</bdi> · <bdi dir="ltr">saliva</bdi></li></ul></div><div class="cs" style="background:#ffe3e8"><b class="cst">🔬 Karyotyping + FISH</b><ul><li><bdi dir="ltr">Karyotype</bdi>: <bdi dir="ltr">metaphase arrest</bdi> → <bdi dir="ltr">bands</bdi> → <bdi dir="ltr">pairs</bdi>; <bdi dir="ltr">detects trisomy</bdi>, <bdi dir="ltr">translocation</bdi></li><li><bdi dir="ltr">FISH</bdi>: <bdi dir="ltr">denature DNA</bdi> → <bdi dir="ltr">probe</bdi> → <bdi dir="ltr">hybridization</bdi> → <bdi dir="ltr">fluorescence</bdi></li><li><bdi dir="ltr">Deletion</bdi> = <bdi dir="ltr">signal lost</bdi> · <bdi dir="ltr">Duplication</bdi> = <bdi dir="ltr">extra</bdi> · <bdi dir="ltr">Translocation</bdi> = <bdi dir="ltr">merge</bdi></li></ul></div></div></section>`;
+
+/* essay */
+const ES=[
+['صنّف أمراض الجين الواحد حسب الأساس البيوكيميائي والجزيئي','<ul><li>عيوب الإنزيمات</li><li>عيوب مستقبلات الغشاء وأنظمة النقل</li><li>عيوب البروتينات البنيوية</li><li>طفرات تعطي ردود فعل غريبة للأدوية</li><li>عيوب بروتينات تنظيم نمو الخلية</li></ul>'],
+['Cystic fibrosis: الوراثة، الجين، البروتين، الخلل، المظاهر','<ul><li>جسمية متنحية، اضطراب نقل أيونات بالظهارة</li><li>جين CF ← بروتين CFTR، نقل الكلور معطوب</li><li>مخاط سميك بالعرق والرئة والبنكرياس</li><li>مرض رئة مزمن (الأخطر) · التهابات علوية · قصور بنكرياس (steatorrhea) · تشمّع كبد</li></ul>'],
+['Marfan syndrome: الوراثة، الجين، البروتين، الأجهزة، العلامات','<ul><li>AD · FBN1 (كروموسوم 15) ← fibrillin 1</li><li>الهيكل + العين + القلب والأوعية</li><li>MARFANS: Mitral prolapse · Aortic aneurysm · Retinal detachment · Fibrillin defect · Arachnodactyly · Negative nitroprusside · Subluxated lens</li></ul>'],
+['قارن بين التحليل الوراثي قبل وبعد الولادة','<ul><li>قبل: أثناء الحمل، NIPS ثم بزل سلى/CVS؛ استطبابات: عمر >34، طفل سابق مصاب، جنس X-linked</li><li>بعد: دم محيطي؛ استطبابات: تشوهات، استقلاب، تأخر نمو، aneuploidy، جين واحد</li></ul>'],
+['FISH: المبدأ والخطوات والإشارات','<ul><li>مسبار (صبغة فلورية + DNA مكمّل) يرتبط بهدفه</li><li>فصل السلاسل ← إضافة المسبار ← ارتباط ← مجهر فلوري</li><li>حذف: إشارة تختفي · تضاعف: إشارات زيادة · انتقال: مواقع تتغير/تندمج</li></ul>'],
+['فرّق NIPS عن الفحص الباضع التشخيصي','<ul><li>NIPS: سونار + مؤشرات دم الأم، خطر فقط، ما بيشخّص</li><li>IPD: بزل سلى أو CVS، DNA الجنين يتفحص ← تأكيد</li></ul>']
+];
+html+=`<section class="sec reveal" id="essay" style="background:#e8e0ff"><h2>✍️ أسئلة مقالية</h2><p style="color:var(--mut)">فكّر بجوابك أول، وبعدين دوس.</p>`+
+ES.map((e,i)=>`<div class="rv"><button><span>${i+1}. ${e[0]}</span><span>👁️</span></button><div class="ans">${e[1]}</div></div>`).join('')+`</section>`;
+
+/* flashcards */
+const FC=[
+['كم فئة لأمراض الجين الواحد؟ {{single-gene}}','5: إنزيم · غشاء · بنية · دوا · نمو'],
+['وراثة PKU؟ والإنزيم الناقص؟','جسمية متنحية {{AR}} · PAH'],
+['بـ PKU: بدل tyrosine، الـ Phe بيتحوّل لشو؟','phenylpyruvate'],
+['بروتين CF؟','CFTR (نقل الكلور {{chloride}})'],
+['وراثة Marfan وجينو؟','سائدة {{AD}} · FBN1 عالكروموسوم 15'],
+['شو نتيجة فحص nitroprusside بـ Marfan؟','سلبي (إيجابي بـ homocystinuria)'],
+['وراثة EDS؟ وأي كولاجين؟','سائدة {{AD}} · النوع I و III'],
+['G6PD + primaquine = شو؟','انحلال دم {{hemolysis}}'],
+['كم نسبة السرطانات العيلية؟ {{familial}}','5% (أغلبها سائدة)'],
+['خطر التكرار بالمتعددة العوامل؟','2–7% درجة أولى {{first-degree}} · 9% بعد أخوين'],
+['الأنواع الأربعة لاستثناءات مندل؟','Triplet · Mitochondrial · Imprinting · Gonadal mosaicism'],
+['شو هو NIPS؟','سونار + مؤشرات دم الأم · خطر بس، مش تشخيص'],
+['إجراءات الفحص الباضع؟ {{IPD}}','بزل السلى {{amniocentesis}} و CVS'],
+['استطبابات الفحص قبل الولادة؟ {{prenatal}}','عمر الأم >34 · ولد سابق بشذوذ كروموسومي · جنس لمرض X-linked'],
+['شو أشيع عينة لفحص الحاملين؟ {{carrier screening}}','لعاب {{saliva}}'],
+['خطوات الكاريوتايب؟','زرع + metaphase ← صبغ ← مجهر/تصوير ← ترتيب أزواج'],
+['خطوات FISH؟','فصل ← مسبار ← ارتباط ← مجهر فلوري'],
+['شو بيصير بالـ FISH إذا في حذف؟ {{deletion}}','الإشارة بتختفي'],
+['كروموسوم فيلادلفيا؟','انتقال {{translocation}} · CML'],
+['كم فئة بتستفيد من الخدمات الوراثية؟','10 فئات']
+];
+html+=`<section class="sec reveal" id="flash" style="background:#d8f5e6"><h2>⚡ بطاقات سريعة</h2><div class="score">✅ <span id="sy">0</span> · 🔁 <span id="sn">0</span> / ${FC.length}</div>`+
+FC.map((f,i)=>`<div class="flash" data-i="${i}"><div class="in2"><div class="face f">${T(f[0])}</div><div class="face b">${T(f[1])}</div></div></div><div class="know" data-i="${i}" style="display:none"><button class="y">عرفتها ✅</button><button class="n">أراجعها 🔁</button></div>`).join('')+`</section>`;
+main.innerHTML=T(html);
+
+/* interactions */
+document.querySelectorAll('.mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.querySelectorAll('.rv>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+let sy=0,sn=0;const done={};
+document.querySelectorAll('.flash').forEach(f=>f.onclick=()=>{f.classList.toggle('flip');const k=f.nextElementSibling;k.style.display=f.classList.contains('flip')?'flex':'none'});
+document.querySelectorAll('.know').forEach(k=>{
+  k.querySelector('.y').onclick=()=>mark(k,1);k.querySelector('.n').onclick=()=>mark(k,0)});
+function mark(k,v){const i=k.dataset.i;if(done[i]!==undefined){v?0:0}
+  if(done[i]===1)sy--;if(done[i]===0)sn--;done[i]=v;v?sy++:sn++;
+  document.getElementById('sy').textContent=sy;document.getElementById('sn').textContent=sn;k.style.opacity=.5}
+/* match */
+const MT=[['PKU','إنزيم'],['CF','غشاء ونقل'],['Marfan','بنية'],['G6PD','دواء']];
+const CL=['إنزيم','غشاء ونقل','بنية','دواء','نمو الخلية'];
+document.getElementById('match').innerHTML=MT.map(m=>`<div style="margin:8px 0"><b class="en">${m[0]}</b> ←<div class="opts" data-a="${m[1]}">${CL.map(c=>`<button>${c}</button>`).join('')}</div></div>`).join('');
+document.querySelectorAll('#match .opts').forEach(o=>o.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(b.textContent===o.dataset.a){b.classList.add('ok')}else{b.classList.add('no')}}));
+const TF=[['G6PD بيحمي الكريات الحمرا من الأكسدة',1,'صح — هيدي شمسية الكريات.'],['NIPS بيشخّص المرض الوراثي',0,'غلط — بيبيّن خطر {{risk}} بس.'],['Marfan بوراثة جسمية متنحية',0,'غلط — جسمية سائدة {{AD}}.'],['CF سببو خلل ببروتين CFTR',1,'صح — نقل الكلور.'],['FISH: الحذف = إشارات زيادة',0,'غلط — الحذف {{deletion}} إشارة بتختفي، والزيادة = تضاعف {{duplication}}.'],['الميتوكوندريا بتنوَّرث من الأم بس',1,'صح (معلومة من خارج المحاضرة).'],['الخطر بعد أخوين مصابين (متعددة العوامل) 9%',1,'صح.'],['الكاريوتايب بيستخدم مسبار فلوري',0,'غلط — هيدا FISH.']];
+document.getElementById('tf').innerHTML=TF.map((t,i)=>`<div class="tf"><div>${t[0]}<div class="fb"></div></div><div class="b2"><button data-v="1">صح</button><button data-v="0">غلط</button></div></div>`).join('');
+document.querySelectorAll('#tf .tf').forEach((r,i)=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  const ok=+b.dataset.v===TF[i][1];r.classList.add(ok?'ok':'no');r.querySelector('.fb').innerHTML=T((ok?'🎉 ':'🤔 ')+TF[i][2])}));
+
+/* reveal & progress */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.con').forEach(el=>io.observe(el));
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('[data-go]').forEach(c=>c.onclick=()=>document.getElementById(c.dataset.go).scrollIntoView({behavior:'smooth'}));
+
+/* guided tour */
+const IDS=[...CH.map(c=>'ch'+c.n),'games','review','essay','flash'];
+let ti=-1,timer=null,playing=false;
+const badge=document.getElementById('tourbadge'),tog=document.getElementById('toggle');
+function go(i){ti=Math.max(0,Math.min(IDS.length-1,i));document.getElementById(IDS[ti]).scrollIntoView({behavior:'smooth'})}
+function stop(){playing=false;clearInterval(timer);badge.style.display='none'}
+function play(){if(ti<0)go(0);playing=true;badge.style.display='block';clearInterval(timer);timer=setInterval(()=>{if(ti>=IDS.length-1){stop();return}go(ti+1)},12000)}
+document.getElementById('tourBtn').onclick=()=>{ti=-1;play()};
+document.getElementById('next').onclick=()=>{go(ti+1);if(playing)play()};
+document.getElementById('prev').onclick=()=>{go(ti-1);if(playing)play()};
+tog.onclick=()=>playing?stop():play();
+
+/* ===== Golden summary ===== */
+const G=[
+['#fff3b8','4 Parts','4 أقسام',[
+ ['Single-gene · Mendelian exceptions · Multifactorial · Genetic analysis','جين واحد {{single-gene}} · استثناءات مندل · متعددة العوامل · التحليل الوراثي']]],
+['#dbeeff','Single-gene disorders','الجين الواحد',[
+ ['5 classes: enzyme · membrane/transport · structural protein · drug reaction · cell growth','5 فئات: إنزيم · غشاء ونقل · بروتين بنيوي · ردّة فعل دوا · نمو الخلية'],
+ ['Enzyme defect: toxic buildup, metabolic imbalance, impaired cell function','عيب الإنزيم: تراكم سموم {{toxic buildup}}، خلل أيض {{metabolic imbalance}}، ضعف وظيفة الخلية']]],
+['#ffe3d3','PKU (enzyme)','PKU',[
+ ['Autosomal recessive','وراثة جسمية متنحية'],
+ ['PAH gene mutation → lack of phenylalanine hydroxylase','طفرة {{mutation}} بجين PAH ← نقص الإنزيم'],
+ ['Phenylalanine → phenylpyruvate (not tyrosine)','الـ Phenylalanine بيتحوّل لـ phenylpyruvate مش لـ tyrosine']]],
+['#d8f5e6','Cystic fibrosis (membrane)','التليّف الكيسي',[
+ ['Autosomal recessive','وراثة جسمية متنحية'],
+ ['CF gene → CFTR protein','جين CF ← بروتين CFTR'],
+ ['Defective chloride transport → thick mucus','نقل الكلور معطوب ← مخاط سميك {{thick mucus}}'],
+ ['Chronic lung disease (most severe)','مرض رئة مزمن (الأخطر)'],
+ ['Recurrent upper respiratory infections','التهابات متكررة بالجهاز التنفسي العلوي'],
+ ['Pancreatic insufficiency: malabsorption, steatorrhea, malnutrition','قصور البنكرياس: سوء امتصاص، إسهال دهني، سوء تغذية'],
+ ['Cirrhosis (some cases)','تشمّع الكبد (ببعض الحالات)']]],
+['#e8e0ff','Marfan syndrome (structural)','مارفان',[
+ ['Autosomal dominant','وراثة جسمية سائدة'],
+ ['FBN1 gene (chromosome 15) → fibrillin 1','جين FBN1 (كروموسوم 15) ← بروتين fibrillin 1'],
+ ['Fibrillin 1: scaffold for elastin; gives strength and elasticity','سقالة للإيلاستين {{elastin}}؛ بتعطي قوة ومرونة'],
+ ['Affects skeleton, eye, cardiovascular system','بيأثّر عالهيكل والعين والقلب والأوعية'],
+ ['MARFANS: Mitral valve prolapse · Aortic aneurysm · Retinal detachment · Fibrillin defect · Arachnodactyly · Negative nitroprusside · Subluxated lens','تدلّي الصمام التاجي · أمّ دم الأبهر · انفصال الشبكية · خلل fibrillin · أصابع طويلة · فحص nitroprusside سلبي · خلع جزئي للعدسة'],
+ ['Nitroprusside positive in homocystinuria','فحص nitroprusside بيطلع إيجابي بـ homocystinuria']]],
+['#ffdfe9','Ehlers-Danlos (structural)','EDS',[
+ ['Autosomal dominant','وراثة جسمية سائدة'],
+ ['Defective collagen type I and III','كولاجين {{collagen}} النوع I والـ III معطوب'],
+ ['Joint hypermobility, hyper-elastic skin','مفاصل مرنة زيادة، جلد مطّاطي'],
+ ['Easy bruising, early osteoarthritis','كدمات بسهولة، خشونة مفاصل بكّير']]],
+['#fff3b8','G6PD deficiency (drug reaction)','نقص G6PD',[
+ ['G6PD protects red cells from oxidative stress','G6PD بيحمي الكريات الحمرا {{red cells}} من الأكسدة {{oxidative stress}}'],
+ ['Primaquine blocks G6PD','دوا primaquine بيعطّل G6PD'],
+ ['Deficient patient → severe hemolysis','المريض الناقص ← انحلال دم شديد {{hemolysis}}'],
+ ['X-linked (slide note) · favism (slide note)','مرتبط بـ X {{X-linked}} · favism (ملاحظة الشريحة)']]],
+['#dbeeff','Cell-growth defects','نمو الخلية',[
+ ['Proto-oncogene and tumor suppressor mutations → uncontrolled growth → cancer','طفرات {{mutations}} بـ proto-oncogenes وبـ tumor suppressors ← نمو مش مضبوط ← سرطان'],
+ ['Cancer mutations: usually somatic (acquired)','طفرات السرطان غالباً جسدية {{somatic}} يعني مكتسبة'],
+ ['Familial: only 5%, mostly autosomal dominant','العيلي {{familial}} بس 5%، وأغلبو سائد']]],
+['#ffdfe9','Multifactorial (polygenic)','متعددة العوامل',[
+ ['Multiple genes + environment','جينات كتيرة + بيئة'],
+ ['Risk rises with number of mutant genes','الخطر بيزيد بعدد الجينات الطافرة {{mutant genes}}'],
+ ['Genetic liability needs environmental factors','القابلية الوراثية لازم يكون معها عوامل بيئية'],
+ ['Examples: hypertension, type II DM, gout, cleft lip/palate, pyloric stenosis, CHD, cancer','ضغط، سكري 2، نقرس، شفة/حنك مشقوق، تضيّق البواب، قلب خلقي، سرطان'],
+ ['Recurrence: 2–7% first-degree relatives; 9% after two affected siblings','التكرار {{recurrence}}: 2–7% لأقارب الدرجة الأولى {{first-degree relatives}}؛ 9% بعد أخوين مصابين']]],
+['#e8e0ff','Non-classic (Mendelian exceptions)','استثناءات مندل',[
+ ['Triplet-repeat · Mitochondrial · Genomic imprinting · Gonadal mosaicism','تكرار ثلاثي · ميتوكوندريا · بصم جيني · فسيفساء المناسل'],
+ ['Triplet repeat: DNA repeats expand beyond normal length','تسلسلات DNA بتتوسّع فوق طولها الطبيعي'],
+ ['Gonadal mosaicism: healthy parents, affected child, recurrence possible','أهل أصحّا {{healthy parents}}، ولد مصاب، والتكرار ممكن']]],
+['#d8f5e6','Prenatal analysis','قبل الولادة',[
+ ['NIPS: ultrasound + maternal blood markers','NIPS: سونار + مؤشرات دم الأم'],
+ ['NIPS shows risk only; no diagnosis','NIPS بيبيّن خطر بس، ما بيشخّص'],
+ ['IPD: amniocentesis or CVS → fetal DNA tested → confirms','IPD: بزل السلى أو CVS ← فحص DNA الجنين ← تأكيد'],
+ ['CVS: fetal part of placenta','CVS: الجزء الجنيني من المشيمة'],
+ ['Indications: age >34 · previous child with chromosomal abnormality · fetal sex (X-linked carrier partner)','عمر الأم >34 · ولد سابق بشذوذ كروموسومي · جنس الجنين (الزوج حامل X-linked)']]],
+['#ffe3d3','Carrier screening','فحص الحاملين',[
+ ['Before pregnancy; detects AR or X-linked carriers','قبل الحمل؛ بيكشف حاملي {{carriers}} AR أو X-linked'],
+ ['Sample: saliva (most common), buccal swab, blood','العينة: لعاب {{saliva}} (الأشيع)، مسحة خد، دم'],
+ ['Infertility → rule out sex chromosome abnormality','عقم {{infertility}} ← استبعاد شذوذ الكروموسومات الجنسية'],
+ ['Recurrent abortions → rule out parental balanced translocation','إجهاضات متكررة ← استبعاد انتقال متوازن عند الأهل']]],
+['#fff3b8','Postnatal analysis','بعد الولادة',[
+ ['Sample: peripheral blood','العينة: دم محيطي'],
+ ['Indications: multiple anomalies · suspected metabolic syndrome · developmental delay · suspected aneuploidy · suspected monogenic disease','تشوهات متعددة · اشتباه أيض · تأخر نمو · اشتباه اختلال عدد الكروموسومات · اشتباه مرض جين واحد'],
+ ['Cytogenetic = chromosomes (karyotyping); Molecular = genes','Cytogenetic = كروموسومات (karyotyping)؛ Molecular = جينات']]],
+['#dbeeff','Karyotyping','الكاريوتايب',[
+ ['Examines chromosome structure, number, arrangement','بيفحص بنية الكروموسومات وعددها وترتيبها'],
+ ['Sample: blood, amniotic fluid, tissue','العينة: دم، سائل أمنيوسي، نسيج'],
+ ['Steps: culture + arrest at metaphase → stain bands → microscope/photo → arrange in pairs','زرع + إيقاف عند metaphase ← صبغ ← مجهر وتصوير ← ترتيب أزواج'],
+ ['Detects: trisomy (Down), translocation (Philadelphia, CML)','بيكشف: تثلّث {{trisomy}} (داون)، انتقال {{translocation}} (فيلادلفيا، CML)']]],
+['#ffe3d3','FISH','FISH',[
+ ['More detailed than traditional cytogenetics','أدق من الكاريوتايب التقليدي'],
+ ['Probe = fluorescent dye + complementary DNA','المسبار {{probe}} = صبغة فلورية + DNA مكمّل'],
+ ['Steps: denature DNA → add probe → hybridization → fluorescence microscope','فصل DNA ← مسبار ← ارتباط ← مجهر فلوري'],
+ ['Deletion: signal lost · Duplication: extra signals · Translocation: signals move/merge','حذف: الإشارة بتختفي · تضاعف: إشارات زيادة · انتقال: الإشارات بتتحرك أو بتندمج']]],
+['#e8e0ff','Genetic services (10 groups)','مين بيستفيد',[
+ ['Parents of affected children · families with severe/recurrent conditions · children with delay + unusual features · hormonal problems/ambiguous genitalia · reproductive problems · short stature · family history · consanguinity · environmental exposure · advanced maternal age','أهل أولاد مصابين · عيل فيها حالات شديدة · ولاد بتأخر وملامح غريبة · هرمونات/أعضاء غامضة · مشاكل إنجاب · قصر قامة · قصة عيلية · زواج أقارب {{consanguinity}} · تعرّض بيئي · عمر أم متقدّم']]]
+];
+const GM=[null,['classes'],['pku'],['cf'],['marfan'],['eds'],['g6pd'],['growth'],['multi','fam'],['nonclassic'],['nips','ipd','ind'],['carrier'],['postnatal','diag'],['karyo'],['fish0','fish1'],['services']];
+let gh=`<div class="wrap"><h1>⭐ الملخص الذهبي</h1><p class="sub">كل فكرة بسطر إنكليزي وتحتو شرحها بالعربي. دوس على السطر لما تحفظو (<span id="gp">0</span> / <span id="gt">0</span>).</p>`;
+G.forEach((g,gi)=>{gh+=`<div class="gcard reveal" style="background:${g[0]}"><h3>${g[1]} <small style="color:var(--mut);font-weight:500">· ${g[2]}</small></h3>${g[3].map(x=>`<div class="gi"><div><div class="ge">${x[0]}</div><div class="ga">${x[1]}</div></div></div>`).join('')}${GM[gi]?`<div class="mn"><button><span>🧠 حيلة الحفظ</span><span>⌄</span></button><div class="body">${GM[gi].map(k=>ST[k]).join('<br><br>')}</div></div>`:''}</div>`});
+gh+=`</div>`;
+document.getElementById('v-gold').innerHTML=T(gh);
+document.querySelectorAll('#v-gold .mn button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+document.getElementById('gt').textContent=document.querySelectorAll('#v-gold .gi').length;
+document.querySelectorAll('#v-gold .gi').forEach(e=>e.onclick=()=>{e.classList.toggle('got');document.getElementById('gp').textContent=document.querySelectorAll('#v-gold .gi.got').length});
+
+/* ===== Short essay ===== */
+const SQ=[
+['Q1: Classify the Non-Classical Disease of single gene disorders.',['Trinucleotide (triplet)-repeat mutations','Mitochondrial gene mutations','Genomic imprinting','Gonadal mosaicism'],'Triplet · Mito · Imprinting · Mosaicism'],
+['Q2: Mention the consequences of enzyme defects.',['Enzyme deficiency / altered activity','Toxic substance buildup','Metabolic imbalance','Impaired cellular function'],'toxic buildup · metabolic imbalance'],
+['Q3: Classify genetic disorders according to the biochemical and molecular basis of single-gene disorders.',['Enzyme defects','Membrane receptors and transport systems','Structural proteins','Unusual drug reactions (+ cell-growth regulating proteins)'],'enzyme · membrane · structural · drug · growth'],
+['Q4: Mention the clinical manifestations of cystic fibrosis.',['Chronic lung disease with recurrent infections (most severe)','Recurrent upper respiratory infections','Pancreatic insufficiency: malabsorption, steatorrhea, malnutrition','Cirrhosis (some cases)'],'CFTR · AR · thick mucus'],
+['Q5: Mention the features of Marfan syndrome.',['M: Mitral valve prolapse · A: Aortic aneurysm','R: Retinal detachment · F: Fibrillin defect (FBN1, chr 15)','A: Arachnodactyly · N: Negative nitroprusside','S: Subluxated lens'],'MARFANS · AD · skeleton + eye + CVS'],
+['Q6: Ehlers-Danlos syndrome: inheritance, defect, signs.',['Autosomal dominant connective tissue disorder','Defective collagen type I and III synthesis','Joint hypermobility + hyper-elastic skin','Easy bruising, early-onset osteoarthritis'],'AD · collagen I, III'],
+['Q7: G6PD deficiency: role of the enzyme and drug reaction.',['G6PD protects red cells from oxidative stress','X-linked (slide note)','Drug (primaquine) blocks G6PD','Deficient patient → severe hemolysis (also favism)'],'primaquine · hemolysis'],
+['Q8: Define multifactorial (polygenic) disorders and give examples.',['Multiple genes + environmental factors','Risk depends on number of mutant genes inherited','Genetic liability needs environment to appear','Hypertension, type II DM, gout, cleft lip/palate, pyloric stenosis, CHD, cancer'],'recurrence 2–7% · 9% after two siblings'],
+['Q9: What are triplet repeat mutations?',['DNA repeat sequences','Expand beyond normal length','Expansion → genetic disorders','More repeats = disease (e.g., Fragile X, Huntington — outside lecture)'],'non-classic single-gene'],
+['Q10: Differentiate NIPS from invasive prenatal diagnostic testing.',['NIPS: ultrasound + maternal blood biochemical markers','NIPS shows higher risk only; cannot diagnose','IPD: amniocentesis or CVS (fetal part of placenta)','IPD: fetal DNA extracted and tested → confirms'],'screening vs diagnostic'],
+['Q11: Mention the indications of prenatal genetic analysis.',['Advanced maternal age (>34): greater trisomy risk','Previous child with chromosomal abnormality','Fetal sex determination: partner confirmed X-linked carrier'],'age · previous child · X-linked sex'],
+['Q12: Mention the indications of postnatal genetic analysis.',['Multiple congenital anomalies','Suspected metabolic syndrome','Unexplained developmental delay / mental retardation','Suspected aneuploidy / chromosomal abnormality or monogenic disease'],'peripheral blood'],
+['Q13: Karyotyping: definition, sample, procedure, applications.',['Lab technique examining chromosomes (structure, number, arrangement); sample: blood, amniotic fluid, tissue','Culture → arrest at metaphase','Stain bands → microscopy/photograph → arrange in pairs','Detects trisomy (Down), translocation (Philadelphia: CML)'],'cytogenetic'],
+['Q14: Mention the steps of FISH and the signal changes in each abnormality.',['Denature DNA → add probe → hybridization → fluorescence microscope','Deletion: signal missing','Duplication: extra signals','Translocation: signal positions change/merge'],'probe = dye + complementary DNA'],
+['Q15: Preconception carrier screening: definition, sample, indications.',['Screening before pregnancy for family planning; detects AR or X-linked carriers','Sample: saliva (most common), buccal swab, blood','Infertility → rule out sex chromosomal abnormality','Multiple spontaneous abortions → rule out balanced translocation in parents'],'before pregnancy'],
+['Q16: Who benefits from genetic services? (mention 4)',['Parents of affected children; families with severe/recurrent conditions','Children with developmental delay + unusual features; hormonal problems/ambiguous genitalia','Reproductive problems; short stature; family history','Consanguineous couples; environmental exposure; advanced maternal age'],'10 groups']
+];
+let sh=`<div class="wrap"><h1>✍️ Short Essay</h1><p class="sub">نفس نمط الامتحان: اكتب جوابك، وبعدين شوف الجواب النموذجي وقيّم حالك من 4.</p>
+<div class="tot">النتيجة: <span id="ts">0</span> / <span id="tm">${SQ.length*4}</span></div>
+<div class="tools"><button id="shuf">🔀 خلّط الأسئلة</button><button id="rst">↺ ابدأ من جديد</button></div><div id="sq"></div></div>`;
+document.getElementById('v-short').innerHTML=sh;
+const sc={};
+function renderSQ(list){
+ document.getElementById('sq').innerHTML=list.map(i=>{const q=SQ[i];return `<div class="qc reveal in" data-i="${i}"><div class="qh"><div class="pt">4 نقاط</div><div class="q">${q[0]}</div></div>
+ <textarea placeholder="إجابتك"></textarea><button class="qbtn">👁️ شوف الجواب</button>
+ <div class="qa"><ol>${q[1].map(x=>`<li class="en" style="display:list-item;direction:ltr;text-align:left">${x}</li>`).join('')}</ol><div class="kw">🔑 ${q[2]}</div>
+ <div class="rate">قيّم إجابتك: ${[0,1,2,3,4].map(n=>`<button data-n="${n}">${n}</button>`).join('')}</div></div></div>`}).join('');
+ document.querySelectorAll('#sq .qc').forEach(c=>{
+  c.querySelector('.qbtn').onclick=()=>c.querySelector('.qa').classList.toggle('show');
+  c.querySelectorAll('.rate button').forEach(b=>b.onclick=()=>{c.querySelectorAll('.rate button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');sc[c.dataset.i]=+b.dataset.n;
+   document.getElementById('ts').textContent=Object.values(sc).reduce((a,b)=>a+b,0)})});
+}
+const order=[...SQ.keys()];renderSQ(order);
+document.getElementById('shuf').onclick=()=>{const o=[...SQ.keys()].sort(()=>Math.random()-.5);renderSQ(o)};
+document.getElementById('rst').onclick=()=>{for(const k in sc)delete sc[k];document.getElementById('ts').textContent=0;renderSQ(order)};
+
+/* ===== view routing ===== */
+const VW=['study','gold','short'];
+function showView(v,push){if(!VW.includes(v))v='study';stop();
+ VW.forEach(x=>{document.getElementById('v-'+x).hidden=x!==v});
+ document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ document.getElementById('nav').style.display=v==='study'?'flex':'none';
+ scrollTo(0,0);if(push){try{location.hash=v}catch(e){}}
+ document.querySelectorAll('#v-'+v+' .reveal').forEach(el=>io.observe(el))}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>showView(b.dataset.v,true));
+addEventListener('hashchange',()=>showView(location.hash.slice(1),false));
+showView(location.hash.slice(1),false);
+</script>
+</body>
+</html>
