@@ -1,22 +1,2348 @@
-/* Lectures filed by system. */
+/* Pathology lectures filed by system (genetic / immuno). */
 (window.LECTURES=window.LECTURES||[]).push(...[
- {"id":"cns-pharma-1","system":"CNS","title":"Pharmacology of CNS Drugs: Sedative-Hypnotics and Antidepressants","url":"cns-pharma-1.html","summary":"CNS channels and neurotransmitters, sedative-hypnotics (BZ, barbiturates, Z-drugs, melatonin/orexin, buspirone), tolerance and dependence, depression and antidepressants (TCAs, SSRIs, SNRIs, MAOIs, atypicals).","points":["CNS drugs act on ion channels and receptors: GABA-A, NMDA, monoamine transporters","BZ: positive allosteric modulators of GABA-A, ↑ Cl⁻ channel opening frequency; Flumazenil antagonist","Barbiturates: ↑ channel opening duration; narrow safety margin","Z-drugs: zolpidem, zaleplon, zopiclone; chloral hydrate; melatonin/orexin agents; buspirone","Depression: monoamine hypothesis; TCAs block NE/5-HT reuptake","SSRIs, SNRIs, mirtazapine, bupropion, MAOIs, 5-HT2 antagonists: mechanism, uses, adverse effects"],"mcqs":[{"q":"Which drug blocks benzodiazepine action at the GABA-A receptor?","opts":["Flumazenil","β-Carbolines","Zolpidem","Buspirone"],"a":0,"why":"Flumazenil هو الـ Antagonist اللي بيحجب BZ. أما β-Carbolines فهني Inverse agonists، تأثيرها عكسي."},{"q":"Barbiturates effect ← GABA-A chloride channel?","opts":["↑ opening frequency","↑ opening duration","Blocks the channel","Opens without GABA"],"a":1,"why":"BZ بتزيد تكرار فتح القناة (Frequency). Barbiturates بتزيد مدة الفتح (Duration)."},{"q":"Usual cause of death ← sedative-hypnotic overdose?","opts":["Hypertension","Respiratory depression","Hyperthermia","Renal failure"],"a":1,"why":"تثبيط التنفس (Respiratory depression) هو السبب المعتاد للوفاة بالجرعة الزائدة."},{"q":"Which drug is a prodrug converted by alcohol dehydrogenase?","opts":["Chloral hydrate","Phenobarbital","Zaleplon","Ramelteon"],"a":0,"why":"Chloral hydrate بيتحوّل بإنزيم Alcohol dehydrogenase لـ Trichloroethanol (المنوّم الفعّال)."},{"q":"Which is NOT a Z-drug?","opts":["Zolpidem","Zaleplon","Triazolam","Zopiclone"],"a":2,"why":"Triazolam بنزوديازيبين (بتنتهي بـ azolam). الـ 3z هني Zopiclone و Zolpidem و Zaleplon."},{"q":"Ramelteon: which statement is correct?","opts":["Acts directly on GABA-A","Controlled substance","Minimal abuse liability","↑ testosterone"],"a":2,"why":"Ramelteon ما بيشتغل على GABA، مو مادة خاضعة للرقابة، احتمال إساءة استعمالو قليل. وبيقلل Testosterone مش بيزيدو."},{"q":"Suvorexant mechanism?","opts":["OX1R, OX2R antagonist","Melatonin agonist","5-HT1A partial agonist","GABA-A agonist"],"a":0,"why":"Suvorexant بيحجب مستقبلات Orexin ← بيقلل نظام اليقظة ← منوّم."},{"q":"Buspirone is used ← ?","opts":["Insomnia","Generalized anxiety","Epilepsy","Anaesthesia"],"a":1,"why":"Buspirone: Partial agonist على 5-HT1A، بيُستعمل بالقلق المعمّم (GAD)."},{"q":"Prototypical TCAs?","opts":["Fluoxetine, sertraline","Imipramine, amitriptyline","Phenelzine, selegiline","Venlafaxine, duloxetine"],"a":1,"why":"النموذجين: Imipramine و Amitriptyline."},{"q":"Which statement ← SSRIs is correct?","opts":["Block alpha receptors","Minimal autonomic toxicity","Inhibit MAO-A","Block 5-HT2A"],"a":1,"why":"SSRIs سميتها الذاتية قليلة لأنها ما بتحصر Alpha و Muscarinic و H1. النموذج: Fluoxetine."},{"q":"Mirtazapine mechanism?","opts":["Presynaptic α2 antagonism ← ↑ NE, 5-HT release","MAO-B inhibition","SERT inhibition only","GABA-A potentiation"],"a":0,"why":"Mirtazapine بيسد α2 (Negative feedback) ← إفراز NE و 5-HT بيزيد. وكمان بيسد 5-HT2."},{"q":"Bupropion is used ← ?","opts":["Smoking cessation","Status epilepticus","Insomnia","Anaesthesia"],"a":0,"why":"Bupropion (NDRI) بيُستعمل للإقلاع عن التدخين، وللاكتئاب والاضطراب العاطفي الموسمي."},{"q":"MAOI with fastest onset, shortest duration?","opts":["Phenelzine","Isocarboxazid","Tranylcypromine","Selegiline"],"a":2,"why":"Tranylcypromine: أسرع بدء، مدة حوالي 1 week مقابل 2–3 weeks لباقي MAOIs."},{"q":"Selective MAO-B inhibitor ← depression, Parkinsonism?","opts":["Phenelzine","Selegiline","Isocarboxazid","Trazodone"],"a":1,"why":"Selegiline انتقائي لـ MAO-B (بيكسّر Dopamine)، وللاكتئاب بصيغة لصقة جلدية."},{"q":"Nefazodone, trazodone act by?","opts":["MAO inhibition","Block 5-HT2A","SERT inhibition only","α2 antagonism"],"a":1,"why":"بيحجبوا 5-HT2A ← تأثير مضاد للاكتئاب ومضاد للقلق."}],"cards":[{"f":"Voltage-gated channels?","b":"Respond to membrane potential change"},{"f":"Ligand-gated channels?","b":"Neurotransmitter binding ← opens; ionotropic; e.g., GABA-A"},{"f":"Metabotropic receptors?","b":"G-protein-coupled; second messengers; e.g., GABA-B"},{"f":"CNS excitatory transmitter?","b":"Glutamate"},{"f":"CNS inhibitory transmitters?","b":"GABA, glycine"},{"f":"Sites of drug action?","b":"8 steps: action potential, synthesis, storage, metabolism, release, reuptake, degradation, receptor"},{"f":"Sedative vs hypnotic?","b":"Sedative: ↓ anxiety, calming; hypnotic: drowsiness, sleep (more CNS depression)"},{"f":"REM sleep?","b":"Rapid eye movements; most dreaming"},{"f":"BZ mechanism?","b":"Bind GABA-A; potentiate GABAergic inhibition; ↑ Cl⁻ channel opening frequency"},{"f":"Barbiturate effect ← Cl⁻ channel?","b":"↑ opening duration"},{"f":"BZ antagonist?","b":"Flumazenil: blocks BZ; may precipitate seizures"},{"f":"Inverse agonists, BZ site?","b":"β-Carbolines"},{"f":"Organ-level effects?","b":"Sedation, hypnosis, anesthesia, anticonvulsant, muscle relaxation, respiratory-cardiovascular"},{"f":"Usual cause of overdose death?","b":"Respiratory depression"},{"f":"Tolerance?","b":"↓ responsiveness ← repeated exposure"},{"f":"Physiologic dependence features?","b":"↑ anxiety, insomnia, CNS excitability, convulsions"},{"f":"BZ cognitive adverse effect?","b":"Dose-related amnesia; impaired new learning"},{"f":"Status epilepticus first-line?","b":"IV lorazepam, diazepam; IM midazolam"},{"f":"BZ examples?","b":"Alprazolam, chlordiazepoxide, clorazepate, clonazepam, diazepam, flurazepam, lorazepam, midazolam"},{"f":"Name clue ← BZ?","b":"azepam, azolam"},{"f":"Barbiturates: key problem?","b":"Low therapeutic index; dependence; abuse"},{"f":"Barbiturate overdose?","b":"Hypothermia, respiratory depression, coma"},{"f":"Thiopental?","b":"Ultra-short barbiturate; anaesthesia"},{"f":"Phenobarbital?","b":"Long-acting; epilepsy; 12+ h"},{"f":"Z-drugs?","b":"Zopiclone, zolpidem, zaleplon (3z); GABA-A, different site from BZ"},{"f":"Chloral hydrate?","b":"Prodrug ← alcohol dehydrogenase ← trichloroethanol; 30–60 min; 6–8 h; t½ 8 h"},{"f":"Chloral hydrate danger?","b":"Serious hepatic, renal failure; aggravates peptic ulcer"},{"f":"Ramelteon, tasimelteon?","b":"Melatonin receptor agonists (SCN); ↓ sleep-onset latency; no GABA effect"},{"f":"Ramelteon adverse effects?","b":"Dizziness, fatigue; ↓ testosterone, ↑ prolactin"},{"f":"Tasimelteon use?","b":"Non-24-hour sleep-wake disorder"},{"f":"Suvorexant?","b":"Orexin OX1R, OX2R antagonist; insomnia"},{"f":"Buspirone?","b":"5-HT1A partial agonist (± D2); generalized anxiety"},{"f":"Amine hypothesis?","b":"Depression ← functional deficiency: NE or serotonin"},{"f":"TCAs mechanism?","b":"Inhibit NE, 5-HT reuptake; prototypes imipramine, amitriptyline"},{"f":"TCAs also block?","b":"Muscarinic, H1, alpha ← orthostatic hypotension"},{"f":"Mirtazapine?","b":"Presynaptic α2 antagonist ← ↑ NE, 5-HT release; 5-HT2 antagonist"},{"f":"Bupropion?","b":"NE, dopamine reuptake inhibitor; smoking cessation, depression, SAD"},{"f":"SSRI prototype?","b":"Fluoxetine"},{"f":"SSRI advantage?","b":"Selective SERT block; minimal autonomic toxicity"},{"f":"SNRIs?","b":"Venlafaxine, desvenlafaxine, duloxetine; NE, 5-HT transporters; no α, anticholinergic, antihistaminic"},{"f":"Venlafaxine vs duloxetine?","b":"Venlafaxine: less NET affinity"},{"f":"MAO-A vs MAO-B?","b":"A: NE, 5-HT, tyramine; B: dopamine"},{"f":"Non-selective MAOIs?","b":"Phenelzine, isocarboxazid, tranylcypromine"},{"f":"Tranylcypromine?","b":"Fastest onset; ~1 week (others 2–3 weeks)"},{"f":"Selegiline?","b":"Selective MAO-B; depression, Parkinsonism; transdermal patch"},{"f":"Nefazodone, trazodone?","b":"5-HT2A block ← antidepressant, antianxiety"},{"f":"Antidepressant uses?","b":"Depression, anxiety (panic, GAD, social phobia), chronic pain, enuresis, eating disorders, smoking cessation, delay orgasm, PMS, PMDD"}],"subject":"pharm","date":"2026-11-16"},
- {"id":"malaria-2026","system":"protozoa","title":"Malaria: Plasmodium spp.","url":"malaria-2026-1.html","summary":"Plasmodium species, fever patterns, falciparum vs vivax morphology, human and mosquito life cycle, hypnozoite relapse, clinical features, lab diagnosis (smear, RDT, fluorescent, PCR) and treatment.","points":["Female Anopheles bite; infective form sporozoite","4 human species; falciparum most lethal, vivax most widespread","Tertian: falciparum, ovale, vivax; quartan: malariae","Falciparum smear: ring 2-4 μm + banana gametocytes only","Vivax: all stages, Schüffner's dots, enlarged RBC","Pre-erythrocytic 8 days, 20,000-30,000 merozoites; erythrocytic 48 h","Hypnozoite: relapse up to 2 years (vivax, ovale)","Sticky RBCs: cerebral malaria; renal failure: Blackwater fever","Diagnosis: thick/thin smear, RDT (HRP II), fluorescent, PCR","Chloroquine, quinine: anti-erythrocytic; primaquine, pyrimethamine: anti-exoerythrocytic"],"mcqs":[{"q":"Infective form of Plasmodium to man:","opts":["Sporozoite","Merozoite","Gametocyte","Hypnozoite"],"a":0,"why":"Sporozoite is injected by the mosquito bite."},{"q":"Definitive host of Plasmodium:","opts":["Man","Female Anopheles","Culex","Dog"],"a":1,"why":"Sexual development occurs in the mosquito."},{"q":"Only ring forms and gametocytes in peripheral blood:","opts":["P. vivax","P. malariae","P. falciparum","P. ovale"],"a":2,"why":"Schizonts aggregate in brain and organ capillaries."},{"q":"Schüffner's dots are seen in:","opts":["P. falciparum","P. vivax","Both","Neither"],"a":1,"why":"Fine red dots on the infected RBC membrane in P. vivax."},{"q":"Quartan malaria is caused by:","opts":["P. malariae","P. vivax","P. ovale","P. falciparum"],"a":0,"why":"Fever every 4th day."},{"q":"Pre-erythrocytic schizogony lasts:","opts":["48 hours","8 days","30 years","2 years"],"a":1,"why":"Liver stage lasts 8 days."},{"q":"Resting liver stage responsible for relapse:","opts":["Oocyst","Hypnozoite","Ookinete","Trophozoite"],"a":1,"why":"Reactivates up to 2 years."},{"q":"Antigen detected by RDT for P. falciparum:","opts":["HRP II","PfEMP","CSP","MSP"],"a":0,"why":"Immunochromatography, malaria card test."},{"q":"Preferred stain per lecture:","opts":["Gram","ZN","Leishman","H&E"],"a":2,"why":"Giemsa is also acceptable."},{"q":"Renal failure in malaria can manifest as:","opts":["Blackwater fever","Cerebral malaria","Quartan fever","Hypnozoite"],"a":0,"why":"Affects kidneys."},{"q":"Anti-erythrocytic drugs:","opts":["Primaquine, pyrimethamine","Chloroquine, quinine","Both","Neither"],"a":1,"why":"Primaquine, pyrimethamine act on exo-erythrocytic stage."}],"cards":[{"f":"Infective form","b":"Sporozoite"},{"f":"Definitive host","b":"Female Anopheles"},{"f":"Intermediate host","b":"Man"},{"f":"Tertian","b":"Falciparum, ovale, vivax: every 3rd day"},{"f":"Quartan","b":"P. malariae: every 4th day"},{"f":"Falciparum smear","b":"Ring + crescent gametocytes only"},{"f":"Ring size","b":"2-4 μm"},{"f":"Schüffner's dots","b":"P. vivax"},{"f":"Pre-erythrocytic","b":"Liver, 8 days"},{"f":"Erythrocytic","b":"RBC, 48 h, 6-24 merozoites"},{"f":"Hypnozoite","b":"Dormant liver form, relapse"},{"f":"Cerebral malaria","b":"Sticky RBCs block brain capillaries"},{"f":"Blackwater fever","b":"Renal failure"},{"f":"RDT antigen","b":"HRP II (P. falciparum)"},{"f":"Preferred stain","b":"Leishman (Giemsa acceptable)"},{"f":"Anti-erythrocytic","b":"Chloroquine, quinine"},{"f":"Anti-exoerythrocytic","b":"Primaquine, pyrimethamine"}],"subject":"para","date":"2026-11-15"},
- {"id":"malaria-2","kind":"practical","system":"protozoa","title":"Malaria 2: P. malariae & P. falciparum","url":"malaria-prac-2.html","summary":"Classification of Plasmodium, then P. malariae (benign quartan, band form, rosette schizont) vs P. falciparum (malignant tertian, tiny rings with double chromatin, crescent gametocytes), the two-phase life cycle and lab diagnosis (thick and thin films, serology).","points":["Apicomplexa > Sporozoa > Haemosporida > Plasmodium; 4 human species","P. malariae: benign quartan; tropical Africa, Sri Lanka, Burma, parts of India","P. malariae ring: thick, intensely stained, single large chromatin dot; RBC not enlarged","Band form is unique to P. malariae; numerous large pigment granules","P. malariae schizont: 6-12 merozoites (usually 8-10), rosette; can be common in blood","P. falciparum: malignant tertian, often fatal; named for crescent gametocytes","P. falciparum rings: delicate, tiny, at RBC margin; double chromatin (stereo headphones)","P. falciparum schizont: smallest, 8-24 merozoites (usually 16), 2/3 of RBC; rare in blood except severe cases","Gametocytes crescent/banana, ~1.5x RBC, appear ~10 days after rings","Asexual phase in man (intermediate host); sexual phase in female Anopheles (definitive host); thick film detects, thin film differentiates species"],"mcqs":[{"q":"P. falciparum is named after:","opts":["Crescent gametocytes","Band form","Rosette schizont","Schüffner's dots"],"a":0,"why":"Crescentic shape of gametocytes."},{"q":"Band form is a unique feature of:","opts":["P. falciparum","P. vivax","P. ovale","P. malariae"],"a":3,"why":"Cytoplasm elongates across the RBC."},{"q":"P. malariae causes:","opts":["Blackwater fever","Cerebral malaria","Benign quartan malaria","Malignant tertian malaria"],"a":2,"why":"Fever every 4th day (quartan)."},{"q":"Schizont of P. malariae usually has:","opts":["2 merozoites","8-10 merozoites","16 merozoites","24 merozoites"],"a":1,"why":"6-12, usually 8-10, in a rosette."},{"q":"Schizont of P. falciparum usually has:","opts":["16 merozoites","8-10 merozoites","6 merozoites","30,000 merozoites"],"a":0,"why":"8-24, usually 16."},{"q":"Schizonts are rarely seen in the peripheral blood of:","opts":["P. malariae","Both","Neither","P. falciparum"],"a":3,"why":"Except in severe cases."},{"q":"Binucleate ring resembling stereo headphones is seen in:","opts":["Both","Neither","P. falciparum","P. malariae"],"a":2,"why":"Double chromatin, common in falciparum."},{"q":"Falciparum gametocytes appear after the ring stage by about:","opts":["1 hour","10 days","2 days","30 days"],"a":1,"why":"About 10 days."},{"q":"Definitive host of Plasmodium:","opts":["Female Anopheles","Man","Cow","Dog"],"a":0,"why":"Sexual phase occurs in the mosquito."},{"q":"Best blood film to differentiate between species:","opts":["Thick film","Both","Neither","Thin film"],"a":3,"why":"Thin film shows morphology; thick film detects the parasite."},{"q":"Order of Plasmodium:","opts":["Sporozoa","Coccidia","Haemosporida","Apicomplexa"],"a":2,"why":"Phylum Apicomplexa, class Sporozoa, order Haemosporida."}],"cards":[{"f":"Phylum / Class / Order / Genus","b":"Apicomplexa / Sporozoa / Haemosporida / Plasmodium"},{"f":"Human Plasmodium species","b":"vivax, ovale, malariae, falciparum"},{"f":"P. malariae disease","b":"Benign quartan malaria (fever every 4th day)"},{"f":"P. malariae distribution","b":"Tropical Africa, Sri Lanka, Burma, parts of India"},{"f":"Definitive host","b":"Female Anopheles (vector)"},{"f":"Intermediate host","b":"Man"},{"f":"P. malariae ring","b":"Like vivax but thicker, intensely stained, single large chromatin dot"},{"f":"Unique feature of P. malariae","b":"Band form; numerous large pigment granules"},{"f":"P. malariae schizont","b":"6-12 merozoites (usually 8-10), rosette, nearly fills a normal-sized RBC"},{"f":"P. falciparum disease","b":"Malignant tertian malaria, often fatal"},{"f":"Why 'falciparum'?","b":"Crescent-shaped gametocytes"},{"f":"P. falciparum ring","b":"Delicate, tiny, along RBC margin; double chromatin (stereo headphones); several per RBC"},{"f":"P. falciparum schizont","b":"Smallest; 8-24 merozoites (usually 16); fills about 2/3 of RBC; rare in blood except severe cases"},{"f":"P. falciparum gametocyte","b":"Crescent, sausage or banana; about 1.5x RBC diameter; appears about 10 days after rings"},{"f":"Asexual phase","b":"In humans (intermediate host)"},{"f":"Sexual phase","b":"In the mosquito (definitive host)"},{"f":"Thick film","b":"Detects the parasite; easy and fast for light infection in endemic areas"},{"f":"Thin film","b":"Differentiates between species"}],"subject":"para","date":"2026-11-16"},
- {"id":"hemodynamics-2","system":"inflam","title":"Hemodynamic Disturbance 2: Thrombosis, Embolism, Infarction, Shock","url":"hemodynamics-2.html","summary":"Virchow's triad, fate and morphology of thrombus, DIC, embolism types, pulmonary thromboembolism, ischemia, infarction (red vs white), and shock types, stages and prognosis.","points":["Virchow: endothelial injury, altered flow, hypercoagulability","Turbulence: arterial; stasis: venous","Fate: propagation, embolization, dissolution, organization, calcification","Lines of Zahn: true thrombus, absent postmortem","DIC: microthrombi, consumption, bleeding","PTE source: deep leg veins; saddle at bifurcation","Red infarct: venous, loose, dual; white: arterial, solid","Shock: cardiogenic, hypovolemic, septic, anaphylactic, neurogenic"],"mcqs":[{"q":"Stasis mainly causes:","opts":["Venous thrombosis","Arterial thrombosis","Cardiac thrombosis","Vegetations"],"a":0,"why":"Turbulence causes arterial and cardiac thrombosis."},{"q":"Lines of Zahn are found in:","opts":["Thrombus formed during life","Postmortem clot","Both","Neither"],"a":0,"why":"Absent in postmortem clots."},{"q":"DIC ends with:","opts":["Serious bleeding","Only thrombosis","Hypertension","Polycythemia"],"a":0,"why":"Platelets and clotting proteins are consumed."},{"q":"Saddle embolus lodges at:","opts":["Pulmonary artery bifurcation","Aortic arch","Carotid","Portal vein"],"a":0,"why":"Source: deep leg veins."},{"q":"Neurons tolerate ischemia for:","opts":["3-4 min","20-30 min","Hours","Days"],"a":0,"why":"Myocardium 20-30 min."},{"q":"Best prognosis shock:","opts":["Young + hypovolemic","Old + septic","Old + cardiogenic","Young + cardiogenic"],"a":0,"why":"Worst: old + cardiogenic or septic."}],"cards":[{"f":"Virchow's triad","b":"Endothelium, flow, coagulability"},{"f":"Primary hypercoagulability","b":"Antithrombin III, protein C deficiency"},{"f":"Lines of Zahn","b":"Pale platelets + fibrin, dark RBCs"},{"f":"DIC","b":"Widespread microthrombi then bleeding"},{"f":"Saddle embolus","b":"Pulmonary artery bifurcation"},{"f":"Fat embolism","b":"Long-bone fracture, 1-3 days"},{"f":"Decompression sickness","b":"Nitrogen bubbles"},{"f":"Infarct shape","b":"Wedge, apex at vessel"},{"f":"Red infarct","b":"Venous, loose, dual circulation"},{"f":"White infarct","b":"Arterial, solid, end-arterial"},{"f":"Shock lung","b":"ARDS"},{"f":"Shock stages","b":"Compensation, progressive, decompensation"}],"subject":"path","date":"2026-11-14"},
- {"id":"hemodynamics-1","system":"inflam","title":"Hemodynamic Disturbance 1: Hyperemia, Congestion, Edema, Hemostasis, Hemorrhage","url":"hemodynamics-1.html","summary":"Hyperemia vs congestion, nutmeg liver, pulmonary congestion, Starling forces, edema mechanisms and types, transudate vs exudate, hemostasis steps, fibrinolysis and hemorrhage.","points":["Hyperemia: active, arteriolar dilation, red","Congestion: passive, venous outflow down, cyanosis","Nutmeg liver: right heart failure, dark centre","Starling: arterial hydrostatic > oncotic, venous oncotic > hydrostatic","Edema: hydrostatic up, oncotic down, lymphatic block, permeability up, Na + water retention","Transudate SG < 1.012, protein < 3 g/dL; exudate opposite","Hemostasis: injury, spasm, platelet plug, coagulation, fibrinolysis","Petechiae 1-2 mm, purpura > 3 mm, ecchymoses 1-2 cm"],"mcqs":[{"q":"Hyperemia is:","opts":["Active, arteriolar dilation","Passive, venous obstruction","Lymphatic block","Platelet defect"],"a":0,"why":"Active with increased inflow; congestion is passive."},{"q":"Nutmeg liver is caused by:","opts":["Right-sided heart failure","Left-sided heart failure","Hepatitis A","Cholestasis"],"a":0,"why":"Chronic venous congestion."},{"q":"Peau d'orange is due to:","opts":["Lymphatic obstruction","Nephrotic syndrome","Heart failure","Cirrhosis"],"a":0,"why":"Breast carcinoma blocks lymphatics."},{"q":"Exudate protein:","opts":["> 3 g/dL","< 3 g/dL","Zero","Same as urine"],"a":0,"why":"SG > 1.012, permeability up."},{"q":"Platelet release reaction includes:","opts":["ADP, serotonin, TXA2","Plasmin","Fibrin","Collagen"],"a":0,"why":"Recruits more platelets."},{"q":"Purpura size:","opts":["> 3 mm","1-2 mm","1-2 cm","< 0.1 mm"],"a":0,"why":"Petechiae 1-2 mm, ecchymoses 1-2 cm."}],"cards":[{"f":"Hyperemia","b":"Active, inflow up, red"},{"f":"Congestion","b":"Passive, outflow down, cyanosis"},{"f":"Total body water","b":"60% lean weight; 2/3 intracellular"},{"f":"Arterial end","b":"Hydrostatic > oncotic"},{"f":"Venous end","b":"Oncotic > hydrostatic"},{"f":"Ascites","b":"Hydroperitoneum"},{"f":"Anasarca","b":"Severe generalized edema"},{"f":"Transudate","b":"SG < 1.012, protein < 3"},{"f":"Exudate","b":"SG > 1.012, protein > 3"},{"f":"Fibrinolysis","b":"Plasminogen to plasmin"},{"f":"Petechiae","b":"1-2 mm"},{"f":"Ecchymoses","b":"1-2 cm"}],"subject":"path","date":"2026-11-14"},
- {"id":"cell-injury-56","system":"inflam","title":"Cell Injury 5-6: Necrosis, Apoptosis, Adaptation, Accumulations","url":"cell-injury-56.html","summary":"Necrosis and its patterns, outcomes, apoptosis and its pathways, hypertrophy, hyperplasia, atrophy, metaplasia, intracellular accumulations, pigments, calcification and cellular aging.","points":["Necrosis: uncontrolled, inflammation; pyknosis, karyorrhexis, karyolysis","6 patterns: coagulative, liquefactive, caseous, gangrenous, fat, fibrinoid","Apoptosis: programmed, caspases, no inflammation","Intrinsic: BCL2 family, cytochrome c, caspase-9","Extrinsic: Fas, FADD, caspase-8","Hypertrophy size, hyperplasia number, atrophy, metaplasia","Dystrophic vs metastatic calcification","Telomere shortening and telomerase"],"mcqs":[{"q":"Fibrinoid necrosis is characteristic of:","opts":["Immune reactions in vessel walls","TB","Pancreatitis","Brain infarct"],"a":0,"why":"Antigen-antibody complexes leak into vessel walls: bright pink on H&E."},{"q":"Caseous necrosis is typical of:","opts":["Tuberculosis","Brain infarct","Acute pancreatitis","Dry gangrene"],"a":0,"why":"Cheese-like, inside a granuloma."},{"q":"Caspase-8 is activated by the:","opts":["Extrinsic pathway","Intrinsic pathway","Both equally","Neither"],"a":0,"why":"Intrinsic activates caspase-9; extrinsic activates caspase-8 and 10."},{"q":"Which protein prevents cytochrome c leakage?","opts":["BCL2","BAX","BAK","FADD"],"a":0,"why":"BCL2, BCL-XL, MCL1 are anti-apoptotic."},{"q":"Hyperplasia differs from hypertrophy by:","opts":["Increased cell number","Increased cell size","Decreased cell size","Cell replacement"],"a":0,"why":"Hyperplasia number, hypertrophy size."},{"q":"Barrett esophagus is:","opts":["Squamous to columnar metaplasia","Columnar to squamous","Atrophy","Hyperplasia"],"a":0,"why":"Risk: adenocarcinoma."}],"cards":[{"f":"Necrosis nuclear changes","b":"Pyknosis, karyorrhexis, karyolysis"},{"f":"Coagulative necrosis","b":"Ischemia, infarction, structure preserved"},{"f":"Liquefactive necrosis","b":"Pus, bacteria, brain"},{"f":"Caseous necrosis","b":"TB, granuloma"},{"f":"Fat necrosis","b":"Pancreatic lipases, saponification"},{"f":"Fibrinoid necrosis","b":"Immune, vessel wall"},{"f":"Apoptosis","b":"Programmed, no inflammation"},{"f":"Intrinsic pathway","b":"Mitochondria, cytochrome c, caspase-9"},{"f":"Extrinsic pathway","b":"Fas, FADD, caspase-8"},{"f":"Executioner caspases","b":"3 and 6"},{"f":"Anti-apoptotic","b":"BCL2, BCL-XL, MCL1"},{"f":"Pro-apoptotic","b":"BAX, BAK"},{"f":"Hypertrophy","b":"Cell size up"},{"f":"Hyperplasia","b":"Cell number up"},{"f":"Barrett esophagus","b":"Squamous to columnar, adenocarcinoma"},{"f":"Dystrophic calcification","b":"Dead tissue, normal calcium"},{"f":"Metastatic calcification","b":"Viable tissue, hypercalcemia"},{"f":"Lipofuscin","b":"Wear-and-tear, aging"},{"f":"Hemosiderin","b":"Iron storage"},{"f":"Telomerase","b":"Germ and stem cells"}],"subject":"path","date":"2026-11-14"},
- {"id":"cell-injury-34","system":"inflam","title":"Cell Injury 3-4: Mechanisms, Free Radicals, Ischemia","url":"cell-injury-34.html","summary":"Homeostasis, adaptation and injury, causes, ATP depletion, membrane and DNA damage with p53, free radicals, calcium, ischemia and reperfusion, chemical and microbial injury, reversible injury.","points":["Stress beyond adaptation = cell injury (reversible / irreversible)","Hypoxia: ischemia, inadequate oxygenation, decreased O2 carrying capacity","ATP < 5-10%: pump failure, glycolysis, decreased protein synthesis","Membrane damage: 5 mechanisms, 3 membranes","p53: G1 arrest, repair, else apoptosis","Free radicals: catalase, antioxidants, metal-binding proteins","Ca2+ up: phospholipase, protease, endonuclease, ATPase","Reperfusion injury: ROS, Ca2+, neutrophils, complement"],"mcqs":[{"q":"Hallmark of reversible cell injury:","opts":["Cell swelling","Karyolysis","Pyknosis","Karyorrhexis"],"a":0,"why":"Cell swelling (hydropic change) is the earliest sign."},{"q":"ATP depletion causes all EXCEPT:","opts":["Na/K pump failure","Glycolysis shift","Increased protein synthesis","Ribosome detachment"],"a":2,"why":"Protein synthesis decreases."},{"q":"After DNA damage, p53 first:","opts":["Causes apoptosis immediately","Arrests the cell cycle in G1","Mutates","Activates caspases only"],"a":1,"why":"G1 arrest gives time to repair; apoptosis if repair fails."},{"q":"Which enzyme decomposes H2O2 to water and oxygen?","opts":["Catalase","Protease","Phospholipase","Endonuclease"],"a":0,"why":"Catalase."},{"q":"Reperfusion injury mechanisms include:","opts":["Oxidative stress","Ca2+ overload","Complement activation","All of the above"],"a":3,"why":"Plus inflammation (neutrophils)."},{"q":"Acetaminophen injures the liver through:","opts":["Direct toxicity","A toxic metabolite","Ischemia","Hepatitis virus"],"a":1,"why":"Converted to a toxic product in the liver."}],"cards":[{"f":"Homeostasis","b":"Stable internal environment of the cell"},{"f":"Hypoxia","b":"Decreased oxygen supply"},{"f":"Ischemia","b":"Decreased blood supply"},{"f":"ATP < 5-10%","b":"Critical functions fail"},{"f":"Na/K pump failure","b":"Na + water in, cell swelling"},{"f":"p53","b":"Guardian of the genome"},{"f":"p53 mutation","b":"Cancer"},{"f":"Free radical","b":"Unpaired electron"},{"f":"Catalase","b":"H2O2 to H2O + O2"},{"f":"Ca2+ stores","b":"ER + mitochondria"},{"f":"Phospholipase","b":"Breaks membrane"},{"f":"Endonuclease","b":"Fragments DNA"},{"f":"HIF-1","b":"Angiogenesis + glycolysis"},{"f":"Reperfusion injury","b":"Damage after blood returns"},{"f":"Acetaminophen","b":"Toxic metabolite, liver injury"},{"f":"Hydropic change","b":"Reversible swelling"}],"subject":"path","date":"2026-11-14"},
- {"id":"gen-12","system":"genetic","title":"Genetic Disorders: Lectures 1 & 2","url":"gen-12.html","summary":"Normal karyotype, classification of genetic disease (single-gene, chromosomal, multifactorial), mutation types, Mendelian patterns (AD, AR, X-linked), epigenetics, numerical and structural chromosomal abnormalities and Down syndrome.","points":["Karyotype: 46 chromosomes, arrested at metaphase, G banding most used","Classical: single-gene, chromosomal, multifactorial","Mutations: missense, nonsense, silent, frameshift, triplet repeat","AD: one mutated allele, sibling risk 50% · AR: both alleles, sibling risk 25%","X-linked: no father-to-son transmission; carrier mother gives 50% affected sons","Down syndrome: regular trisomy 21 (95%), translocation (4%), mosaic (1%)"],"mcqs":[{"q":"Which banding technique is most commonly used in karyotyping?","opts":["Q banding","G banding (Giemsa)","R banding","C banding"],"a":1,"why":"G banding with Giemsa stain is the most used method."},{"q":"A missense mutation causes:","opts":["A premature stop codon","No change in the amino acid","One amino acid replaced by another","A shift in the reading frame"],"a":2,"why":"Missense = a single base change that replaces one amino acid."},{"q":"Recurrence risk for a sibling in an autosomal recessive disorder is:","opts":["50%","25%","100%","12.5%"],"a":1,"why":"Both parents are carriers, so each child has a 25% chance of being affected."},{"q":"Which of these is X-linked?","opts":["Huntington disease","Cystic fibrosis","Duchenne muscular dystrophy","Marfan syndrome"],"a":2,"why":"Duchenne is X-linked recessive."},{"q":"Regular trisomy 21 (95% of Down syndrome) is caused by:","opts":["Robertsonian translocation","Non-disjunction, usually maternal","Isochromosome 21","Mosaicism"],"a":1,"why":"Maternal non-disjunction accounts for about 95% of regular trisomy 21."},{"q":"t(9;22), the Philadelphia chromosome, is associated with:","opts":["Down syndrome","Cri du chat","Chronic myeloid leukemia","Turner syndrome"],"a":2,"why":"Reciprocal translocation t(9;22) is the hallmark of CML."}],"cards":[{"f":"كم كروموسوم بالخلية الجسدية؟","b":"46 = 22 زوج جسمي + 2 جنسي"},{"f":"أي صبغة بالكاريوتايب؟ وأي مرحلة؟","b":"Giemsa (G banding) · metaphase"},{"f":"شو أنواع الأمراض الوراثية الكلاسيكية؟","b":"single-gene · chromosomal · multifactorial"},{"f":"الفرق بين hereditary و congenital؟","b":"hereditary من الأهل · congenital موجود عند الولادة"},{"f":"أي طفرة بتعمل stop codon؟","b":"Nonsense (مثل β0-thalassemia)"},{"f":"الفرق بين missense و silent؟","b":"missense بيبدّل حمض أميني · silent ما بيبدّل"},{"f":"خطر الإعادة بالإخوة بـ AD؟","b":"50%"},{"f":"خطر الإعادة بالإخوة بـ AR؟","b":"25%"},{"f":"نمط وراثة Huntington؟","b":"AD"},{"f":"نمط وراثة Cystic fibrosis؟","b":"AR (الأكثر شيوعاً)"},{"f":"نمط وراثة Duchenne؟","b":"X-linked recessive"},{"f":"في انتقال أب ← إبن بـ X-linked؟","b":"لا — بنات الأب المصاب كلهن حاملات"},{"f":"شو ال hemizygous؟","b":"الذكر عندو X واحد، فبيبيّن المرض"},{"f":"الفرق بين euploid و aneuploid؟","b":"euploid مضاعف n طبيعي · aneuploid زيادة/نقص كروموسوم"},{"f":"سبب أغلب الـ aneuploidy؟","b":"Non-disjunction (و anaphase lag)"},{"f":"Robertsonian translocation بين أي كروموسومات؟","b":"acrocentric: مثلاً 14;21"},{"f":"Philadelphia chromosome؟","b":"Reciprocal 9;22 ← CML"},{"f":"Cri du chat؟","b":"deletion بالكروموسوم 5"},{"f":"Trisomies جسمية؟","b":"21 Down · 18 Edwards · 13 Patau"},{"f":"أنواع Down ونسبها؟","b":"Regular 95% · Translocation 4% · Mosaic ~1%"}],"subject":"path","date":"2026-11-13"},
- {"id":"gen-34","system":"genetic","title":"Genetic Disorders: Lectures 3 & 4","url":"gen-34.html","summary":"Single-gene disorders (PKU, cystic fibrosis, Marfan, Ehlers-Danlos, G6PD deficiency), cell-growth defects, multifactorial disease, non-classic inheritance and genetic analysis (prenatal, carrier screening, karyotyping, FISH).","points":["5 classes: enzyme, membrane/transport, structural protein, drug reaction, cell growth","PKU: phenylalanine hydroxylase deficiency (AR)","Cystic fibrosis: CFTR chloride transport defect (AR)","Marfan: FBN1, fibrillin 1 (AD) · Ehlers-Danlos: collagen I and III","Multifactorial: genes + environment, recurrence 2-7%","FISH: probe hybridization; deletion = signal lost"],"mcqs":[{"q":"Marfan syndrome is caused by a mutation in which gene?","opts":["COL1A1","FBN1 (chromosome 15)","CFTR","PAH"],"a":1,"why":"FBN1 encodes fibrillin 1, the scaffold for elastin."},{"q":"PKU results from deficiency of:","opts":["Galactose-1-phosphate uridyltransferase","Phenylalanine hydroxylase","Glucose-6-phosphatase","Homogentisate oxidase"],"a":1,"why":"Without PAH, phenylalanine is converted to phenylpyruvate instead of tyrosine."},{"q":"Cystic fibrosis involves defective:","opts":["Chloride transport (CFTR)","Collagen synthesis","Iron absorption","Clotting factor VIII"],"a":0,"why":"CFTR chloride defect leads to thick mucus."},{"q":"Primaquine can cause severe hemolysis in:","opts":["Marfan syndrome","G6PD deficiency","Cystic fibrosis","PKU"],"a":1,"why":"G6PD protects red cells from oxidative stress; primaquine blocks it."},{"q":"In FISH, a translocation appears as:","opts":["Signal lost","Extra signals","Signals that move or merge","No change"],"a":2,"why":"Deletion = signal lost; duplication = extra signals; translocation = signals move/merge."},{"q":"Non-invasive prenatal screening (NIPS) can:","opts":["Give a definitive diagnosis","Show risk only","Replace karyotyping","Detect all genes"],"a":1,"why":"NIPS shows risk only; invasive prenatal diagnosis (amniocentesis or CVS) confirms."}],"cards":[{"f":"كم فئة لأمراض الجين الواحد؟ {{single-gene}}","b":"5: إنزيم · غشاء · بنية · دوا · نمو"},{"f":"وراثة PKU؟ والإنزيم الناقص؟","b":"جسمية متنحية {{AR}} · PAH"},{"f":"بـ PKU: بدل tyrosine، الـ Phe بيتحوّل لشو؟","b":"phenylpyruvate"},{"f":"بروتين CF؟","b":"CFTR (نقل الكلور {{chloride}})"},{"f":"وراثة Marfan وجينو؟","b":"سائدة {{AD}} · FBN1 عالكروموسوم 15"},{"f":"شو نتيجة فحص nitroprusside بـ Marfan؟","b":"سلبي (إيجابي بـ homocystinuria)"},{"f":"وراثة EDS؟ وأي كولاجين؟","b":"سائدة {{AD}} · النوع I و III"},{"f":"G6PD + primaquine = شو؟","b":"انحلال دم {{hemolysis}}"},{"f":"كم نسبة السرطانات العيلية؟ {{familial}}","b":"5% (أغلبها سائدة)"},{"f":"خطر التكرار بالمتعددة العوامل؟","b":"2–7% درجة أولى {{first-degree}} · 9% بعد أخوين"},{"f":"الأنواع الأربعة لاستثناءات مندل؟","b":"Triplet · Mitochondrial · Imprinting · Gonadal mosaicism"},{"f":"شو هو NIPS؟","b":"سونار + مؤشرات دم الأم · خطر بس، مش تشخيص"},{"f":"إجراءات الفحص الباضع؟ {{IPD}}","b":"بزل السلى {{amniocentesis}} و CVS"},{"f":"استطبابات الفحص قبل الولادة؟ {{prenatal}}","b":"عمر الأم >34 · ولد سابق بشذوذ كروموسومي · جنس لمرض X-linked"},{"f":"شو أشيع عينة لفحص الحاملين؟ {{carrier screening}}","b":"لعاب {{saliva}}"},{"f":"خطوات الكاريوتايب؟","b":"زرع + metaphase ← صبغ ← مجهر/تصوير ← ترتيب أزواج"},{"f":"خطوات FISH؟","b":"فصل ← مسبار ← ارتباط ← مجهر فلوري"},{"f":"شو بيصير بالـ FISH إذا في حذف؟ {{deletion}}","b":"الإشارة بتختفي"},{"f":"كروموسوم فيلادلفيا؟","b":"انتقال {{translocation}} · CML"},{"f":"كم فئة بتستفيد من الخدمات الوراثية؟","b":"10 فئات"}],"subject":"path","date":"2026-11-13"},
- {"id":"imm-hyper","system":"immuno","title":"Hypersensitivity Reactions","url":"imm-hyper.html","summary":"Four types of hypersensitivity: Type I (IgE, immediate), Type II (antibody-mediated), Type III (immune complex) and Type IV (T-cell mediated, delayed), with mechanisms, examples and a comparison table.","points":["Type I: IgE, minutes, mast cells; asthma, hay fever, anaphylaxis","Type II: IgG/IgM vs cell surface; complement, ADCC, cellular dysfunction","Type III: immune complexes; Arthus, SLE, serum sickness","Type IV: T cells, 48-72 h; granuloma, Mantoux, contact dermatitis","CD8+ CTLs kill virus-infected and tumor cells"],"mcqs":[{"q":"Which antibody mediates Type I hypersensitivity?","opts":["IgG","IgM","IgE","IgA"],"a":2,"why":"IgE binds mast cells and triggers immediate reactions."},{"q":"Graves disease is an example of Type II acting through:","opts":["Complement lysis","Cellular dysfunction (stimulating TSH receptor)","ADCC","Immune complex deposition"],"a":1,"why":"Antibodies stimulate the TSH receptor without cell injury."},{"q":"The Arthus reaction is:","opts":["Local immune complex vasculitis with necrosis","Anaphylaxis","Granuloma formation","Antibody-mediated lysis"],"a":0,"why":"Type III: large complexes cause fibrinoid necrosis in the skin."},{"q":"The Mantoux test reaction peaks at:","opts":["5-10 minutes","8-12 hours","24-72 hours","7 days"],"a":2,"why":"Type IV (DTH) reaches its peak 24-72 hours after PPD injection."},{"q":"Serum sickness is which type?","opts":["Type I","Type II","Type III","Type IV"],"a":2,"why":"Foreign proteins form immune complexes that deposit in vessels and joints."},{"q":"Which cells kill virus-infected and tumor cells in Type IV?","opts":["CD4+ helper T cells","CD8+ cytotoxic T cells","Mast cells","Eosinophils"],"a":1,"why":"CD8+ CTLs kill antigen-bearing cells."}],"cards":[{"f":"شو الـ Hypersensitivity؟","b":"رد مناعي مبالغ فيه ومؤذي ضد مستضد عند شخص حسّاس"},{"f":"شو بيلزم قبل ما يصير فرط حساسية؟","b":"Priming (تعرّض سابق)"},{"f":"كم نوع؟ وشو أول حروفهم؟","b":"4: ACID — Anaphylactic · Cytotoxic · Immune complex · Delayed"},{"f":"الجسم المضاد بـ Type I؟","b":"IgE"},{"f":"إيمتى بيصير Type I؟","b":"5-10 دقايق"},{"f":"الخلايا الأساسية بـ Type I؟","b":"Mast cells + eosinophils"},{"f":"شو الأتوبي atopic؟","b":"IgE مرتفع بالمصل + قابلية وراثية"},{"f":"علامات الأنافيلاكسيس؟","b":"Hypotension · Urticaria · Dyspnea"},{"f":"الأجسام بـ Type II؟","b":"IgG (غالباً) · IgM (نادراً)"},{"f":"3 تأثيرات Type II؟","b":"Complement · ADCC · Cellular dysfunction"},{"f":"C3b شو بيعمل؟","b":"Opsonin ← phagocytosis"},{"f":"بـ ADCC شو بتستعمل NK؟","b":"Perforin + granzyme ← apoptosis"},{"f":"Graves بـ Type II شو سببو؟","b":"أجسام مضادة بتنبّه مستقبل TSH ← thyrotoxicosis"},{"f":"C5a شو بيعمل؟","b":"Chemotaxis للعدلات والوحيدات"},{"f":"أجسام Type III؟","b":"IgG · IgM · أحياناً IgA"},{"f":"Arthus reaction؟","b":"نخر موضّع من immune complex vasculitis"},{"f":"SLE: ضد شو؟","b":"Nuclear components (DNA, histones)"},{"f":"Serum sickness: إيمتى بيتكوّن الجسم المضاد؟","b":"7-12 يوم"},{"f":"Type IV: كم بيتأخر؟","b":"48-72 ساعة (DTH)"},{"f":"Mantoux: شو بيشوفو مجهرياً؟","b":"Perivascular cuffing (CD4+ + macrophages)"}],"subject":"path","date":"2026-11-13"},
- {"id":"imm-def","system":"immuno","title":"Immunodeficiency & AIDS","url":"imm-def.html","summary":"Primary immunodeficiencies (B-cell, T-cell, complement, phagocytic), secondary immunodeficiency, AIDS and its opportunistic infections and neoplasms, and Kaposi sarcoma.","points":["PID groups: B-cell, T-cell, complement, phagocytic","SCID (X-linked cytokine receptor / AR ADA), DiGeorge (22q11), Hyper-IgM (CD40L)","Bruton (Btk), CVID (no plasma cells), IgA deficiency (1:850)","CGD (NADPH oxidase), Chediak-Higashi (no phagosome-lysosome fusion)","C2 most common, C3 most serious, C5-C9 Neisseria","AIDS: HIV, opportunistic infections, neoplasms (Kaposi, HHV8)"],"mcqs":[{"q":"X-linked hyper-IgM syndrome is caused by a mutation in:","opts":["Btk","CD40L","ADA","NADPH oxidase"],"a":1,"why":"CD40L on CD4 T cells fails to bind CD40, blocking isotype switching."},{"q":"DiGeorge syndrome is associated with deletion of:","opts":["22q11","21q22","15q11","5p"],"a":0,"why":"Thymic aplasia with 22q11 deletion (CATCH 22)."},{"q":"Bruton agammaglobulinemia involves which enzyme?","opts":["Btk (B-cell tyrosine kinase)","ADA","NADPH oxidase","Proteinase"],"a":0,"why":"Btk mutation blocks pre-B cell maturation."},{"q":"Chronic granulomatous disease results from deficiency of:","opts":["ADA","CD40L","NADPH oxidase","C3"],"a":2,"why":"No respiratory burst means no ROS killing."},{"q":"Deficiency of C5-C9 predisposes to:","opts":["Neisserial infections","Pneumocystis pneumonia","Cryptococcus meningitis","Candida esophagitis"],"a":0,"why":"Late complement components are needed for lysis of Neisseria."},{"q":"The AIDS-defining tumor caused by HHV8 is:","opts":["Burkitt lymphoma","Kaposi sarcoma","Cervical carcinoma","Hepatocellular carcinoma"],"a":1,"why":"Kaposi sarcoma: HHV8 plus altered T-cell immunity."}],"cards":[{"f":"الفرق بين PID و SID؟","b":"Primary = وراثي · Secondary = مكتسب (الأشيع)"},{"f":"شو 4 مجموعات PID؟","b":"B-cell · T-cell · Complement · Phagocytic"},{"f":"أشيع SCID؟","b":"X-linked (50-60%) cytokine receptor"},{"f":"سبب AR SCID؟","b":"ADA deficiency"},{"f":"DiGeorge: أي كروموسوم؟","b":"22q11 deletion"},{"f":"CATCH 22؟","b":"Cardiac · Abnormal facies · Thymic aplasia · Cleft palate · Hypocalcemia"},{"f":"Hyper-IgM: أي طفرة؟","b":"CD40L (X-linked)"},{"f":"Hyper-IgM: أي خلل؟","b":"Isotype switching"},{"f":"Bruton: أي إنزيم؟","b":"B-cell tyrosine kinase (Btk)"},{"f":"Bruton: إيمتى الأعراض؟","b":"بعد 6 شهور، بالصبيان"},{"f":"CVID: شو المشكلة؟","b":"B cells ما بتتمايز لـ plasma cells"},{"f":"CVID: أي سرطانات لاحقاً؟","b":"Gastric cancer + lymphoma"},{"f":"أشيع نقص مناعة خلقي؟","b":"Isolated IgA deficiency (1:850)"},{"f":"CGD: أي إنزيم؟","b":"NADPH oxidase ← respiratory burst"},{"f":"Chediak-Higashi: شو الخلل؟","b":"No phagosome-lysosome fusion"},{"f":"وظايف المتمّم؟","b":"Inflammation · direct killing · opsonization"},{"f":"أشيع نقص متمّم؟","b":"C2"},{"f":"نقص C5-C9 بيعطي؟","b":"Neisserial infections / meningitis"},{"f":"ثلاثية AIDS؟","b":"Opportunistic infections · neoplasms · neurologic"},{"f":"Kaposi: أي فيروس؟","b":"HHV8"}],"subject":"path","date":"2026-11-13"},
- {"id":"imm-tol","system":"immuno","title":"Tolerance, Autoimmunity & Transplantation","url":"imm-tol.html","summary":"Central and peripheral tolerance, autoimmune diseases and their triggers, Sjogren syndrome, graft rejection (hyperacute, acute, chronic), ways to improve graft survival, and graft versus host disease.","points":["Central tolerance: thymus (T) and bone marrow (B), apoptosis","Peripheral tolerance: anergy, Treg suppression, deletion","Triggers: costimulators, molecular mimicry, polyclonal B activation, modified or sequestered antigens","Sjogren: anti-SS-A (Ro) and SS-B (La), sicca syndrome","Rejection: hyperacute (preformed Ab), acute, chronic (fibrosis)","GVHD: donor CD8+ T cells attack the host"],"mcqs":[{"q":"Central tolerance occurs in:","opts":["Spleen and lymph nodes","Thymus (T cells) and bone marrow (B cells)","Liver","Skin"],"a":1,"why":"Immature self-reactive lymphocytes die by apoptosis in central organs."},{"q":"Anergy means:","opts":["Apoptosis of the cell","Irreversible inactivation without death","Suppression by Treg","Antibody production"],"a":1,"why":"The cell survives but is functionally inactive."},{"q":"Rheumatic heart disease is an example of:","opts":["Sequestered antigen release","Molecular mimicry","Polyclonal B activation","Epitope modification by smoking"],"a":1,"why":"Anti-streptococcal antibodies cross-react with myocardial proteins."},{"q":"Sjogren syndrome is associated with antibodies against:","opts":["dsDNA and Sm","SS-A (Ro) and SS-B (La)","Centromere","Mitochondria"],"a":1,"why":"Detected in up to 90% of patients."},{"q":"Hyperacute rejection is caused by:","opts":["Donor T cells","Preformed antibodies in the recipient","Cytokine-driven fibrosis","Immunosuppressive therapy"],"a":1,"why":"Previous transplant or transfusion leaves preformed antibodies that bind graft endothelium."},{"q":"The main effector cell in GVHD is:","opts":["Recipient B cell","Donor CD8+ T cell","Recipient neutrophil","Donor mast cell"],"a":1,"why":"Donor CD8+ T cells attack proliferating recipient cells."}],"cards":[{"f":"شو هو self-tolerance؟","b":"المناعة ما بتهاجم مستضدات الجسم"},{"f":"وين بتتعلّم T cells؟","b":"Thymus"},{"f":"central tolerance: شو بيصير؟","b":"الخلايا المعادية للذات بتموت بالـ apoptosis"},{"f":"أماكن central tolerance؟","b":"Thymus (T) · Bone marrow (B)"},{"f":"3 طرق peripheral tolerance؟","b":"Anergy · Treg · Deletion"},{"f":"Anergy؟","b":"تعطيل بدون موت"},{"f":"طريقتين أذى بالمناعة الذاتية؟","b":"CD8 cytotoxic T cells · autoantibodies"},{"f":"أقوى رابط جيني؟","b":"Ankylosing spondylitis ↔ HLA-B27"},{"f":"مثال molecular mimicry؟","b":"Rheumatic heart disease"},{"f":"فيروسات polyclonal B activation؟","b":"EBV · HIV"},{"f":"التدخين مع أي مرض؟","b":"RA (modified self antigen)"},{"f":"UV بيعمل شو؟","b":"بيكشف nuclear antigens ثم lupus"},{"f":"Sjögren: أجسام ضد شو؟","b":"SS-A (Ro) · SS-B (La)"},{"f":"Sjögren: عمر وجنس؟","b":"نساء 50-60"},{"f":"Mikulicz syndrome؟","b":"التهاب الغدد الدمعية واللعابية"},{"f":"Sjögren: سرطان لاحق؟","b":"Marginal zone lymphoma"},{"f":"أكتر عضو بيتزرع؟","b":"Kidney"},{"f":"Hyperacute: السبب؟","b":"Preformed antibodies (نقل دم / زرع سابق)"},{"f":"Chronic rejection: الصفة الرئيسية؟","b":"Fibrosis · onion skinning"},{"f":"GVHD: الخلايا الأساسية؟","b":"CD8+ T cells"}],"subject":"path","date":"2026-11-13"},
- {"id":"imm-amy","system":"immuno","title":"Amyloidosis","url":"imm-amy.html","summary":"Amyloid as an extracellular pathologic protein deposit (95% fibrils, 5% non-fibrillar), AL vs AA and minor fibril proteins, systemic, hereditary and localized types, clinical features, diagnosis, special stains and morphology.","points":["Amyloid fibrils: 7.5-10 nm, non-branching; 95% fibrils + 5% AP, ApoE, GAGs","AL: Ig light chains, plasma cells, myeloma (primary); AA: SAA from liver, chronic inflammation (secondary)","Others: TTR, beta2-microglobulin (hemodialysis), Abeta (Alzheimer), endocrine, prion","Hereditary: FMF (AR, pyrin), familial neuropathies (mutant TTR); localized: single organ, AL","Diagnosis: rectal biopsy, fat aspirate + Congo red (apple-green under polarized light), EM definite"],"mcqs":[{"q":"AL amyloid is derived from:","opts":["Serum amyloid A","Immunoglobulin light chains","Transthyretin","Beta2-microglobulin"],"a":1,"why":"AL comes from plasma cell light chains, linked to multiple myeloma."},{"q":"AA amyloid is derived from:","opts":["Light chains","SAA made by the liver","Calcitonin","Prion protein"],"a":1,"why":"IL-6 and IL-1 raise SAA in chronic inflammation."},{"q":"Amyloid under polarized light after Congo red shows:","opts":["Blue-violet","Apple-green birefringence","Rose pink","Yellow"],"a":1,"why":"Apple-green birefringence is characteristic."},{"q":"Best biopsy site for amyloidosis:","opts":["Skin","Rectum","Muscle","Lung"],"a":1,"why":"Rectal biopsy is the best site."},{"q":"Amyloid of long-term hemodialysis is:","opts":["AL","AA","Beta2-microglobulin","Abeta"],"a":2,"why":"Beta2-microglobulin is not filtered by dialysis membranes."},{"q":"Familial Mediterranean fever is inherited as:","opts":["Autosomal dominant","Autosomal recessive","X-linked","Mitochondrial"],"a":1,"why":"FMF: autosomal recessive, pyrin gene, AA fibrils."}],"cards":[{"f":"AL مشتق من شو؟","b":"Immunoglobulin light chains (plasma cells)"},{"f":"AL مع أي مرض؟","b":"Multiple myeloma (primary)"},{"f":"AA مشتق من؟","b":"SAA (liver)"},{"f":"شو بيزيد SAA؟","b":"IL-6 + IL-1 (inflammation)"},{"f":"TTR بينقل شو؟","b":"Thyroxine + retinol"},{"f":"أميلويد الغسيل الكلوي؟","b":"β2-microglobulin"},{"f":"أميلويد Alzheimer؟","b":"Aβ (from AβPP)"},{"f":"Prion مثال مرض؟","b":"Creutzfeldt-Jakob disease (CJD)"},{"f":"قطر الخيوط؟","b":"7.5-10 nm"},{"f":"نسبة الخيوط؟","b":"95% (5% non-fibrillar)"},{"f":"مكوّنات non-fibrillar؟","b":"AP · ApoE · GAGs"},{"f":"Bence Jones protein؟","b":"Light chains بالبول والدم (myeloma)"},{"f":"Secondary أسبابو؟","b":"TB · bronchiectasis · osteomyelitis · RA · IBD"},{"f":"Senile عمرو؟","b":"70-80 سنة (normal TTR)"},{"f":"FMF وراثتو؟","b":"Autosomal recessive (pyrin, AA)"},{"f":"Localized أشكالو؟","b":"Nodular mass: lung · larynx · skin · tongue (AL)"},{"f":"أفضل مكان خزعة؟","b":"Rectum"},{"f":"أشهر صبغة؟","b":"Congo red (apple-green under polarized light)"},{"f":"التشخيص النهائي؟","b":"Electron microscopy"},{"f":"شكل العضو؟","b":"Enlarged · firm · waxy"}],"subject":"path","date":"2026-11-13"},
- {"id":"inf-heal","system":"inflam","title":"Healing & Repair (Inflammation 5-6)","url":"inf-heal.html","summary":"Repair by regeneration or fibrous scar, labile/stable/permanent cells, granulation tissue and angiogenesis, ECM deposition and remodelling, healing by first and second intention, wound strength, factors affecting healing and complications (hypertrophic scar, keloid, dehiscence, contracture).","points":["Regeneration (normal tissue) vs healing (fibrous scar)","Steps: scavenging, regeneration, granulation tissue, ECM deposition, remodelling","Labile and stable cells regenerate; permanent cells (neurons, cardiac myocytes) do not","Granulation tissue: angiogenesis (VEGF) + fibroblasts (PDGF, FGF); pink, soft, leaky","1st intention: clean opposed edges; 2nd intention: separated edges, more granulation, contraction by myofibroblasts","Infection is the most important local factor delaying healing; keloid extends beyond wound boundaries"],"mcqs":[{"q":"Which cell type cannot regenerate?","opts":["Epidermal cells","Hepatocytes","Cardiac myocytes","GI epithelium"],"a":2,"why":"Cardiac myocytes and neurons are permanent cells."},{"q":"The hallmark of healing is:","opts":["Fibrin clot","Granulation tissue","Scab","Keloid"],"a":1,"why":"Granulation tissue is pink, soft, granular and leaky."},{"q":"Angiogenesis is stimulated mainly by:","opts":["PDGF","VEGF and angiopoietin","IL-1","TNF"],"a":1,"why":"VEGF and angiopoietin drive new vessel formation."},{"q":"Wound contraction is caused by:","opts":["Neutrophils","Macrophages","Myofibroblasts","Hepatocytes"],"a":2,"why":"Myofibroblasts have smooth-muscle features and pull wound edges."},{"q":"Which is the single most important local cause of delayed healing?","opts":["Foreign body","Infection","Wound size","Early motion"],"a":1,"why":"Infection causes persistent injury and inflammation."},{"q":"Keloid differs from hypertrophic scar because it:","opts":["Is flat","Extends beyond the original wound and does not regress","Contains no collagen","Is caused by deficiency"],"a":1,"why":"Keloid grows beyond wound boundaries and is more common in black people."}],"cards":[{"f":"Repair شو بيرجّع؟","b":"Tissue architecture + function"},{"f":"Regeneration معناها؟","b":"Tissue returns to normal"},{"f":"Healing بتنتج شو؟","b":"Fibrous tissue → scar"},{"f":"Fibrosis بمكان فيه exudate؟","b":"Organization"},{"f":"أول خطوة بالشفاء؟","b":"Scavenging (macrophages)"},{"f":"Labile cells مثال؟","b":"Epidermis · GI epithelium"},{"f":"Stable cells مثال؟","b":"Hepatocytes (G0)"},{"f":"Permanent cells؟","b":"Neurons · cardiac myocytes"},{"f":"علامة الشفاء المميّزة؟","b":"Granulation tissue"},{"f":"Angiogenesis محفّزها؟","b":"VEGF + angiopoietin"},{"f":"EPCs من وين؟","b":"Bone marrow"},{"f":"PDGF معناها؟","b":"Platelet-derived growth factor"},{"f":"الخلية الرئيسية للـ ECM؟","b":"Fibroblast"},{"f":"ECM deposition بيبدأ؟","b":"Day 3-5"},{"f":"Metalloproteinases بتحتاج؟","b":"Zinc"},{"f":"Neutrophils بيوصلو؟","b":"24 hours"},{"f":"Neovascularization الذروة؟","b":"Day 5"},{"f":"Wound contraction بسبب؟","b":"Myofibroblasts"},{"f":"أهم سبب موضعي لتأخير الشفاء؟","b":"Infection"},{"f":"Keloid بتتميّز بـ؟","b":"Beyond wound boundaries · no regression"}],"subject":"path","date":"2026-11-13"},
- {"id":"inf-out","system":"inflam","title":"Inflammation 3-4: Outcomes, Chronic & Granulomas","url":"inf-out.html","summary":"Outcomes of acute inflammation (resolution, scarring, abscess, chronic), six morphologic types, lymphatics, chronic inflammation, macrophages, granulomatous inflammation and systemic effects of inflammation.","points":["5 signs: redness, heat, swelling, pain, loss of function (mediators + leukocyte damage)","Vasodilation → redness + heat; permeability → edema → swelling","Outcome depends on injury, site, host response","6 types: catarrhal, serous, fibrinous, suppurative, ulceration, pseudomembranous","Chronic: mononuclear cells, destruction, repair; no vascular response","Granuloma: epithelioid macrophages + lymphocyte collar + giant cell; foreign body vs immune","Systemic: fever (prostaglandins), CRP (IL-6), leukocytosis (CSFs), septic shock (TNF)"],"mcqs":[{"q":"Swelling in acute inflammation results mainly from:","opts":["Vasodilation","Increased vascular permeability with edema","Leukocytosis","Fever"],"a":1,"why":"Vasodilation gives redness + heat; permeability lets fluid and protein leak, causing edema."},{"q":"Which is NOT a factor deciding the outcome of acute inflammation?","opts":["Type and severity of injury","Site affected","Host response","Patient's blood group"],"a":3,"why":"Outcome depends on injury, site, and host response."},{"q":"Pus is best described as:","opts":["Protein-poor fluid","Dead neutrophils, debris, microbes and fluid from liquefaction","Fibrin only","Clear blister fluid"],"a":1,"why":"Lysosomal enzymes liquefy tissue; pus always contains bacteria."},{"q":"Pseudomembranous inflammation occurs only in:","opts":["Colon and oropharynx","Lung and pleura","Skin and joints","Kidney and liver"],"a":0,"why":"Classically Clostridium difficile colitis."},{"q":"Which feature is absent in chronic inflammation compared with acute?","opts":["Tissue destruction","Mononuclear cells","Vascular response (heat, redness, edema)","Attempts at repair"],"a":2,"why":"Chronic inflammation lacks the vascular response."},{"q":"A granuloma consists of:","opts":["Neutrophils around pus","Epithelioid macrophages with a lymphocyte collar, giant cells, fibroblasts","Fibrin and fibroblasts","Eosinophils and mast cells"],"a":1,"why":"Central necrosis may be present."},{"q":"Septic shock in severe infection is driven mainly by high levels of:","opts":["IL-6","TNF","CSFs","Interferon-gamma"],"a":1,"why":"TNF causes low BP, DIC and metabolic abnormalities."}],"cards":[{"f":"5 علامات الالتهاب الحاد؟","b":"Redness · Heat · Swelling · Pain · Loss of function"},{"f":"الاحمرار والحرارة من؟ والانتفاخ من؟","b":"Vasodilation · ↑ Permeability → edema"},{"f":"حاجز الوعاء الدموي؟","b":"Endothelium + tight junctions + basement membrane"},{"f":"3 عوامل مصير الالتهاب الحاد؟","b":"Injury type/severity · site · host response"},{"f":"4 مصائر؟","b":"Resolution · scarring · abscess · chronic"},{"f":"Abscess من؟","b":"Pyogenic bacteria (staph aureus)"},{"f":"Pus فيه؟","b":"Dead neutrophils · debris · microbes · fluid"},{"f":"أخف شكل؟","b":"Catarrhal"},{"f":"Serous مثال؟","b":"Blister (burns)"},{"f":"Fibrinous وين؟","b":"Serosal membranes · joints"},{"f":"Pseudomembranous جرثومة؟","b":"C. difficile (colon + oropharynx)"},{"f":"Lymphangitis علامة؟","b":"Red streaks near wound"},{"f":"Chronic بلا شو؟","b":"Vascular response"},{"f":"خلايا المزمن؟","b":"Mononuclear cells (macrophages)"},{"f":"Macrophage بتنتنشّط بـ؟","b":"Interferon"},{"f":"Fistula؟","b":"Opening between two surfaces"},{"f":"Granuloma خلاياه؟","b":"Epithelioid macrophages + lymphocytes + giant cell"},{"f":"Foreign body granuloma مثال؟","b":"Suture material"},{"f":"Immune granuloma مثال؟","b":"TB (T-cell mediated)"},{"f":"أسباب Granuloma؟","b":"TB · leprosy · syphilis · cat-scratch · sarcoidosis · Crohn"},{"f":"CRP من وين؟","b":"Liver (IL-6)"},{"f":"Leukocytosis بتحفّزها؟","b":"CSFs on bone marrow"},{"f":"Septic shock مفتاح؟","b":"High TNF · low BP · DIC"}],"subject":"path","date":"2026-11-13"},
- {"id":"inf-intro","system":"inflam","title":"Inflammation 1-2: Acute Inflammation & Mediators","url":"inf-intro.html","summary":"Definition and five Rs, acute vs chronic, vascular response (vasodilation, permeability mechanisms, stasis, exudates), leukocyte cellular events (margination to phagocytosis), leukocyte defects, and chemical mediators with the benefits of exudate.","points":["Inflammation = tissue + microcirculation reaction to insult; protective, not necessarily infection","5 Rs: recognition, recruitment, removal, regulation, resolution","Acute: edema hallmark; chronic: tissue damage hallmark","Permeability: contraction, direct injury, leukocyte-dependent, transcytosis (VEGF)","Transudate < 3 g/dl vs exudate > 3 g/dl","Margination → rolling (selectin) → adhesion (integrin/ICAM) → CD31 transmigration → chemotaxis → phagocytosis","Mediators: complement, kinin, clotting; amines, AA metabolites, cytokines, ROS, NO; exudate benefits"],"mcqs":[{"q":"Hallmark of acute inflammation is:","opts":["Tissue damage","Edema (exudation of fluid)","Granuloma","Fibrosis"],"a":1,"why":"Acute: minutes, neutrophils, edema. Chronic hallmark is tissue damage."},{"q":"Most common mechanism of increased vascular permeability:","opts":["Direct injury","Endothelial contraction (venules, histamine)","Transcytosis","Leukocyte-dependent injury"],"a":1,"why":"Fast and short-lived (minutes), in venules via vasoactive mediators."},{"q":"Exudate differs from transudate by:","opts":["Protein < 3 g/dl","Protein > 3 g/dl, SG > 1.015, cells","No cells","Cavity only"],"a":1,"why":"Transudate has low protein, SG < 1.015."},{"q":"Which molecule mediates leukocyte rolling?","opts":["Integrin","CD31","Selectin","ICAM only"],"a":2,"why":"Selectins (weak, temporary) cause rolling; integrin + ICAM/VCAM firm adhesion; CD31 transmigration."},{"q":"Chronic granulomatous disease is a defect of:","opts":["Integrin","Microbicidal activity (NADPH oxidase)","Chemotaxis","Production"],"a":1,"why":"LAD-1 is integrin deficiency; CGD is a killing defect."},{"q":"C5b-C9 forms:","opts":["Opsonin","Anaphylatoxin","Membrane attack complex","Kininogen"],"a":2,"why":"MAC punctures microbe membrane; C3b opsonizes; C5a is chemotactic."}],"cards":[{"f":"5 Rs؟","b":"Recognition · Recruitment · Removal · Regulation · Resolution"},{"f":"Hallmark الحاد؟","b":"Edema"},{"f":"Hallmark المزمن؟","b":"Tissue damage"},{"f":"5 علامات الحاد؟","b":"Redness · Swelling · Hotness · Pain · Function disturbance"},{"f":"Vasodilation بتعطي؟","b":"Redness + Heat"},{"f":"أشيع آلية نفاذية؟","b":"Endothelial contraction (histamine)"},{"f":"VEGF بيحفّز؟","b":"Transcytosis"},{"f":"Transudate؟","b":"< 3 g/dl, SG < 1.015"},{"f":"Exudate؟","b":"> 3 g/dl, SG > 1.015, cells"},{"f":"Serosanguineous؟","b":"Serous + RBC"},{"f":"أول خطوة لرحلة الكريات؟","b":"Margination"},{"f":"Selectin؟","b":"Rolling"},{"f":"Integrin + ICAM/VCAM؟","b":"Firm adhesion"},{"f":"CD31؟","b":"Transmigration"},{"f":"Chemotactic endogenous؟","b":"C5a · LTB4 · IL-8"},{"f":"Opsonins؟","b":"IgG · C3b"},{"f":"LAD-1؟","b":"Integrin deficiency"},{"f":"CGD؟","b":"NADPH oxidase defect"},{"f":"Bradykinin؟","b":"Vasodilation + permeability + pain"},{"f":"فوائد النضح؟","b":"Dilution · antibodies · fibrin · plasma systems · nutrition · immunity"}],"subject":"path","date":"2026-11-14"},
- {"id":"imm-all","system":"immuno","title":"Immunology: Complete System Review","url":"imm-all.html","summary":"One place for the comparison tables and cheat sheets of every Immunology lecture: Hypersensitivity, Immunodeficiency & AIDS, Tolerance / Autoimmunity / Transplantation, and Amyloidosis.","points":["Hypersensitivity: types I-IV","Immunodeficiency: primary, secondary, AIDS","Tolerance, autoimmunity, graft rejection, GVHD","Amyloidosis: AL vs AA, types, diagnosis"],"mcqs":[{"q":"Which immunoglobulin mediates type I hypersensitivity?","opts":["IgE","IgG","IgM","IgA"],"a":0,"why":"Type I reactions are IgE-mediated, acting through mast cells within minutes."},{"q":"A delayed-type (type IV) reaction typically appears after:","opts":["5-10 minutes","48-72 hours","7-12 days","Several seconds"],"a":1,"why":"Type IV is T-cell mediated and peaks at 48-72 hours, as in the Mantoux test."},{"q":"In Graves disease the antibodies:","opts":["Lyse thyroid cells with complement","Deposit as immune complexes in glomeruli","Stimulate the TSH receptor","Activate mast cells through IgE"],"a":2,"why":"This is the cellular dysfunction mechanism of type II: antibodies against a receptor without tissue injury."},{"q":"Which statement describes ADCC?","opts":["C3b opsonizes the target for phagocytosis","An antibody links an NK cell to the target, which dies by perforin and granzyme","IgE triggers degranulation of mast cells","Sensitized CD4+ T cells release cytokines"],"a":1,"why":"ADCC needs neither complement nor phagocytosis."},{"q":"Serum sickness usually begins:","opts":["Within minutes","After 2-3 days","7-12 days after exposure","After several years"],"a":2,"why":"It is a type III reaction that follows antibody production against foreign serum protein."},{"q":"A boy has increased IgM and decreased IgG, IgA and IgE. The defect is:","opts":["Btk","CD40L","ADA","NADPH oxidase"],"a":1,"why":"Hyper-IgM is an X-linked CD40L defect that blocks isotype switching."},{"q":"Bruton agammaglobulinemia is caused by a mutation in:","opts":["CD40L","ADA","Btk","Cytokine receptor gamma chain"],"a":2,"why":"Btk mutations block B-cell maturation, so B cells and all immunoglobulins are low."},{"q":"DiGeorge syndrome results from:","opts":["CD40L mutation","22q11 deletion with thymic aplasia","NADPH oxidase defect","Absent plasma cell differentiation"],"a":1,"why":"Thymic aplasia causes T-cell deficiency; the CATCH 22 features accompany it."},{"q":"Chronic granulomatous disease is a defect of:","opts":["Phagosome-lysosome fusion","NADPH oxidase","Btk","C3"],"a":1,"why":"Without NADPH oxidase there is no respiratory burst, so the phagocyte cannot kill ingested organisms."},{"q":"Which complement deficiency is the most common?","opts":["C3","C5","C2","C9"],"a":2,"why":"C2 is the most common (often mild, SLE-like); C3 is the most serious."},{"q":"Recurrent Neisseria infections suggest a deficiency of:","opts":["C2","C5-C9","C1q","Factor H only"],"a":1,"why":"Late components form the membrane attack complex, which is needed against Neisseria."},{"q":"Central tolerance takes place in the:","opts":["Lymph nodes and spleen","Skin and mucosa","Thymus and bone marrow","Liver and kidney"],"a":2,"why":"Immature self-reactive T and B cells are deleted by apoptosis in the thymus and bone marrow."},{"q":"Which antibodies are characteristic of Sjögren syndrome?","opts":["Anti-dsDNA","Anti-SS-A (Ro) and anti-SS-B (La)","Anti-centromere","Anti-Smith only"],"a":1,"why":"They are found in up to 90% of cases."},{"q":"Hyperacute graft rejection is caused by:","opts":["Donor CD8+ T cells","Fibrosis over months","Preformed antibodies","Regulatory T cells"],"a":2,"why":"Preformed antibodies (from transfusion or a previous transplant) cause immediate thrombosis and necrosis."},{"q":"Graft-versus-host disease is mainly mediated by:","opts":["Recipient antibodies","Donor CD8+ T cells","Recipient NK cells","Complement"],"a":1,"why":"Donor T cells attack recipient tissues, classically after bone marrow transplantation."},{"q":"Congo red-stained amyloid under polarized light shows:","opts":["Red fluorescence","Blue-violet color","Apple-green birefringence","No change"],"a":2,"why":"Apple-green birefringence is the diagnostic feature."},{"q":"AA amyloid derives from:","opts":["Immunoglobulin light chains","Serum amyloid A made by the liver","Transthyretin","Beta-2 microglobulin"],"a":1,"why":"Chronic inflammation raises IL-1 and IL-6, which drive hepatic SAA production."},{"q":"Amyloid in long-term hemodialysis patients is composed of:","opts":["Transthyretin","Calcitonin","Beta-2 microglobulin","Amyloid beta"],"a":2,"why":"Beta-2 microglobulin is not filtered by dialysis membranes and accumulates."}],"cards":[{"f":"Type I hypersensitivity: antibody, cells, timing","b":"IgE, mast cells and eosinophils, minutes (5-10)"},{"f":"Three mechanisms of type II hypersensitivity","b":"Complement-dependent, ADCC, cellular dysfunction"},{"f":"Examples of type III hypersensitivity","b":"Arthus reaction, SLE, serum sickness, post-streptococcal GN"},{"f":"Type IV: timing and hallmark lesion","b":"48-72 hours; granuloma (epithelioid cells, lymphocyte collar, Langhans giant cell)"},{"f":"Mantoux test","b":"PPD skin test; red and indurated, peak at 24-72 h"},{"f":"The four groups of primary immunodeficiency","b":"B cell, T cell, complement and phagocytic defects"},{"f":"X-linked SCID vs autosomal recessive SCID","b":"Cytokine receptor (gamma chain) defect vs ADA deficiency"},{"f":"CATCH 22","b":"DiGeorge: Cardiac, Abnormal facies, Thymic aplasia, Cleft palate, Hypocalcemia, 22q11 deletion"},{"f":"Hyper-IgM syndrome","b":"CD40L defect; high IgM, low IgG, IgA, IgE"},{"f":"Bruton vs CVID","b":"Bruton: Btk, boys, B cells absent. CVID: no plasma cell differentiation, risk of gastric cancer and lymphoma"},{"f":"CGD vs Chediak-Higashi","b":"CGD: NADPH oxidase, no respiratory burst. CHS: no phagosome-lysosome fusion"},{"f":"AIDS triad","b":"Opportunistic infections, secondary neoplasms, neurologic disease"},{"f":"Kaposi sarcoma","b":"HHV8; violaceous plaques with spindle cells and slit-like vessels"},{"f":"Peripheral tolerance mechanisms","b":"Anergy, Treg suppression and deletion"},{"f":"Molecular mimicry example","b":"Streptococcus antigens and heart tissue in rheumatic heart disease"},{"f":"Three types of graft rejection","b":"Hyperacute (preformed Ab), acute (cellular or humoral), chronic (fibrosis, onion skinning)"},{"f":"Rejection vs GVHD","b":"Rejection: recipient attacks graft. GVHD: donor T cells (CD8+) attack the recipient"},{"f":"AL vs AA amyloid","b":"AL: light chains from plasma cells (myeloma). AA: SAA from the liver in chronic inflammation"},{"f":"Amyloid stains","b":"Congo red: red, apple-green under polarized light. Thioflavin T/S: UV fluorescence"},{"f":"Best biopsy sites for amyloid","b":"Rectum (best), kidney, gingiva; fat aspirate is specific but not sensitive"}],"subject":"path","date":"2026-11-13"},
- {"id":"cns-anti-1","system":"CNS","title":"Antiepileptics","url":"cns-antiepileptics-1.html","summary":"Epilepsy, seizure classification (focal vs generalized), pathophysiology (glutamate vs GABA, T-type Ca2+ in absence), principles of therapy, and the antiepileptic drugs: phenytoin, carbamazepine, valproic acid, phenobarbital, benzodiazepines, ethosuximide, vigabatrin, lamotrigine, topiramate, levetiracetam, adjuvants, drug selection and guidelines.","points":["Epilepsy = recurrent seizures; a single seizure is not epilepsy; febrile seizures are not epilepsy","Focal (one hemisphere) vs generalized (both, loss of consciousness); status epilepticus = emergency","Seizures: too much glutamate/aspartate or too little GABA; absence seizures = T-type Ca2+ channels in the thalamus","Drug actions: increase GABA, decrease glutamate, block Na+ channels, block Ca2+ channels","Phenytoin and carbamazepine block Na+; valproic acid broad-spectrum; ethosuximide for absence","Vigabatrin: visual field defects; lamotrigine: rash, safer in pregnancy; levetiracetam: cleanest profile","First choice: focal = carbamazepine, tonic-clonic/myoclonic = valproic acid, absence = ethosuximide, status = diazepam","Start after the second seizure with one drug; stop after 2 seizure-free years, gradually; folic acid 5 mg in pregnancy"],"mcqs":[{"q":"Which drug is the first line for childhood absence seizures?","opts":["Phenytoin","Ethosuximide","Carbamazepine","Phenobarbital"],"a":1,"why":"Ethosuximide بيسد قنوات T-type Ca²⁺ بالثلاموس، وهو الأول للنوبات الغيابية وكمان أقل مضادات الصرع سمّية."},{"q":"Absence seizures are caused by overactivation of:","opts":["T-type Ca²⁺ channels","NMDA receptors","GABA-A receptors","P/Q-type Ca²⁺ channels"],"a":0,"why":"النوبة الغيابية سببها فرط تنشيط قنوات T-type Ca²⁺ بخلايا المرحّل الثلاموسية."},{"q":"First line drug for focal seizures?","opts":["Valproic acid","Lamotrigine","Carbamazepine","Levetiracetam"],"a":2,"why":"حسب جدول الشريحة الخيار الأول للجزئية هو Carbamazepine ."},{"q":"Which drug causes gingival hyperplasia and hirsutism?","opts":["Phenytoin","Valproic acid","Topiramate","Tiagabine"],"a":0,"why":"Phenytoin بيعمل تضخم لثة وكثرة شعر وتضخم عقد لمفية."},{"q":"Which drug induces its own metabolism (autoinduction)?","opts":["Valproic acid","Phenytoin","Carbamazepine","Lamotrigine"],"a":2,"why":"Carbamazepine بيحفّز استقلاب نفسو."},{"q":"Carbamazepine ↑ ADH secretion leading to:","opts":["Hypernatremia","Hyponatremia & edema","Hyperkalemia","Hypocalcemia"],"a":1,"why":"زيادة ADH ← احتباس مي ← نقص صوديوم (hyponatremia) ووذمة."},{"q":"Which drug has the highest risk of major congenital malformations?","opts":["Lamotrigine","Levetiracetam","Valproic acid","Ethosuximide"],"a":2,"why":"Valproic acid أعلى خطر تشوهات خلقية كبرى. أما Lamotrigine و Levetiracetam فمفضّلين بالحمل."},{"q":"Rare but fatal adverse effect of valproic acid?","opts":["Fulminant hepatic toxicity","Gingival hyperplasia","Visual loss","Renal stones"],"a":0,"why":"Fulminant hepatic toxicity نادر بس قاتل. وكمان pancreatitis و alopecia ."},{"q":"Which drug causes irreversible visual field loss?","opts":["Topiramate","Vigabatrin","Tiagabine","Gabapentin"],"a":1,"why":"Vigabatrin : فقدان رؤية غير عكوس عند 30 لـ 40 بالميّة. الحيلة: Vi يعني Vision ."},{"q":"Skin rash and Stevens-Johnson syndrome risk is highest with lamotrigine when combined with:","opts":["Phenytoin","Valproic acid","Levetiracetam","Ethosuximide"],"a":1,"why":"خطر SJS باللاموتريجين بيزيد لما ينعطى مع Valproic acid ."},{"q":"Which drug should be avoided in glaucoma?","opts":["Levetiracetam","Topiramate","Phenobarbital","Ethosuximide"],"a":1,"why":"Topiramate بيرفع ضغط العين (↑↑ IOP) ، وكمان حصى كلى وشق حنك ونقص وزن."},{"q":"Levetiracetam acts by binding to:","opts":["SV2A","T-type Ca²⁺ channel","GABA transaminase","NMDA receptor"],"a":0,"why":"Levetiracetam بيرتبط ببروتين الحويصلات المشبكية SV2A فبيقل Glutamate ."},{"q":"Gabapentin and pregabalin inhibit:","opts":["GABA reuptake","Presynaptic P/Q-type Ca²⁺ channels","Na⁺ channels","GABA transaminase"],"a":1,"why":"بيسدّوا قنوات P/Q-type Ca²⁺ قبل المشبك فبينقص Glutamate ."},{"q":"Tiagabine mechanism?","opts":["GABA reuptake inhibition","GABA-T inhibition","Na⁺ block","SV2A binding"],"a":0,"why":"Tiagabine بيمنع إعادة امتصاص GABA فبيرتفع تركيزو."},{"q":"First line for status epilepticus (adults)?","opts":["Phenytoin","Diazepam IV","Valproic acid","Ethosuximide"],"a":1,"why":"الخيار الأول Diazepam بالوريد للبالغين وبالمستقيم للأطفال. التاني Fosphenytoin أو Levetiracetam ."},{"q":"Which is NOT an epilepsy?","opts":["Febrile seizure","Absence seizure","Myoclonic seizure","Tonic-clonic seizure"],"a":0,"why":"Febrile seizure عند الأطفال بالحرارة العالية، من 6 أشهر لـ 5 سنوات، وهو مش صرع."},{"q":"Best antiepileptic drugs in pregnancy?","opts":["Valproic acid, phenytoin","Lamotrigine, levetiracetam","Carbamazepine, phenobarbital","Topiramate, vigabatrin"],"a":1,"why":"أفضلهم بالحمل Lamotrigine و Levetiracetam ."},{"q":"Folic acid dose before pregnancy in epileptic women?","opts":["0.4 mg/day","1 mg/day","5 mg/day","50 mg/day"],"a":2,"why":"الشريحة: حمض الفوليك 5 ملغ باليوم قبل الحمل بوقت كافي لتقليل عيوب الأنبوب العصبي."},{"q":"Antiepileptic drugs can be considered for withdrawal if seizure free for:","opts":["> 6 months","> 1 year","> 2 years","> 10 years"],"a":2,"why":"إذا بلا نوبات لأكتر من سنتين، والإيقاف تدريجي على أشهر."},{"q":"Which drug is a water-soluble prodrug used parenterally?","opts":["Fosphenytoin","Phenytoin","Levetiracetam","Topiramate"],"a":0,"why":"Fosphenytoin طليعة دوا بتذوب بالماء وبتنعطى بالوريد."},{"q":"Which is an enzyme INHIBITOR?","opts":["Phenytoin","Carbamazepine","Phenobarbital","Valproic acid"],"a":3,"why":"Valproic acid بيثبّط إنزيمات الكبد. الباقيين بيحفّزوها."},{"q":"Which drug has mixed mechanisms (↑ GABA, block Na⁺, block Ca²⁺) and covers all seizure types?","opts":["Phenytoin","Valproic acid","Ethosuximide","Vigabatrin"],"a":1,"why":"Valproic acid : يثبّط GABA-T ، يسد Na⁺ و Ca²⁺ ."}],"cards":[{"f":"Epilepsy?","b":"Neurological disorder: sudden, excessive, synchronous discharge of cerebral neurons"},{"f":"Seizure?","b":"Transient alteration of brain function ← abnormal neuronal discharge; single seizure ≠ epilepsy"},{"f":"Convulsion?","b":"Involuntary, violent, spasmodic contraction of skeletal muscles"},{"f":"Focal seizure?","b":"Confined to one hemisphere; simple (aware), complex (impaired), secondary generalization"},{"f":"Generalized seizure types?","b":"Absence, myoclonic, tonic-clonic; both hemispheres, loss of consciousness"},{"f":"Status epilepticus?","b":"Prolonged seizure >20 min; most common: generalized tonic-clonic; life-threatening"},{"f":"Febrile seizure?","b":"Children 6 months-5 years, high fever; NOT epilepsy"},{"f":"Pathophysiology of seizures?","b":"Imbalance: ↑ excitation (glutamate, aspartate) or ↓ inhibition (GABA)"},{"f":"NMDA receptor: ion?","b":"Na⁺ (excitatory: glutamate, aspartate)"},{"f":"GABA receptor: ion?","b":"Cl⁻ (inhibitory)"},{"f":"Absence seizure cause?","b":"T-type Ca²⁺ channel overactivation in thalamic relay neurons: thalamus-cortex rhythm"},{"f":"4 treatment principles?","b":"↑ GABA; ↓ excitatory neurotransmitters; block Na⁺; block Ca²⁺"},{"f":"1st generation AEDs?","b":"Phenytoin, carbamazepine, valproic acid, phenobarbital, benzodiazepines, ethosuximide"},{"f":"2nd generation AEDs?","b":"Vigabatrin, lamotrigine, topiramate, levetiracetam, gabapentin & pregabalin, tiagabine"},{"f":"Phenytoin: mechanism, use?","b":"Block voltage-gated Na⁺; tonic-clonic seizures"},{"f":"Phenytoin: adverse effects?","b":"Nystagmus, diplopia, ataxia; enzyme induction; megaloblastic anemia; gingival hyperplasia; lymphadenopathy; hirsutism; osteomalacia; fetal hydantoin syndrome; spina bifida"},{"f":"Fosphenytoin?","b":"Water-soluble prodrug of phenytoin; parenteral use"},{"f":"Why vit D + folic acid with phenytoin?","b":"↑ metabolism of vit D, folic acid ← osteomalacia, megaloblastic anemia"},{"f":"Carbamazepine: use?","b":"1st line focal; 2nd line tonic-clonic; trigeminal neuralgia"},{"f":"Carbamazepine: unique effects?","b":"↑ ADH → hyponatremia & edema; autoinduction"},{"f":"Valproic acid: mechanism?","b":"Inhibits GABA transaminase (↑ GABA); blocks Na⁺, Ca²⁺ channels"},{"f":"Valproic acid: use?","b":"ALL types of seizures (focal & generalized)"},{"f":"Valproic acid: adverse effects?","b":"Enzyme inhibition; neutropenia; teratogenic; alopecia; pancreatitis; fulminant hepatic toxicity"},{"f":"Highest malformation risk AED?","b":"Valproic acid"},{"f":"Phenobarbital: mechanism?","b":"Allosteric modulation GABA-A; GABA-like (GABA agonist)"},{"f":"Phenobarbital: use, key adverse?","b":"Tonic-clonic, status epilepticus; tolerance, dependence, respiratory depression (toxic)"},{"f":"Benzodiazepines: mechanism?","b":"Allosteric modulation of GABA-A receptors"},{"f":"Benzodiazepines: 1st line for?","b":"Status epilepticus; febrile seizures in children"},{"f":"Benzodiazepines: adverse?","b":"Tolerance & physical dependence; memory disturbance"},{"f":"Ethosuximide: mechanism?","b":"Blocks T-type Ca²⁺ channels in thalamocortical neurons"},{"f":"Ethosuximide: use?","b":"First line absence seizures; LEAST toxic AED"},{"f":"Vigabatrin: mechanism?","b":"Irreversibly inhibits GABA transaminase → ↑ GABA"},{"f":"Vigabatrin: adverse?","b":"Irreversible visual loss (30-40%); check visual fields every 6 months"},{"f":"Vigabatrin: use?","b":"Focal seizures only; refractory cases"},{"f":"Lamotrigine: mechanism?","b":"Block Na⁺ channels; ↓ glutamate release"},{"f":"Lamotrigine: adverse?","b":"Skin rash, Stevens-Johnson (↑ with valproic acid); insomnia"},{"f":"Lamotrigine: special?","b":"Preferred in pregnancy; widely prescribed for focal seizures"},{"f":"Topiramate: mechanism?","b":"Block Na⁺; ↑ GABA; block AMPA/kainate receptors"},{"f":"Topiramate: adverse?","b":"↑ IOP (avoid glaucoma); renal stones; cleft palate; weight loss"},{"f":"Topiramate: extra use?","b":"Migraine prophylaxis"},{"f":"Levetiracetam: mechanism?","b":"Binds SV2A (synaptic vesicle protein) → ↓ glutamate release"},{"f":"Levetiracetam: advantages?","b":"Broad spectrum; low toxicity; favorable PK; no drug interactions"},{"f":"Gabapentin, pregabalin: mechanism?","b":"Inhibit presynaptic P/Q Ca²⁺ channels → ↓ Ca²⁺ influx → ↓ glutamate release"},{"f":"Gabapentin, pregabalin: use?","b":"Adjuvant focal seizures; neuropathic pain"},{"f":"Tiagabine: mechanism?","b":"Inhibits GABA reuptake → ↑ GABA"},{"f":"Adjuvant drug?","b":"Additional therapy to boost the main drug when it is not enough alone"},{"f":"1st line: focal seizures?","b":"Carbamazepine"},{"f":"1st line: generalized tonic-clonic, myoclonic?","b":"Valproic acid"},{"f":"1st line: childhood absence?","b":"Ethosuximide"},{"f":"1st line: pregnancy?","b":"Lamotrigine or levetiracetam"},{"f":"1st line: status epilepticus?","b":"Diazepam IV (adult) / rectal (children)"},{"f":"When to start AED?","b":"After a second epileptic seizure"},{"f":"Treatment strategy?","b":"Monotherapy → substitute → combine 2 drugs"},{"f":"When to stop AED?","b":"Seizure free >2 years; withdraw gradually over months"},{"f":"Pregnancy: folic acid?","b":"5 mg/day, well before pregnancy ← ↓ neural tube defects"},{"f":"Breast feeding with AEDs?","b":"Acceptable with nearly ALL"}],"subject":"pharm","date":"2026-11-17"},
- {"id":"cns-neuro-3","system":"CNS","title":"Neurodegenerative Drugs (Alzheimer)","url":"cns-neurodegenerative-3.html","summary":"Neurodegenerative diseases, Alzheimer's triad (memory loss, cognitive impairment, behavioral abnormalities), pathophysiology (↓ acetylcholine, ↑ glutamate in cortex and hippocampus), cholinesterase inhibitors (donepezil, rivastigmine, galantamine) as 1st line, and memantine (NMDA antagonist) as 2nd line or add-on in severe disease.","points":["Neurodegenerative disease = progressive loss of selected neurons in discrete brain areas → movement disorders, cognition disorders, or both","Most common: Alzheimer and Parkinson","Alzheimer triad: progressive memory loss, progressive cognitive impairment (can't recognize familiar people), behavioral abnormalities","Behavioral: aggression, emotional lability, depression, motor hyperactivity","Pathophysiology: neurotransmitter dysregulation → ↓ acetylcholine and ↑ glutamate in cortical and hippocampal regions","Image findings: atrophy of cortex, atrophy of hippocampus, enlarged ventricles","Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) = 1st line, more selective for CNS cholinesterase, modest reduction in rate of cognitive loss","ChEI side effects: bradycardia, insomnia, nausea, vomiting, anorexia","Memantine = NMDA receptor antagonist, 2nd line; used if ChEIs are contraindicated or as add-on in severe disease; delays memory loss","Memantine side effects: insomnia, neuropsychiatric changes, confusion, agitation"],"mcqs":[{"q":"Which drug group is the first-line therapy for Alzheimer's disease?","opts":["NMDA antagonists","Cholinesterase inhibitors","Dopamine agonists","Benzodiazepines"],"a":1,"why":"مثبطات الكولينستراز هي الخيار الأول، وميمانتين بالمرتبة التانية."},{"q":"Which is NOT a cholinesterase inhibitor?","opts":["Donepezil","Rivastigmine","Galantamine","Memantine"],"a":3,"why":"ميمانتين بيحجب مستقبلات NMDA، مو مثبط كولينستراز."},{"q":"The neurotransmitter changes in Alzheimer's disease are:","opts":["↑ Acetylcholine, ↓ glutamate","↓ Acetylcholine, ↑ glutamate","↓ Both","↑ Both"],"a":1,"why":"الأستيل كولين بينقص والغلوتامات بيزيد، بالقشرة وبالحصين."},{"q":"Which is part of the Alzheimer triad?","opts":["Resting tremor","Progressive memory loss","Seizures","Rigidity"],"a":1,"why":"الثالوث: فقدان ذاكرة + ضعف إدراكي + اضطراب سلوكي."},{"q":"Memantine acts as:","opts":["Cholinesterase inhibitor","GABA agonist","NMDA receptor antagonist","Dopamine antagonist"],"a":2,"why":"ميمانتين مضاد لمستقبل NMDA، يعني بيخفف تأثير الغلوتامات."},{"q":"A common side effect of donepezil is:","opts":["Tachycardia","Bradycardia","Constipation","Weight gain"],"a":1,"why":"زيادة الأستيل كولين بتعطي بطء قلب، غثيان، قيء، أرق، فقدان شهية."},{"q":"Memantine is used in Alzheimer's when:","opts":["As the only 1st line drug always","ChEIs are contraindicated, or as add-on in severe disease","The patient has epilepsy","The patient is pregnant"],"a":1,"why":"خط تاني: مانع لمثبطات الكولينستراز أو إضافة بالمرض الشديد."},{"q":"Which is a behavioral abnormality in Alzheimer's?","opts":["Aggression","Ptosis","Polyuria","Hypotension"],"a":0,"why":"السلوك: عدوانية، تقلب عاطفي، اكتئاب، فرط حركة."},{"q":"Which finding is seen in Alzheimer's brain imaging?","opts":["Small ventricles","Enlarged ventricles","Hypertrophy of cortex","Normal hippocampus"],"a":1,"why":"ضمور القشرة والحصين مع توسع البطينات."},{"q":"Side effects of memantine include:","opts":["Bradycardia and vomiting","Confusion and agitation","Anorexia only","Hypoglycemia"],"a":1,"why":"ميمانتين: أرق، تخليط، هيجان، تغيرات نفسية عصبية."}],"cards":[{"f":"Neurodegenerative disease?","b":"Progressive loss of selected neurons in discrete brain areas"},{"f":"2 most common neurodegenerative diseases?","b":"Alzheimer and Parkinson"},{"f":"Alzheimer triad?","b":"Progressive memory loss, cognitive impairment, behavioral abnormalities"},{"f":"Cognitive impairment in Alzheimer?","b":"Unable to recognize familiar people"},{"f":"Behavioral abnormalities?","b":"Aggression, emotional lability, depression, motor hyperactivity"},{"f":"Neurotransmitters in Alzheimer?","b":"↓ Acetylcholine, ↑ glutamate (excitatory)"},{"f":"Brain regions affected?","b":"Cortical and hippocampal"},{"f":"Imaging findings?","b":"Atrophy of cortex and hippocampus, enlarged ventricles"},{"f":"1st line therapy for Alzheimer?","b":"Cholinesterase inhibitors"},{"f":"Names of ChEIs?","b":"Donepezil, rivastigmine, galantamine"},{"f":"ChEIs mechanism?","b":"Inhibit cholinesterase (more selective for CNS) → ↑ ACh"},{"f":"ChEIs effect?","b":"Modest reduction in the rate of loss of cognitive functions"},{"f":"ChEIs side effects?","b":"Bradycardia, insomnia, nausea, vomiting, anorexia"},{"f":"Memantine class?","b":"NMDA receptor antagonist"},{"f":"Memantine line?","b":"2nd line"},{"f":"When is memantine used?","b":"ChEIs contraindicated, or add-on in severe disease"},{"f":"Memantine effect?","b":"Delays the rate of memory loss"},{"f":"Memantine side effects?","b":"Insomnia, neuropsychiatric changes, confusion, agitation"}],"subject":"pharm","date":"2026-11-18"}
+ {
+  "id": "path-neoplasia-1",
+  "system": "Pathology",
+  "title": "Neoplasia 1 (الأورام)",
+  "url": "lec/path-neoplasia-1.html",
+  "summary": "Neoplasm definition, benign vs malignant, nomenclature, differentiation, anaplasia, growth rate, local invasion, metastasis, dysplasia and CIS.",
+  "points": [
+   "Neoplasm: New growth: abnormal mass, growth exceeds + uncoordinated with normal tissue",
+   "Classification: Benign: localized, no spread, surgical excision",
+   "Tumor structure: Parenchyma: neoplastic cells",
+   "Nomenclature: Benign: cell of origin + -oma",
+   "Differentiation + anaplasia: Well, moderately, poorly, undifferentiated (anaplastic)",
+   "Rate of growth + invasion: Benign: slow; malignant: rapid, correlates with differentiation",
+   "Metastasis: Single most important feature of malignancy",
+   "Dysplasia, CIS: Dysplasia: disordered growth, premalignant, reversible, confined to epithelium"
+  ],
+  "mcqs": [
+   {
+    "q": "A tumor that persists in growing after the stimulus stops is described as:",
+    "opts": [
+     "Reactive",
+     "Autonomous",
+     "Regenerative",
+     "Physiologic"
+    ],
+    "a": 1,
+    "why": "الورم مستقل (autonomous): بيكمّل نمو حتى بعد ما يوقف المحفّز."
+   },
+   {
+    "q": "The word cancer comes from the Latin for:",
+    "opts": [
+     "Swelling",
+     "Crab",
+     "Sword",
+     "Cell"
+    ],
+    "a": 1,
+    "why": "Cancer جاية من اللاتينية بمعنى سرطان البحر (crab). أما Tumor فمعناها تورّم."
+   },
+   {
+    "q": "Cancer ranks as a cause of death:",
+    "opts": [
+     "1st",
+     "2nd after cardiovascular diseases",
+     "3rd",
+     "Rare"
+    ],
+    "a": 1,
+    "why": "ثاني سبب للوفاة بعد أمراض القلب والأوعية."
+   },
+   {
+    "q": "Which is a feature of benign tumors?",
+    "opts": [
+     "Invade adjacent tissue",
+     "Metastasize",
+     "Remain localized",
+     "Cause death"
+    ],
+    "a": 2,
+    "why": "الحميد بيضل موضعي (localized)."
+   },
+   {
+    "q": "Borderline malignant tumors:",
+    "opts": [
+     "Metastasize widely",
+     "Invade surrounding tissue but do not metastasize",
+     "Are always encapsulated",
+     "Are common"
+    ],
+    "a": 1,
+    "why": "الحدّي بيغزو الجوار بس ما بينتشر، ونادر."
+   },
+   {
+    "q": "The two basic components of every tumor:",
+    "opts": [
+     "Cells + fat",
+     "Parenchyma + stroma",
+     "Epithelium + endothelium",
+     "Nucleus + cytoplasm"
+    ],
+    "a": 1,
+    "why": "برانشيما (الخلايا الورمية) + سدى (نسيج ضام وأوعية)."
+   },
+   {
+    "q": "Desmoplasia is:",
+    "opts": [
+     "Scanty stroma",
+     "Abundant collagenous stroma, stony hard tumor",
+     "Necrosis",
+     "Mitosis"
+    ],
+    "a": 1,
+    "why": "Desmoplasia سدى كولاجيني غزير ← ورم قاسي كالحجر."
+   },
+   {
+    "q": "Benign tumors are named by adding:",
+    "opts": [
+     "-sarcoma",
+     "-carcinoma",
+     "-oma",
+     "-itis"
+    ],
+    "a": 2,
+    "why": "الحميد: اسم الخلية الأصلية + -oma."
+   },
+   {
+    "q": "A benign epithelial tumor with finger-like projections:",
+    "opts": [
+     "Adenoma",
+     "Papilloma",
+     "Cystadenoma",
+     "Fibroma"
+    ],
+    "a": 1,
+    "why": "Papilloma نتوءات كالأصابع من سطح ظهاري."
+   },
+   {
+    "q": "Hollow cystic benign tumor, mostly ovary:",
+    "opts": [
+     "Cystadenoma",
+     "Polyp",
+     "Lipoma",
+     "Teratoma"
+    ],
+    "a": 0,
+    "why": "Cystadenoma كتلة كيسية مجوفة غالباً بالمبيض."
+   },
+   {
+    "q": "Malignant tumor of epithelial origin:",
+    "opts": [
+     "Sarcoma",
+     "Carcinoma",
+     "Lipoma",
+     "Teratoma"
+    ],
+    "a": 1,
+    "why": "ظهاري خبيث ← Carcinoma. ضام خبيث ← Sarcoma."
+   },
+   {
+    "q": "Malignant tumor of cartilage:",
+    "opts": [
+     "Chondroma",
+     "Chondrosarcoma",
+     "Osteoma",
+     "Fibroma"
+    ],
+    "a": 1,
+    "why": "Chondrosarcoma ورم خبيث بالغضروف."
+   },
+   {
+    "q": "Which tumor arises from totipotential cells?",
+    "opts": [
+     "Lipoma",
+     "Teratoma",
+     "Adenoma",
+     "Papilloma"
+    ],
+    "a": 1,
+    "why": "Teratoma من خلايا متعددة القدرات، أكتر من طبقة جنينية."
+   },
+   {
+    "q": "Which is malignant despite -oma ending?",
+    "opts": [
+     "Lipoma",
+     "Melanoma",
+     "Fibroma",
+     "Osteoma"
+    ],
+    "a": 1,
+    "why": "استثناءات: Lymphoma و Melanoma و Glioma و Seminoma."
+   },
+   {
+    "q": "Benign tumors are:",
+    "opts": [
+     "Always well differentiated",
+     "Poorly differentiated",
+     "Anaplastic",
+     "Undifferentiated"
+    ],
+    "a": 0,
+    "why": "الحميد دايماً متمايز جيداً."
+   }
+  ],
+  "cards": [
+   {
+    "f": "Neoplasm?",
+    "b": "New growth: abnormal mass, growth exceeds + uncoordinated with normal tissue, persists after stimuli cease"
+   },
+   {
+    "f": "Tumor, cancer, oncology?",
+    "b": "Tumor: swelling. Cancer: all malignant tumors (Latin: crab). Oncology: science of cancer"
+   },
+   {
+    "f": "Cancer: genetic basis?",
+    "b": "Genetic disorder: DNA mutation, passed to progeny, autonomous proliferation"
+   },
+   {
+    "f": "Cancer rank as cause of death?",
+    "b": "2nd after cardiovascular diseases"
+   },
+   {
+    "f": "Benign tumor features?",
+    "b": "Innocent features, localized, no spread, surgical excision, usually not affecting survival"
+   },
+   {
+    "f": "Malignant tumor features?",
+    "b": "Characteristic morphology, invades + destroys, metastasizes, can cause death"
+   },
+   {
+    "f": "Borderline malignant?",
+    "b": "Localized, invades surrounding tissue, no metastasis, rare"
+   },
+   {
+    "f": "Tumor components?",
+    "b": "Parenchyma (neoplastic cells) + stroma (connective tissue, blood vessels)"
+   },
+   {
+    "f": "Desmoplasia?",
+    "b": "Abundant collagenous stroma ← stony hard tumor (scirrhous carcinoma of breast)"
+   },
+   {
+    "f": "Benign tumor naming?",
+    "b": "Cell of origin + suffix -oma"
+   },
+   {
+    "f": "Adenoma?",
+    "b": "Benign tumor from glands or glandular pattern (e.g. renal cell adenoma)"
+   },
+   {
+    "f": "Papilloma?",
+    "b": "Benign epithelial tumor: finger-like projections from surface"
+   },
+   {
+    "f": "Cystadenoma?",
+    "b": "Benign hollow cystic mass, mostly ovary"
+   },
+   {
+    "f": "Polyp?",
+    "b": "Benign epithelial mass projecting above mucosal surface, mostly GIT"
+   },
+   {
+    "f": "Carcinoma vs sarcoma?",
+    "b": "Carcinoma: malignant epithelial. Sarcoma: malignant mesenchymal"
+   },
+   {
+    "f": "Carcinoma types?",
+    "b": "Squamous cell, adenocarcinoma, transitional cell, basal cell"
+   },
+   {
+    "f": "Mixed tumor?",
+    "b": "Epithelial + mesenchymal; divergent differentiation of one cell line (e.g. pleomorphic adenoma, carcinosarcoma)"
+   },
+   {
+    "f": "Teratoma?",
+    "b": "Totipotential cells, > 1 germ layer; gonads; dermoid cyst; benign or malignant"
+   },
+   {
+    "f": "Exceptions to -oma naming?",
+    "b": "Lymphoma, melanoma, glioma, seminoma: malignant"
+   },
+   {
+    "f": "Differentiation?",
+    "b": "Extent neoplastic cells resemble normal cells, morphology + function"
+   },
+   {
+    "f": "Anaplasia?",
+    "b": "Reversal to primitive level; lack of differentiation"
+   },
+   {
+    "f": "Cytologic atypia features?",
+    "b": "Pleomorphism, hyperchromasia, ↑ N/C ratio"
+   },
+   {
+    "f": "Other malignant signs?",
+    "b": "Abnormal mitoses, necrosis, tumor giant cells, loss of polarity"
+   },
+   {
+    "f": "Rate of growth and differentiation?",
+    "b": "Well differentiated: slow. Poorly differentiated: rapid"
+   },
+   {
+    "f": "Benign tumor invasion?",
+    "b": "Cohesive expansile, capsule (not all), enucleation"
+   },
+   {
+    "f": "Malignant tumor invasion?",
+    "b": "Infiltrates, no capsule, no cleavage plane; excision with safety margin"
+   },
+   {
+    "f": "Most reliable features of malignancy?",
+    "b": "1: metastasis. 2: local invasion"
+   },
+   {
+    "f": "Metastasis?",
+    "b": "Secondary implants away from primary tumor"
+   },
+   {
+    "f": "Distant metastasis at diagnosis?",
+    "b": "≈ 30% of solid tumor patients"
+   },
+   {
+    "f": "Pathways of spread?",
+    "b": "Lymphatic, hematogenous, seeding body cavities"
+   },
+   {
+    "f": "Most common initial spread of carcinomas?",
+    "b": "Lymphatic"
+   },
+   {
+    "f": "Sentinel node?",
+    "b": "First node in regional lymphatic basin receiving lymph from primary tumor"
+   },
+   {
+    "f": "Sentinel node mapping?",
+    "b": "Radiolabeled tracers + blue dyes; frozen section at surgery"
+   },
+   {
+    "f": "Why liver + lungs commonly involved?",
+    "b": "Portal drainage → liver; caval blood → lungs"
+   },
+   {
+    "f": "Seeding characteristic of?",
+    "b": "Ovarian carcinomas: peritoneum, pleura"
+   },
+   {
+    "f": "Dysplasia?",
+    "b": "Disordered growth of epithelium; non-neoplastic, premalignant, reversible"
+   },
+   {
+    "f": "Carcinoma in situ?",
+    "b": "Severe atypia confined to epithelium; basement membrane intact"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-19"
+ },
+ {
+  "id": "cns-neurodegenerative",
+  "system": "CNS",
+  "title": "Drugs for Neurodegenerative Diseases: Alzheimer's (CNS Pharmacology)",
+  "url": "lec/cns-neurodegenerative.html",
+  "summary": "Neurodegenerative diseases, Alzheimer's triad (memory loss, cognitive impairment, behavioral abnormalities), pathophysiology (↓ ACh, ↑ glutamate), cholinesterase inhibitors (donepezil, rivastigmine, galantamine) and memantine (NMDA antagonist).",
+  "points": [
+   "Neurodegenerative: progressive loss of selected neurons in discrete brain areas; movement, cognition, or both; most common Alzheimer, Parkinson",
+   "Alzheimer triad: progressive memory loss; cognitive impairment (unable to recognize familiar people); behavioral abnormalities (aggression, emotional lability, depression, motor hyperactivity)",
+   "Pathophysiology: ↓ acetylcholine, ↑ glutamate in cortical and hippocampal regions",
+   "Cholinesterase inhibitors (donepezil, rivastigmine, galantamine): 1st line; more selective for CNS enzyme; modest ↓ rate of cognitive loss; SE bradycardia, insomnia, nausea, vomiting, anorexia",
+   "Memantine: NMDA receptor antagonist; 2nd line (contraindication to ChEIs) or add-on in severe disease; delays memory loss; SE insomnia, neuropsychiatric changes, confusion, agitation"
+  ],
+  "mcqs": [
+   {
+    "q": "Neurodegenerative disease is characterized by:",
+    "opts": [
+     "Acute loss of all neurons",
+     "Progressive loss of selected neurons in discrete brain areas",
+     "Excess acetylcholine",
+     "Infection of the meninges"
+    ],
+    "a": 1,
+    "why": "تعريف المرض التنكسي العصبي: فقدان تدريجي لخلايا عصبية مختارة بمناطق محددة من الدماغ."
+   },
+   {
+    "q": "The two most common neurodegenerative diseases?",
+    "opts": [
+     "Epilepsy, migraine",
+     "Alzheimer, Parkinson",
+     "Stroke, tumor",
+     "Depression, anxiety"
+    ],
+    "a": 1,
+    "why": "الأشهر: Alzheimer و Parkinson."
+   },
+   {
+    "q": "Which is NOT part of the Alzheimer triad?",
+    "opts": [
+     "Progressive memory loss",
+     "Cognitive impairment",
+     "Behavioral abnormalities",
+     "Seizures"
+    ],
+    "a": 3,
+    "why": "الثالوث: ذاكرة، إدراك، سلوك. النوبات (Seizures) مو منو."
+   },
+   {
+    "q": "Inability to recognize familiar people reflects:",
+    "opts": [
+     "Memory loss only",
+     "Cognitive impairment",
+     "Motor hyperactivity",
+     "Depression"
+    ],
+    "a": 1,
+    "why": "عدم التعرّف على ناس مألوفين مذكور تحت الضعف الإدراكي (Cognitive impairment)."
+   },
+   {
+    "q": "Which is a behavioral abnormality in Alzheimer?",
+    "opts": [
+     "Aggression",
+     "Tremor",
+     "Bradycardia",
+     "Ataxia"
+    ],
+    "a": 0,
+    "why": "السلوكيات: عدوانية، تقلّب عاطفي، اكتئاب، وفرط حركة."
+   },
+   {
+    "q": "Neurotransmitter changes in Alzheimer?",
+    "opts": [
+     "↑ ACh, ↓ glutamate",
+     "↓ ACh, ↑ glutamate",
+     "↓ ACh, ↓ glutamate",
+     "↑ ACh, ↑ glutamate"
+    ],
+    "a": 1,
+    "why": "الأستيل كولين بينقص والغلوتامات بيزيد."
+   },
+   {
+    "q": "Which regions show the neurotransmitter changes?",
+    "opts": [
+     "Cerebellar, spinal",
+     "Cortical, hippocampal",
+     "Brainstem only",
+     "Peripheral nerves"
+    ],
+    "a": 1,
+    "why": "التغيّر بالمناطق القشرية والحصينية (Cortical, hippocampal)."
+   },
+   {
+    "q": "First-line therapy for Alzheimer?",
+    "opts": [
+     "Memantine",
+     "Cholinesterase inhibitors",
+     "Diazepam",
+     "Phenytoin"
+    ],
+    "a": 1,
+    "why": "مثبطات الكولينستراز هي الخط الأول."
+   },
+   {
+    "q": "Which is a cholinesterase inhibitor?",
+    "opts": [
+     "Memantine",
+     "Donepezil",
+     "Phenytoin",
+     "Lorazepam"
+    ],
+    "a": 1,
+    "why": "Donepezil و Rivastigmine و Galantamine هنّي المجموعة."
+   },
+   {
+    "q": "Which is NOT a cholinesterase inhibitor?",
+    "opts": [
+     "Donepezil",
+     "Rivastigmine",
+     "Galantamine",
+     "Memantine"
+    ],
+    "a": 3,
+    "why": "Memantine مضاد NMDA، مو مثبط كولينستراز."
+   },
+   {
+    "q": "Side effects of cholinesterase inhibitors?",
+    "opts": [
+     "Bradycardia, nausea, vomiting, anorexia",
+     "Tachycardia, constipation",
+     "Hypertension, dry mouth",
+     "Hyperglycemia, weight gain"
+    ],
+    "a": 0,
+    "why": "بطء القلب، أرق، غثيان، قيء، فقدان شهية."
+   },
+   {
+    "q": "Effect of cholinesterase inhibitors on disease?",
+    "opts": [
+     "Cure",
+     "Modest reduction in rate of loss of cognitive functions",
+     "Stop all symptoms",
+     "Increase glutamate"
+    ],
+    "a": 1,
+    "why": "تأثيرها متواضع: بتبطّئ خسارة الوظائف الفكرية بس شوي."
+   },
+   {
+    "q": "Memantine mechanism?",
+    "opts": [
+     "Cholinesterase inhibitor",
+     "NMDA receptor antagonist",
+     "GABA-A agonist",
+     "Na⁺ channel blocker"
+    ],
+    "a": 1,
+    "why": "Memantine بيحجب مستقبلات NMDA."
+   },
+   {
+    "q": "Memantine is used:",
+    "opts": [
+     "1st line always",
+     "If contraindication to ChEIs, or add-on in severe disease",
+     "For Parkinson only",
+     "For epilepsy"
+    ],
+    "a": 1,
+    "why": "خط تاني: إذا في مانع لمثبطات الكولينستراز، أو إضافة بالمرض الشديد."
+   },
+   {
+    "q": "Memantine delays the rate of:",
+    "opts": [
+     "Seizures",
+     "Memory loss",
+     "Tremor",
+     "Sleep"
+    ],
+    "a": 1,
+    "why": "بيبطّئ معدل ضياع الذاكرة."
+   },
+   {
+    "q": "Side effects of memantine?",
+    "opts": [
+     "Insomnia, confusion, agitation",
+     "Bradycardia, vomiting",
+     "Gingival hyperplasia",
+     "Hirsutism"
+    ],
+    "a": 0,
+    "why": "أرق، تغيّرات نفسية عصبية، تخليط، وهيجان."
+   }
+  ],
+  "cards": [
+   {
+    "f": "Neurodegenerative disease?",
+    "b": "Progressive loss of selected neurons in discrete brain areas ← disorders of movement, cognition, or both"
+   },
+   {
+    "f": "Most common neurodegenerative diseases?",
+    "b": "Alzheimer, Parkinson"
+   },
+   {
+    "f": "Alzheimer's disease?",
+    "b": "Neurodegenerative disease; triad: memory loss, cognitive impairment, behavioral abnormalities"
+   },
+   {
+    "f": "Alzheimer triad?",
+    "b": "Progressive memory loss; progressive cognitive impairment; behavioral abnormalities"
+   },
+   {
+    "f": "Cognitive impairment in Alzheimer?",
+    "b": "Progressive; unable to recognize familiar people"
+   },
+   {
+    "f": "Behavioral abnormalities in Alzheimer?",
+    "b": "Aggression, emotional lability, depression, motor hyperactivity"
+   },
+   {
+    "f": "Neurotransmitter changes in Alzheimer?",
+    "b": "↓ Acetylcholine; ↑ excitatory transmitters (glutamate)"
+   },
+   {
+    "f": "Brain regions affected (neurotransmitters)?",
+    "b": "Cortical and hippocampal regions"
+   },
+   {
+    "f": "Biochemical change?",
+    "b": "Neurotransmitters dysregulation"
+   },
+   {
+    "f": "Brain changes in Alzheimer (image)?",
+    "b": "Atrophy of cerebral cortex; atrophy of hippocampus; enlarged ventricles"
+   },
+   {
+    "f": "Healthy brain: ACh vs glutamate?",
+    "b": "Balanced"
+   },
+   {
+    "f": "Treatment targets?",
+    "b": "Acetylcholine (cholinesterase inhibitors); glutamate (NMDA antagonist)"
+   },
+   {
+    "f": "Cholinesterase inhibitors: drugs?",
+    "b": "Donepezil, rivastigmine, galantamine"
+   },
+   {
+    "f": "Cholinesterase inhibitors: line?",
+    "b": "1st line therapy"
+   },
+   {
+    "f": "Cholinesterase inhibitors: selectivity?",
+    "b": "More selective for cholinesterase enzyme in CNS"
+   },
+   {
+    "f": "Cholinesterase inhibitors: effect?",
+    "b": "Modest reduction in rate of loss of cognitive functions"
+   },
+   {
+    "f": "Cholinesterase inhibitors: side effects?",
+    "b": "Bradycardia, insomnia, nausea, vomiting, anorexia"
+   },
+   {
+    "f": "NMDA receptor antagonist in Alzheimer?",
+    "b": "Memantine"
+   },
+   {
+    "f": "NMDA stands for?",
+    "b": "N-methyl-D-aspartate"
+   },
+   {
+    "f": "Memantine: line?",
+    "b": "2nd line drug"
+   },
+   {
+    "f": "Memantine: when used?",
+    "b": "Contraindication to cholinesterase inhibitors; or add-on therapy in severe disease"
+   },
+   {
+    "f": "Memantine: effect?",
+    "b": "Delays rate of memory loss in Alzheimer"
+   },
+   {
+    "f": "Memantine: side effects?",
+    "b": "Insomnia, neuropsychiatric changes, confusion, agitation"
+   },
+   {
+    "f": "Name clue: donepezil, rivastigmine?",
+    "b": "-pezil, -stigmine ← cholinesterase inhibitors"
+   },
+   {
+    "f": "Name clue: memantine?",
+    "b": "-mantine ← NMDA antagonist"
+   }
+  ],
+  "subject": "pharm",
+  "date": "2026-11-18"
+ },
+ {
+  "id": "cns-antiepileptics",
+  "system": "CNS",
+  "title": "Antiepileptics (CNS Pharmacology)",
+  "url": "lec/cns-antiepileptics.html",
+  "summary": "Epilepsy and seizure classification, pathophysiology (GABA, glutamate, T-type Ca2+), principles of treatment, first and second generation antiepileptic drugs (mechanism, uses, adverse effects), drug selection by seizure type, treatment guidelines and pregnancy.",
+  "points": [
+   "Seizure ≠ epilepsy; focal vs generalized; status epilepticus >20 min; febrile seizure is NOT epilepsy",
+   "Cause: ↑ excitation (glutamate, aspartate) or ↓ inhibition (GABA); absence: T-type Ca²⁺ channels in thalamic relay neurons",
+   "Treatment principles: ↑ GABA, ↓ glutamate, block Na⁺, block Ca²⁺",
+   "1st gen: phenytoin, carbamazepine, valproic acid, phenobarbital, BZD, ethosuximide; 2nd gen: vigabatrin, lamotrigine, topiramate, levetiracetam, gabapentin/pregabalin, tiagabine",
+   "1st line: focal carbamazepine; GTC/myoclonic valproic acid; absence ethosuximide; pregnancy lamotrigine/levetiracetam; status epilepticus diazepam",
+   "Start after 2nd seizure; monotherapy first; stop if seizure free >2 years, gradually; folic acid 5 mg/day in pregnancy"
+  ],
+  "mcqs": [
+   {
+    "q": "Which drug is the first line for childhood absence seizures?",
+    "opts": [
+     "Phenytoin",
+     "Ethosuximide",
+     "Carbamazepine",
+     "Phenobarbital"
+    ],
+    "a": 1,
+    "why": "Ethosuximide بيسد قنوات T-type Ca²⁺ بالثلاموس، وهو الأول للنوبات الغيابية وكمان أقل مضادات الصرع سمّية."
+   },
+   {
+    "q": "Absence seizures are caused by overactivation of:",
+    "opts": [
+     "T-type Ca²⁺ channels",
+     "NMDA receptors",
+     "GABA-A receptors",
+     "P/Q-type Ca²⁺ channels"
+    ],
+    "a": 0,
+    "why": "النوبة الغيابية سببها فرط تنشيط قنوات T-type Ca²⁺ بخلايا المرحّل الثلاموسية."
+   },
+   {
+    "q": "First line drug for focal seizures?",
+    "opts": [
+     "Valproic acid",
+     "Lamotrigine",
+     "Carbamazepine",
+     "Levetiracetam"
+    ],
+    "a": 2,
+    "why": "حسب جدول الشريحة الخيار الأول للجزئية هو Carbamazepine."
+   },
+   {
+    "q": "Which drug causes gingival hyperplasia and hirsutism?",
+    "opts": [
+     "Phenytoin",
+     "Valproic acid",
+     "Topiramate",
+     "Tiagabine"
+    ],
+    "a": 0,
+    "why": "Phenytoin بيعمل تضخم لثة وكثرة شعر وتضخم عقد لمفية."
+   },
+   {
+    "q": "Which drug induces its own metabolism (autoinduction)?",
+    "opts": [
+     "Valproic acid",
+     "Phenytoin",
+     "Carbamazepine",
+     "Lamotrigine"
+    ],
+    "a": 2,
+    "why": "Carbamazepine بيحفّز استقلاب نفسو."
+   },
+   {
+    "q": "Carbamazepine ↑ ADH secretion leading to:",
+    "opts": [
+     "Hypernatremia",
+     "Hyponatremia & edema",
+     "Hyperkalemia",
+     "Hypocalcemia"
+    ],
+    "a": 1,
+    "why": "زيادة ADH ← احتباس مي ← نقص صوديوم (hyponatremia) ووذمة."
+   },
+   {
+    "q": "Which drug has the highest risk of major congenital malformations?",
+    "opts": [
+     "Lamotrigine",
+     "Levetiracetam",
+     "Valproic acid",
+     "Ethosuximide"
+    ],
+    "a": 2,
+    "why": "Valproic acid أعلى خطر تشوهات خلقية كبرى. أما Lamotrigine وLevetiracetam فمفضّلين بالحمل."
+   },
+   {
+    "q": "Rare but fatal adverse effect of valproic acid?",
+    "opts": [
+     "Fulminant hepatic toxicity",
+     "Gingival hyperplasia",
+     "Visual loss",
+     "Renal stones"
+    ],
+    "a": 0,
+    "why": "Fulminant hepatic toxicity نادر بس قاتل. وكمان pancreatitis وalopecia."
+   },
+   {
+    "q": "Which drug causes irreversible visual field loss?",
+    "opts": [
+     "Topiramate",
+     "Vigabatrin",
+     "Tiagabine",
+     "Gabapentin"
+    ],
+    "a": 1,
+    "why": "Vigabatrin: فقدان رؤية غير عكوس عند 30 لـ 40 بالميّة. الحيلة: Vi يعني Vision."
+   },
+   {
+    "q": "Skin rash and Stevens-Johnson syndrome risk is highest with lamotrigine when combined with:",
+    "opts": [
+     "Phenytoin",
+     "Valproic acid",
+     "Levetiracetam",
+     "Ethosuximide"
+    ],
+    "a": 1,
+    "why": "خطر SJS باللاموتريجين بيزيد لما ينعطى مع Valproic acid."
+   },
+   {
+    "q": "Which drug should be avoided in glaucoma?",
+    "opts": [
+     "Levetiracetam",
+     "Topiramate",
+     "Phenobarbital",
+     "Ethosuximide"
+    ],
+    "a": 1,
+    "why": "Topiramate بيرفع ضغط العين (↑↑ IOP)، وكمان حصى كلى وشق حنك ونقص وزن."
+   },
+   {
+    "q": "Levetiracetam acts by binding to:",
+    "opts": [
+     "SV2A",
+     "T-type Ca²⁺ channel",
+     "GABA transaminase",
+     "NMDA receptor"
+    ],
+    "a": 0,
+    "why": "Levetiracetam بيرتبط ببروتين الحويصلات المشبكية SV2A فبيقل Glutamate."
+   },
+   {
+    "q": "Gabapentin and pregabalin inhibit:",
+    "opts": [
+     "GABA reuptake",
+     "Presynaptic P/Q-type Ca²⁺ channels",
+     "Na⁺ channels",
+     "GABA transaminase"
+    ],
+    "a": 1,
+    "why": "بيسدّوا قنوات P/Q-type Ca²⁺ قبل المشبك فبينقص Glutamate."
+   },
+   {
+    "q": "Tiagabine mechanism?",
+    "opts": [
+     "GABA reuptake inhibition",
+     "GABA-T inhibition",
+     "Na⁺ block",
+     "SV2A binding"
+    ],
+    "a": 0,
+    "why": "Tiagabine بيمنع إعادة امتصاص GABA فبيرتفع تركيزو."
+   },
+   {
+    "q": "First line for status epilepticus (adults)?",
+    "opts": [
+     "Phenytoin",
+     "Diazepam IV",
+     "Valproic acid",
+     "Ethosuximide"
+    ],
+    "a": 1,
+    "why": "الخيار الأول Diazepam بالوريد للبالغين وبالمستقيم للأطفال. التاني Fosphenytoin أو Levetiracetam."
+   },
+   {
+    "q": "Which is NOT an epilepsy?",
+    "opts": [
+     "Febrile seizure",
+     "Absence seizure",
+     "Myoclonic seizure",
+     "Tonic-clonic seizure"
+    ],
+    "a": 0,
+    "why": "Febrile seizure عند الأطفال بالحرارة العالية، من 6 أشهر لـ 5 سنوات، وهو مش صرع."
+   },
+   {
+    "q": "Best antiepileptic drugs in pregnancy?",
+    "opts": [
+     "Valproic acid, phenytoin",
+     "Lamotrigine, levetiracetam",
+     "Carbamazepine, phenobarbital",
+     "Topiramate, vigabatrin"
+    ],
+    "a": 1,
+    "why": "أفضلهم بالحمل Lamotrigine وLevetiracetam."
+   },
+   {
+    "q": "Folic acid dose before pregnancy in epileptic women?",
+    "opts": [
+     "0.4 mg/day",
+     "1 mg/day",
+     "5 mg/day",
+     "50 mg/day"
+    ],
+    "a": 2,
+    "why": "الشريحة: حمض الفوليك 5 ملغ باليوم قبل الحمل بوقت كافي لتقليل عيوب الأنبوب العصبي."
+   },
+   {
+    "q": "Antiepileptic drugs can be considered for withdrawal if seizure free for:",
+    "opts": [
+     "> 6 months",
+     "> 1 year",
+     "> 2 years",
+     "> 10 years"
+    ],
+    "a": 2,
+    "why": "إذا بلا نوبات لأكتر من سنتين، والإيقاف تدريجي على أشهر."
+   },
+   {
+    "q": "Which drug is a water-soluble prodrug used parenterally?",
+    "opts": [
+     "Fosphenytoin",
+     "Phenytoin",
+     "Levetiracetam",
+     "Topiramate"
+    ],
+    "a": 0,
+    "why": "Fosphenytoin طليعة دوا بتذوب بالماء وبتنعطى بالوريد."
+   },
+   {
+    "q": "Which is an enzyme INHIBITOR?",
+    "opts": [
+     "Phenytoin",
+     "Carbamazepine",
+     "Phenobarbital",
+     "Valproic acid"
+    ],
+    "a": 3,
+    "why": "Valproic acid بيثبّط إنزيمات الكبد. الباقيين بيحفّزوها."
+   },
+   {
+    "q": "Which drug has mixed mechanisms (↑ GABA, block Na⁺, block Ca²⁺) and covers all seizure types?",
+    "opts": [
+     "Phenytoin",
+     "Valproic acid",
+     "Ethosuximide",
+     "Vigabatrin"
+    ],
+    "a": 1,
+    "why": "Valproic acid: يثبّط GABA-T، يسد Na⁺ وCa²⁺."
+   }
+  ],
+  "cards": [
+   {
+    "f": "Epilepsy?",
+    "b": "Neurological disorder: sudden, excessive, synchronous discharge of cerebral neurons"
+   },
+   {
+    "f": "Seizure?",
+    "b": "Transient alteration of brain function ← abnormal neuronal discharge; single seizure ≠ epilepsy"
+   },
+   {
+    "f": "Convulsion?",
+    "b": "Involuntary, violent, spasmodic contraction of skeletal muscles"
+   },
+   {
+    "f": "Focal seizure?",
+    "b": "Confined to one hemisphere; simple (aware), complex (impaired), secondary generalization"
+   },
+   {
+    "f": "Generalized seizure types?",
+    "b": "Absence, myoclonic, tonic-clonic; both hemispheres, loss of consciousness"
+   },
+   {
+    "f": "Status epilepticus?",
+    "b": "Prolonged seizure >20 min; most common: generalized tonic-clonic; life-threatening"
+   },
+   {
+    "f": "Febrile seizure?",
+    "b": "Children 6 months-5 years, high fever; NOT epilepsy"
+   },
+   {
+    "f": "Pathophysiology of seizures?",
+    "b": "Imbalance: ↑ excitation (glutamate, aspartate) or ↓ inhibition (GABA)"
+   },
+   {
+    "f": "NMDA receptor: ion?",
+    "b": "Na⁺ (excitatory: glutamate, aspartate)"
+   },
+   {
+    "f": "GABA receptor: ion?",
+    "b": "Cl⁻ (inhibitory)"
+   },
+   {
+    "f": "Absence seizure cause?",
+    "b": "T-type Ca²⁺ channel overactivation in thalamic relay neurons: thalamus-cortex rhythm"
+   },
+   {
+    "f": "4 treatment principles?",
+    "b": "↑ GABA; ↓ excitatory neurotransmitters; block Na⁺; block Ca²⁺"
+   },
+   {
+    "f": "1st generation AEDs?",
+    "b": "Phenytoin, carbamazepine, valproic acid, phenobarbital, benzodiazepines, ethosuximide"
+   },
+   {
+    "f": "2nd generation AEDs?",
+    "b": "Vigabatrin, lamotrigine, topiramate, levetiracetam, gabapentin & pregabalin, tiagabine"
+   },
+   {
+    "f": "Phenytoin: mechanism, use?",
+    "b": "Block voltage-gated Na⁺; tonic-clonic seizures"
+   },
+   {
+    "f": "Phenytoin: adverse effects?",
+    "b": "Nystagmus, diplopia, ataxia; enzyme induction; megaloblastic anemia; gingival hyperplasia; lymphadenopathy; hirsutism; osteomalacia; fetal hydantoin syndrome; spina bifida"
+   },
+   {
+    "f": "Fosphenytoin?",
+    "b": "Water-soluble prodrug of phenytoin; parenteral use"
+   },
+   {
+    "f": "Why vit D + folic acid with phenytoin?",
+    "b": "↑ metabolism of vit D, folic acid ← osteomalacia, megaloblastic anemia"
+   },
+   {
+    "f": "Carbamazepine: use?",
+    "b": "1st line focal; 2nd line tonic-clonic; trigeminal neuralgia"
+   },
+   {
+    "f": "Carbamazepine: unique effects?",
+    "b": "↑ ADH → hyponatremia & edema; autoinduction"
+   },
+   {
+    "f": "Valproic acid: mechanism?",
+    "b": "Inhibits GABA transaminase (↑ GABA); blocks Na⁺, Ca²⁺ channels"
+   },
+   {
+    "f": "Valproic acid: use?",
+    "b": "ALL types of seizures (focal & generalized)"
+   },
+   {
+    "f": "Valproic acid: adverse effects?",
+    "b": "Enzyme inhibition; neutropenia; teratogenic; alopecia; pancreatitis; fulminant hepatic toxicity"
+   },
+   {
+    "f": "Highest malformation risk AED?",
+    "b": "Valproic acid"
+   },
+   {
+    "f": "Phenobarbital: mechanism?",
+    "b": "Allosteric modulation GABA-A; GABA-like (GABA agonist)"
+   },
+   {
+    "f": "Phenobarbital: use, key adverse?",
+    "b": "Tonic-clonic, status epilepticus; tolerance, dependence, respiratory depression (toxic)"
+   },
+   {
+    "f": "Benzodiazepines: mechanism?",
+    "b": "Allosteric modulation of GABA-A receptors"
+   },
+   {
+    "f": "Benzodiazepines: 1st line for?",
+    "b": "Status epilepticus; febrile seizures in children"
+   },
+   {
+    "f": "Benzodiazepines: adverse?",
+    "b": "Tolerance & physical dependence; memory disturbance"
+   },
+   {
+    "f": "Ethosuximide: mechanism?",
+    "b": "Blocks T-type Ca²⁺ channels in thalamocortical neurons"
+   },
+   {
+    "f": "Ethosuximide: use?",
+    "b": "First line absence seizures; LEAST toxic AED"
+   },
+   {
+    "f": "Vigabatrin: mechanism?",
+    "b": "Irreversibly inhibits GABA transaminase → ↑ GABA"
+   },
+   {
+    "f": "Vigabatrin: adverse?",
+    "b": "Irreversible visual loss (30-40%); check visual fields every 6 months"
+   },
+   {
+    "f": "Vigabatrin: use?",
+    "b": "Focal seizures only; refractory cases"
+   },
+   {
+    "f": "Lamotrigine: mechanism?",
+    "b": "Block Na⁺ channels; ↓ glutamate release"
+   },
+   {
+    "f": "Lamotrigine: adverse?",
+    "b": "Skin rash, Stevens-Johnson (↑ with valproic acid); insomnia"
+   },
+   {
+    "f": "Lamotrigine: special?",
+    "b": "Preferred in pregnancy; widely prescribed for focal seizures"
+   },
+   {
+    "f": "Topiramate: mechanism?",
+    "b": "Block Na⁺; ↑ GABA; block AMPA/kainate receptors"
+   },
+   {
+    "f": "Topiramate: adverse?",
+    "b": "↑ IOP (avoid glaucoma); renal stones; cleft palate; weight loss"
+   },
+   {
+    "f": "Topiramate: extra use?",
+    "b": "Migraine prophylaxis"
+   },
+   {
+    "f": "Levetiracetam: mechanism?",
+    "b": "Binds SV2A (synaptic vesicle protein) → ↓ glutamate release"
+   },
+   {
+    "f": "Levetiracetam: advantages?",
+    "b": "Broad spectrum; low toxicity; favorable PK; no drug interactions"
+   },
+   {
+    "f": "Gabapentin, pregabalin: mechanism?",
+    "b": "Inhibit presynaptic P/Q Ca²⁺ channels → ↓ Ca²⁺ influx → ↓ glutamate release"
+   },
+   {
+    "f": "Gabapentin, pregabalin: use?",
+    "b": "Adjuvant focal seizures; neuropathic pain"
+   },
+   {
+    "f": "Tiagabine: mechanism?",
+    "b": "Inhibits GABA reuptake → ↑ GABA"
+   },
+   {
+    "f": "Adjuvant drug?",
+    "b": "Additional therapy to boost the main drug when it is not enough alone"
+   },
+   {
+    "f": "1st line: focal seizures?",
+    "b": "Carbamazepine"
+   },
+   {
+    "f": "1st line: generalized tonic-clonic, myoclonic?",
+    "b": "Valproic acid"
+   },
+   {
+    "f": "1st line: childhood absence?",
+    "b": "Ethosuximide"
+   },
+   {
+    "f": "1st line: pregnancy?",
+    "b": "Lamotrigine or levetiracetam"
+   },
+   {
+    "f": "1st line: status epilepticus?",
+    "b": "Diazepam IV (adult) / rectal (children)"
+   },
+   {
+    "f": "When to start AED?",
+    "b": "After a second epileptic seizure"
+   },
+   {
+    "f": "Treatment strategy?",
+    "b": "Monotherapy → substitute → combine 2 drugs"
+   },
+   {
+    "f": "When to stop AED?",
+    "b": "Seizure free >2 years; withdraw gradually over months"
+   },
+   {
+    "f": "Pregnancy: folic acid?",
+    "b": "5 mg/day, well before pregnancy ← ↓ neural tube defects"
+   },
+   {
+    "f": "Breast feeding with AEDs?",
+    "b": "Acceptable with nearly ALL"
+   }
+  ],
+  "subject": "pharm",
+  "date": "2026-11-16"
+ },
+ {"id": "cns-pharma-1", "system": "CNS", "title": "Pharmacology of CNS Drugs: Sedative-Hypnotics and Antidepressants", "url": "lec/cns-pharma-1.html", "summary": "CNS channels and neurotransmitters, sedative-hypnotics (BZ, barbiturates, Z-drugs, melatonin/orexin, buspirone), tolerance and dependence, depression and antidepressants (TCAs, SSRIs, SNRIs, MAOIs, atypicals).", "points": ["CNS drugs act on ion channels and receptors: GABA-A, NMDA, monoamine transporters", "BZ: positive allosteric modulators of GABA-A, ↑ Cl⁻ channel opening frequency; Flumazenil antagonist", "Barbiturates: ↑ channel opening duration; narrow safety margin", "Z-drugs: zolpidem, zaleplon, zopiclone; chloral hydrate; melatonin/orexin agents; buspirone", "Depression: monoamine hypothesis; TCAs block NE/5-HT reuptake", "SSRIs, SNRIs, mirtazapine, bupropion, MAOIs, 5-HT2 antagonists: mechanism, uses, adverse effects"], "mcqs": [{"q": "Which drug blocks benzodiazepine action at the GABA-A receptor?", "opts": ["Flumazenil", "β-Carbolines", "Zolpidem", "Buspirone"], "a": 0, "why": "Flumazenil هو الـ Antagonist اللي بيحجب BZ. أما β-Carbolines فهني Inverse agonists، تأثيرها عكسي."}, {"q": "Barbiturates effect ← GABA-A chloride channel?", "opts": ["↑ opening frequency", "↑ opening duration", "Blocks the channel", "Opens without GABA"], "a": 1, "why": "BZ بتزيد تكرار فتح القناة (Frequency). Barbiturates بتزيد مدة الفتح (Duration)."}, {"q": "Usual cause of death ← sedative-hypnotic overdose?", "opts": ["Hypertension", "Respiratory depression", "Hyperthermia", "Renal failure"], "a": 1, "why": "تثبيط التنفس (Respiratory depression) هو السبب المعتاد للوفاة بالجرعة الزائدة."}, {"q": "Which drug is a prodrug converted by alcohol dehydrogenase?", "opts": ["Chloral hydrate", "Phenobarbital", "Zaleplon", "Ramelteon"], "a": 0, "why": "Chloral hydrate بيتحوّل بإنزيم Alcohol dehydrogenase لـ Trichloroethanol (المنوّم الفعّال)."}, {"q": "Which is NOT a Z-drug?", "opts": ["Zolpidem", "Zaleplon", "Triazolam", "Zopiclone"], "a": 2, "why": "Triazolam بنزوديازيبين (بتنتهي بـ azolam). الـ 3z هني Zopiclone و Zolpidem و Zaleplon."}, {"q": "Ramelteon: which statement is correct?", "opts": ["Acts directly on GABA-A", "Controlled substance", "Minimal abuse liability", "↑ testosterone"], "a": 2, "why": "Ramelteon ما بيشتغل على GABA، مو مادة خاضعة للرقابة، احتمال إساءة استعمالو قليل. وبيقلل Testosterone مش بيزيدو."}, {"q": "Suvorexant mechanism?", "opts": ["OX1R, OX2R antagonist", "Melatonin agonist", "5-HT1A partial agonist", "GABA-A agonist"], "a": 0, "why": "Suvorexant بيحجب مستقبلات Orexin ← بيقلل نظام اليقظة ← منوّم."}, {"q": "Buspirone is used ← ?", "opts": ["Insomnia", "Generalized anxiety", "Epilepsy", "Anaesthesia"], "a": 1, "why": "Buspirone: Partial agonist على 5-HT1A، بيُستعمل بالقلق المعمّم (GAD)."}, {"q": "Prototypical TCAs?", "opts": ["Fluoxetine, sertraline", "Imipramine, amitriptyline", "Phenelzine, selegiline", "Venlafaxine, duloxetine"], "a": 1, "why": "النموذجين: Imipramine و Amitriptyline."}, {"q": "Which statement ← SSRIs is correct?", "opts": ["Block alpha receptors", "Minimal autonomic toxicity", "Inhibit MAO-A", "Block 5-HT2A"], "a": 1, "why": "SSRIs سميتها الذاتية قليلة لأنها ما بتحصر Alpha و Muscarinic و H1. النموذج: Fluoxetine."}, {"q": "Mirtazapine mechanism?", "opts": ["Presynaptic α2 antagonism ← ↑ NE, 5-HT release", "MAO-B inhibition", "SERT inhibition only", "GABA-A potentiation"], "a": 0, "why": "Mirtazapine بيسد α2 (Negative feedback) ← إفراز NE و 5-HT بيزيد. وكمان بيسد 5-HT2."}, {"q": "Bupropion is used ← ?", "opts": ["Smoking cessation", "Status epilepticus", "Insomnia", "Anaesthesia"], "a": 0, "why": "Bupropion (NDRI) بيُستعمل للإقلاع عن التدخين، وللاكتئاب والاضطراب العاطفي الموسمي."}, {"q": "MAOI with fastest onset, shortest duration?", "opts": ["Phenelzine", "Isocarboxazid", "Tranylcypromine", "Selegiline"], "a": 2, "why": "Tranylcypromine: أسرع بدء، مدة حوالي 1 week مقابل 2–3 weeks لباقي MAOIs."}, {"q": "Selective MAO-B inhibitor ← depression, Parkinsonism?", "opts": ["Phenelzine", "Selegiline", "Isocarboxazid", "Trazodone"], "a": 1, "why": "Selegiline انتقائي لـ MAO-B (بيكسّر Dopamine)، وللاكتئاب بصيغة لصقة جلدية."}, {"q": "Nefazodone, trazodone act by?", "opts": ["MAO inhibition", "Block 5-HT2A", "SERT inhibition only", "α2 antagonism"], "a": 1, "why": "بيحجبوا 5-HT2A ← تأثير مضاد للاكتئاب ومضاد للقلق."}], "cards": [{"f": "Voltage-gated channels?", "b": "Respond to membrane potential change"}, {"f": "Ligand-gated channels?", "b": "Neurotransmitter binding ← opens; ionotropic; e.g., GABA-A"}, {"f": "Metabotropic receptors?", "b": "G-protein-coupled; second messengers; e.g., GABA-B"}, {"f": "CNS excitatory transmitter?", "b": "Glutamate"}, {"f": "CNS inhibitory transmitters?", "b": "GABA, glycine"}, {"f": "Sites of drug action?", "b": "8 steps: action potential, synthesis, storage, metabolism, release, reuptake, degradation, receptor"}, {"f": "Sedative vs hypnotic?", "b": "Sedative: ↓ anxiety, calming; hypnotic: drowsiness, sleep (more CNS depression)"}, {"f": "REM sleep?", "b": "Rapid eye movements; most dreaming"}, {"f": "BZ mechanism?", "b": "Bind GABA-A; potentiate GABAergic inhibition; ↑ Cl⁻ channel opening frequency"}, {"f": "Barbiturate effect ← Cl⁻ channel?", "b": "↑ opening duration"}, {"f": "BZ antagonist?", "b": "Flumazenil: blocks BZ; may precipitate seizures"}, {"f": "Inverse agonists, BZ site?", "b": "β-Carbolines"}, {"f": "Organ-level effects?", "b": "Sedation, hypnosis, anesthesia, anticonvulsant, muscle relaxation, respiratory-cardiovascular"}, {"f": "Usual cause of overdose death?", "b": "Respiratory depression"}, {"f": "Tolerance?", "b": "↓ responsiveness ← repeated exposure"}, {"f": "Physiologic dependence features?", "b": "↑ anxiety, insomnia, CNS excitability, convulsions"}, {"f": "BZ cognitive adverse effect?", "b": "Dose-related amnesia; impaired new learning"}, {"f": "Status epilepticus first-line?", "b": "IV lorazepam, diazepam; IM midazolam"}, {"f": "BZ examples?", "b": "Alprazolam, chlordiazepoxide, clorazepate, clonazepam, diazepam, flurazepam, lorazepam, midazolam"}, {"f": "Name clue ← BZ?", "b": "azepam, azolam"}, {"f": "Barbiturates: key problem?", "b": "Low therapeutic index; dependence; abuse"}, {"f": "Barbiturate overdose?", "b": "Hypothermia, respiratory depression, coma"}, {"f": "Thiopental?", "b": "Ultra-short barbiturate; anaesthesia"}, {"f": "Phenobarbital?", "b": "Long-acting; epilepsy; 12+ h"}, {"f": "Z-drugs?", "b": "Zopiclone, zolpidem, zaleplon (3z); GABA-A, different site from BZ"}, {"f": "Chloral hydrate?", "b": "Prodrug ← alcohol dehydrogenase ← trichloroethanol; 30–60 min; 6–8 h; t½ 8 h"}, {"f": "Chloral hydrate danger?", "b": "Serious hepatic, renal failure; aggravates peptic ulcer"}, {"f": "Ramelteon, tasimelteon?", "b": "Melatonin receptor agonists (SCN); ↓ sleep-onset latency; no GABA effect"}, {"f": "Ramelteon adverse effects?", "b": "Dizziness, fatigue; ↓ testosterone, ↑ prolactin"}, {"f": "Tasimelteon use?", "b": "Non-24-hour sleep-wake disorder"}, {"f": "Suvorexant?", "b": "Orexin OX1R, OX2R antagonist; insomnia"}, {"f": "Buspirone?", "b": "5-HT1A partial agonist (± D2); generalized anxiety"}, {"f": "Amine hypothesis?", "b": "Depression ← functional deficiency: NE or serotonin"}, {"f": "TCAs mechanism?", "b": "Inhibit NE, 5-HT reuptake; prototypes imipramine, amitriptyline"}, {"f": "TCAs also block?", "b": "Muscarinic, H1, alpha ← orthostatic hypotension"}, {"f": "Mirtazapine?", "b": "Presynaptic α2 antagonist ← ↑ NE, 5-HT release; 5-HT2 antagonist"}, {"f": "Bupropion?", "b": "NE, dopamine reuptake inhibitor; smoking cessation, depression, SAD"}, {"f": "SSRI prototype?", "b": "Fluoxetine"}, {"f": "SSRI advantage?", "b": "Selective SERT block; minimal autonomic toxicity"}, {"f": "SNRIs?", "b": "Venlafaxine, desvenlafaxine, duloxetine; NE, 5-HT transporters; no α, anticholinergic, antihistaminic"}, {"f": "Venlafaxine vs duloxetine?", "b": "Venlafaxine: less NET affinity"}, {"f": "MAO-A vs MAO-B?", "b": "A: NE, 5-HT, tyramine; B: dopamine"}, {"f": "Non-selective MAOIs?", "b": "Phenelzine, isocarboxazid, tranylcypromine"}, {"f": "Tranylcypromine?", "b": "Fastest onset; ~1 week (others 2–3 weeks)"}, {"f": "Selegiline?", "b": "Selective MAO-B; depression, Parkinsonism; transdermal patch"}, {"f": "Nefazodone, trazodone?", "b": "5-HT2A block ← antidepressant, antianxiety"}, {"f": "Antidepressant uses?", "b": "Depression, anxiety (panic, GAD, social phobia), chronic pain, enuresis, eating disorders, smoking cessation, delay orgasm, PMS, PMDD"}], "subject": "pharm", "date": "2026-11-16"},
+ {"id": "plasmodium-mal-fal", "system": "protozoa", "title": "Plasmodium malariae and P. falciparum", "url": "lec/plasmodium-mal-fal.html", "summary": "Classification, P. malariae and P. falciparum (disease, ring, band form, schizont, gametocyte), comparison, life cycle phases and lab diagnosis.", "points": ["Classification: Apicomplexa, Sporozoa, Haemosporida, Plasmodium; 4 human species", "P. malariae: tropical Africa, Sri Lanka, Burma, parts of India; benign quartan malaria", "Malariae ring: thick, intensely stained, single large chromatin dot, no RBC enlargement", "Band form: unique to P. malariae, large pigment granules", "Malariae schizont: 6-12 (usually 8-10) merozoites, rosette; gametocytes compact", "P. falciparum: crescent gametocytes (name), malignant tertian, often fatal", "Falciparum ring: tiny, along RBC margin, double chromatin (stereo headphones), several per RBC", "Falciparum schizont: smallest, 8-24 (usually 16) merozoites, 2/3 of RBC, rare in blood", "Falciparum gametocyte: crescent/banana, 1.5x RBC, ~10 days after ring", "Life cycle: asexual in humans, sexual in mosquito; diagnosis: thick film, thin film, serodiagnosis"], "mcqs": [{"q": "P. falciparum is named after:", "opts": ["Crescent gametocytes", "Band form", "Rosette schizont", "Schüffner's dots"], "a": 0, "why": "Crescentic shape of gametocytes."}, {"q": "Band form is a unique feature of:", "opts": ["P. malariae", "P. falciparum", "P. vivax", "P. ovale"], "a": 0, "why": "Cytoplasm elongates across the RBC."}, {"q": "P. malariae causes:", "opts": ["Benign quartan malaria", "Malignant tertian malaria", "Blackwater fever", "Cerebral malaria"], "a": 0, "why": "Fever every 4th day (quartan)."}, {"q": "Schizont of P. malariae has usually:", "opts": ["8-10 merozoites", "16 merozoites", "24 merozoites", "2 merozoites"], "a": 0, "why": "6-12, usually 8-10, in a rosette."}, {"q": "Schizont of P. falciparum has usually:", "opts": ["16 merozoites", "8-10 merozoites", "6 merozoites", "30,000 merozoites"], "a": 0, "why": "8-24, usually 16."}, {"q": "Schizonts are rarely seen in blood of:", "opts": ["P. falciparum", "P. malariae", "Both", "Neither"], "a": 0, "why": "Except severe cases."}, {"q": "Binucleate ring resembling stereo headphones:", "opts": ["P. falciparum", "P. malariae", "Both", "Neither"], "a": 0, "why": "Double chromatin, common."}, {"q": "Falciparum gametocytes appear after ring stage by about:", "opts": ["10 days", "2 days", "30 days", "1 hour"], "a": 0, "why": "~10 days."}, {"q": "Definitive host of Plasmodium:", "opts": ["Female Anopheles", "Man", "Cow", "Dog"], "a": 0, "why": "Sexual phase occurs in the mosquito."}, {"q": "Best film to differentiate species:", "opts": ["Thin film", "Thick film", "Both", "Neither"], "a": 0, "why": "Thick film recognizes parasite presence."}, {"q": "Order of Plasmodium:", "opts": ["Haemosporida", "Apicomplexa", "Sporozoa", "Coccidia"], "a": 0, "why": "Phylum Apicomplexa, class Sporozoa, order Haemosporida."}], "cards": [{"f": "Plasmodium order", "b": "Haemosporida"}, {"f": "P. malariae disease", "b": "Benign quartan malaria"}, {"f": "Band form", "b": "Unique to P. malariae"}, {"f": "Malariae schizont", "b": "6-12 merozoites (usually 8-10), rosette"}, {"f": "Malariae gametocyte", "b": "Compact, fills RBC"}, {"f": "P. falciparum disease", "b": "Malignant tertian, often fatal"}, {"f": "Falciparum name", "b": "Crescentic gametocytes"}, {"f": "Falciparum ring", "b": "Tiny, margin, double chromatin"}, {"f": "Stereo headphones", "b": "Binucleate rings of falciparum"}, {"f": "Falciparum schizont", "b": "8-24 (usually 16) merozoites, 2/3 of RBC"}, {"f": "Falciparum gametocyte", "b": "Crescent/banana, 1.5x RBC"}, {"f": "Gametocytes appear", "b": "~10 days after ring stage"}, {"f": "Asexual phase", "b": "Humans (intermediate host)"}, {"f": "Sexual phase", "b": "Mosquito (definitive host)"}, {"f": "Thick film", "b": "Detect parasite, light infection"}, {"f": "Thin film", "b": "Differentiate species"}], "subject": "para", "date": "2026-11-16"},
+ {"id": "malaria-2026", "system": "protozoa", "title": "Malaria: Plasmodium spp.", "url": "lec/malaria-2026.html", "summary": "Plasmodium species, fever patterns, falciparum vs vivax morphology, human and mosquito life cycle, hypnozoite relapse, clinical features, lab diagnosis (smear, RDT, fluorescent, PCR) and treatment.", "points": ["Female Anopheles bite; infective form sporozoite", "4 human species; falciparum most lethal, vivax most widespread", "Tertian: falciparum, ovale, vivax; quartan: malariae", "Falciparum smear: ring 2-4 μm + banana gametocytes only", "Vivax: all stages, Schüffner's dots, enlarged RBC", "Pre-erythrocytic 8 days, 20,000-30,000 merozoites; erythrocytic 48 h", "Hypnozoite: relapse up to 2 years (vivax, ovale)", "Sticky RBCs: cerebral malaria; renal failure: Blackwater fever", "Diagnosis: thick/thin smear, RDT (HRP II), fluorescent, PCR", "Chloroquine, quinine: anti-erythrocytic; primaquine, pyrimethamine: anti-exoerythrocytic"], "mcqs": [{"q": "Infective form of Plasmodium to man:", "opts": ["Sporozoite", "Merozoite", "Gametocyte", "Hypnozoite"], "a": 0, "why": "Sporozoite is injected by the mosquito bite."}, {"q": "Definitive host of Plasmodium:", "opts": ["Man", "Female Anopheles", "Culex", "Dog"], "a": 1, "why": "Sexual development occurs in the mosquito."}, {"q": "Only ring forms and gametocytes in peripheral blood:", "opts": ["P. vivax", "P. malariae", "P. falciparum", "P. ovale"], "a": 2, "why": "Schizonts aggregate in brain and organ capillaries."}, {"q": "Schüffner's dots are seen in:", "opts": ["P. falciparum", "P. vivax", "Both", "Neither"], "a": 1, "why": "Fine red dots on the infected RBC membrane in P. vivax."}, {"q": "Quartan malaria is caused by:", "opts": ["P. malariae", "P. vivax", "P. ovale", "P. falciparum"], "a": 0, "why": "Fever every 4th day."}, {"q": "Pre-erythrocytic schizogony lasts:", "opts": ["48 hours", "8 days", "30 years", "2 years"], "a": 1, "why": "Liver stage lasts 8 days."}, {"q": "Resting liver stage responsible for relapse:", "opts": ["Oocyst", "Hypnozoite", "Ookinete", "Trophozoite"], "a": 1, "why": "Reactivates up to 2 years."}, {"q": "Antigen detected by RDT for P. falciparum:", "opts": ["HRP II", "PfEMP", "CSP", "MSP"], "a": 0, "why": "Immunochromatography, malaria card test."}, {"q": "Preferred stain per lecture:", "opts": ["Gram", "ZN", "Leishman", "H&E"], "a": 2, "why": "Giemsa is also acceptable."}, {"q": "Renal failure in malaria can manifest as:", "opts": ["Blackwater fever", "Cerebral malaria", "Quartan fever", "Hypnozoite"], "a": 0, "why": "Affects kidneys."}, {"q": "Anti-erythrocytic drugs:", "opts": ["Primaquine, pyrimethamine", "Chloroquine, quinine", "Both", "Neither"], "a": 1, "why": "Primaquine, pyrimethamine act on exo-erythrocytic stage."}], "cards": [{"f": "Infective form", "b": "Sporozoite"}, {"f": "Definitive host", "b": "Female Anopheles"}, {"f": "Intermediate host", "b": "Man"}, {"f": "Tertian", "b": "Falciparum, ovale, vivax: every 3rd day"}, {"f": "Quartan", "b": "P. malariae: every 4th day"}, {"f": "Falciparum smear", "b": "Ring + crescent gametocytes only"}, {"f": "Ring size", "b": "2-4 μm"}, {"f": "Schüffner's dots", "b": "P. vivax"}, {"f": "Pre-erythrocytic", "b": "Liver, 8 days"}, {"f": "Erythrocytic", "b": "RBC, 48 h, 6-24 merozoites"}, {"f": "Hypnozoite", "b": "Dormant liver form, relapse"}, {"f": "Cerebral malaria", "b": "Sticky RBCs block brain capillaries"}, {"f": "Blackwater fever", "b": "Renal failure"}, {"f": "RDT antigen", "b": "HRP II (P. falciparum)"}, {"f": "Preferred stain", "b": "Leishman (Giemsa acceptable)"}, {"f": "Anti-erythrocytic", "b": "Chloroquine, quinine"}, {"f": "Anti-exoerythrocytic", "b": "Primaquine, pyrimethamine"}], "subject": "para", "date": "2026-11-15"},
+ {"id":"hemodynamics-2","system":"inflam","title":"Hemodynamic Disturbance 2: Thrombosis, Embolism, Infarction, Shock","url":"lec/hemodynamics-2.html","summary":"Virchow's triad, fate and morphology of thrombus, DIC, embolism types, pulmonary thromboembolism, ischemia, infarction (red vs white), and shock types, stages and prognosis.","points":["Virchow: endothelial injury, altered flow, hypercoagulability","Turbulence: arterial; stasis: venous","Fate: propagation, embolization, dissolution, organization, calcification","Lines of Zahn: true thrombus, absent postmortem","DIC: microthrombi, consumption, bleeding","PTE source: deep leg veins; saddle at bifurcation","Red infarct: venous, loose, dual; white: arterial, solid","Shock: cardiogenic, hypovolemic, septic, anaphylactic, neurogenic"],"mcqs":[{"q":"Stasis mainly causes:","opts":["Venous thrombosis","Arterial thrombosis","Cardiac thrombosis","Vegetations"],"a":0,"why":"Turbulence causes arterial and cardiac thrombosis."},{"q":"Lines of Zahn are found in:","opts":["Thrombus formed during life","Postmortem clot","Both","Neither"],"a":0,"why":"Absent in postmortem clots."},{"q":"DIC ends with:","opts":["Serious bleeding","Only thrombosis","Hypertension","Polycythemia"],"a":0,"why":"Platelets and clotting proteins are consumed."},{"q":"Saddle embolus lodges at:","opts":["Pulmonary artery bifurcation","Aortic arch","Carotid","Portal vein"],"a":0,"why":"Source: deep leg veins."},{"q":"Neurons tolerate ischemia for:","opts":["3-4 min","20-30 min","Hours","Days"],"a":0,"why":"Myocardium 20-30 min."},{"q":"Best prognosis shock:","opts":["Young + hypovolemic","Old + septic","Old + cardiogenic","Young + cardiogenic"],"a":0,"why":"Worst: old + cardiogenic or septic."}],"cards":[{"f":"Virchow's triad","b":"Endothelium, flow, coagulability"},{"f":"Primary hypercoagulability","b":"Antithrombin III, protein C deficiency"},{"f":"Lines of Zahn","b":"Pale platelets + fibrin, dark RBCs"},{"f":"DIC","b":"Widespread microthrombi then bleeding"},{"f":"Saddle embolus","b":"Pulmonary artery bifurcation"},{"f":"Fat embolism","b":"Long-bone fracture, 1-3 days"},{"f":"Decompression sickness","b":"Nitrogen bubbles"},{"f":"Infarct shape","b":"Wedge, apex at vessel"},{"f":"Red infarct","b":"Venous, loose, dual circulation"},{"f":"White infarct","b":"Arterial, solid, end-arterial"},{"f":"Shock lung","b":"ARDS"},{"f":"Shock stages","b":"Compensation, progressive, decompensation"}],"subject":"path","date":"2026-11-14"},
+ {"id":"hemodynamics-1","system":"inflam","title":"Hemodynamic Disturbance 1: Hyperemia, Congestion, Edema, Hemostasis, Hemorrhage","url":"lec/hemodynamics-1.html","summary":"Hyperemia vs congestion, nutmeg liver, pulmonary congestion, Starling forces, edema mechanisms and types, transudate vs exudate, hemostasis steps, fibrinolysis and hemorrhage.","points":["Hyperemia: active, arteriolar dilation, red","Congestion: passive, venous outflow down, cyanosis","Nutmeg liver: right heart failure, dark centre","Starling: arterial hydrostatic > oncotic, venous oncotic > hydrostatic","Edema: hydrostatic up, oncotic down, lymphatic block, permeability up, Na + water retention","Transudate SG < 1.012, protein < 3 g/dL; exudate opposite","Hemostasis: injury, spasm, platelet plug, coagulation, fibrinolysis","Petechiae 1-2 mm, purpura > 3 mm, ecchymoses 1-2 cm"],"mcqs":[{"q":"Hyperemia is:","opts":["Active, arteriolar dilation","Passive, venous obstruction","Lymphatic block","Platelet defect"],"a":0,"why":"Active with increased inflow; congestion is passive."},{"q":"Nutmeg liver is caused by:","opts":["Right-sided heart failure","Left-sided heart failure","Hepatitis A","Cholestasis"],"a":0,"why":"Chronic venous congestion."},{"q":"Peau d'orange is due to:","opts":["Lymphatic obstruction","Nephrotic syndrome","Heart failure","Cirrhosis"],"a":0,"why":"Breast carcinoma blocks lymphatics."},{"q":"Exudate protein:","opts":["> 3 g/dL","< 3 g/dL","Zero","Same as urine"],"a":0,"why":"SG > 1.012, permeability up."},{"q":"Platelet release reaction includes:","opts":["ADP, serotonin, TXA2","Plasmin","Fibrin","Collagen"],"a":0,"why":"Recruits more platelets."},{"q":"Purpura size:","opts":["> 3 mm","1-2 mm","1-2 cm","< 0.1 mm"],"a":0,"why":"Petechiae 1-2 mm, ecchymoses 1-2 cm."}],"cards":[{"f":"Hyperemia","b":"Active, inflow up, red"},{"f":"Congestion","b":"Passive, outflow down, cyanosis"},{"f":"Total body water","b":"60% lean weight; 2/3 intracellular"},{"f":"Arterial end","b":"Hydrostatic > oncotic"},{"f":"Venous end","b":"Oncotic > hydrostatic"},{"f":"Ascites","b":"Hydroperitoneum"},{"f":"Anasarca","b":"Severe generalized edema"},{"f":"Transudate","b":"SG < 1.012, protein < 3"},{"f":"Exudate","b":"SG > 1.012, protein > 3"},{"f":"Fibrinolysis","b":"Plasminogen to plasmin"},{"f":"Petechiae","b":"1-2 mm"},{"f":"Ecchymoses","b":"1-2 cm"}],"subject":"path","date":"2026-11-14"},
+ {"id":"cell-injury-56","system":"inflam","title":"Cell Injury 5-6: Necrosis, Apoptosis, Adaptation, Accumulations","url":"lec/cell-injury-56.html","summary":"Necrosis and its patterns, outcomes, apoptosis and its pathways, hypertrophy, hyperplasia, atrophy, metaplasia, intracellular accumulations, pigments, calcification and cellular aging.","points":["Necrosis: uncontrolled, inflammation; pyknosis, karyorrhexis, karyolysis","6 patterns: coagulative, liquefactive, caseous, gangrenous, fat, fibrinoid","Apoptosis: programmed, caspases, no inflammation","Intrinsic: BCL2 family, cytochrome c, caspase-9","Extrinsic: Fas, FADD, caspase-8","Hypertrophy size, hyperplasia number, atrophy, metaplasia","Dystrophic vs metastatic calcification","Telomere shortening and telomerase"],"mcqs":[{"q":"Fibrinoid necrosis is characteristic of:","opts":["Immune reactions in vessel walls","TB","Pancreatitis","Brain infarct"],"a":0,"why":"Antigen-antibody complexes leak into vessel walls: bright pink on H&E."},{"q":"Caseous necrosis is typical of:","opts":["Tuberculosis","Brain infarct","Acute pancreatitis","Dry gangrene"],"a":0,"why":"Cheese-like, inside a granuloma."},{"q":"Caspase-8 is activated by the:","opts":["Extrinsic pathway","Intrinsic pathway","Both equally","Neither"],"a":0,"why":"Intrinsic activates caspase-9; extrinsic activates caspase-8 and 10."},{"q":"Which protein prevents cytochrome c leakage?","opts":["BCL2","BAX","BAK","FADD"],"a":0,"why":"BCL2, BCL-XL, MCL1 are anti-apoptotic."},{"q":"Hyperplasia differs from hypertrophy by:","opts":["Increased cell number","Increased cell size","Decreased cell size","Cell replacement"],"a":0,"why":"Hyperplasia number, hypertrophy size."},{"q":"Barrett esophagus is:","opts":["Squamous to columnar metaplasia","Columnar to squamous","Atrophy","Hyperplasia"],"a":0,"why":"Risk: adenocarcinoma."}],"cards":[{"f":"Necrosis nuclear changes","b":"Pyknosis, karyorrhexis, karyolysis"},{"f":"Coagulative necrosis","b":"Ischemia, infarction, structure preserved"},{"f":"Liquefactive necrosis","b":"Pus, bacteria, brain"},{"f":"Caseous necrosis","b":"TB, granuloma"},{"f":"Fat necrosis","b":"Pancreatic lipases, saponification"},{"f":"Fibrinoid necrosis","b":"Immune, vessel wall"},{"f":"Apoptosis","b":"Programmed, no inflammation"},{"f":"Intrinsic pathway","b":"Mitochondria, cytochrome c, caspase-9"},{"f":"Extrinsic pathway","b":"Fas, FADD, caspase-8"},{"f":"Executioner caspases","b":"3 and 6"},{"f":"Anti-apoptotic","b":"BCL2, BCL-XL, MCL1"},{"f":"Pro-apoptotic","b":"BAX, BAK"},{"f":"Hypertrophy","b":"Cell size up"},{"f":"Hyperplasia","b":"Cell number up"},{"f":"Barrett esophagus","b":"Squamous to columnar, adenocarcinoma"},{"f":"Dystrophic calcification","b":"Dead tissue, normal calcium"},{"f":"Metastatic calcification","b":"Viable tissue, hypercalcemia"},{"f":"Lipofuscin","b":"Wear-and-tear, aging"},{"f":"Hemosiderin","b":"Iron storage"},{"f":"Telomerase","b":"Germ and stem cells"}],"subject":"path","date":"2026-11-14"},
+ {
+  "id": "cell-injury-34",
+  "system": "inflam",
+  "title": "Cell Injury 3-4: Mechanisms, Free Radicals, Ischemia",
+  "url": "lec/cell-injury-34.html",
+  "summary": "Homeostasis, adaptation and injury, causes, ATP depletion, membrane and DNA damage with p53, free radicals, calcium, ischemia and reperfusion, chemical and microbial injury, reversible injury.",
+  "points": ["Stress beyond adaptation = cell injury (reversible / irreversible)", "Hypoxia: ischemia, inadequate oxygenation, decreased O2 carrying capacity", "ATP < 5-10%: pump failure, glycolysis, decreased protein synthesis", "Membrane damage: 5 mechanisms, 3 membranes", "p53: G1 arrest, repair, else apoptosis", "Free radicals: catalase, antioxidants, metal-binding proteins", "Ca2+ up: phospholipase, protease, endonuclease, ATPase", "Reperfusion injury: ROS, Ca2+, neutrophils, complement"],
+  "mcqs": [{"q":"Hallmark of reversible cell injury:","opts":["Cell swelling","Karyolysis","Pyknosis","Karyorrhexis"],"a":0,"why":"Cell swelling (hydropic change) is the earliest sign."},{"q":"ATP depletion causes all EXCEPT:","opts":["Na/K pump failure","Glycolysis shift","Increased protein synthesis","Ribosome detachment"],"a":2,"why":"Protein synthesis decreases."},{"q":"After DNA damage, p53 first:","opts":["Causes apoptosis immediately","Arrests the cell cycle in G1","Mutates","Activates caspases only"],"a":1,"why":"G1 arrest gives time to repair; apoptosis if repair fails."},{"q":"Which enzyme decomposes H2O2 to water and oxygen?","opts":["Catalase","Protease","Phospholipase","Endonuclease"],"a":0,"why":"Catalase."},{"q":"Reperfusion injury mechanisms include:","opts":["Oxidative stress","Ca2+ overload","Complement activation","All of the above"],"a":3,"why":"Plus inflammation (neutrophils)."},{"q":"Acetaminophen injures the liver through:","opts":["Direct toxicity","A toxic metabolite","Ischemia","Hepatitis virus"],"a":1,"why":"Converted to a toxic product in the liver."}],
+  "cards": [{"f":"Homeostasis","b":"Stable internal environment of the cell"},{"f":"Hypoxia","b":"Decreased oxygen supply"},{"f":"Ischemia","b":"Decreased blood supply"},{"f":"ATP < 5-10%","b":"Critical functions fail"},{"f":"Na/K pump failure","b":"Na + water in, cell swelling"},{"f":"p53","b":"Guardian of the genome"},{"f":"p53 mutation","b":"Cancer"},{"f":"Free radical","b":"Unpaired electron"},{"f":"Catalase","b":"H2O2 to H2O + O2"},{"f":"Ca2+ stores","b":"ER + mitochondria"},{"f":"Phospholipase","b":"Breaks membrane"},{"f":"Endonuclease","b":"Fragments DNA"},{"f":"HIF-1","b":"Angiogenesis + glycolysis"},{"f":"Reperfusion injury","b":"Damage after blood returns"},{"f":"Acetaminophen","b":"Toxic metabolite, liver injury"},{"f":"Hydropic change","b":"Reversible swelling"}],
+  "subject": "path",
+  "date": "2026-11-14"
+ },
+ {
+  "id": "gen-12",
+  "system": "genetic",
+  "title": "Genetic Disorders: Lectures 1 & 2",
+  "url": "lec/gen-12.html",
+  "summary": "Normal karyotype, classification of genetic disease (single-gene, chromosomal, multifactorial), mutation types, Mendelian patterns (AD, AR, X-linked), epigenetics, numerical and structural chromosomal abnormalities and Down syndrome.",
+  "points": [
+   "Karyotype: 46 chromosomes, arrested at metaphase, G banding most used",
+   "Classical: single-gene, chromosomal, multifactorial",
+   "Mutations: missense, nonsense, silent, frameshift, triplet repeat",
+   "AD: one mutated allele, sibling risk 50% · AR: both alleles, sibling risk 25%",
+   "X-linked: no father-to-son transmission; carrier mother gives 50% affected sons",
+   "Down syndrome: regular trisomy 21 (95%), translocation (4%), mosaic (1%)"
+  ],
+  "mcqs": [
+   {
+    "q": "Which banding technique is most commonly used in karyotyping?",
+    "opts": [
+     "Q banding",
+     "G banding (Giemsa)",
+     "R banding",
+     "C banding"
+    ],
+    "a": 1,
+    "why": "G banding with Giemsa stain is the most used method."
+   },
+   {
+    "q": "A missense mutation causes:",
+    "opts": [
+     "A premature stop codon",
+     "No change in the amino acid",
+     "One amino acid replaced by another",
+     "A shift in the reading frame"
+    ],
+    "a": 2,
+    "why": "Missense = a single base change that replaces one amino acid."
+   },
+   {
+    "q": "Recurrence risk for a sibling in an autosomal recessive disorder is:",
+    "opts": [
+     "50%",
+     "25%",
+     "100%",
+     "12.5%"
+    ],
+    "a": 1,
+    "why": "Both parents are carriers, so each child has a 25% chance of being affected."
+   },
+   {
+    "q": "Which of these is X-linked?",
+    "opts": [
+     "Huntington disease",
+     "Cystic fibrosis",
+     "Duchenne muscular dystrophy",
+     "Marfan syndrome"
+    ],
+    "a": 2,
+    "why": "Duchenne is X-linked recessive."
+   },
+   {
+    "q": "Regular trisomy 21 (95% of Down syndrome) is caused by:",
+    "opts": [
+     "Robertsonian translocation",
+     "Non-disjunction, usually maternal",
+     "Isochromosome 21",
+     "Mosaicism"
+    ],
+    "a": 1,
+    "why": "Maternal non-disjunction accounts for about 95% of regular trisomy 21."
+   },
+   {
+    "q": "t(9;22), the Philadelphia chromosome, is associated with:",
+    "opts": [
+     "Down syndrome",
+     "Cri du chat",
+     "Chronic myeloid leukemia",
+     "Turner syndrome"
+    ],
+    "a": 2,
+    "why": "Reciprocal translocation t(9;22) is the hallmark of CML."
+   }
+  ],
+  "cards": [
+   {
+    "f": "كم كروموسوم بالخلية الجسدية؟",
+    "b": "46 = 22 زوج جسمي + 2 جنسي"
+   },
+   {
+    "f": "أي صبغة بالكاريوتايب؟ وأي مرحلة؟",
+    "b": "Giemsa (G banding) · metaphase"
+   },
+   {
+    "f": "شو أنواع الأمراض الوراثية الكلاسيكية؟",
+    "b": "single-gene · chromosomal · multifactorial"
+   },
+   {
+    "f": "الفرق بين hereditary و congenital؟",
+    "b": "hereditary من الأهل · congenital موجود عند الولادة"
+   },
+   {
+    "f": "أي طفرة بتعمل stop codon؟",
+    "b": "Nonsense (مثل β0-thalassemia)"
+   },
+   {
+    "f": "الفرق بين missense و silent؟",
+    "b": "missense بيبدّل حمض أميني · silent ما بيبدّل"
+   },
+   {
+    "f": "خطر الإعادة بالإخوة بـ AD؟",
+    "b": "50%"
+   },
+   {
+    "f": "خطر الإعادة بالإخوة بـ AR؟",
+    "b": "25%"
+   },
+   {
+    "f": "نمط وراثة Huntington؟",
+    "b": "AD"
+   },
+   {
+    "f": "نمط وراثة Cystic fibrosis؟",
+    "b": "AR (الأكثر شيوعاً)"
+   },
+   {
+    "f": "نمط وراثة Duchenne؟",
+    "b": "X-linked recessive"
+   },
+   {
+    "f": "في انتقال أب ← إبن بـ X-linked؟",
+    "b": "لا — بنات الأب المصاب كلهن حاملات"
+   },
+   {
+    "f": "شو ال hemizygous؟",
+    "b": "الذكر عندو X واحد، فبيبيّن المرض"
+   },
+   {
+    "f": "الفرق بين euploid و aneuploid؟",
+    "b": "euploid مضاعف n طبيعي · aneuploid زيادة/نقص كروموسوم"
+   },
+   {
+    "f": "سبب أغلب الـ aneuploidy؟",
+    "b": "Non-disjunction (و anaphase lag)"
+   },
+   {
+    "f": "Robertsonian translocation بين أي كروموسومات؟",
+    "b": "acrocentric: مثلاً 14;21"
+   },
+   {
+    "f": "Philadelphia chromosome؟",
+    "b": "Reciprocal 9;22 ← CML"
+   },
+   {
+    "f": "Cri du chat؟",
+    "b": "deletion بالكروموسوم 5"
+   },
+   {
+    "f": "Trisomies جسمية؟",
+    "b": "21 Down · 18 Edwards · 13 Patau"
+   },
+   {
+    "f": "أنواع Down ونسبها؟",
+    "b": "Regular 95% · Translocation 4% · Mosaic ~1%"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+  "id": "gen-34",
+  "system": "genetic",
+  "title": "Genetic Disorders: Lectures 3 & 4",
+  "url": "lec/gen-34.html",
+  "summary": "Single-gene disorders (PKU, cystic fibrosis, Marfan, Ehlers-Danlos, G6PD deficiency), cell-growth defects, multifactorial disease, non-classic inheritance and genetic analysis (prenatal, carrier screening, karyotyping, FISH).",
+  "points": [
+   "5 classes: enzyme, membrane/transport, structural protein, drug reaction, cell growth",
+   "PKU: phenylalanine hydroxylase deficiency (AR)",
+   "Cystic fibrosis: CFTR chloride transport defect (AR)",
+   "Marfan: FBN1, fibrillin 1 (AD) · Ehlers-Danlos: collagen I and III",
+   "Multifactorial: genes + environment, recurrence 2-7%",
+   "FISH: probe hybridization; deletion = signal lost"
+  ],
+  "mcqs": [
+   {
+    "q": "Marfan syndrome is caused by a mutation in which gene?",
+    "opts": [
+     "COL1A1",
+     "FBN1 (chromosome 15)",
+     "CFTR",
+     "PAH"
+    ],
+    "a": 1,
+    "why": "FBN1 encodes fibrillin 1, the scaffold for elastin."
+   },
+   {
+    "q": "PKU results from deficiency of:",
+    "opts": [
+     "Galactose-1-phosphate uridyltransferase",
+     "Phenylalanine hydroxylase",
+     "Glucose-6-phosphatase",
+     "Homogentisate oxidase"
+    ],
+    "a": 1,
+    "why": "Without PAH, phenylalanine is converted to phenylpyruvate instead of tyrosine."
+   },
+   {
+    "q": "Cystic fibrosis involves defective:",
+    "opts": [
+     "Chloride transport (CFTR)",
+     "Collagen synthesis",
+     "Iron absorption",
+     "Clotting factor VIII"
+    ],
+    "a": 0,
+    "why": "CFTR chloride defect leads to thick mucus."
+   },
+   {
+    "q": "Primaquine can cause severe hemolysis in:",
+    "opts": [
+     "Marfan syndrome",
+     "G6PD deficiency",
+     "Cystic fibrosis",
+     "PKU"
+    ],
+    "a": 1,
+    "why": "G6PD protects red cells from oxidative stress; primaquine blocks it."
+   },
+   {
+    "q": "In FISH, a translocation appears as:",
+    "opts": [
+     "Signal lost",
+     "Extra signals",
+     "Signals that move or merge",
+     "No change"
+    ],
+    "a": 2,
+    "why": "Deletion = signal lost; duplication = extra signals; translocation = signals move/merge."
+   },
+   {
+    "q": "Non-invasive prenatal screening (NIPS) can:",
+    "opts": [
+     "Give a definitive diagnosis",
+     "Show risk only",
+     "Replace karyotyping",
+     "Detect all genes"
+    ],
+    "a": 1,
+    "why": "NIPS shows risk only; invasive prenatal diagnosis (amniocentesis or CVS) confirms."
+   }
+  ],
+  "cards": [
+   {
+    "f": "كم فئة لأمراض الجين الواحد؟ {{single-gene}}",
+    "b": "5: إنزيم · غشاء · بنية · دوا · نمو"
+   },
+   {
+    "f": "وراثة PKU؟ والإنزيم الناقص؟",
+    "b": "جسمية متنحية {{AR}} · PAH"
+   },
+   {
+    "f": "بـ PKU: بدل tyrosine، الـ Phe بيتحوّل لشو؟",
+    "b": "phenylpyruvate"
+   },
+   {
+    "f": "بروتين CF؟",
+    "b": "CFTR (نقل الكلور {{chloride}})"
+   },
+   {
+    "f": "وراثة Marfan وجينو؟",
+    "b": "سائدة {{AD}} · FBN1 عالكروموسوم 15"
+   },
+   {
+    "f": "شو نتيجة فحص nitroprusside بـ Marfan؟",
+    "b": "سلبي (إيجابي بـ homocystinuria)"
+   },
+   {
+    "f": "وراثة EDS؟ وأي كولاجين؟",
+    "b": "سائدة {{AD}} · النوع I و III"
+   },
+   {
+    "f": "G6PD + primaquine = شو؟",
+    "b": "انحلال دم {{hemolysis}}"
+   },
+   {
+    "f": "كم نسبة السرطانات العيلية؟ {{familial}}",
+    "b": "5% (أغلبها سائدة)"
+   },
+   {
+    "f": "خطر التكرار بالمتعددة العوامل؟",
+    "b": "2–7% درجة أولى {{first-degree}} · 9% بعد أخوين"
+   },
+   {
+    "f": "الأنواع الأربعة لاستثناءات مندل؟",
+    "b": "Triplet · Mitochondrial · Imprinting · Gonadal mosaicism"
+   },
+   {
+    "f": "شو هو NIPS؟",
+    "b": "سونار + مؤشرات دم الأم · خطر بس، مش تشخيص"
+   },
+   {
+    "f": "إجراءات الفحص الباضع؟ {{IPD}}",
+    "b": "بزل السلى {{amniocentesis}} و CVS"
+   },
+   {
+    "f": "استطبابات الفحص قبل الولادة؟ {{prenatal}}",
+    "b": "عمر الأم >34 · ولد سابق بشذوذ كروموسومي · جنس لمرض X-linked"
+   },
+   {
+    "f": "شو أشيع عينة لفحص الحاملين؟ {{carrier screening}}",
+    "b": "لعاب {{saliva}}"
+   },
+   {
+    "f": "خطوات الكاريوتايب؟",
+    "b": "زرع + metaphase ← صبغ ← مجهر/تصوير ← ترتيب أزواج"
+   },
+   {
+    "f": "خطوات FISH؟",
+    "b": "فصل ← مسبار ← ارتباط ← مجهر فلوري"
+   },
+   {
+    "f": "شو بيصير بالـ FISH إذا في حذف؟ {{deletion}}",
+    "b": "الإشارة بتختفي"
+   },
+   {
+    "f": "كروموسوم فيلادلفيا؟",
+    "b": "انتقال {{translocation}} · CML"
+   },
+   {
+    "f": "كم فئة بتستفيد من الخدمات الوراثية؟",
+    "b": "10 فئات"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+  "id": "imm-hyper",
+  "system": "immuno",
+  "title": "Hypersensitivity Reactions",
+  "url": "lec/imm-hyper.html",
+  "summary": "Four types of hypersensitivity: Type I (IgE, immediate), Type II (antibody-mediated), Type III (immune complex) and Type IV (T-cell mediated, delayed), with mechanisms, examples and a comparison table.",
+  "points": [
+   "Type I: IgE, minutes, mast cells; asthma, hay fever, anaphylaxis",
+   "Type II: IgG/IgM vs cell surface; complement, ADCC, cellular dysfunction",
+   "Type III: immune complexes; Arthus, SLE, serum sickness",
+   "Type IV: T cells, 48-72 h; granuloma, Mantoux, contact dermatitis",
+   "CD8+ CTLs kill virus-infected and tumor cells"
+  ],
+  "mcqs": [
+   {
+    "q": "Which antibody mediates Type I hypersensitivity?",
+    "opts": [
+     "IgG",
+     "IgM",
+     "IgE",
+     "IgA"
+    ],
+    "a": 2,
+    "why": "IgE binds mast cells and triggers immediate reactions."
+   },
+   {
+    "q": "Graves disease is an example of Type II acting through:",
+    "opts": [
+     "Complement lysis",
+     "Cellular dysfunction (stimulating TSH receptor)",
+     "ADCC",
+     "Immune complex deposition"
+    ],
+    "a": 1,
+    "why": "Antibodies stimulate the TSH receptor without cell injury."
+   },
+   {
+    "q": "The Arthus reaction is:",
+    "opts": [
+     "Local immune complex vasculitis with necrosis",
+     "Anaphylaxis",
+     "Granuloma formation",
+     "Antibody-mediated lysis"
+    ],
+    "a": 0,
+    "why": "Type III: large complexes cause fibrinoid necrosis in the skin."
+   },
+   {
+    "q": "The Mantoux test reaction peaks at:",
+    "opts": [
+     "5-10 minutes",
+     "8-12 hours",
+     "24-72 hours",
+     "7 days"
+    ],
+    "a": 2,
+    "why": "Type IV (DTH) reaches its peak 24-72 hours after PPD injection."
+   },
+   {
+    "q": "Serum sickness is which type?",
+    "opts": [
+     "Type I",
+     "Type II",
+     "Type III",
+     "Type IV"
+    ],
+    "a": 2,
+    "why": "Foreign proteins form immune complexes that deposit in vessels and joints."
+   },
+   {
+    "q": "Which cells kill virus-infected and tumor cells in Type IV?",
+    "opts": [
+     "CD4+ helper T cells",
+     "CD8+ cytotoxic T cells",
+     "Mast cells",
+     "Eosinophils"
+    ],
+    "a": 1,
+    "why": "CD8+ CTLs kill antigen-bearing cells."
+   }
+  ],
+  "cards": [
+   {
+    "f": "شو الـ Hypersensitivity؟",
+    "b": "رد مناعي مبالغ فيه ومؤذي ضد مستضد عند شخص حسّاس"
+   },
+   {
+    "f": "شو بيلزم قبل ما يصير فرط حساسية؟",
+    "b": "Priming (تعرّض سابق)"
+   },
+   {
+    "f": "كم نوع؟ وشو أول حروفهم؟",
+    "b": "4: ACID — Anaphylactic · Cytotoxic · Immune complex · Delayed"
+   },
+   {
+    "f": "الجسم المضاد بـ Type I؟",
+    "b": "IgE"
+   },
+   {
+    "f": "إيمتى بيصير Type I؟",
+    "b": "5-10 دقايق"
+   },
+   {
+    "f": "الخلايا الأساسية بـ Type I؟",
+    "b": "Mast cells + eosinophils"
+   },
+   {
+    "f": "شو الأتوبي atopic؟",
+    "b": "IgE مرتفع بالمصل + قابلية وراثية"
+   },
+   {
+    "f": "علامات الأنافيلاكسيس؟",
+    "b": "Hypotension · Urticaria · Dyspnea"
+   },
+   {
+    "f": "الأجسام بـ Type II؟",
+    "b": "IgG (غالباً) · IgM (نادراً)"
+   },
+   {
+    "f": "3 تأثيرات Type II؟",
+    "b": "Complement · ADCC · Cellular dysfunction"
+   },
+   {
+    "f": "C3b شو بيعمل؟",
+    "b": "Opsonin ← phagocytosis"
+   },
+   {
+    "f": "بـ ADCC شو بتستعمل NK؟",
+    "b": "Perforin + granzyme ← apoptosis"
+   },
+   {
+    "f": "Graves بـ Type II شو سببو؟",
+    "b": "أجسام مضادة بتنبّه مستقبل TSH ← thyrotoxicosis"
+   },
+   {
+    "f": "C5a شو بيعمل؟",
+    "b": "Chemotaxis للعدلات والوحيدات"
+   },
+   {
+    "f": "أجسام Type III؟",
+    "b": "IgG · IgM · أحياناً IgA"
+   },
+   {
+    "f": "Arthus reaction؟",
+    "b": "نخر موضّع من immune complex vasculitis"
+   },
+   {
+    "f": "SLE: ضد شو؟",
+    "b": "Nuclear components (DNA, histones)"
+   },
+   {
+    "f": "Serum sickness: إيمتى بيتكوّن الجسم المضاد؟",
+    "b": "7-12 يوم"
+   },
+   {
+    "f": "Type IV: كم بيتأخر؟",
+    "b": "48-72 ساعة (DTH)"
+   },
+   {
+    "f": "Mantoux: شو بيشوفو مجهرياً؟",
+    "b": "Perivascular cuffing (CD4+ + macrophages)"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+  "id": "imm-def",
+  "system": "immuno",
+  "title": "Immunodeficiency & AIDS",
+  "url": "lec/imm-def.html",
+  "summary": "Primary immunodeficiencies (B-cell, T-cell, complement, phagocytic), secondary immunodeficiency, AIDS and its opportunistic infections and neoplasms, and Kaposi sarcoma.",
+  "points": [
+   "PID groups: B-cell, T-cell, complement, phagocytic",
+   "SCID (X-linked cytokine receptor / AR ADA), DiGeorge (22q11), Hyper-IgM (CD40L)",
+   "Bruton (Btk), CVID (no plasma cells), IgA deficiency (1:850)",
+   "CGD (NADPH oxidase), Chediak-Higashi (no phagosome-lysosome fusion)",
+   "C2 most common, C3 most serious, C5-C9 Neisseria",
+   "AIDS: HIV, opportunistic infections, neoplasms (Kaposi, HHV8)"
+  ],
+  "mcqs": [
+   {
+    "q": "X-linked hyper-IgM syndrome is caused by a mutation in:",
+    "opts": [
+     "Btk",
+     "CD40L",
+     "ADA",
+     "NADPH oxidase"
+    ],
+    "a": 1,
+    "why": "CD40L on CD4 T cells fails to bind CD40, blocking isotype switching."
+   },
+   {
+    "q": "DiGeorge syndrome is associated with deletion of:",
+    "opts": [
+     "22q11",
+     "21q22",
+     "15q11",
+     "5p"
+    ],
+    "a": 0,
+    "why": "Thymic aplasia with 22q11 deletion (CATCH 22)."
+   },
+   {
+    "q": "Bruton agammaglobulinemia involves which enzyme?",
+    "opts": [
+     "Btk (B-cell tyrosine kinase)",
+     "ADA",
+     "NADPH oxidase",
+     "Proteinase"
+    ],
+    "a": 0,
+    "why": "Btk mutation blocks pre-B cell maturation."
+   },
+   {
+    "q": "Chronic granulomatous disease results from deficiency of:",
+    "opts": [
+     "ADA",
+     "CD40L",
+     "NADPH oxidase",
+     "C3"
+    ],
+    "a": 2,
+    "why": "No respiratory burst means no ROS killing."
+   },
+   {
+    "q": "Deficiency of C5-C9 predisposes to:",
+    "opts": [
+     "Neisserial infections",
+     "Pneumocystis pneumonia",
+     "Cryptococcus meningitis",
+     "Candida esophagitis"
+    ],
+    "a": 0,
+    "why": "Late complement components are needed for lysis of Neisseria."
+   },
+   {
+    "q": "The AIDS-defining tumor caused by HHV8 is:",
+    "opts": [
+     "Burkitt lymphoma",
+     "Kaposi sarcoma",
+     "Cervical carcinoma",
+     "Hepatocellular carcinoma"
+    ],
+    "a": 1,
+    "why": "Kaposi sarcoma: HHV8 plus altered T-cell immunity."
+   }
+  ],
+  "cards": [
+   {
+    "f": "الفرق بين PID و SID؟",
+    "b": "Primary = وراثي · Secondary = مكتسب (الأشيع)"
+   },
+   {
+    "f": "شو 4 مجموعات PID؟",
+    "b": "B-cell · T-cell · Complement · Phagocytic"
+   },
+   {
+    "f": "أشيع SCID؟",
+    "b": "X-linked (50-60%) cytokine receptor"
+   },
+   {
+    "f": "سبب AR SCID؟",
+    "b": "ADA deficiency"
+   },
+   {
+    "f": "DiGeorge: أي كروموسوم؟",
+    "b": "22q11 deletion"
+   },
+   {
+    "f": "CATCH 22؟",
+    "b": "Cardiac · Abnormal facies · Thymic aplasia · Cleft palate · Hypocalcemia"
+   },
+   {
+    "f": "Hyper-IgM: أي طفرة؟",
+    "b": "CD40L (X-linked)"
+   },
+   {
+    "f": "Hyper-IgM: أي خلل؟",
+    "b": "Isotype switching"
+   },
+   {
+    "f": "Bruton: أي إنزيم؟",
+    "b": "B-cell tyrosine kinase (Btk)"
+   },
+   {
+    "f": "Bruton: إيمتى الأعراض؟",
+    "b": "بعد 6 شهور، بالصبيان"
+   },
+   {
+    "f": "CVID: شو المشكلة؟",
+    "b": "B cells ما بتتمايز لـ plasma cells"
+   },
+   {
+    "f": "CVID: أي سرطانات لاحقاً؟",
+    "b": "Gastric cancer + lymphoma"
+   },
+   {
+    "f": "أشيع نقص مناعة خلقي؟",
+    "b": "Isolated IgA deficiency (1:850)"
+   },
+   {
+    "f": "CGD: أي إنزيم؟",
+    "b": "NADPH oxidase ← respiratory burst"
+   },
+   {
+    "f": "Chediak-Higashi: شو الخلل؟",
+    "b": "No phagosome-lysosome fusion"
+   },
+   {
+    "f": "وظايف المتمّم؟",
+    "b": "Inflammation · direct killing · opsonization"
+   },
+   {
+    "f": "أشيع نقص متمّم؟",
+    "b": "C2"
+   },
+   {
+    "f": "نقص C5-C9 بيعطي؟",
+    "b": "Neisserial infections / meningitis"
+   },
+   {
+    "f": "ثلاثية AIDS؟",
+    "b": "Opportunistic infections · neoplasms · neurologic"
+   },
+   {
+    "f": "Kaposi: أي فيروس؟",
+    "b": "HHV8"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+  "id": "imm-tol",
+  "system": "immuno",
+  "title": "Tolerance, Autoimmunity & Transplantation",
+  "url": "lec/imm-tol.html",
+  "summary": "Central and peripheral tolerance, autoimmune diseases and their triggers, Sjogren syndrome, graft rejection (hyperacute, acute, chronic), ways to improve graft survival, and graft versus host disease.",
+  "points": [
+   "Central tolerance: thymus (T) and bone marrow (B), apoptosis",
+   "Peripheral tolerance: anergy, Treg suppression, deletion",
+   "Triggers: costimulators, molecular mimicry, polyclonal B activation, modified or sequestered antigens",
+   "Sjogren: anti-SS-A (Ro) and SS-B (La), sicca syndrome",
+   "Rejection: hyperacute (preformed Ab), acute, chronic (fibrosis)",
+   "GVHD: donor CD8+ T cells attack the host"
+  ],
+  "mcqs": [
+   {
+    "q": "Central tolerance occurs in:",
+    "opts": [
+     "Spleen and lymph nodes",
+     "Thymus (T cells) and bone marrow (B cells)",
+     "Liver",
+     "Skin"
+    ],
+    "a": 1,
+    "why": "Immature self-reactive lymphocytes die by apoptosis in central organs."
+   },
+   {
+    "q": "Anergy means:",
+    "opts": [
+     "Apoptosis of the cell",
+     "Irreversible inactivation without death",
+     "Suppression by Treg",
+     "Antibody production"
+    ],
+    "a": 1,
+    "why": "The cell survives but is functionally inactive."
+   },
+   {
+    "q": "Rheumatic heart disease is an example of:",
+    "opts": [
+     "Sequestered antigen release",
+     "Molecular mimicry",
+     "Polyclonal B activation",
+     "Epitope modification by smoking"
+    ],
+    "a": 1,
+    "why": "Anti-streptococcal antibodies cross-react with myocardial proteins."
+   },
+   {
+    "q": "Sjogren syndrome is associated with antibodies against:",
+    "opts": [
+     "dsDNA and Sm",
+     "SS-A (Ro) and SS-B (La)",
+     "Centromere",
+     "Mitochondria"
+    ],
+    "a": 1,
+    "why": "Detected in up to 90% of patients."
+   },
+   {
+    "q": "Hyperacute rejection is caused by:",
+    "opts": [
+     "Donor T cells",
+     "Preformed antibodies in the recipient",
+     "Cytokine-driven fibrosis",
+     "Immunosuppressive therapy"
+    ],
+    "a": 1,
+    "why": "Previous transplant or transfusion leaves preformed antibodies that bind graft endothelium."
+   },
+   {
+    "q": "The main effector cell in GVHD is:",
+    "opts": [
+     "Recipient B cell",
+     "Donor CD8+ T cell",
+     "Recipient neutrophil",
+     "Donor mast cell"
+    ],
+    "a": 1,
+    "why": "Donor CD8+ T cells attack proliferating recipient cells."
+   }
+  ],
+  "cards": [
+   {
+    "f": "شو هو self-tolerance؟",
+    "b": "المناعة ما بتهاجم مستضدات الجسم"
+   },
+   {
+    "f": "وين بتتعلّم T cells؟",
+    "b": "Thymus"
+   },
+   {
+    "f": "central tolerance: شو بيصير؟",
+    "b": "الخلايا المعادية للذات بتموت بالـ apoptosis"
+   },
+   {
+    "f": "أماكن central tolerance؟",
+    "b": "Thymus (T) · Bone marrow (B)"
+   },
+   {
+    "f": "3 طرق peripheral tolerance؟",
+    "b": "Anergy · Treg · Deletion"
+   },
+   {
+    "f": "Anergy؟",
+    "b": "تعطيل بدون موت"
+   },
+   {
+    "f": "طريقتين أذى بالمناعة الذاتية؟",
+    "b": "CD8 cytotoxic T cells · autoantibodies"
+   },
+   {
+    "f": "أقوى رابط جيني؟",
+    "b": "Ankylosing spondylitis ↔ HLA-B27"
+   },
+   {
+    "f": "مثال molecular mimicry؟",
+    "b": "Rheumatic heart disease"
+   },
+   {
+    "f": "فيروسات polyclonal B activation؟",
+    "b": "EBV · HIV"
+   },
+   {
+    "f": "التدخين مع أي مرض؟",
+    "b": "RA (modified self antigen)"
+   },
+   {
+    "f": "UV بيعمل شو؟",
+    "b": "بيكشف nuclear antigens ثم lupus"
+   },
+   {
+    "f": "Sjögren: أجسام ضد شو؟",
+    "b": "SS-A (Ro) · SS-B (La)"
+   },
+   {
+    "f": "Sjögren: عمر وجنس؟",
+    "b": "نساء 50-60"
+   },
+   {
+    "f": "Mikulicz syndrome؟",
+    "b": "التهاب الغدد الدمعية واللعابية"
+   },
+   {
+    "f": "Sjögren: سرطان لاحق؟",
+    "b": "Marginal zone lymphoma"
+   },
+   {
+    "f": "أكتر عضو بيتزرع؟",
+    "b": "Kidney"
+   },
+   {
+    "f": "Hyperacute: السبب؟",
+    "b": "Preformed antibodies (نقل دم / زرع سابق)"
+   },
+   {
+    "f": "Chronic rejection: الصفة الرئيسية؟",
+    "b": "Fibrosis · onion skinning"
+   },
+   {
+    "f": "GVHD: الخلايا الأساسية؟",
+    "b": "CD8+ T cells"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+  "id": "imm-amy",
+  "system": "immuno",
+  "title": "Amyloidosis",
+  "url": "lec/imm-amy.html",
+  "summary": "Amyloid as an extracellular pathologic protein deposit (95% fibrils, 5% non-fibrillar), AL vs AA and minor fibril proteins, systemic, hereditary and localized types, clinical features, diagnosis, special stains and morphology.",
+  "points": [
+   "Amyloid fibrils: 7.5-10 nm, non-branching; 95% fibrils + 5% AP, ApoE, GAGs",
+   "AL: Ig light chains, plasma cells, myeloma (primary); AA: SAA from liver, chronic inflammation (secondary)",
+   "Others: TTR, beta2-microglobulin (hemodialysis), Abeta (Alzheimer), endocrine, prion",
+   "Hereditary: FMF (AR, pyrin), familial neuropathies (mutant TTR); localized: single organ, AL",
+   "Diagnosis: rectal biopsy, fat aspirate + Congo red (apple-green under polarized light), EM definite"
+  ],
+  "mcqs": [
+   {
+    "q": "AL amyloid is derived from:",
+    "opts": [
+     "Serum amyloid A",
+     "Immunoglobulin light chains",
+     "Transthyretin",
+     "Beta2-microglobulin"
+    ],
+    "a": 1,
+    "why": "AL comes from plasma cell light chains, linked to multiple myeloma."
+   },
+   {
+    "q": "AA amyloid is derived from:",
+    "opts": [
+     "Light chains",
+     "SAA made by the liver",
+     "Calcitonin",
+     "Prion protein"
+    ],
+    "a": 1,
+    "why": "IL-6 and IL-1 raise SAA in chronic inflammation."
+   },
+   {
+    "q": "Amyloid under polarized light after Congo red shows:",
+    "opts": [
+     "Blue-violet",
+     "Apple-green birefringence",
+     "Rose pink",
+     "Yellow"
+    ],
+    "a": 1,
+    "why": "Apple-green birefringence is characteristic."
+   },
+   {
+    "q": "Best biopsy site for amyloidosis:",
+    "opts": [
+     "Skin",
+     "Rectum",
+     "Muscle",
+     "Lung"
+    ],
+    "a": 1,
+    "why": "Rectal biopsy is the best site."
+   },
+   {
+    "q": "Amyloid of long-term hemodialysis is:",
+    "opts": [
+     "AL",
+     "AA",
+     "Beta2-microglobulin",
+     "Abeta"
+    ],
+    "a": 2,
+    "why": "Beta2-microglobulin is not filtered by dialysis membranes."
+   },
+   {
+    "q": "Familial Mediterranean fever is inherited as:",
+    "opts": [
+     "Autosomal dominant",
+     "Autosomal recessive",
+     "X-linked",
+     "Mitochondrial"
+    ],
+    "a": 1,
+    "why": "FMF: autosomal recessive, pyrin gene, AA fibrils."
+   }
+  ],
+  "cards": [
+   {
+    "f": "AL مشتق من شو؟",
+    "b": "Immunoglobulin light chains (plasma cells)"
+   },
+   {
+    "f": "AL مع أي مرض؟",
+    "b": "Multiple myeloma (primary)"
+   },
+   {
+    "f": "AA مشتق من؟",
+    "b": "SAA (liver)"
+   },
+   {
+    "f": "شو بيزيد SAA؟",
+    "b": "IL-6 + IL-1 (inflammation)"
+   },
+   {
+    "f": "TTR بينقل شو؟",
+    "b": "Thyroxine + retinol"
+   },
+   {
+    "f": "أميلويد الغسيل الكلوي؟",
+    "b": "β2-microglobulin"
+   },
+   {
+    "f": "أميلويد Alzheimer؟",
+    "b": "Aβ (from AβPP)"
+   },
+   {
+    "f": "Prion مثال مرض؟",
+    "b": "Creutzfeldt-Jakob disease (CJD)"
+   },
+   {
+    "f": "قطر الخيوط؟",
+    "b": "7.5-10 nm"
+   },
+   {
+    "f": "نسبة الخيوط؟",
+    "b": "95% (5% non-fibrillar)"
+   },
+   {
+    "f": "مكوّنات non-fibrillar؟",
+    "b": "AP · ApoE · GAGs"
+   },
+   {
+    "f": "Bence Jones protein؟",
+    "b": "Light chains بالبول والدم (myeloma)"
+   },
+   {
+    "f": "Secondary أسبابو؟",
+    "b": "TB · bronchiectasis · osteomyelitis · RA · IBD"
+   },
+   {
+    "f": "Senile عمرو؟",
+    "b": "70-80 سنة (normal TTR)"
+   },
+   {
+    "f": "FMF وراثتو؟",
+    "b": "Autosomal recessive (pyrin, AA)"
+   },
+   {
+    "f": "Localized أشكالو؟",
+    "b": "Nodular mass: lung · larynx · skin · tongue (AL)"
+   },
+   {
+    "f": "أفضل مكان خزعة؟",
+    "b": "Rectum"
+   },
+   {
+    "f": "أشهر صبغة؟",
+    "b": "Congo red (apple-green under polarized light)"
+   },
+   {
+    "f": "التشخيص النهائي؟",
+    "b": "Electron microscopy"
+   },
+   {
+    "f": "شكل العضو؟",
+    "b": "Enlarged · firm · waxy"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+  "id": "inf-heal",
+  "system": "inflam",
+  "title": "Healing & Repair (Inflammation 5-6)",
+  "url": "lec/inf-heal.html",
+  "summary": "Repair by regeneration or fibrous scar, labile/stable/permanent cells, granulation tissue and angiogenesis, ECM deposition and remodelling, healing by first and second intention, wound strength, factors affecting healing and complications (hypertrophic scar, keloid, dehiscence, contracture).",
+  "points": [
+   "Regeneration (normal tissue) vs healing (fibrous scar)",
+   "Steps: scavenging, regeneration, granulation tissue, ECM deposition, remodelling",
+   "Labile and stable cells regenerate; permanent cells (neurons, cardiac myocytes) do not",
+   "Granulation tissue: angiogenesis (VEGF) + fibroblasts (PDGF, FGF); pink, soft, leaky",
+   "1st intention: clean opposed edges; 2nd intention: separated edges, more granulation, contraction by myofibroblasts",
+   "Infection is the most important local factor delaying healing; keloid extends beyond wound boundaries"
+  ],
+  "mcqs": [
+   {
+    "q": "Which cell type cannot regenerate?",
+    "opts": [
+     "Epidermal cells",
+     "Hepatocytes",
+     "Cardiac myocytes",
+     "GI epithelium"
+    ],
+    "a": 2,
+    "why": "Cardiac myocytes and neurons are permanent cells."
+   },
+   {
+    "q": "The hallmark of healing is:",
+    "opts": [
+     "Fibrin clot",
+     "Granulation tissue",
+     "Scab",
+     "Keloid"
+    ],
+    "a": 1,
+    "why": "Granulation tissue is pink, soft, granular and leaky."
+   },
+   {
+    "q": "Angiogenesis is stimulated mainly by:",
+    "opts": [
+     "PDGF",
+     "VEGF and angiopoietin",
+     "IL-1",
+     "TNF"
+    ],
+    "a": 1,
+    "why": "VEGF and angiopoietin drive new vessel formation."
+   },
+   {
+    "q": "Wound contraction is caused by:",
+    "opts": [
+     "Neutrophils",
+     "Macrophages",
+     "Myofibroblasts",
+     "Hepatocytes"
+    ],
+    "a": 2,
+    "why": "Myofibroblasts have smooth-muscle features and pull wound edges."
+   },
+   {
+    "q": "Which is the single most important local cause of delayed healing?",
+    "opts": [
+     "Foreign body",
+     "Infection",
+     "Wound size",
+     "Early motion"
+    ],
+    "a": 1,
+    "why": "Infection causes persistent injury and inflammation."
+   },
+   {
+    "q": "Keloid differs from hypertrophic scar because it:",
+    "opts": [
+     "Is flat",
+     "Extends beyond the original wound and does not regress",
+     "Contains no collagen",
+     "Is caused by deficiency"
+    ],
+    "a": 1,
+    "why": "Keloid grows beyond wound boundaries and is more common in black people."
+   }
+  ],
+  "cards": [
+   {
+    "f": "Repair شو بيرجّع؟",
+    "b": "Tissue architecture + function"
+   },
+   {
+    "f": "Regeneration معناها؟",
+    "b": "Tissue returns to normal"
+   },
+   {
+    "f": "Healing بتنتج شو؟",
+    "b": "Fibrous tissue → scar"
+   },
+   {
+    "f": "Fibrosis بمكان فيه exudate؟",
+    "b": "Organization"
+   },
+   {
+    "f": "أول خطوة بالشفاء؟",
+    "b": "Scavenging (macrophages)"
+   },
+   {
+    "f": "Labile cells مثال؟",
+    "b": "Epidermis · GI epithelium"
+   },
+   {
+    "f": "Stable cells مثال؟",
+    "b": "Hepatocytes (G0)"
+   },
+   {
+    "f": "Permanent cells؟",
+    "b": "Neurons · cardiac myocytes"
+   },
+   {
+    "f": "علامة الشفاء المميّزة؟",
+    "b": "Granulation tissue"
+   },
+   {
+    "f": "Angiogenesis محفّزها؟",
+    "b": "VEGF + angiopoietin"
+   },
+   {
+    "f": "EPCs من وين؟",
+    "b": "Bone marrow"
+   },
+   {
+    "f": "PDGF معناها؟",
+    "b": "Platelet-derived growth factor"
+   },
+   {
+    "f": "الخلية الرئيسية للـ ECM؟",
+    "b": "Fibroblast"
+   },
+   {
+    "f": "ECM deposition بيبدأ؟",
+    "b": "Day 3-5"
+   },
+   {
+    "f": "Metalloproteinases بتحتاج؟",
+    "b": "Zinc"
+   },
+   {
+    "f": "Neutrophils بيوصلو؟",
+    "b": "24 hours"
+   },
+   {
+    "f": "Neovascularization الذروة؟",
+    "b": "Day 5"
+   },
+   {
+    "f": "Wound contraction بسبب؟",
+    "b": "Myofibroblasts"
+   },
+   {
+    "f": "أهم سبب موضعي لتأخير الشفاء؟",
+    "b": "Infection"
+   },
+   {
+    "f": "Keloid بتتميّز بـ؟",
+    "b": "Beyond wound boundaries · no regression"
+   }
+  ],
+  "subject": "path",
+  "date": "2026-11-13"
+ },
+ {
+ "id": "inf-out",
+ "system": "inflam",
+ "title": "Inflammation 3-4: Outcomes, Chronic & Granulomas",
+ "url": "lec/inf-out.html",
+ "summary": "Outcomes of acute inflammation (resolution, scarring, abscess, chronic), six morphologic types, lymphatics, chronic inflammation, macrophages, granulomatous inflammation and systemic effects of inflammation.",
+ "points": ["5 signs: redness, heat, swelling, pain, loss of function (mediators + leukocyte damage)","Vasodilation → redness + heat; permeability → edema → swelling","Outcome depends on injury, site, host response","6 types: catarrhal, serous, fibrinous, suppurative, ulceration, pseudomembranous","Chronic: mononuclear cells, destruction, repair; no vascular response","Granuloma: epithelioid macrophages + lymphocyte collar + giant cell; foreign body vs immune","Systemic: fever (prostaglandins), CRP (IL-6), leukocytosis (CSFs), septic shock (TNF)"],
+ "mcqs": [{"q":"Swelling in acute inflammation results mainly from:","opts":["Vasodilation","Increased vascular permeability with edema","Leukocytosis","Fever"],"a":1,"why":"Vasodilation gives redness + heat; permeability lets fluid and protein leak, causing edema."},{"q":"Which is NOT a factor deciding the outcome of acute inflammation?","opts":["Type and severity of injury","Site affected","Host response","Patient's blood group"],"a":3,"why":"Outcome depends on injury, site, and host response."},{"q":"Pus is best described as:","opts":["Protein-poor fluid","Dead neutrophils, debris, microbes and fluid from liquefaction","Fibrin only","Clear blister fluid"],"a":1,"why":"Lysosomal enzymes liquefy tissue; pus always contains bacteria."},{"q":"Pseudomembranous inflammation occurs only in:","opts":["Colon and oropharynx","Lung and pleura","Skin and joints","Kidney and liver"],"a":0,"why":"Classically Clostridium difficile colitis."},{"q":"Which feature is absent in chronic inflammation compared with acute?","opts":["Tissue destruction","Mononuclear cells","Vascular response (heat, redness, edema)","Attempts at repair"],"a":2,"why":"Chronic inflammation lacks the vascular response."},{"q":"A granuloma consists of:","opts":["Neutrophils around pus","Epithelioid macrophages with a lymphocyte collar, giant cells, fibroblasts","Fibrin and fibroblasts","Eosinophils and mast cells"],"a":1,"why":"Central necrosis may be present."},{"q":"Septic shock in severe infection is driven mainly by high levels of:","opts":["IL-6","TNF","CSFs","Interferon-gamma"],"a":1,"why":"TNF causes low BP, DIC and metabolic abnormalities."}],
+ "cards": [{"f":"5 علامات الالتهاب الحاد؟","b":"Redness · Heat · Swelling · Pain · Loss of function"},{"f":"الاحمرار والحرارة من؟ والانتفاخ من؟","b":"Vasodilation · ↑ Permeability → edema"},{"f":"حاجز الوعاء الدموي؟","b":"Endothelium + tight junctions + basement membrane"},{"f":"3 عوامل مصير الالتهاب الحاد؟","b":"Injury type/severity · site · host response"},{"f":"4 مصائر؟","b":"Resolution · scarring · abscess · chronic"},{"f":"Abscess من؟","b":"Pyogenic bacteria (staph aureus)"},{"f":"Pus فيه؟","b":"Dead neutrophils · debris · microbes · fluid"},{"f":"أخف شكل؟","b":"Catarrhal"},{"f":"Serous مثال؟","b":"Blister (burns)"},{"f":"Fibrinous وين؟","b":"Serosal membranes · joints"},{"f":"Pseudomembranous جرثومة؟","b":"C. difficile (colon + oropharynx)"},{"f":"Lymphangitis علامة؟","b":"Red streaks near wound"},{"f":"Chronic بلا شو؟","b":"Vascular response"},{"f":"خلايا المزمن؟","b":"Mononuclear cells (macrophages)"},{"f":"Macrophage بتنتنشّط بـ؟","b":"Interferon"},{"f":"Fistula؟","b":"Opening between two surfaces"},{"f":"Granuloma خلاياه؟","b":"Epithelioid macrophages + lymphocytes + giant cell"},{"f":"Foreign body granuloma مثال؟","b":"Suture material"},{"f":"Immune granuloma مثال؟","b":"TB (T-cell mediated)"},{"f":"أسباب Granuloma؟","b":"TB · leprosy · syphilis · cat-scratch · sarcoidosis · Crohn"},{"f":"CRP من وين؟","b":"Liver (IL-6)"},{"f":"Leukocytosis بتحفّزها؟","b":"CSFs on bone marrow"},{"f":"Septic shock مفتاح؟","b":"High TNF · low BP · DIC"}],
+ "subject": "path",
+ "date": "2026-11-13"
+ },
+ {
+  "id": "inf-intro",
+ "system": "inflam",
+ "title": "Inflammation 1-2: Acute Inflammation & Mediators",
+ "url": "lec/inf-intro.html",
+ "summary": "Definition and five Rs, acute vs chronic, vascular response (vasodilation, permeability mechanisms, stasis, exudates), leukocyte cellular events (margination to phagocytosis), leukocyte defects, and chemical mediators with the benefits of exudate.",
+ "points": ["Inflammation = tissue + microcirculation reaction to insult; protective, not necessarily infection","5 Rs: recognition, recruitment, removal, regulation, resolution","Acute: edema hallmark; chronic: tissue damage hallmark","Permeability: contraction, direct injury, leukocyte-dependent, transcytosis (VEGF)","Transudate < 3 g/dl vs exudate > 3 g/dl","Margination → rolling (selectin) → adhesion (integrin/ICAM) → CD31 transmigration → chemotaxis → phagocytosis","Mediators: complement, kinin, clotting; amines, AA metabolites, cytokines, ROS, NO; exudate benefits"],
+ "mcqs": [{"q":"Hallmark of acute inflammation is:","opts":["Tissue damage","Edema (exudation of fluid)","Granuloma","Fibrosis"],"a":1,"why":"Acute: minutes, neutrophils, edema. Chronic hallmark is tissue damage."},{"q":"Most common mechanism of increased vascular permeability:","opts":["Direct injury","Endothelial contraction (venules, histamine)","Transcytosis","Leukocyte-dependent injury"],"a":1,"why":"Fast and short-lived (minutes), in venules via vasoactive mediators."},{"q":"Exudate differs from transudate by:","opts":["Protein < 3 g/dl","Protein > 3 g/dl, SG > 1.015, cells","No cells","Cavity only"],"a":1,"why":"Transudate has low protein, SG < 1.015."},{"q":"Which molecule mediates leukocyte rolling?","opts":["Integrin","CD31","Selectin","ICAM only"],"a":2,"why":"Selectins (weak, temporary) cause rolling; integrin + ICAM/VCAM firm adhesion; CD31 transmigration."},{"q":"Chronic granulomatous disease is a defect of:","opts":["Integrin","Microbicidal activity (NADPH oxidase)","Chemotaxis","Production"],"a":1,"why":"LAD-1 is integrin deficiency; CGD is a killing defect."},{"q":"C5b-C9 forms:","opts":["Opsonin","Anaphylatoxin","Membrane attack complex","Kininogen"],"a":2,"why":"MAC punctures microbe membrane; C3b opsonizes; C5a is chemotactic."}],
+ "cards": [{"f":"5 Rs؟","b":"Recognition · Recruitment · Removal · Regulation · Resolution"},{"f":"Hallmark الحاد؟","b":"Edema"},{"f":"Hallmark المزمن؟","b":"Tissue damage"},{"f":"5 علامات الحاد؟","b":"Redness · Swelling · Hotness · Pain · Function disturbance"},{"f":"Vasodilation بتعطي؟","b":"Redness + Heat"},{"f":"أشيع آلية نفاذية؟","b":"Endothelial contraction (histamine)"},{"f":"VEGF بيحفّز؟","b":"Transcytosis"},{"f":"Transudate؟","b":"< 3 g/dl, SG < 1.015"},{"f":"Exudate؟","b":"> 3 g/dl, SG > 1.015, cells"},{"f":"Serosanguineous؟","b":"Serous + RBC"},{"f":"أول خطوة لرحلة الكريات؟","b":"Margination"},{"f":"Selectin؟","b":"Rolling"},{"f":"Integrin + ICAM/VCAM؟","b":"Firm adhesion"},{"f":"CD31؟","b":"Transmigration"},{"f":"Chemotactic endogenous؟","b":"C5a · LTB4 · IL-8"},{"f":"Opsonins؟","b":"IgG · C3b"},{"f":"LAD-1؟","b":"Integrin deficiency"},{"f":"CGD؟","b":"NADPH oxidase defect"},{"f":"Bradykinin؟","b":"Vasodilation + permeability + pain"},{"f":"فوائد النضح؟","b":"Dilution · antibodies · fibrin · plasma systems · nutrition · immunity"}],
+ "subject": "path",
+ "date": "2026-11-14"
+ },
+ {
+  "id": "imm-all",
+  "system": "immuno",
+  "title": "Immunology: Complete System Review",
+  "url": "lec/imm-all.html",
+  "summary": "One place for the comparison tables and cheat sheets of every Immunology lecture: Hypersensitivity, Immunodeficiency & AIDS, Tolerance / Autoimmunity / Transplantation, and Amyloidosis.",
+  "points": [
+   "Hypersensitivity: types I-IV",
+   "Immunodeficiency: primary, secondary, AIDS",
+   "Tolerance, autoimmunity, graft rejection, GVHD",
+   "Amyloidosis: AL vs AA, types, diagnosis"
+  ],
+  "mcqs": [{"q":"Which immunoglobulin mediates type I hypersensitivity?","opts":["IgE","IgG","IgM","IgA"],"a":0,"why":"Type I reactions are IgE-mediated, acting through mast cells within minutes."},{"q":"A delayed-type (type IV) reaction typically appears after:","opts":["5-10 minutes","48-72 hours","7-12 days","Several seconds"],"a":1,"why":"Type IV is T-cell mediated and peaks at 48-72 hours, as in the Mantoux test."},{"q":"In Graves disease the antibodies:","opts":["Lyse thyroid cells with complement","Deposit as immune complexes in glomeruli","Stimulate the TSH receptor","Activate mast cells through IgE"],"a":2,"why":"This is the cellular dysfunction mechanism of type II: antibodies against a receptor without tissue injury."},{"q":"Which statement describes ADCC?","opts":["C3b opsonizes the target for phagocytosis","An antibody links an NK cell to the target, which dies by perforin and granzyme","IgE triggers degranulation of mast cells","Sensitized CD4+ T cells release cytokines"],"a":1,"why":"ADCC needs neither complement nor phagocytosis."},{"q":"Serum sickness usually begins:","opts":["Within minutes","After 2-3 days","7-12 days after exposure","After several years"],"a":2,"why":"It is a type III reaction that follows antibody production against foreign serum protein."},{"q":"A boy has increased IgM and decreased IgG, IgA and IgE. The defect is:","opts":["Btk","CD40L","ADA","NADPH oxidase"],"a":1,"why":"Hyper-IgM is an X-linked CD40L defect that blocks isotype switching."},{"q":"Bruton agammaglobulinemia is caused by a mutation in:","opts":["CD40L","ADA","Btk","Cytokine receptor gamma chain"],"a":2,"why":"Btk mutations block B-cell maturation, so B cells and all immunoglobulins are low."},{"q":"DiGeorge syndrome results from:","opts":["CD40L mutation","22q11 deletion with thymic aplasia","NADPH oxidase defect","Absent plasma cell differentiation"],"a":1,"why":"Thymic aplasia causes T-cell deficiency; the CATCH 22 features accompany it."},{"q":"Chronic granulomatous disease is a defect of:","opts":["Phagosome-lysosome fusion","NADPH oxidase","Btk","C3"],"a":1,"why":"Without NADPH oxidase there is no respiratory burst, so the phagocyte cannot kill ingested organisms."},{"q":"Which complement deficiency is the most common?","opts":["C3","C5","C2","C9"],"a":2,"why":"C2 is the most common (often mild, SLE-like); C3 is the most serious."},{"q":"Recurrent Neisseria infections suggest a deficiency of:","opts":["C2","C5-C9","C1q","Factor H only"],"a":1,"why":"Late components form the membrane attack complex, which is needed against Neisseria."},{"q":"Central tolerance takes place in the:","opts":["Lymph nodes and spleen","Skin and mucosa","Thymus and bone marrow","Liver and kidney"],"a":2,"why":"Immature self-reactive T and B cells are deleted by apoptosis in the thymus and bone marrow."},{"q":"Which antibodies are characteristic of Sjögren syndrome?","opts":["Anti-dsDNA","Anti-SS-A (Ro) and anti-SS-B (La)","Anti-centromere","Anti-Smith only"],"a":1,"why":"They are found in up to 90% of cases."},{"q":"Hyperacute graft rejection is caused by:","opts":["Donor CD8+ T cells","Fibrosis over months","Preformed antibodies","Regulatory T cells"],"a":2,"why":"Preformed antibodies (from transfusion or a previous transplant) cause immediate thrombosis and necrosis."},{"q":"Graft-versus-host disease is mainly mediated by:","opts":["Recipient antibodies","Donor CD8+ T cells","Recipient NK cells","Complement"],"a":1,"why":"Donor T cells attack recipient tissues, classically after bone marrow transplantation."},{"q":"Congo red-stained amyloid under polarized light shows:","opts":["Red fluorescence","Blue-violet color","Apple-green birefringence","No change"],"a":2,"why":"Apple-green birefringence is the diagnostic feature."},{"q":"AA amyloid derives from:","opts":["Immunoglobulin light chains","Serum amyloid A made by the liver","Transthyretin","Beta-2 microglobulin"],"a":1,"why":"Chronic inflammation raises IL-1 and IL-6, which drive hepatic SAA production."},{"q":"Amyloid in long-term hemodialysis patients is composed of:","opts":["Transthyretin","Calcitonin","Beta-2 microglobulin","Amyloid beta"],"a":2,"why":"Beta-2 microglobulin is not filtered by dialysis membranes and accumulates."}],
+  "cards": [{"f":"Type I hypersensitivity: antibody, cells, timing","b":"IgE, mast cells and eosinophils, minutes (5-10)"},{"f":"Three mechanisms of type II hypersensitivity","b":"Complement-dependent, ADCC, cellular dysfunction"},{"f":"Examples of type III hypersensitivity","b":"Arthus reaction, SLE, serum sickness, post-streptococcal GN"},{"f":"Type IV: timing and hallmark lesion","b":"48-72 hours; granuloma (epithelioid cells, lymphocyte collar, Langhans giant cell)"},{"f":"Mantoux test","b":"PPD skin test; red and indurated, peak at 24-72 h"},{"f":"The four groups of primary immunodeficiency","b":"B cell, T cell, complement and phagocytic defects"},{"f":"X-linked SCID vs autosomal recessive SCID","b":"Cytokine receptor (gamma chain) defect vs ADA deficiency"},{"f":"CATCH 22","b":"DiGeorge: Cardiac, Abnormal facies, Thymic aplasia, Cleft palate, Hypocalcemia, 22q11 deletion"},{"f":"Hyper-IgM syndrome","b":"CD40L defect; high IgM, low IgG, IgA, IgE"},{"f":"Bruton vs CVID","b":"Bruton: Btk, boys, B cells absent. CVID: no plasma cell differentiation, risk of gastric cancer and lymphoma"},{"f":"CGD vs Chediak-Higashi","b":"CGD: NADPH oxidase, no respiratory burst. CHS: no phagosome-lysosome fusion"},{"f":"AIDS triad","b":"Opportunistic infections, secondary neoplasms, neurologic disease"},{"f":"Kaposi sarcoma","b":"HHV8; violaceous plaques with spindle cells and slit-like vessels"},{"f":"Peripheral tolerance mechanisms","b":"Anergy, Treg suppression and deletion"},{"f":"Molecular mimicry example","b":"Streptococcus antigens and heart tissue in rheumatic heart disease"},{"f":"Three types of graft rejection","b":"Hyperacute (preformed Ab), acute (cellular or humoral), chronic (fibrosis, onion skinning)"},{"f":"Rejection vs GVHD","b":"Rejection: recipient attacks graft. GVHD: donor T cells (CD8+) attack the recipient"},{"f":"AL vs AA amyloid","b":"AL: light chains from plasma cells (myeloma). AA: SAA from the liver in chronic inflammation"},{"f":"Amyloid stains","b":"Congo red: red, apple-green under polarized light. Thioflavin T/S: UV fluorescence"},{"f":"Best biopsy sites for amyloid","b":"Rectum (best), kidney, gingiva; fat aspirate is specific but not sensitive"}],
+  "subject": "path",
+  "date": "2026-11-13"
+ }
 ]);
