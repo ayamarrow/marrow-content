@@ -1,10 +1,13 @@
 {
-  "open": false,
-  "always": ["aya.mufeed.med25@stu.uoninevah.edu.iq"],
-  "approved": {
-    "ahmed.emad.med25@stu.uoninevah.edu.iq": "43EUFK",
-    "birdn2030@gmail.com": "ZAZENR",
-    "fatma.atallah.med25@stu.uoninevah.edu.iq": "ENMSGG",
-    "shahad.ghazwan.med25@stu.uoninevah.edu.iq": "UDSJ2J"
-  }
+ "open": false,
+ "always": [
+  "aya.mufeed.med25@stu.uoninevah.edu.iq"
+ ],
+ "approved": {
+  "ahmed.emad.med25@stu.uoninevah.edu.iq": "43EUFK",
+  "birdn2030@gmail.com": "ZAZENR",
+  "fatma.atallah.med25@stu.uoninevah.edu.iq": "ENMSGG",
+  "shahad.ghazwan.med25@stu.uoninevah.edu.iq": "UDSJ2J",
+  "lujain.waleed.med23@stu.uoninevah.edu.iq": "7RAY6S"
+ }
 }
