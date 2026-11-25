@@ -9,11 +9,12 @@ var w=document.createElement('div');w.innerHTML="<div id=\"inkw\"><button type=\
 var dbg=document.createElement('div');dbg.id='inkDbg';dbg.style.cssText='font-size:11px;color:#6b5a2f;margin-top:4px;font-weight:700';dbg.textContent='نسخة 3';document.getElementById('inkP').appendChild(dbg);
 (function(){
 var KEY=window.INK_KEY||('marrow-ink-'+(location.pathname.split('/').pop()||'page')),data={},tool='off',color='#000000',W={pen:2.6,hi:18},hist=[],ruler=false,smooth=true;
-try{data=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){data={}}
-var saveOk=null;function save(){try{localStorage.setItem(KEY,JSON.stringify(data));saveOk=true}catch(e){saveOk=false}var d=document.getElementById('inkDbg');if(d&&saveOk!==null)d.textContent='الحفظ: '+(saveOk?'شغّال ✅':'مو شغّال ❌ (المتصفح مانع التخزين)')}
+var LS=null,LSN='';(function(){var c=[['own',function(){return window.localStorage}],['parent',function(){return window.parent.localStorage}],['top',function(){return window.top.localStorage}]];for(var i=0;i<c.length;i++){try{var st=c[i][1]();st.setItem('__t','1');st.removeItem('__t');LS=st;LSN=c[i][0];return}catch(e){}}})();
+try{data=JSON.parse((LS&&LS.getItem(KEY))||'{}')||{}}catch(e){data={}}
+var saveOk=null;function save(){try{LS.setItem(KEY,JSON.stringify(data));saveOk=true}catch(e){saveOk=false}var d=document.getElementById('inkDbg');if(d&&saveOk!==null)d.textContent='الحفظ: '+(saveOk?'شغّال ✅':'مو شغّال ❌ (المتصفح مانع التخزين)')}
 function flush(){clearTimeout(saveT);if(dirty){dirty=false;save()}}
 window.addEventListener('pagehide',flush);document.addEventListener('visibilitychange',function(){if(document.hidden)flush()});
-try{localStorage.setItem(KEY+'-t','1');localStorage.removeItem(KEY+'-t');saveOk=true}catch(e){saveOk=false}
+saveOk=!!LS;
 (function(){var d=document.getElementById('inkDbg');if(d)d.textContent='الحفظ: '+(saveOk?'شغّال ✅':'مو شغّال ❌ (المتصفح مانع التخزين)')})();
 var SEL='p,li,h3,h4,td,th,summary,.qq,.qwa,.ct,.cl,.simple';
 var hosts=[].slice.call(document.querySelectorAll('section')).filter(function(s){return !s.parentElement.closest('section')}),cv={},BL={};
