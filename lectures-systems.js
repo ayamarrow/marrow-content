@@ -64,3 +64,44 @@ var st=document.createElement('style');st.textContent='.kinds{grid-template-colu
 renderAll();}catch(e){}}
 if(document.readyState==='complete')patch();else window.addEventListener('load',patch);
 })();
+
+/* Auto-discovery: a lecture html that carries <script type="application/json" id="marrow-meta">{...}</script>
+   is added to the app by itself (no need to re-upload lectures-systems.js). */
+(function(){if(typeof document==='undefined')return;
+var REPO='ayamarrow/marrow-content',KEY='marrow-auto-v1';
+function run(){try{
+var base=window.CONTENT_BASE||'';
+var cache={};try{cache=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(cache));}catch(e){}}
+function add(file,meta){
+ if(!meta||!meta.id||byId(meta.id))return false;
+ var l=Object.assign({s:0,star:false,notes:'',box:{},quiz:null},meta,{url:base+file},(progress&&progress[meta.id])||{});
+ l.system=sysOf(l);
+ l.kind=(meta.kind==='script')?'scr':((meta.kind==='practical'||meta.kind==='prac')?'prac':'acad');
+ LEC.push(l);return true;}
+var changed=false;
+Object.keys(cache).forEach(function(f){if(cache[f]&&cache[f].meta&&add(f,cache[f].meta))changed=true;});
+if(changed)renderAll();
+if(!navigator.onLine||typeof fetch!=='function')return;
+fetch('https://api.github.com/repos/'+REPO+'/contents/?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).then(function(list){
+ if(!Array.isArray(list))return;
+ var known={};(window.LECTURES||[]).forEach(function(x){if(x&&x.url)known[String(x.url).split('/').pop()]=1;});
+ var jobs=[];
+ list.forEach(function(it){
+  var f=it&&it.name;if(!f||!/\.html$/i.test(f)||known[f]||f==='index.html')return;
+  if(cache[f]&&cache[f].sha===it.sha)return;
+  jobs.push(fetch(base+f+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.text():'';}).then(function(t){
+   var m=/<script[^>]*id=["']marrow-meta["'][^>]*>([\s\S]*?)<\/script>/i.exec(t||'');
+   var meta=null;if(m){try{meta=JSON.parse(m[1]);}catch(e){}}
+   cache[f]={sha:it.sha,meta:meta};
+  }).catch(function(){}));
+ });
+ return Promise.all(jobs).then(function(){
+  save();var c=false;
+  Object.keys(cache).forEach(function(f){if(cache[f]&&cache[f].meta&&add(f,cache[f].meta))c=true;});
+  if(c)renderAll();
+ });
+}).catch(function(){});
+}catch(e){}}
+if(document.readyState==='complete')setTimeout(run,300);else window.addEventListener('load',function(){setTimeout(run,300);});
+})();
